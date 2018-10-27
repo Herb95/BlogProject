@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Lua初识]]></title>
     <url>%2Fposts%2Fundefined%2F</url>
-    <content type="text"><![CDATA[Lua初识]]></content>
+    <content type="text"><![CDATA[Lua初识Lua 数据类型8中基本类型:nil,boolean,number,string,userdata,function,thread,table]]></content>
       <tags>
         <tag>Lua Study</tag>
       </tags>
