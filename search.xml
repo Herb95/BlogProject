@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[List]]></title>
+    <url>%2Fposts%2Fe4fa5726%2F</url>
+    <content type="text"><![CDATA[List 泛型集合之基本使用List介绍List是一个C#内置的一个类,是类我们就可以实例化对象List本质和数组是一样的,因为List这个类的内部其实维护了一个数组]]></content>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据结构]]></title>
+    <url>%2Fposts%2Fba907200%2F</url>
+    <content type="text"><![CDATA[什么是数据结构1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式.2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。4.正确的数据机构可提高算法的效率5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构常见的数据结构数组 (Array)堆栈 (Stack)队列 (Queue)链表 (Linked List)树 (Tree)图 (Graph)堆 (Heap)散列表 (Hash)参考维基百科地址 &lt;–点击]]></content>
+      <tags>
+        <tag>数据</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Lua初识]]></title>
     <url>%2Fposts%2Fundefined%2F</url>
     <content type="text"><![CDATA[Lua初识Lua 数据类型8种基本类型:nil :表示无效值(条件表达式代表false)boolean:布尔 包含两个值:true和falsenumber: 表示双精度类型的实浮点数string: 字符串有””或者’’表示userdata: 任意存储中的C数据结构function: Lua或C编写的函数thread: 执行独立线路,执行协同程序table: 关联数据(associative arrays),索引是数字或者字符串,table的创建通过”构造表达式”来完成,最简单构造表达式{}(创建一个空表)nil1234nil:空 print(type(x)==&quot;nil&quot;) true print(typeI(x)==nil) false 注: type(X)==nil 结果为 false 的原因是因为 type(type(X))==stringnumber1234567number类型--双精度类型(默认类型修改luaconf.h文中定义)例如:print(type(2))print(type(2.2))print(type(0.2))print(type(2e+1))print(type(2.1231231465e-06))string1234567891011用 [[]] 表示一块字符串例如:html = [[ &lt;html&gt; &lt;head&gt;&lt;/head&gt; &lt;body&gt; &lt;a href=&quot;https://herb95.github.io/&quot;&gt;Graywolf 博客&lt;/a&gt; &lt;/body&gt; &lt;/html&gt;]]print(html)运算123456789101112数字,字符串上进行运算print(&quot;3&quot;+9)print(&quot;3&quot;+&quot;9&quot;)print(&quot;3+9&quot;)print(&quot;-2e2&quot;*9)print(&quot;e&quot;+2)结果:12123+9-1800error...注:字符串连接使用是 ..注:用#来计算字符串的长度# 运用123456len=&quot;herb95.github.io/&quot;print(#len)print(#&quot;herb95.github.io/&quot;)结果:1717table1234567891011tab1 =&#123;&#125;-- 直接初始化tab2 =&#123;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;&#125;for k,v in pairs(tab2) do print(k.. &quot;:&quot; .. v)end结果:1:12:23:34:4注:lua表默认初始索引一般以1开始table不会固定长度大小,有新数据添加table长度会自动增长,没初始的table都是nilfunction1234567891011-- function 函数是被看做事&quot;第一类值(First-Class Value),可存变量&quot;:例如:function add(a,b) return a+bendprint(add(10,20))add2 = addprint(add(10,30))结果:3040function 可以做匿名函数(anonymous function)的方式参数传递:123456789101112131415function testFun(tab,fun) for k,v in pairs(tab) do print(fun(k,v)) endendtab1 = &#123;k1= &quot;1&quot;,k2 = &quot;3&quot;&#125;;testFun(tab1,function(k,v) return k..&quot;=&quot;..vend)结果:k1=1k2=3thread线程lua中最主要的线程是协同程序(coroutine),跟线程(thread)差不多,拥有自己独立的栈、 局部变量和指令指针，可与其他协同程序共享全局变量线程和协程的区别：线程可以多个运行；协程任意时刻只能运行一个，并且处于运行状态的协程只有被挂起(suspend)时才会暂停userdata (自定义类型)是一种用户自定义数据,表示一种有应用程序或C/C++语言库创建类型,将任意C/C++任意数据类型的数据(通常是struct和指针) 存到lua变量中调用]]></content>
