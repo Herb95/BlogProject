@@ -1,3 +1,9 @@
 [submodule "source/_posts/GWNotebookLibrary"]
 	path = source/_posts/GWNotebookLibrary
 	url = https://github.com/Herb95/GWNotebookLibrary.git
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/Herb95/hexo-theme-next.git
+[submodule "themes/hexo-theme-chan"]
+	path = themes/hexo-theme-chan
+	url = https://github.com/denjones/hexo-theme-chan.git
