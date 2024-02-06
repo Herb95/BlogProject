@@ -21,9 +21,9 @@ timezone: UTC
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 # 网址
-url: https://herb95.github.io/
+url: https://herb95.github.io/BlogProject/
 # 网址根目录
-root: /
+root: /BlogProject/
 # 文章的格式 permalink: :year/:month/:day/:title/
 permalink: posts/:abbrlink/ # "posts/"
 # 永久链接各部分的默认值
