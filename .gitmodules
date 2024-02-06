@@ -1,0 +1,3 @@
+[submodule "source/_posts/GWNotebookLibrary"]
+	path = source/_posts/GWNotebookLibrary
+	url = https://github.com/Herb95/GWNotebookLibrary.git
