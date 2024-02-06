@@ -1,0 +1,1734 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>数据结构</title>
+    <url>/posts/ba907200/</url>
+    <content><![CDATA[<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><blockquote>
+<p>1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式. 2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。 3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。 4.正确的数据机构可提高算法的效率 5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构</p>
+</blockquote>
+<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><blockquote>
+<p>数组 (Array)<br>堆栈 (Stack)<br>队列 (Queue)<br>链表 (Linked List)<br>树 (Tree)<br>图 (Graph)<br>堆 (Heap)<br>散列表 (Hash)</p>
+</blockquote>
+<p><strong><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">参考维基百科地址</a></strong> &lt;–点击</p>
+]]></content>
+      <tags>
+        <tag>数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lua初识</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h2 id="Lua-初识"><a href="#Lua-初识" class="headerlink" title="Lua 初识"></a>Lua 初识</h2><h3 id="Lua-数据类型"><a href="#Lua-数据类型" class="headerlink" title="Lua 数据类型"></a>Lua 数据类型</h3><ul>
+<li>8 种基本类型:</li>
+<li>nil :表示无效值(条件表达式代表 false)</li>
+<li>boolean:布尔 包含两个值:true 和 false</li>
+<li>number: 表示双精度类型的实浮点数</li>
+<li>string: 字符串有””或者’’表示</li>
+<li>userData: 任意存储中的 C 数据结构</li>
+<li>function: Lua 或 C 编写的函数</li>
+<li>thread: 执行独立线路,执行协同程序</li>
+<li>table: 关联数据(associative arrays),索引是数字或者字符串,table 的创建通过”构造表达式”来完成,最简单构造表达式{}(创建一个空表)</li>
+</ul>
+<h4 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nil:空</span><br><span class="line"> print(type(x)==&quot;nil&quot;) true</span><br><span class="line"> print(typeI(x)==nil) false</span><br><span class="line"> 注: type(X)==nil 结果为 false 的原因是因为 type(type(X))==string</span><br></pre></td></tr></table></figure>
+
+<h4 id="number"><a href="#number" class="headerlink" title="number"></a>number</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">number类型--双精度类型(默认类型修改luaconf.h文中定义)</span><br><span class="line">例如:</span><br><span class="line">print(type(2))</span><br><span class="line">print(type(2.2))</span><br><span class="line">print(type(0.2))</span><br><span class="line">print(type(2e+1))</span><br><span class="line">print(type(2.1231231465e-06))</span><br></pre></td></tr></table></figure>
+
+<h4 id="string"><a href="#string" class="headerlink" title="string"></a>string</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用 [[]] 表示一块字符串</span><br><span class="line">例如:</span><br><span class="line">html = [[</span><br><span class="line">    &lt;html&gt;</span><br><span class="line">    &lt;head&gt;&lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;a href=&quot;https://herb95.github.io/&quot;&gt;Graywolf 博客&lt;/a&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">    &lt;/html&gt;</span><br><span class="line">]]</span><br><span class="line">print(html)</span><br></pre></td></tr></table></figure>
+
+<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">数字,字符串上进行运算</span><br><span class="line">print(&quot;3&quot;+9)</span><br><span class="line">print(&quot;3&quot;+&quot;9&quot;)</span><br><span class="line">print(&quot;3+9&quot;)</span><br><span class="line">print(&quot;-2e2&quot;*9)</span><br><span class="line">print(&quot;e&quot;+2)</span><br><span class="line">结果:</span><br><span class="line">12</span><br><span class="line">12</span><br><span class="line">3+9</span><br><span class="line">-1800</span><br><span class="line">error...</span><br></pre></td></tr></table></figure>
+
+<p><strong>注:字符串连接使用是 ..</strong><br><strong>注:用#来计算字符串的长度</strong></p>
+<h4 id="运用"><a href="#运用" class="headerlink" title="# 运用"></a># 运用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">len=&quot;herb95.github.io/&quot;</span><br><span class="line">print(#len)</span><br><span class="line">print(#&quot;herb95.github.io/&quot;)</span><br><span class="line">结果:</span><br><span class="line">17</span><br><span class="line">17</span><br></pre></td></tr></table></figure>
+
+<h4 id="table"><a href="#table" class="headerlink" title="table"></a>table</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tab1 =&#123;&#125;</span><br><span class="line">-- 直接初始化</span><br><span class="line">tab2 =&#123;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;&#125;</span><br><span class="line">for k,v in pairs(tab2) do</span><br><span class="line">    print(k.. &quot;:&quot; .. v)</span><br><span class="line">end</span><br><span class="line">结果:</span><br><span class="line">1:1</span><br><span class="line">2:2</span><br><span class="line">3:3</span><br><span class="line">4:4</span><br></pre></td></tr></table></figure>
+
+<p><strong>注:lua 表默认初始索引一般以 1 开始</strong><br><strong>table 不会固定长度大小,有新数据添加 table 长度会自动增长,没初始的 table 都是 nil</strong></p>
+<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- function 函数是被看做事&quot;第一类值(First-Class Value),可存变量&quot;:</span><br><span class="line">例如:</span><br><span class="line">function add(a,b)</span><br><span class="line">   return a+b</span><br><span class="line">end</span><br><span class="line">print(add(10,20))</span><br><span class="line">add2 = add</span><br><span class="line">print(add(10,30))</span><br><span class="line">结果:</span><br><span class="line">30</span><br><span class="line">40</span><br></pre></td></tr></table></figure>
+
+<p>function 可以做匿名函数(anonymous function)的方式参数传递:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function testFun(tab,fun)</span><br><span class="line">    for k,v in pairs(tab) do</span><br><span class="line">        print(fun(k,v))</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">tab1 = &#123;k1= &quot;1&quot;,k2 = &quot;3&quot;&#125;;</span><br><span class="line">testFun(tab1,</span><br><span class="line">function(k,v)</span><br><span class="line">    return k..&quot;=&quot;..v</span><br><span class="line">end</span><br><span class="line">)</span><br><span class="line">结果:</span><br><span class="line">k1=1</span><br><span class="line">k2=3</span><br></pre></td></tr></table></figure>
+
+<h4 id="thread-线程"><a href="#thread-线程" class="headerlink" title="thread 线程"></a>thread 线程</h4><p>lua 中最主要的线程是协同程序(coroutine),跟线程(thread)差不多,拥有自己独立的栈、 局部变量和指令指针，可与其他协同程序共享全局变量<br>线程和协程的区别：</p>
+<blockquote>
+<ul>
+<li>线程可以多个运行；</li>
+<li>协程任意时刻只能运行一个，并且处于运行状态的协程只有被挂起(suspend)时才会暂停</li>
+</ul>
+</blockquote>
+<h4 id="userdata-自定义类型"><a href="#userdata-自定义类型" class="headerlink" title="userdata (自定义类型)"></a>userdata (自定义类型)</h4><p>是一种用户自定义数据,表示一种有应用程序或 C&#x2F;C++语言库创建类型,将任意 C&#x2F;C++任意数据类型的数据(通常是 struct 和指针) 存到 lua 变量中调用</p>
+]]></content>
+      <tags>
+        <tag>Lua Study</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Make Backpack</title>
+    <url>/posts/undefined/</url>
+    <content><![CDATA[<h4 id="Unity3D-背包的制作"><a href="#Unity3D-背包的制作" class="headerlink" title="Unity3D 背包的制作"></a>Unity3D 背包的制作</h4>]]></content>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/posts/16107/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>部署个人博客方法</title>
+    <url>/posts/4441/</url>
+    <content><![CDATA[<p>部署个人博客命令<br>npm+hexo</p>
+<ul>
+<li><p>npm install hexo-cli -g #安装 Hexo</p>
+</li>
+<li><p>npm install hexo-deployer-git –save #部署 hexo 到 git page 的 deployer</p>
+</li>
+<li><p>hexo init #初始化</p>
+</li>
+<li><p>hexo generate #简化 hexo g 生成</p>
+</li>
+<li><p>hexo server #简化 hexo s 启动服务器</p>
+</li>
+</ul>
+<h4 id="配置-github"><a href="#配置-github" class="headerlink" title="配置 github"></a>配置 github</h4><ul>
+<li>cd ~&#x2F;.ssh #查看本机是否存在 SSH Key ###<strong>存在</strong></li>
+<li>clip &lt;~&#x2F;.ssh&#x2F;id_rsa.pub #复制公钥到 clipboard</li>
+<li>登录 github 设置秘钥</li>
+<li>ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a> #测试秘钥</li>
+</ul>
+<h3 id="不存在"><a href="#不存在" class="headerlink" title="不存在"></a><strong>不存在</strong></h3><ul>
+<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#117;&#114;&#95;&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#x6f;&#117;&#114;&#95;&#101;&#x6d;&#x61;&#105;&#x6c;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
+<ul>
+<li>弹出界面</li>
+<li>直接回车:默认文件进行存储<ul>
+<li>输入特定的文件名</li>
+<li>输入密码(可不输入直接回车)</li>
+<li>确认密码</li>
+</ul>
+</li>
+<li>执行存在那一步</li>
+</ul>
+</li>
+<li><p>创建库</p>
+</li>
+<li><p>选择设置的 SSH 并复制</p>
+</li>
+<li><p>打开本地 hexo 项目 编辑 _config.yml</p>
+</li>
+<li><p>修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: &quot;复制的SSH&quot;</span><br><span class="line">branch: master</span><br></pre></td></tr></table></figure></li>
+<li><p>在 Hexo 文件下执行</p>
+</li>
+<li><p>hexo g -d</p>
+</li>
+<li><p>报错 not fount:git</p>
+</li>
+<li><p>重新安装 npm install hexo-deployer-git –save</p>
+</li>
+<li><p>再次执行 hexo g -d</p>
+</li>
+<li><p>浏览器输入 github 生成的外链 <a href="https://xxxx.github.io/">https://xxxx.github.io/</a></p>
+</li>
+</ul>
+<h3 id="美化自己博客"><a href="#美化自己博客" class="headerlink" title="美化自己博客"></a>美化自己博客</h3><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><ul>
+<li>下载网址:<a href="https://hexo.io/">https://hexo.io</a></li>
+<li>克隆主题到 theme 目录</li>
+<li>修改配置文件 _config.yml</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">theme: hexo-theme-chan</span><br></pre></td></tr></table></figure>
+
+<p>返回项目根目录 执行语句</p>
+<ul>
+<li>hexo g</li>
+<li>hexo s</li>
+<li><a href="http://localhost:4000/">http://localhost:4000/</a></li>
+</ul>
+<h3 id="部署到-Github"><a href="#部署到-Github" class="headerlink" title="部署到 Github"></a>部署到 Github</h3><ul>
+<li>hexo clean #清除缓存</li>
+<li>hexo g -d</li>
+</ul>
+<h3 id="Hexo-编写文章"><a href="#Hexo-编写文章" class="headerlink" title="Hexo 编写文章"></a>Hexo 编写文章</h3><p>1.发表新篇</p>
+<ul>
+<li>hexo n “NewPage”</li>
+<li>生成地址在 \项目\Hexo\source_post\NewPage.md</li>
+<li>推送服务器上</li>
+<li>hexo g</li>
+<li>hexo d</li>
+<li>注: 合并命令 hexo d -g</li>
+</ul>
+<h3 id="域名关联"><a href="#域名关联" class="headerlink" title="域名关联"></a>域名关联</h3><ul>
+<li>hexo\source\ 创建 CNAME<br>内容是你的域名</li>
+<li>提交 hexo g -d</li>
+<li>修改 DNS</li>
+</ul>
+<figure class="highlight dns"><table><tr><td class="code"><pre><span class="line">f1g1ns2.dnspod.net</span><br><span class="line">f1g1ns1.dnspod.net</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>域名解析</li>
+<li>打开<a href="https://www.dnspod.cn/">https://www.dnspod.cn/</a> 注册账户</li>
+<li>添加域名</li>
+<li>添加记录</li>
+<li>1.主记录为@</li>
+<li>2.www</li>
+<li>记录值相同 博客主页对应 ip</li>
+<li>获取 ip ping “github 博客地址”</li>
+<li>等生效</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/posts/0/</url>
+    <content><![CDATA[<h1 id="GWNotebookLibrary"><a href="#GWNotebookLibrary" class="headerlink" title="GWNotebookLibrary"></a>GWNotebookLibrary</h1><p>生活工作笔记记录库</p>
+<h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>[[Git -Command — Some Solutions]](Git 相关解决方案)</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>List</title>
+    <url>/posts/e4fa5726/</url>
+    <content><![CDATA[<h2 id="List-集合之基本使用"><a href="#List-集合之基本使用" class="headerlink" title="List 集合之基本使用"></a>List 集合之基本使用</h2><h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><blockquote>
+<p>泛型是 C#2.0 中的新增元素(C++中称为模板),主要用于解决一系列类似的问题.这种机制允许将类名左为参数传递给泛型类型,并生成相应的对象.将泛型(类,接口,方法,委托等)看做模板可能更好解释,模板中的变体部分将被作为参数传进来的类名所代替,从而得到一个新的类型定义.</p>
+</blockquote>
+<h5 id="如何创建"><a href="#如何创建" class="headerlink" title="如何创建"></a>如何创建</h5><blockquote>
+<p>利用 System.Collections.Generic 命名空间下面的 List 泛型类创建集合.<br><strong>语法:</strong></p>
+<ul>
+<li>List<T> ListOfT &#x3D; new List<T>();</li>
+</ul>
+</blockquote>
+<h4 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h4><blockquote>
+<p>动态数组(ArrayList)代表可被单独索引的对象的有序集合.基本可以替代数组,与数组不同的是,在使用索引在指定的位置添加和移除项目,动态数组自动重新调整他的大小.它也允许在列表中进行冬天内存分配、增加、搜索、排序各项。<br><strong>常用属性</strong>:</p>
+<blockquote>
+<ul>
+<li>Capacity 获取或设置 ArrayList 可以包含的元素个数</li>
+<li>Count 获取 ArrayList 中实际包含的元素个数</li>
+<li>IsFixedSize 获取一个值,表示 ArrayList 是否具有固定大小</li>
+<li>IsReadOnly 获取一个值,表示 ArrayList 是否只读</li>
+<li>item 获取或设置指定索引处的元素</li>
+</ul>
+</blockquote>
+<p><strong>常用方法</strong>:</p>
+<blockquote>
+<ul>
+<li>public virtual int Add(object value); 在 ArrayList 的末尾添加一个对象.</li>
+<li>public virtual void AddRange(ICollection c); 在 ArrayList 的末尾添加 ICollection 的元素.</li>
+<li>public virtual void Clear(); 从 ArrayList 中移除所有的元素.</li>
+<li>public virtual bool Contains(object item); 判断某个元素是否在 ArrayList 中.</li>
+<li>public virtual ArrayList GetRange(int index,int count); 返回一个 ArrayList,表示源 ArrayList 中元素的子集.</li>
+<li>public virtual int IndexOf(object); 返回某个值在 ArrayList 中第一次出现的索引,索引从零开始.</li>
+<li>public virtual void Insert(int index,objcet value); 在 ArrayList 的指定索引处,插入一个元素.</li>
+<li>public virtual void InsertRange(int index,ICollection c); 在 ArrayList 的指定索引出,插入某个集合的元素</li>
+<li>public virtual void Remove(object obj); 在 ArrayList 中移除第一次出现的指定对象.</li>
+<li>public virtual void RemoveAt(int index); 移除 ArrayList 的指定索引出的元素.</li>
+<li>public virtual void RemoveRange(int index,int count); 从 ArrayList 中移除某个范围的元素.</li>
+<li>public virtual void Reverse(); 逆转 ArrayList 中元素的顺序.</li>
+<li>public virtual void SetRange(int index,ICollection c); 复制某个集合的元素到 ArrayList 中某个范围的元素上.</li>
+<li>public virtual void Sort(); 对 ArrayList 中的元素进行排序.</li>
+<li>public virtual void TrimToSize(); 设置容量为 ArrayList 中的实际个数.</li>
+</ul>
+</blockquote>
+</blockquote>
+<h4 id="List-介绍"><a href="#List-介绍" class="headerlink" title="List 介绍"></a>List<T> 介绍</h4><blockquote>
+<p>List<T>是一个 C#内置的一个类,是类我们就可以实例化对象<br>List<T>本质和数组是一样的,<strong>因为 List<T>这个类的内部其实维护了一个数组</strong><br>List<T>比数组灵活,这个类封装了很多方便我们操作这个内部数组的各种方法,可以方便对数组进行增加、删除、修改等操作，且 List<T>的长度可以动态改变,实例化中 List<T>类对象时,不需要指定长度.</p>
+</blockquote>
+<h4 id="List-基本使用"><a href="#List-基本使用" class="headerlink" title="List 基本使用"></a>List<T> 基本使用</h4><blockquote>
+<ul>
+<li><strong>创建泛型集合</strong><blockquote>
+<p>引入命名空间: using System.Collections.Generic;<br>List&lt;类型&gt; 集合名 &#x3D; new List&lt;类型&gt;();</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>常用属性</strong><blockquote>
+<ul>
+<li>Capacity 用于获取或设置 List 可容纳元素的数量.当数量超过容量时,这个值会自动增长.可以设置这个值以减少容量,也可以调用 trin()方法减少容量已适合实际的元素数目</li>
+<li>Count 获取数组当前元素数量</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li><strong>常用方法</strong><blockquote>
+<ul>
+<li>list.Add(Value); 添加数据到集合中</li>
+<li>list[索引] 取出指定索引位置的数据 索引和数组一样从 0 开始</li>
+<li>list.Count 获取集合长度</li>
+<li>list.RemoveAt(索引) 删除指定索引位置的数据. 删除后,后面的数据索引自动调整</li>
+<li>list[索引] &#x3D; 新值; 给指定索引的数据重新赋值</li>
+<li>list.item(); 通过制定索引获取或设置元素,对于 list 类来说,他是一个索引器.</li>
+<li>list.AddRange(); 公有方法,在 list 尾部添加实现了 IConllection 接口的多个元素</li>
+<li>list.BinarySearch(); 重载公有方法,用于排序的 list 内使用二分查找来定位指定元素</li>
+<li>list.Clear(); 移除所有元素</li>
+<li>list.Contains() 测试是否存在 List 内</li>
+<li>list.CopyTo() 重载公有方法,把一个 list 拷贝到一堆数组内</li>
+<li>list.Exists() 测试一个元素是否在 List 内</li>
+<li>list.Find() 查找并返回 List 内的出现第一个匹配元素</li>
+<li>list.FindAll() 查找并返回 List 内的所有匹配元素</li>
+<li>list.GetEnumerator() 重载的公有方法,返回一个用于迭代 List 的枚举器</li>
+<li>list.Getrange*() 拷贝指定范围的元素到新的 list 内</li>
+<li>list.IndexOf() 重载的公有方法,查找并返回每一个匹配元素的索引</li>
+<li>list.Insert() 在 List 内插入一个元素</li>
+<li>list.InsertRange() 在 list 中插入一组元素</li>
+<li>list.LastIndexOf() 重载的公有方法,查找并返回最后一个匹配元素的索引</li>
+<li>list.Remove() 移除与指定元素的第一个匹配</li>
+<li>list.RemoveRange() 移除指定范围的元素</li>
+<li>list.Reverse() 反转 list 内元素的顺序</li>
+<li>list.Sort() 对 list 内的元素进行排序</li>
+<li>list.ToArray() 把 list 内的元素拷贝到一个新的数组内</li>
+<li>list.trimToSize() 将容量设置为 List 中元素的实际数目</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h4 id="Dictionary-介绍"><a href="#Dictionary-介绍" class="headerlink" title="Dictionary&lt;K,V&gt; 介绍"></a>Dictionary&lt;K,V&gt; 介绍</h4><blockquote>
+<p>Dictionary 集合是一种<strong>键值对</strong>集合.该集合每个数据都是两个部分组成,键和值,在键值集合中,根据键找值<br>键值集合中,键必须是唯一的,值是可以是重复的.<br>List<T>泛型集合,只是限定数据 T 的类型,在 Dictionary&lt;K,V&gt;泛型集合中,分别对键(K)和值(V)的类型</p>
+</blockquote>
+<h4 id="Dictionary-基本方法"><a href="#Dictionary-基本方法" class="headerlink" title="Dictionary&lt;K,V&gt; 基本方法"></a>Dictionary&lt;K,V&gt; 基本方法</h4><blockquote>
+<p>创建 Dictionary 需要引用命名空间 using System.Collection.Generic;<br>Dictionary&lt;K 类型,V 类型&gt; 集合名 &#x3D; new Dictionary&lt;K 类型,V 类型&gt;();</p>
+<ul>
+<li><strong>常用属性</strong><blockquote>
+<ul>
+<li>dir.Add(K,V); 添加数据</li>
+<li>dir[K] 取出对应键名所对应的数据</li>
+<li>dir.Count 获取集合的长度</li>
+<li>dir.Remove(K); 删除指定键名所对应的数据</li>
+<li>dir[K] &#x3D; (new V); 给指定键名所对应的数据重新赋值</li>
+</ul>
+</blockquote>
+</li>
+<li><strong>常用方法</strong><blockquote>
+<ul>
+<li>ContainsKey(K) 判断当前字典集合中对否包含某个键</li>
+<li>ContainsValue(V) 判断当前字典集合中是否包含某个值</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<blockquote>
+<ul>
+<li>遍历集合</li>
+</ul>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">foreach(var item in dic.Keys)</span><br><span class="line">&#123;</span><br><span class="line">    Console.WriteLie(&quot;&#123;0&#125;:&#123;1&#125;&quot;,item,dic[itme]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>说话心理学</title>
+    <url>/posts/2c4a00a4/</url>
+    <content><![CDATA[<h1 id="会说话懂心里，迈出成功第一步"><a href="#会说话懂心里，迈出成功第一步" class="headerlink" title="会说话懂心里，迈出成功第一步"></a>会说话懂心里，迈出成功第一步</h1><blockquote>
+<p>说话，是一种可以训练的技能。它取决于你的思维和表达方式，更取决于你是否能抓住听者的心里。掌握说话心理学，迈出成功第一步。</p>
+</blockquote>
+<h2 id="说话操纵术"><a href="#说话操纵术" class="headerlink" title="说话操纵术"></a>说话操纵术</h2><p>从利益中最中新的</p>
+<ul>
+<li>拉近彼此距离</li>
+<li>该说的话大方说</li>
+<li>好口才是练出来的</li>
+<li></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>闲赋</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git Log</title>
+    <url>/posts/d768d41d/</url>
+    <content><![CDATA[<h1 id="Git-Log"><a href="#Git-Log" class="headerlink" title="Git Log"></a>Git Log</h1><h2 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h2><p>不传入任何参数的默认情况下，<code>git log</code> 会按时间先后顺序列出所有的提交，最近的更新排在最上面。 正如你所看到的，这个命令会列出每个提交的 SHA-1 校验和、作者的名字和电子邮件地址、提交时间以及提交说明。</p>
+<h2 id="git-log-p-2"><a href="#git-log-p-2" class="headerlink" title="git log -p -2"></a>git log -p -2</h2><p>其中一个比较有用的选项是 <code>-p</code> 或 <code>--patch</code> ，显示每次提交所引入的差异（按 <strong>补丁</strong> 的格式输出）。 你也可以限制显示的日志条目数量，例如使用 <code>-2</code> 选项来只显示最近的两次提交。</p>
+<h2 id="git-log-–stat"><a href="#git-log-–stat" class="headerlink" title="git log –stat"></a>git log –stat</h2><p> 输出每次提交的简略统计信息。选项在每次提交的下面列出所有被修改过的文件、有多少文件被修改了以及被修改过的文件的哪些行被移除或是添加了。</p>
+<h2 id="git-log-–pretty-oneline"><a href="#git-log-–pretty-oneline" class="headerlink" title="git log –pretty&#x3D;oneline"></a>git log –pretty&#x3D;oneline</h2><p> 个选项可以使用不同于默认格式的方式展示提交历史。 这个选项有一些内建的子选项供你使用。 比如 <code>oneline</code> 会将每个提交放在一行显示，在浏览大量的提交时非常有用。另外还有 <code>short</code>，<code>full</code> 和 <code>fuller</code> 选项，它们展示信息的格式基本一致，但是详尽程度不一.最有意思的是 <code>format</code> ，可以定制记录的显示格式。 这样的输出对后期提取分析格外有用——因为你知道输出的格式不会随着 Git 的更新而发生改变：<br> <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log --pretty=fromat:&quot;%h - %an, %ar : %s\&quot;</span><br></pre></td></tr></table></figure></p>
+<h2 id="git-log-–pretty-format常用的选项"><a href="#git-log-–pretty-format常用的选项" class="headerlink" title="git log –pretty&#x3D;format常用的选项:"></a>git log –pretty&#x3D;format常用的选项:</h2><table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>%H</code></td>
+<td align="left">提交的完整哈希值</td>
+</tr>
+<tr>
+<td align="left"><code>%h</code></td>
+<td align="left">提交的简写哈希值</td>
+</tr>
+<tr>
+<td align="left"><code>%T</code></td>
+<td align="left">树的完整哈希值</td>
+</tr>
+<tr>
+<td align="left"><code>%t</code></td>
+<td align="left">树的简写哈希值</td>
+</tr>
+<tr>
+<td align="left"><code>%P</code></td>
+<td align="left">父提交的完整哈希值</td>
+</tr>
+<tr>
+<td align="left"><code>%p</code></td>
+<td align="left">父提交的简写哈希值</td>
+</tr>
+<tr>
+<td align="left"><code>%an</code></td>
+<td align="left">作者名字</td>
+</tr>
+<tr>
+<td align="left"><code>%ae</code></td>
+<td align="left">作者的电子邮件地址</td>
+</tr>
+<tr>
+<td align="left"><code>%ad</code></td>
+<td align="left">作者修订日期（可以用 –date&#x3D;选项 来定制格式）</td>
+</tr>
+<tr>
+<td align="left"><code>%ar</code></td>
+<td align="left">作者修订日期，按多久以前的方式显示</td>
+</tr>
+<tr>
+<td align="left"><code>%cn</code></td>
+<td align="left">提交者的名字</td>
+</tr>
+<tr>
+<td align="left"><code>%ce</code></td>
+<td align="left">提交者的电子邮件地址</td>
+</tr>
+<tr>
+<td align="left"><code>%cd</code></td>
+<td align="left">提交日期</td>
+</tr>
+<tr>
+<td align="left"><code>%cr</code></td>
+<td align="left">提交日期（距今多长时间）</td>
+</tr>
+<tr>
+<td align="left"><code>%s</code></td>
+<td align="left">提交说明</td>
+</tr>
+</tbody></table>
+<h2 id="git-log-常用"><a href="#git-log-常用" class="headerlink" title="git log 常用"></a>git log 常用</h2><table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>--shortstat</code></td>
+<td align="left">只显示 –stat 中最后的行数修改添加移除统计。</td>
+</tr>
+<tr>
+<td align="left"><code>--name-only</code></td>
+<td align="left">仅在提交信息后显示已修改的文件清单</td>
+</tr>
+<tr>
+<td align="left"><code>--name-status</code></td>
+<td align="left">显示新增、修改、删除的文件清单。</td>
+</tr>
+<tr>
+<td align="left"><code>--abbrev-commit</code></td>
+<td align="left">仅显示 SHA-1 校验和所有 40 个字符中的前几个字符。</td>
+</tr>
+<tr>
+<td align="left"><code>--relative-date</code></td>
+<td align="left">使用较短的相对时间而不是完整格式显示日期（比如“2 weeks ago”）。</td>
+</tr>
+<tr>
+<td align="left"><code>--graph</code></td>
+<td align="left">在日志旁以 ASCII 图形显示分支与合并历史。</td>
+</tr>
+<tr>
+<td align="left"><code>--pretty</code></td>
+<td align="left">使用其他格式显示历史提交信息。可用的选项包括 oneline、short、full、fuller 和 format（用来定义自己的格式）。</td>
+</tr>
+<tr>
+<td align="left"><code>--oneline</code></td>
+<td align="left">–pretty&#x3D;oneline –abbrev-commit 合用的简写。</td>
+</tr>
+</tbody></table>
+<h2 id="限制输出长度"><a href="#限制输出长度" class="headerlink" title="限制输出长度"></a>限制输出长度</h2><p>除了定制输出格式的选项之外，<code>git log</code> 还有许多非常实用的限制输出长度的选项，也就是只输出一部分的提交。 之前你已经看到过 <code>-2</code> 选项了，它只会显示最近的两条提交， 实际上，你可以使用类似 <code>-&lt;n&gt;</code> 的选项，其中的 <code>n</code> 可以是任何整数，表示仅显示最近的 <code>n</code> 条提交。 不过实践中这个选项不是很常用，因为 Git 默认会将所有的输出传送到分页程序中，所以你一次只会看到一页的内容。但是，类似 <code>--since</code> 和 <code>--until</code> 这种按照时间作限制的选项很有用。 例如，下面的命令会列出最近两周的所有提交:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log --since=2.weeks</span><br></pre></td></tr></table></figure>
+<p>该命令可用的格式十分丰富——可以是类似 <code>&quot;2008-01-15&quot;</code> 的具体的某一天，也可以是类似 <code>&quot;2 years 1 day 3 minutes ago&quot;</code> 的相对日期。还可以过滤出匹配指定条件的提交。 用 <code>--author</code> 选项显示指定作者的提交，用 <code>--grep</code> 选项搜索提交说明中的关键字。</p>
+<blockquote>
+<p>你可以指定多个 <code>--author</code> 和 <code>--grep</code> 搜索条件，这样会只输出匹配 <strong>任意</strong> <code>--author</code> 模式和 <strong>任意</strong> <code>--grep</code> 模式的提交。然而，如果你添加了 <code>--all-match</code> 选项， 则只会输出匹配 <strong>所有</strong> <code>--grep</code> 模式的提交。</p>
+</blockquote>
+<p>另一个非常有用的过滤器是 <code>-S</code>（俗称“pickaxe”选项，取“用鹤嘴锄在土里捡石头”之意）， 它接受一个字符串参数，并且只会显示那些添加或删除了该字符串的提交。 假设你想找出添加或删除了对某一个特定函数的引用的提交，可以调用：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log -S function_name</span><br></pre></td></tr></table></figure>
+
+<p>最后一个很实用的 <code>git log</code> 选项是路径（path）， 如果只关心某些文件或者目录的历史提交，可以在 git log 选项的最后指定它们的路径。 因为是放在最后位置上的选项，所以用两个短划线（–）隔开之前的选项和后面限定的路径名。</p>
+<h2 id="限制-git-log-输出的选项选项说明"><a href="#限制-git-log-输出的选项选项说明" class="headerlink" title="限制 git log 输出的选项选项说明"></a>限制 <code>git log</code> 输出的选项选项说明</h2><table>
+<thead>
+<tr>
+<th align="left">选项</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-&lt;n&gt;</code></td>
+<td align="left">仅显示最近的 n 条提交。</td>
+</tr>
+<tr>
+<td align="left"><code>--since</code>, <code>--after</code></td>
+<td align="left">仅显示指定时间之后的提交。</td>
+</tr>
+<tr>
+<td align="left"><code>--until</code>, <code>--before</code></td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><code>--author</code></td>
+<td align="left">仅显示作者匹配指定字符串的提交。</td>
+</tr>
+<tr>
+<td align="left"><code>--committer</code></td>
+<td align="left">仅显示提交者匹配指定字符串的提交。</td>
+</tr>
+<tr>
+<td align="left"><code>--grep</code></td>
+<td align="left">仅显示提交说明中包含指定字符串的提交。</td>
+</tr>
+<tr>
+<td align="left"><code>-S</code></td>
+<td align="left">仅显示添加或删除内容匹配指定字符串的提交。</td>
+</tr>
+</tbody></table>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git log --pretty=&quot;%h - %s&quot; --author=&#x27;Junio C Hamano&#x27; --since=&quot;2008-10-01&quot; \</span><br><span class="line">   --before=&quot;2008-11-01&quot; --no-merges -- t/</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>隐藏合并提交<br>按照你代码仓库的工作流程，记录中可能有为数不少的合并提交，它们所包含的信息通常并不多。 为了避免显示的合并提交弄乱历史记录，可以为 <code>log</code> 加上 <code>--no-merges</code> 选项.</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>撤销提交操作</title>
+    <url>/posts/beba20e2/</url>
+    <content><![CDATA[<h1 id="撤销提交操作"><a href="#撤销提交操作" class="headerlink" title="撤销提交操作"></a>撤销提交操作</h1><p>git add . &#x2F;&#x2F;添加所有文件<br>git commit -m “本功能全部完成”<br>执行完commit后，想撤回commit，怎么办？</p>
+<p>git reset –soft HEAD^<br>这样就成功的撤销了你的commit<br>注意，仅仅是撤回commit操作，您写的代码仍然保留。</p>
+<p>说一下个人理解：<br>HEAD^的意思是上一个版本，也可以写成HEAD<del>1<br>如果你进行了2次commit，想都撤回，可以使用HEAD</del>2</p>
+<p>至于这几个参数：<br>–mixed<br>意思是：不删除工作空间改动代码，撤销commit，并且撤销git add . 操作<br>这个为默认参数,git reset –mixed HEAD^ 和 git reset HEAD^ 效果是一样的。</p>
+<p>–soft<br>不删除工作空间改动代码，撤销commit，不撤销git add . </p>
+<p>–hard<br>删除工作空间改动代码，撤销commit，撤销git add . </p>
+<p>注意完成这个操作后，就恢复到了上一次的commit状态。</p>
+<p>顺便说一下，如果commit注释写错了，只是想改一下注释，只需要：<br>git commit –amend</p>
+<p>此时会进入默认vim编辑器，修改注释完毕后保存就好了。</p>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 相关解决方案</title>
+    <url>/posts/12e58447/</url>
+    <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除某一个配置Key"><a href="#删除某一个配置Key" class="headerlink" title="删除某一个配置Key"></a>删除某一个配置Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//删除某一个配置key</span><br><span class="line">git config --global --unset &quot;key Name&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单独设置GitHub代理"><a href="#单独设置GitHub代理" class="headerlink" title="单独设置GitHub代理"></a>单独设置GitHub代理</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 命令。port：自定义端口</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:port</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="old-mode-100644-new-mode-100755"><a href="#old-mode-100644-new-mode-100755" class="headerlink" title="old mode 100644 new mode 100755"></a>old mode 100644 new mode 100755</h2><p>  old mode 100644 new mode 100755 的提示，如下图：<br>  ![[Pasted image 20230801150009.png]]<br>  ### 产生这个问题的原因就是<br>  filemode的变化，文件chmod后其文件某些位是改变了的，如果严格的比较原文件和chmod后的文件，两者是有区别的，但是源代码通常只关心文本内容，因此chmod产生的变化应该忽略，所以设置一下：<br>  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">  切到源码的根目录下，</span><br><span class="line">  git config --add core.filemode false</span><br></pre></td></tr></table></figure><br>  这样你的所有的git库都会忽略filemode变更了～</p>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取当前仓库文件状态</title>
+    <url>/posts/be7912d9/</url>
+    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+
+<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 命令使用记录</title>
+    <url>/posts/0/</url>
+    <content><![CDATA[<h1 id="Git-相关命令使用记录"><a href="#Git-相关命令使用记录" class="headerlink" title="Git 相关命令使用记录"></a>Git 相关命令使用记录</h1><h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks merge &#123;branch Name&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="获取内容-sourceTree"><a href="#获取内容-sourceTree" class="headerlink" title="获取内容-sourceTree"></a>获取内容-sourceTree</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git --no-optional-locks -c color.branch=<span class="literal">false</span> -c color.diff=<span class="literal">false</span> -c color.status=<span class="literal">false</span> -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> -c credential.helper=sourcetree fetch origin </span><br></pre></td></tr></table></figure>
+<h2 id="删除-Tag"><a href="#删除-Tag" class="headerlink" title="删除 Tag"></a>删除 Tag</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks tag -d &#123;Tag Name&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="重置"><a href="#重置" class="headerlink" title="重置"></a>重置</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks reset -q --hard HEAD --</span><br><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks submodule update --init</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>查看仓库大小</title>
+    <url>/posts/b44735da/</url>
+    <content><![CDATA[<p>git count-objects -vh<br>![[Pasted image 20230908115042.png]]</p>
+<p>count：松散物体的数量</p>
+<p>size：松散对象消耗的磁盘空间，以KiB为单位（除非指定了-H）</p>
+<p>in-pack：包内对象的数量</p>
+<p>size-pack：包消耗的磁盘空间，以KiB为单位（除非指定了-H）</p>
+<p>prune-packable：包中也存在的松散物体的数量。可以使用<code>git prune-packed</code>修剪这些对象。</p>
+<p>garbage：对象数据库中既不是有效的松散对象也不是有效包的文件数</p>
+<p>size-garbage：垃圾文件占用的磁盘空间，以KiB为单位（除非指定-H）</p>
+<p>alternate：备用对象数据库的绝对路径;可能会出现多次，每条路径一行。请注意，如果路径包含不可打印的字符，则它可能被双引号括起来并包含C样式的反斜杠转义序列。</p>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>生成密钥</title>
+    <url>/posts/7b852c9/</url>
+    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#120;&#120;&#120;&#x78;&#x40;&#120;&#120;&#120;&#120;&#46;&#99;&#x6f;&#109;">&#120;&#120;&#120;&#x78;&#x40;&#120;&#120;&#120;&#120;&#46;&#99;&#x6f;&#109;</a>“</p>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git 配置多个ssh Key</title>
+    <url>/posts/72277d8b/</url>
+    <content><![CDATA[<h1 id="1-生成-ssh-key"><a href="#1-生成-ssh-key" class="headerlink" title="1. 生成 ssh key"></a>1. 生成 ssh key</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C &quot;Gitee User A&quot; -f gitee_user_a_ed25519</span><br></pre></td></tr></table></figure>
+
+<h1 id="2-创建或者修改文件-ssh-config，添加如下内容："><a href="#2-创建或者修改文件-ssh-config，添加如下内容：" class="headerlink" title="2. 创建或者修改文件  ~/.ssh/config，添加如下内容："></a>2. 创建或者修改文件  <code>~/.ssh/config</code>，添加如下内容：</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host gt_a</span><br><span class="line">    User git</span><br><span class="line">    Hostname gitee.com</span><br><span class="line">    Port 22</span><br><span class="line">    IdentityFile ~/.ssh/gitee_user_a_ed25519</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-用-ssh-命令分别测试两个-SSH-Key"><a href="#3-用-ssh-命令分别测试两个-SSH-Key" class="headerlink" title="3.用 ssh 命令分别测试两个 SSH Key"></a>3.用 ssh 命令分别测试两个 SSH Key</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh -T gt_a</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-拉取代码："><a href="#4-拉取代码：" class="headerlink" title="4. 拉取代码："></a>4. 拉取代码：</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">原始: git@gitee.com:owner/repo.git</span><br><span class="line">修改后: gt_a:owner/repo.git</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Gitee</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Good  博客</title>
+    <url>/posts/91dd904b/</url>
+    <content><![CDATA[<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p><a href="https://www.lfzxb.top/gameframework-all/">烟雨的博客</a><br><a href="https://cathole.top/">自然妙有猫仙人的博客</a> <a href="https://blog.csdn.net/qq_32821435/category_7709588.html">CSDN-喵</a><br><a href="https://www.drflower.top/posts/6ca825f5/">花桑</a><br><a href="https://blog.csdn.net/qq_32821435/category_7753219.html">一个FlappyBird例子 </a><br><a href="https://blog.csdn.net/pricecheap/category_11664353.html">一个将unity第三人称控制器改成gf框架的例子 </a><br><a href="https://www.bilibili.com/read/cv14100707/">比较全的视频讲解</a><br><a href="https://learn.u3d.cn/tutorial/game-framework-rolling-ball-gbe">零基础入门GameFramwork框架：制作一个滚动小球</a></p>
+]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Good  Word Page</title>
+    <url>/posts/34a163a4/</url>
+    <content><![CDATA[<h2 id="Jekyll"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll</h2><p><a href="%22https://jekyllrb.com/%22">链接–&gt;jekyll</a></p>
+<p><strong>Free hosting</strong> with GitHub Pages<br>将纯文本转换为静态网站和博客。</p>
+<h2 id="GithubPages"><a href="#GithubPages" class="headerlink" title="GithubPages"></a>GithubPages</h2><p><a href="https://pages.github.com/">链接–&gt;Github-pages</a></p>
+<h2 id="鱼了个鱼"><a href="#鱼了个鱼" class="headerlink" title="鱼了个鱼"></a>鱼了个鱼</h2><p><a href="https://github.com/liyupi/yulegeyu">https://github.com/liyupi/yulegeyu</a></p>
+<h2 id="程序员延寿指南"><a href="#程序员延寿指南" class="headerlink" title="程序员延寿指南"></a>程序员延寿指南</h2><p><a href="https://github.com/geekan/HowToLiveLonger">https://github.com/geekan/HowToLiveLonger</a></p>
+<h2 id="各种语言的免费编程书"><a href="#各种语言的免费编程书" class="headerlink" title="各种语言的免费编程书"></a>各种语言的免费编程书</h2><p><a href="https://github.com/EbookFoundation/free-programming-books">https://github.com/EbookFoundation/free-programming-books</a></p>
+<h2 id="真正的无代码，兄弟你做到了"><a href="#真正的无代码，兄弟你做到了" class="headerlink" title="真正的无代码，兄弟你做到了"></a>真正的无代码，兄弟你做到了</h2><p><a href="https://github.com/kelseyhightower/nocode">https://github.com/kelseyhightower/nocode</a></p>
+<h2 id="eeeeeeeeeeeeee……eeee"><a href="#eeeeeeeeeeeeee……eeee" class="headerlink" title="eeeeeeeeeeeeee……eeee"></a>eeeeeeeeeeeeee……eeee</h2><p><a href="https://github.com/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee">https://github.com/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</a></p>
+<h2 id="Unity-LuaBehaviour"><a href="#Unity-LuaBehaviour" class="headerlink" title="Unity-LuaBehaviour"></a>Unity-LuaBehaviour</h2><p><a href="https://github.com/wy19910222/Unity-LuaBehaviour">https://github.com/wy19910222/Unity-LuaBehaviour</a></p>
+<h2 id="Unity-ControlSystem"><a href="#Unity-ControlSystem" class="headerlink" title="Unity-ControlSystem"></a>Unity-ControlSystem</h2><p><a href="https://github.com/wy19910222/Unity-ControlSystem">https://github.com/wy19910222/Unity-ControlSystem</a></p>
+<h2 id="Unity-Tools"><a href="#Unity-Tools" class="headerlink" title="Unity-Tools"></a>Unity-Tools</h2><p><a href="https://github.com/wy19910222/Unity-Tools">https://github.com/wy19910222/Unity-Tools</a></p>
+]]></content>
+      <tags>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Changelog Record</title>
+    <url>/posts/8efc86c4/</url>
+    <content><![CDATA[<h1 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h1><p>All notable changes to this project will be documented in this file.</p>
+<p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,<br>and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
+<h2 id="Unreleased"><a href="#Unreleased" class="headerlink" title="Unreleased"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.1...HEAD">Unreleased</a></h2><h2 id="1-1-1-2023-03-05"><a href="#1-1-1-2023-03-05" class="headerlink" title="1.1.1 - 2023-03-05"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.0...v1.1.1">1.1.1</a> - 2023-03-05</h2><h3 id="Added"><a href="#Added" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Arabic translation (#444).</li>
+<li>v1.1 French translation.</li>
+<li>v1.1 Dutch translation (#371).</li>
+<li>v1.1 Russian translation (#410).</li>
+<li>v1.1 Japanese translation (#363).</li>
+<li>v1.1 Norwegian Bokmål translation (#383).</li>
+<li>v1.1 “Inconsistent Changes” Turkish translation (#347).</li>
+<li>Default to most recent versions available for each languages</li>
+<li>Display count of available translations (26 to date!)</li>
+<li>Centralize all links into <code>/data/links.json</code> so they can be updated easily</li>
+</ul>
+<h3 id="Fixed"><a href="#Fixed" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Improve French translation (#377).</li>
+<li>Improve id-ID translation (#416).</li>
+<li>Improve Persian translation (#457).</li>
+<li>Improve Russian translation (#408).</li>
+<li>Improve Swedish title (#419).</li>
+<li>Improve zh-CN translation (#359).</li>
+<li>Improve French translation (#357).</li>
+<li>Improve zh-TW translation (#360, #355).</li>
+<li>Improve Spanish (es-ES) transltion (#362).</li>
+<li>Foldout menu in Dutch translation (#371).</li>
+<li>Missing periods at the end of each change (#451).</li>
+<li>Fix missing logo in 1.1 pages</li>
+<li>Display notice when translation isn’t for most recent version</li>
+<li>Various broken links, page versions, and indentations.</li>
+</ul>
+<h3 id="Changed"><a href="#Changed" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Upgrade dependencies: Ruby 3.2.1, Middleman, etc.</li>
+</ul>
+<h3 id="Removed"><a href="#Removed" class="headerlink" title="Removed"></a>Removed</h3><ul>
+<li>Unused normalize.css file</li>
+<li>Identical links assigned in each translation file</li>
+<li>Duplicate index file for the english version</li>
+</ul>
+<h2 id="1-1-0-2019-02-15"><a href="#1-1-0-2019-02-15" class="headerlink" title="1.1.0 - 2019-02-15"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v1.0.0...v1.1.0">1.1.0</a> - 2019-02-15</h2><h3 id="Added-1"><a href="#Added-1" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Danish translation (#297).</li>
+<li>Georgian translation from (#337).</li>
+<li>Changelog inconsistency section in Bad Practices.</li>
+</ul>
+<h3 id="Fixed-1"><a href="#Fixed-1" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Italian translation (#332).</li>
+<li>Indonesian translation (#336).</li>
+</ul>
+<h2 id="1-0-0-2017-06-20"><a href="#1-0-0-2017-06-20" class="headerlink" title="1.0.0 - 2017-06-20"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.3.0...v1.0.0">1.0.0</a> - 2017-06-20</h2><h3 id="Added-2"><a href="#Added-2" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>New visual identity by <a href="https://github.com/tylerfortune8">@tylerfortune8</a>.</li>
+<li>Version navigation.</li>
+<li>Links to latest released version in previous versions.</li>
+<li>“Why keep a changelog?” section.</li>
+<li>“Who needs a changelog?” section.</li>
+<li>“How do I make a changelog?” section.</li>
+<li>“Frequently Asked Questions” section.</li>
+<li>New “Guiding Principles” sub-section to “How do I make a changelog?”.</li>
+<li>Simplified and Traditional Chinese translations from <a href="https://github.com/tianshuo">@tianshuo</a>.</li>
+<li>German translation from <a href="https://github.com/mpbzh">@mpbzh</a> &amp; <a href="https://github.com/Art4">@Art4</a>.</li>
+<li>Italian translation from <a href="https://github.com/azkidenz">@azkidenz</a>.</li>
+<li>Swedish translation from <a href="https://github.com/magol">@magol</a>.</li>
+<li>Turkish translation from <a href="https://github.com/emreerkan">@emreerkan</a>.</li>
+<li>French translation from <a href="https://github.com/zapashcanon">@zapashcanon</a>.</li>
+<li>Brazilian Portuguese translation from <a href="https://github.com/Webysther">@Webysther</a>.</li>
+<li>Polish translation from <a href="https://github.com/amielucha">@amielucha</a> &amp; <a href="https://github.com/m-aciek">@m-aciek</a>.</li>
+<li>Russian translation from <a href="https://github.com/aishek">@aishek</a>.</li>
+<li>Czech translation from <a href="https://github.com/h4vry">@h4vry</a>.</li>
+<li>Slovak translation from <a href="https://github.com/jkostolansky">@jkostolansky</a>.</li>
+<li>Korean translation from <a href="https://github.com/pierceh89">@pierceh89</a>.</li>
+<li>Croatian translation from <a href="https://github.com/porx">@porx</a>.</li>
+<li>Persian translation from <a href="https://github.com/Hameds">@Hameds</a>.</li>
+<li>Ukrainian translation from <a href="https://github.com/osadchyi-s">@osadchyi-s</a>.</li>
+</ul>
+<h3 id="Changed-1"><a href="#Changed-1" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Start using “changelog” over “change log” since it’s the common usage.</li>
+<li>Start versioning based on the current English version at 0.3.0 to help<br>translation authors keep things up-to-date.</li>
+<li>Rewrite “What makes unicorns cry?” section.</li>
+<li>Rewrite “Ignoring Deprecations” sub-section to clarify the ideal<br>scenario.</li>
+<li>Improve “Commit log diffs” sub-section to further argument against<br>them.</li>
+<li>Merge “Why can’t people just use a git log diff?” with “Commit log<br>diffs”.</li>
+<li>Fix typos in Simplified Chinese and Traditional Chinese translations.</li>
+<li>Fix typos in Brazilian Portuguese translation.</li>
+<li>Fix typos in Turkish translation.</li>
+<li>Fix typos in Czech translation.</li>
+<li>Fix typos in Swedish translation.</li>
+<li>Improve phrasing in French translation.</li>
+<li>Fix phrasing and spelling in German translation.</li>
+</ul>
+<h3 id="Removed-1"><a href="#Removed-1" class="headerlink" title="Removed"></a>Removed</h3><ul>
+<li>Section about “changelog” vs “CHANGELOG”.</li>
+</ul>
+<h2 id="0-3-0-2015-12-03"><a href="#0-3-0-2015-12-03" class="headerlink" title="0.3.0 - 2015-12-03"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.2.0...v0.3.0">0.3.0</a> - 2015-12-03</h2><h3 id="Added-3"><a href="#Added-3" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>RU translation from <a href="https://github.com/aishek">@aishek</a>.</li>
+<li>pt-BR translation from <a href="https://github.com/tallesl">@tallesl</a>.</li>
+<li>es-ES translation from <a href="https://github.com/ZeliosAriex">@ZeliosAriex</a>.</li>
+</ul>
+<h2 id="0-2-0-2015-10-06"><a href="#0-2-0-2015-10-06" class="headerlink" title="0.2.0 - 2015-10-06"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.1.0...v0.2.0">0.2.0</a> - 2015-10-06</h2><h3 id="Changed-2"><a href="#Changed-2" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Remove exclusionary mentions of “open source” since this project can<br>benefit both “open” and “closed” source projects equally.</li>
+</ul>
+<h2 id="0-1-0-2015-10-06"><a href="#0-1-0-2015-10-06" class="headerlink" title="0.1.0 - 2015-10-06"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.8...v0.1.0">0.1.0</a> - 2015-10-06</h2><h3 id="Added-4"><a href="#Added-4" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Answer “Should you ever rewrite a change log?”.</li>
+</ul>
+<h3 id="Changed-3"><a href="#Changed-3" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Improve argument against commit logs.</li>
+<li>Start following <a href="https://semver.org/">SemVer</a> properly.</li>
+</ul>
+<h2 id="0-0-8-2015-02-17"><a href="#0-0-8-2015-02-17" class="headerlink" title="0.0.8 - 2015-02-17"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.7...v0.0.8">0.0.8</a> - 2015-02-17</h2><h3 id="Changed-4"><a href="#Changed-4" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Update year to match in every README example.</li>
+<li>Reluctantly stop making fun of Brits only, since most of the world<br>writes dates in a strange way.</li>
+</ul>
+<h3 id="Fixed-2"><a href="#Fixed-2" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Fix typos in recent README changes.</li>
+<li>Update outdated unreleased diff link.</li>
+</ul>
+<h2 id="0-0-7-2015-02-16"><a href="#0-0-7-2015-02-16" class="headerlink" title="0.0.7 - 2015-02-16"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.6...v0.0.7">0.0.7</a> - 2015-02-16</h2><h3 id="Added-5"><a href="#Added-5" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Link, and make it obvious that date format is ISO 8601.</li>
+</ul>
+<h3 id="Changed-5"><a href="#Changed-5" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Clarified the section on “Is there a standard change log format?”.</li>
+</ul>
+<h3 id="Fixed-3"><a href="#Fixed-3" class="headerlink" title="Fixed"></a>Fixed</h3><ul>
+<li>Fix Markdown links to tag comparison URL with footnote-style links.</li>
+</ul>
+<h2 id="0-0-6-2014-12-12"><a href="#0-0-6-2014-12-12" class="headerlink" title="0.0.6 - 2014-12-12"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.5...v0.0.6">0.0.6</a> - 2014-12-12</h2><h3 id="Added-6"><a href="#Added-6" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>README section on “yanked” releases.</li>
+</ul>
+<h2 id="0-0-5-2014-08-09"><a href="#0-0-5-2014-08-09" class="headerlink" title="0.0.5 - 2014-08-09"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.4...v0.0.5">0.0.5</a> - 2014-08-09</h2><h3 id="Added-7"><a href="#Added-7" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Markdown links to version tags on release headings.</li>
+<li>Unreleased section to gather unreleased changes and encourage note<br>keeping prior to releases.</li>
+</ul>
+<h2 id="0-0-4-2014-08-09"><a href="#0-0-4-2014-08-09" class="headerlink" title="0.0.4 - 2014-08-09"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.3...v0.0.4">0.0.4</a> - 2014-08-09</h2><h3 id="Added-8"><a href="#Added-8" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Better explanation of the difference between the file (“CHANGELOG”)<br>and its function “the change log”.</li>
+</ul>
+<h3 id="Changed-6"><a href="#Changed-6" class="headerlink" title="Changed"></a>Changed</h3><ul>
+<li>Refer to a “change log” instead of a “CHANGELOG” throughout the site<br>to differentiate between the file and the purpose of the file — the<br>logging of changes.</li>
+</ul>
+<h3 id="Removed-2"><a href="#Removed-2" class="headerlink" title="Removed"></a>Removed</h3><ul>
+<li>Remove empty sections from CHANGELOG, they occupy too much space and<br>create too much noise in the file. People will have to assume that the<br>missing sections were intentionally left out because they contained no<br>notable changes.</li>
+</ul>
+<h2 id="0-0-3-2014-08-09"><a href="#0-0-3-2014-08-09" class="headerlink" title="0.0.3 - 2014-08-09"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.2...v0.0.3">0.0.3</a> - 2014-08-09</h2><h3 id="Added-9"><a href="#Added-9" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>“Why should I care?” section mentioning The Changelog podcast.</li>
+</ul>
+<h2 id="0-0-2-2014-07-10"><a href="#0-0-2-2014-07-10" class="headerlink" title="0.0.2 - 2014-07-10"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v0.0.1...v0.0.2">0.0.2</a> - 2014-07-10</h2><h3 id="Added-10"><a href="#Added-10" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>Explanation of the recommended reverse chronological release ordering.</li>
+</ul>
+<h2 id="0-0-1-2014-05-31"><a href="#0-0-1-2014-05-31" class="headerlink" title="0.0.1 - 2014-05-31"></a><a href="https://github.com/olivierlacan/keep-a-changelog/releases/tag/v0.0.1">0.0.1</a> - 2014-05-31</h2><h3 id="Added-11"><a href="#Added-11" class="headerlink" title="Added"></a>Added</h3><ul>
+<li>This CHANGELOG file to hopefully serve as an evolving example of a<br>standardized open source project CHANGELOG.</li>
+<li>CNAME file to enable GitHub Pages custom domain.</li>
+<li>README now contains answers to common questions about CHANGELOGs.</li>
+<li>Good examples and basic guidelines, including proper date formatting.</li>
+<li>Counter-examples: “What makes unicorns cry?”.</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>预定义模板变量</title>
+    <url>/posts/50d8601f/</url>
+    <content><![CDATA[<h2 id="预定义模板变量"><a href="#预定义模板变量" class="headerlink" title="预定义模板变量"></a>预定义模板变量</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$&#123;DATE&#125; 当前系统日期</span><br><span class="line">$&#123;DAY&#125; 该月的当前日期</span><br><span class="line">$&#123;DIR_PATH&#125; 新文件目录的路径（相对于项目根目录）</span><br><span class="line">$&#123;DS&#125; 美元符号$。此变量用于转义美元字符，因此它不会被视为模板变量的前缀。</span><br><span class="line">$&#123;HOUR&#125; 当前时间</span><br><span class="line">$&#123;MINUTE&#125; 当前分钟</span><br><span class="line">$&#123;SECOND&#125; 当前秒</span><br><span class="line">$&#123;MONTH&#125; 这个月</span><br><span class="line">$&#123;MONTH_NAME_FULL&#125; 当前月份的全名（一月、二月等）</span><br><span class="line">$&#123;MONTH_NAME_SHORT&#125; 当前月份名称的前三个字母（Jan、Feb 等）</span><br><span class="line">$&#123;NAME&#125; 新实体的名称（文件、%class%、接口等）</span><br><span class="line">$&#123;PRODUCT_NAME&#125; IDE 的名称（例如 JetBrains Rider）</span><br><span class="line">$&#123;PROJECT_NAME&#125; 当前项目名称</span><br><span class="line">$&#123;TIME&#125; 当前系统时间</span><br><span class="line">$&#123;USER&#125; 当前用户的登录名</span><br><span class="line">$&#123;YEAR&#125; 今年</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS 8 Install Python</title>
+    <url>/posts/b5a8ead0/</url>
+    <content><![CDATA[<h1 id="检查系统安装版本"><a href="#检查系统安装版本" class="headerlink" title="检查系统安装版本"></a>检查系统安装版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment"># pwd</span></span><br><span class="line">/user/bin</span><br><span class="line">[root@xsource bin]<span class="comment"># ls -al | grep python</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="安装编译时依赖库"><a href="#安装编译时依赖库" class="headerlink" title="安装编译时依赖库"></a>安装编译时依赖库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># dnf -y groupinstall &quot;Development tools&quot;</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install libuuid-devel.x86_64 libuuid.x86_64 uuid.x86_64</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf install -y openssl-devel # 安装openssl</span></span><br><span class="line">opensll version  <span class="comment">#检查版本</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="下载版本"><a href="#下载版本" class="headerlink" title="下载版本"></a>下载版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># wget https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tgz</span></span><br><span class="line">[root@xsource /]<span class="comment"># tar xvzf Python-3.11.3.tgz</span></span><br><span class="line">[root@xsource /]<span class="comment"># cd Python-3.11.3</span></span><br><span class="line">[root@xsource /]<span class="comment"># ./configure --enable-optiomizations &amp;&amp; make altinstall</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="配置软链接"><a href="#配置软链接" class="headerlink" title="配置软链接"></a>配置软链接</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/python3.11 /usr/bin/python3</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/pip3.11 /usr/bin/pip3</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/python3.11 /usr/bin/python</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/pip3.11 /usr/bin/pip</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="需要覆盖-pip-不是软连接"><a href="#需要覆盖-pip-不是软连接" class="headerlink" title="需要覆盖 pip (不是软连接)"></a>需要覆盖 pip (不是软连接)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]#which pip</span><br><span class="line">/usr/local/bin/pip</span><br><span class="line">[root@xsource bin]# ls -al</span><br><span class="line">-rwxr-xr-x   1 root root      230 Jan  3 09:55 pip</span><br><span class="line">-rwxr-xr-x   1 root root      227 Dec 22 14:12 pip3</span><br><span class="line">-rwxr-xr-x   1 root root      230 Jan  3 08:46 pip3.11</span><br><span class="line">-rwxr-xr-x   1 root root      227 Dec 22 14:12 pip3.6</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h1><p>地址: <a href="https://docs.python.org/3/tutorial/venv.html">https://docs.python.org/3/tutorial/venv.html</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># python -m venv tutorial-env #创建虚拟环境</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Windows</span></span><br><span class="line">[root@xsource /]<span class="comment"># tutorial-env\Scripts\activate.bat</span></span><br><span class="line"><span class="comment">#Unix || MacOS</span></span><br><span class="line">[root@xsource /]<span class="comment"># source tutorial-env/bin/activate</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="停止运行"><a href="#停止运行" class="headerlink" title="停止运行"></a>停止运行</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment">#  deactivate</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>OpenAI</title>
+    <url>/posts/1ecd9fbe/</url>
+    <content><![CDATA[<h1 id="出现-OpenAI’s-services-are-not-available-in-your-country-错误主要是地区不允许导致"><a href="#出现-OpenAI’s-services-are-not-available-in-your-country-错误主要是地区不允许导致" class="headerlink" title="出现 OpenAI’s services are not available in your country 错误主要是地区不允许导致"></a>出现 OpenAI’s services are not available in your country 错误主要是地区不允许导致</h1><ol>
+<li>开启全局代理</li>
+<li>浏览器进行如下操作</li>
+</ol>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">//并在后面加上上面的代码 如下 注意javascript: 要手动输入 无法复制 javascript:window.localStorage.removeItem(Object.keys(window.localStorage).find(i=&gt;i.startsWith(&#x27;@@auth0spajs&#x27;)))</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>刷新网页</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux Firewall</title>
+    <url>/posts/cebd6f84/</url>
+    <content><![CDATA[<h1 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h1><ul>
+<li>查看防火墙某个端口是否开放</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --query-port=3306/tcp</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>开放防火墙端口 3306</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=3306/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<p><em>注意:开放端口需要重启防火墙生效</em></p>
+<ul>
+<li>重启防火墙</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl restart firewalld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>关闭防火墙</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>打开防火墙</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl start firewalld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看防火墙状态</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>开放一段端口</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zone=public --add-port=40000-45000/tcp --permanent</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看开放的端口列表</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">firewall-cmd --zoon-public --list-ports</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查看被监听(listen)的端口</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">netstat -lnp</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>检查端口被那个进程占用</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nestat -lnp |grep 3306</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>常用端口记录</title>
+    <url>/posts/3fb58c6b/</url>
+    <content><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">注解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">3306</td>
+<td align="center">数据库端口</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td align="center">通用端口</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">SSh 端口</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">FTP 端口</td>
+</tr>
+<tr>
+<td align="center">443</td>
+<td align="center">https</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Love Steam Game</title>
+    <url>/posts/33b8e905/</url>
+    <content><![CDATA[<p>Desynced <a href="https://store.steampowered.com/app/1450900/Desynced/">https://store.steampowered.com/app/1450900/Desynced/</a></p>
+]]></content>
+      <tags>
+        <tag>SteamGame</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CentOS Instal Report</title>
+    <url>/posts/c975ca3a/</url>
+    <content><![CDATA[<h1 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h1><hr>
+<ul>
+<li>&#x2F; 根目录,存放系统命令和用户数据等</li>
+<li>&#x2F;boot boot laoder 的静态链接文件,存放与 Linux 启动相关的程序</li>
+<li>&#x2F;home 用户目录,存放普通用户的数据</li>
+<li>&#x2F;tmp 临时目录</li>
+<li>&#x2F;usr 是 red hat linux 系统存放软件的地方,如有可能应讲最大空间分配给它</li>
+<li>&#x2F;usr&#x2F;local 自己安装程序在此</li>
+<li>&#x2F;var 不断变化的数据,服务器的一些服务在下面.</li>
+<li>&#x2F;opt 附加的应用程序软件包</li>
+</ul>
+<p>一般最小需要两个分区,需要一个 SWAP 分区,和一个”&#x2F;“ 分区,但吧一些常用、重要的挂在点分到其他分区，这样便于管理。一般一个”&#x2F;“分区,一个 “&#x2F;usr”分区,一个”&#x2F;home”分区,一个”&#x2F;var”分区.</p>
+<h2 id="建议系统分区方案"><a href="#建议系统分区方案" class="headerlink" title="建议系统分区方案"></a>建议系统分区方案</h2><table>
+<thead>
+<tr>
+<th>目录</th>
+<th>大小</th>
+<th>注解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;swap</td>
+<td>8G</td>
+<td>内存小于 4G 的为内存的 2 倍,内存大于 4G 的和内存大小一致</td>
+</tr>
+<tr>
+<td>&#x2F;boot</td>
+<td>300-800M</td>
+<td>centos8 目录容量要求比较高</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>30-50G</td>
+<td>根目录 较大的一些,强制主分区</td>
+</tr>
+<tr>
+<td>&#x2F;var</td>
+<td>30-50G</td>
+<td>存放各种日志文件最好大一些</td>
+</tr>
+<tr>
+<td>&#x2F;usr</td>
+<td>50-100G</td>
+<td>用户个人配置应用程序,特别是安装一些容易产生日志较大的程序若 wowza tomcat 等时</td>
+</tr>
+<tr>
+<td>&#x2F;home</td>
+<td>10G</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x2F;opt</td>
+<td>10G</td>
+<td></td>
+</tr>
+<tr>
+<td>&#x2F;tmp</td>
+<td>10G</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="目录文件系统"><a href="#目录文件系统" class="headerlink" title="目录文件系统"></a>目录文件系统</h2><p>实际分配 200G</p>
+<table>
+<thead>
+<tr>
+<th>目录</th>
+<th>大小</th>
+<th>文件系统</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;boot</td>
+<td>2GB</td>
+<td>ext4 文件系统</td>
+</tr>
+<tr>
+<td>&#x2F;</td>
+<td>134GB</td>
+<td>xfs 文件系统</td>
+</tr>
+<tr>
+<td>&#x2F;home</td>
+<td>20GB</td>
+<td>xfs 文件系统</td>
+</tr>
+<tr>
+<td>&#x2F;tmp</td>
+<td>10GB</td>
+<td>xfs 文件系统</td>
+</tr>
+<tr>
+<td>&#x2F;var</td>
+<td>30GB</td>
+<td>xfs 文件系统</td>
+</tr>
+<tr>
+<td>Swap</td>
+<td>4GB</td>
+<td>swap</td>
+</tr>
+</tbody></table>
+<p>40G 分配 2+2 _ 4G 内存<br>![[Pasted image 20230418130950.png]]</p>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>DisallowMultipleComponent</title>
+    <url>/posts/5c9c1269/</url>
+    <content><![CDATA[<h1 id="DisallowMultipleComponent"><a href="#DisallowMultipleComponent" class="headerlink" title="DisallowMultipleComponent"></a>DisallowMultipleComponent</h1><p>DisallowMultipleComponent : 不允许多个相同的组件挂载在同一个 GameObject 上</p>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Free Assets</title>
+    <url>/posts/293bbd56/</url>
+    <content><![CDATA[<p>✅Flooded Grounds - <a href="https://bit.ly/2ZfAxIT">https://bit.ly/2ZfAxIT</a><br>✅Sun Temple - <a href="https://bit.ly/38m5A8L">https://bit.ly/38m5A8L</a><br>✅Realistic Terrain Collection LITE - <a href="https://bit.ly/2L48vLB">https://bit.ly/2L48vLB</a><br>✅Rocky Hills Environment - Light Pack <a href="https://bit.ly/39uEkW8">https://bit.ly/39uEkW8</a><br>✅Conifers [BOTD] - <a href="https://bit.ly/3h6xXel">https://bit.ly/3h6xXel</a><br>✅Coconut Palm Tree Pack : <a href="https://bit.ly/363LTSg">https://bit.ly/363LTSg</a><br>✅Nature Starter Kit - 2<a href="https://bit.ly/3oHW6vF">https://bit.ly/3oHW6vF</a><br>✅Outdoor Ground Textures - <a href="https://bit.ly/306eljm">https://bit.ly/306eljm</a><br>✅Grass Flowers Pack Free - <a href="https://bit.ly/30cbmWS">https://bit.ly/30cbmWS</a><br>✅Terrain Tools Sample Asset Pack - <a href="https://bit.ly/2QnnI9S">https://bit.ly/2QnnI9S</a><br>✅Book of the Dead Project : <a href="https://bit.ly/2URXyPa">https://bit.ly/2URXyPa</a> </p>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Json</title>
+    <url>/posts/cb358a7b/</url>
+    <content><![CDATA[<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><ul>
+<li>Newtonsoft、LitJson都可以转成List和数组</li>
+<li>Newtonsoft可以转成任意key的字典，LitJson只能转成key为string类型的字典</li>
+<li>Newtonsoft转成json可保留汉字，LitJson会把汉字转成十六进制Unicode码</li>
+<li>Newtonsoft 序列化 &#x2F; 反序列化抽象类、接口时，创建一个JsonSerializerSettings类，其中字段TypeNameHandling设置为All或者Auto，序列化 &#x2F; 反序列化时把这个setting类传参进去，就正常了</li>
+</ul>
+<p>Newtonsoft存储字典Dictionary的结构：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;0&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;返回值为0&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;metaData&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;saas_username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;已退出0&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;saas_groupname&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gr0&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;1&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;status&quot;</span><span class="punctuation">:</span> <span class="string">&quot;返回值为1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;metaData&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;saas_username&quot;</span><span class="punctuation">:</span> <span class="string">&quot;已退出1&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;saas_groupname&quot;</span><span class="punctuation">:</span> <span class="string">&quot;gr1&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+<p>但是如果key用复杂类型，比如MetaData，则存储后会变成类似”JustStudy.C01_Json+MetaData”: {…}这种鬼样子，命名空间.类名+key类名</p>
+<h2 id="Newtonsoft"><a href="#Newtonsoft" class="headerlink" title="Newtonsoft"></a>Newtonsoft</h2><p>[JsonIgnore] 忽略public的字段、属性<br>[DefaultValue(10)] 成员默认值（只能修饰值类型？）<br>[JsonProperty] 默认不会序列化private对象，加上这个修饰就可以序列化了<br>[JsonConverter] 继承自JsonConverter类，就可以按照自定义方式来序列化<br>[OptOut] 修饰类，所有公有成员会被序列化，成员加JsonIgnore不序列化<br>[OptIn] 修饰类，所有的成员不会被序列化，成员加JsonProperty序列化<br>举例：[JsonObject(MemberSerialization.OptIn)]<br>[JsonConverter(typeof(StringEnumConverter))] 枚举按照string类型来序列化<br>[DefaultValue(10)] 属性成员添加默认值<br>JsonSerializerSettings.DefaultValueHandling<br>JsonSerializerSettings.NullValueHandling 空值的处理，比如空值不序列化？<br>[JsonConverter(typeof(IsoDateTimeConverter))] 日期类型转换成Iso，或者自己继承一个<br>[JsonProperty(PropertyName &#x3D; “CName”)] 自定义属性名称</p>
+<h2 id="常规序列化与反序列化"><a href="#常规序列化与反序列化" class="headerlink" title="常规序列化与反序列化"></a>常规序列化与反序列化</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="built_in">string</span> json= JsonConvert.SerializeObject(product);</span><br><span class="line">Product product = JsonConvert.DeserializeObject&lt;Product&gt;(json);</span><br><span class="line"><span class="comment">//格式化json字符串</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 格式化json字符串</span></span><br><span class="line"><span class="comment"><span class="doctag">///</span><span class="doctag">&lt;/summary&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;str&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span></span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;returns&gt;</span><span class="doctag">&lt;/returns&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="built_in">string</span> <span class="title">FormatJsonString</span>(<span class="params"><span class="built_in">string</span> str</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    JsonSerializer serializer = <span class="keyword">new</span> JsonSerializer();</span><br><span class="line">    TextReader tr = <span class="keyword">new</span> StringReader(str);</span><br><span class="line">    JsonTextReader jtr = <span class="keyword">new</span> JsonTextReader(tr);</span><br><span class="line">    <span class="built_in">object</span> obj = serializer.Deserialize(jtr);</span><br><span class="line">    <span class="keyword">if</span> (obj != <span class="literal">null</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        StringWriter textWriter = <span class="keyword">new</span> StringWriter();</span><br><span class="line">        JsonTextWriter jsonWriter = <span class="keyword">new</span> JsonTextWriter(textWriter)</span><br><span class="line">        &#123;</span><br><span class="line">            Formatting = Formatting.Indented,</span><br><span class="line">            Indentation = <span class="number">4</span>,</span><br><span class="line">            IndentChar = <span class="string">&#x27; &#x27;</span></span><br><span class="line">        &#125;;</span><br><span class="line">        serializer.Serialize(jsonWriter, obj);</span><br><span class="line">        <span class="keyword">return</span> textWriter.ToString();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> str;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>动态忽略某些属性不进行序列化（比如Vector3中的magnitude）</p>
+<p>1.定义类</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">JsonSettings</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="title">JsonSettings</span>()</span></span><br><span class="line">    &#123;</span><br><span class="line">        IgnoreSerializerProperty = <span class="keyword">new</span> JsonSerializerSettings</span><br><span class="line">        &#123;</span><br><span class="line">            ContractResolver = <span class="keyword">new</span> IgnorePropertyContractResolver(<span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt; &#123; <span class="string">&quot;gamma&quot;</span>, <span class="string">&quot;linear&quot;</span>, <span class="string">&quot;grayscale&quot;</span>,<span class="string">&quot;maxColorComponent&quot;</span>,</span><br><span class="line">            <span class="string">&quot;magnitude&quot;</span>, <span class="string">&quot;sqrMagnitude&quot;</span> &#125;),</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> JsonSerializerSettings IgnoreSerializerProperty &#123; <span class="keyword">get</span>; <span class="keyword">set</span>; &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">IgnorePropertyContractResolver</span> : <span class="title">DefaultContractResolver</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">readonly</span> List&lt;<span class="built_in">string</span>&gt; ignoreProperty;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="title">IgnorePropertyContractResolver</span>(<span class="params">List&lt;<span class="built_in">string</span>&gt; ignoreProperty</span>)</span></span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">this</span>.ignoreProperty = ignoreProperty;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="function"><span class="keyword">protected</span> <span class="keyword">override</span> IList&lt;JsonProperty&gt; <span class="title">CreateProperties</span>(<span class="params">Type type, MemberSerialization memberSerialization</span>)</span></span><br><span class="line">        &#123;</span><br><span class="line">            IList&lt;JsonProperty&gt; propertyList = <span class="keyword">base</span>.CreateProperties(type, memberSerialization);</span><br><span class="line">            propertyList = propertyList.Where(p =&gt; ignoreProperty.FirstOrDefault(o =&gt; o == p.PropertyName) == <span class="literal">null</span>).ToList();</span><br><span class="line">            <span class="keyword">return</span> propertyList;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>3.使用自定义setting</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">JsonConvert.SerializeObject(xxx, JsonSettings.IgnoreSerializerProperty)</span><br></pre></td></tr></table></figure>
+
+<p>日期类型转成yyyy-MM-dd 或者yyyy-MM-dd HH:mm:ss格式</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">ChinaDateTimeConverter</span> : <span class="title">DateTimeConverterBase</span></span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">static</span> IsoDateTimeConverter dtConverter = <span class="keyword">new</span> IsoDateTimeConverter &#123; DateTimeFormat = <span class="string">&quot;yyyy-MM-dd&quot;</span> &#125;;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="built_in">object</span> <span class="title">ReadJson</span>(<span class="params">JsonReader reader, Type objectType, <span class="built_in">object</span> existingValue, JsonSerializer serializer</span>)</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">return</span> dtConverter.ReadJson(reader, objectType, existingValue, serializer);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">override</span> <span class="keyword">void</span> <span class="title">WriteJson</span>(<span class="params">JsonWriter writer, <span class="built_in">object</span> <span class="keyword">value</span>, JsonSerializer serializer</span>)</span></span><br><span class="line">	&#123;</span><br><span class="line">		dtConverter.WriteJson(writer, <span class="keyword">value</span>, serializer);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="LitJson"><a href="#LitJson" class="headerlink" title="LitJson"></a>LitJson</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">Entity[] arr = JsonMapper.ToObject&lt;Entity[]&gt;(json);</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> json = JsonMapper.ToJson(lstEntity);</span><br><span class="line"></span><br><span class="line">JsonData data = <span class="keyword">new</span> JsonData();</span><br><span class="line"></span><br><span class="line">data[<span class="string">&quot;name&quot;</span>] = <span class="string">&quot;peiandsky&quot;</span>;</span><br><span class="line"></span><br><span class="line">data[<span class="string">&quot;info&quot;</span>] = <span class="keyword">new</span> JsonData();</span><br><span class="line"></span><br><span class="line">data[<span class="string">&quot;info&quot;</span>][<span class="string">&quot;sex&quot;</span>] = <span class="string">&quot;male&quot;</span>;</span><br><span class="line"></span><br><span class="line">data[<span class="string">&quot;info&quot;</span>][<span class="string">&quot;age&quot;</span>] = <span class="number">28</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">string</span> json = data.ToJson();</span><br><span class="line"></span><br><span class="line">SimpleJson</span><br></pre></td></tr></table></figure>
+
+<h2 id="SimpleJson"><a href="#SimpleJson" class="headerlink" title="SimpleJson"></a>SimpleJson</h2>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Temp Unity Scripts</title>
+    <url>/posts/afa13234/</url>
+    <content><![CDATA[<h3 id="GUI-Script"><a href="#GUI-Script" class="headerlink" title="GUI Script"></a>GUI Script</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isActiveGUIUI = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isActiveGUIUI2 = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">private</span> Rect _winRect = <span class="keyword">new</span> Rect(<span class="number">150</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(<span class="number">100</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>),<span class="string">&quot;是否开启测试弹窗&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        isActiveGUIUI = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width<span class="number">-100</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>),<span class="string">&quot;我是测试按钮&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        isActiveGUIUI2 = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (isActiveGUIUI)</span><br><span class="line">    &#123;</span><br><span class="line">        _winRect = GUILayout.Window(<span class="number">0</span>, <span class="keyword">new</span> Rect(<span class="number">150</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>), OpenLog, <span class="string">&quot;我是测试&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isActiveGUIUI2)</span><br><span class="line">    &#123;</span><br><span class="line">        _winRect = GUILayout.Window(<span class="number">1</span>, <span class="keyword">new</span> Rect(Screen.width<span class="number">-300</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>), OpenLog, <span class="string">&quot;我是测试2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OpenLog</span>(<span class="params"><span class="built_in">int</span> winId</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (winId == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;我是打印按钮&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            Log.Warn(<span class="string">&quot;我是测试,我是测试我是测试我是测试我是测试&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;关闭窗口&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            isActiveGUIUI = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Resolution and Presentation</title>
+    <url>/posts/b4834b29/</url>
+    <content><![CDATA[<h1 id="分变率设置区域（Resolution-Section）"><a href="#分变率设置区域（Resolution-Section）" class="headerlink" title="分变率设置区域（Resolution Section）"></a>分变率设置区域（Resolution Section）</h1><ol>
+<li>Fullscreen Mode</li>
+<li>Default Is Native Resolution</li>
+<li>Mac Retina Support</li>
+<li>Run in Background</li>
+</ol>
+<h2 id="Fullscreen-Mode"><a href="#Fullscreen-Mode" class="headerlink" title="Fullscreen Mode"></a>Fullscreen Mode</h2><h3 id="Fullscreen-Window"><a href="#Fullscreen-Window" class="headerlink" title="Fullscreen Window"></a>Fullscreen Window</h3><p>Fullscreen Window是将发布的APP自动全屏到目标机器（运行APP的机器）的分辨率，注意，<strong>这里仅仅是将APP自动全屏</strong>，并不一定会APP渲染的内容自动全屏，因为还有黑边机制，下面会讲到。APP中所渲染的场景的分辨率则是通过代码或者是用户启动的时候所选择的分变率决定的，因为此分辨率不一定会占满屏幕，Unity则会自动放大到显示器的分辨率。但是Unity为了保证场景不被拉伸变形，会自动在APP场景的分辨率（宽高比）的基础上添加黑边，以保证适配目标机器的分辨率。</p>
+<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>加入选择场景的渲染场景分辨率为800X600（aspect ratio 1.333），目标机器的分变率为 1920X1080（aspect ratio 1.777），运行之后发现APP是全屏的，但是两侧有相应的黑边，这就是上面所说的黑边机制（letterboxing）。在这里补充一点，常见的屏幕分辨率的宽高比（aspect ratio）有1.25、1.333、1.5、1.6、1.6666、1.7777（常说的16：9）几种，目前最后一种最为流行</p>
+<h3 id="Exclusive-Fullscreen"><a href="#Exclusive-Fullscreen" class="headerlink" title="Exclusive Fullscreen"></a>Exclusive Fullscreen</h3><p>Exclusive Fullscreen是只在Windows平台上起作用的模式，这种模式也是在自动将APP自动全屏到目标机器屏幕，但是与上述的Fullscreen Window不同，这种模式会改变目标屏幕的分辨率，并且不会有黑边机制，场景出现拉伸情况。</p>
+<p><strong>此选项仅在 Windows 上受支持；在其他平台上，设置将回退到 _<strong><strong>Fullscreen Window</strong></strong>_。</strong></p>
+<h4 id="举个例子-1"><a href="#举个例子-1" class="headerlink" title="举个例子"></a>举个例子</h4><p>当我们将APP的分辨率设置为1280X960（1.333），运行后没有黑边，场景则被拉伸，对应的屏幕分辨率。这种模式下不容易被截图，读者可以亲自动手试一试。</p>
+<h3 id="Maximized-Window这种模式只能在MAC上被支持，Windows系统则不支持。"><a href="#Maximized-Window这种模式只能在MAC上被支持，Windows系统则不支持。" class="headerlink" title="Maximized Window这种模式只能在MAC上被支持，Windows系统则不支持。"></a>Maximized Window这种模式只能在MAC上被支持，Windows系统则不支持。</h3><h3 id="Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。"><a href="#Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。" class="headerlink" title="Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。"></a>Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。</h3><h3 id="Default-Is-Native-Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。"><a href="#Default-Is-Native-Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。" class="headerlink" title="Default Is Native Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。"></a>Default Is Native Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。</h3><h3 id="Force-single-instance是保证APP只被打开一次，不能同时打开多个"><a href="#Force-single-instance是保证APP只被打开一次，不能同时打开多个" class="headerlink" title="Force single instance是保证APP只被打开一次，不能同时打开多个"></a>Force single instance是保证APP只被打开一次，不能同时打开多个</h3><p>Unity之Application.runInBackground &#x3D; true</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">默认是False，设置Application.runInBackground = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">则<span class="function"><span class="keyword">void</span> <span class="title">OnApplicationPause</span>(<span class="params"><span class="built_in">bool</span> pause</span>)不再起作用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Standalone-Player-Options-部分"><a href="#Standalone-Player-Options-部分" class="headerlink" title="Standalone Player Options 部分"></a>Standalone Player Options 部分</h2><h3 id="Capture-Single-Screen"><a href="#Capture-Single-Screen" class="headerlink" title="Capture Single Screen"></a><strong>Capture Single Screen</strong></h3><p>启用此选项可确保全屏模式 (Fullscreen Mode) 下的独立平台游戏不会使多显示屏设置中的辅助显示屏变暗。Mac OS X 上不支持该功能。</p>
+<h3 id="Use-Player-Log"><a href="#Use-Player-Log" class="headerlink" title="Use Player Log"></a><strong>Use Player Log</strong></h3><p>启用此选项可向日志文件写入调试信息。默认已启用。 <strong>警告：</strong>如果计划将应用程序提交到 Mac App Store，请禁用此选项。有关更多信息，请参阅<a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#AppStore">发布到 Mac App Store</a>。</p>
+<h3 id="Resizable-Window"><a href="#Resizable-Window" class="headerlink" title="Resizable Window"></a><strong>Resizable Window</strong></h3><p>启用此选项可允许用户调整独立平台播放器窗口的大小。<br><strong>注意：</strong>如果禁用此选项，您的应用程序无法将 <a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_。</p>
+<h3 id="Visible-in-Background"><a href="#Visible-in-Background" class="headerlink" title="Visible in Background"></a>Visible in Background</h3><p>如果已将 <a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_，启用此选项可在背景中显示应用程序（在 Windows 中）。</p>
+<h3 id="Allow-Fullscreen-Switch"><a href="#Allow-Fullscreen-Switch" class="headerlink" title="Allow Fullscreen Switch"></a><strong>Allow Fullscreen Switch</strong></h3><p>启用此选项可允许通过默认操作系统全屏按键在全屏模式和窗口模式之间切换。</p>
+<h3 id="Force-Single-Instance"><a href="#Force-Single-Instance" class="headerlink" title="Force Single Instance"></a><strong>Force Single Instance</strong></h3><p>启用此选项可将独立平台播放器限制为单个并发运行实例。</p>
+<h3 id="Supported-Aspect-Ratios"><a href="#Supported-Aspect-Ratios" class="headerlink" title="Supported Aspect Ratios"></a>Supported Aspect Ratios</h3><p>启用希望游戏启动时出现在分辨率对话框中的每个宽高比（只要用户的显示屏支持这些宽高比设置）。</p>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>EXE App 文件说明</title>
+    <url>/posts/5074e280/</url>
+    <content><![CDATA[<h1 id="Exe-导出包相关内容"><a href="#Exe-导出包相关内容" class="headerlink" title="Exe 导出包相关内容"></a>Exe 导出包相关内容</h1><h2 id="EXE-App-文件说明"><a href="#EXE-App-文件说明" class="headerlink" title="EXE App 文件说明"></a>EXE App 文件说明</h2><ol>
+<li>xxx_BackUpThisFolder_ButDontShipItWithYourGame &#x2F;&#x2F;用来帮助查看调试当前打包的信息 XX_Data &#x2F;&#x2F;文件夹里面包含 unity 的一些默认资源和当前工程的一些必须资源</li>
+<li>MonoBleedingEdge &#x2F;&#x2F;文件夹包含运行应用程序所需的 C# 和 MonoDevelop 库,UnityPlayer.dll 包含引擎的核心，脚本库位于 MonoBleedingEdge 中。虽然运行游戏&#x2F;应用程序需要其部分内容，但我们能够删除其中的“etc”文件夹，只保留 EmbedRuntime 文件夹。</li>
+<li>UnityCrashHandler 64. Exe &#x2F;&#x2F;是 Unity 的发布之后的崩溃处理程序，当你的程序崩溃的时候他会向 Unity 发送崩溃的日志，当然你是可以把他删除掉的</li>
+<li>UnityPlayer.dll &#x2F;&#x2F;unity 的库文件，很重要不可删除</li>
+</ol>
+<h2 id="Unity-Exe-文件作用"><a href="#Unity-Exe-文件作用" class="headerlink" title="Unity Exe 文件作用"></a>Unity Exe 文件作用</h2><ol>
+<li>一个后缀为  BurstDebugInformation_DoNotShip 的文件夹，早期 unity 打包没有这个玩意，这个文件夹可以忽略和删除没有实际意义，内部是一个 txt 文本，主要是用来帮助查看调试当前打包的信息</li>
+<li>XX_Data 文件夹里面包含 unity 的一些默认资源和当前工程的一些必须资源</li>
+<li>MonoBleedingEdge 文件夹包含运行应用程序所需的 C# 和 MonoDevelop 库。UnityPlayer.dll 包含引擎的核心，脚本库位于 MonoBleedingEdge 中。虽然运行游戏&#x2F;应用程序需要其部分内容，但我们能够删除其中的“etc”文件夹，只保留 EmbedRuntime 文件夹。</li>
+<li>我们打包出来的可执行文件 exe，启动项目双击这个就行</li>
+<li>UnityCrashHandler64.exe  它是 Unity 的发布之后的崩溃处理程序，当你的程序崩溃的时候他会向 Unity 发送崩溃的日志，当然你是可以把他删除掉的，</li>
+<li>UnityPlayer.dll unity 的库文件，很重要不可删除</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IOS 平台相关内容</title>
+    <url>/posts/db41d8/</url>
+    <content><![CDATA[<h1 id="IOS-平台相关内容"><a href="#IOS-平台相关内容" class="headerlink" title="IOS 平台相关内容"></a>IOS 平台相关内容</h1><h1 id="IOS-Build-Config"><a href="#IOS-Build-Config" class="headerlink" title="IOS Build Config"></a>IOS Build Config</h1><h2 id="FrameworkId"><a href="#FrameworkId" class="headerlink" title="FrameworkId"></a>FrameworkId</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 添加系统库  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;pbxProject&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;mFrameworkGuid&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">SystemFrameworkAdd</span>(<span class="params">PBXProject pbxProject, <span class="built_in">string</span> mFrameworkGuid</span>)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">string</span>[] frameworksToAdd =</span><br><span class="line">    &#123;        <span class="comment">//压缩库  </span></span><br><span class="line">        <span class="string">&quot;libz.dylib&quot;</span>,  </span><br><span class="line">        <span class="string">&quot;libsqlite3.tbd&quot;</span>,        <span class="comment">//IAD是苹果推出的广告平台  </span></span><br><span class="line">        <span class="string">&quot;iAd.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//获取设备唯一的一个广告标识符  </span></span><br><span class="line">        <span class="string">&quot;AdSupport.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//输出手机的运营商信息  </span></span><br><span class="line">        <span class="string">&quot;CoreTelephony.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//数字商品或服务  </span></span><br><span class="line">        <span class="string">&quot;StoreKit.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//认证服务  </span></span><br><span class="line">        <span class="string">&quot;AuthenticationServices.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//请求用户授权，获取对可用于跟踪用户或设备的应用程序相关数据的访问权限  </span></span><br><span class="line">        <span class="string">&quot;AppTrackingTransparency.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//账户管理框架  </span></span><br><span class="line">        <span class="string">&quot;Accounts.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//社交框架为中国用户提供统一的API，用于与社交网络（包括Twitter 和Facebook）以及新浪微博交互  </span></span><br><span class="line">        <span class="string">&quot;Social.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//进行大规模的数学计算和图像计算，优化为高性能和低能耗  </span></span><br><span class="line">        <span class="string">&quot;Accelerate.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//框架用于保证应用程序所管理之数据的安全  </span></span><br><span class="line">        <span class="string">&quot;Security.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//一套基于 C 的API 框架，使用了Quartz 作为绘图引擎，可用于一切绘图操作  </span></span><br><span class="line">        <span class="string">&quot;CoreGraphics.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//读取异常发生的系统信息  </span></span><br><span class="line">        <span class="string">&quot;SystemConfiguration.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//WX  </span></span><br><span class="line">        <span class="string">&quot;WebKit.framework&quot;</span>,  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">foreach</span> (<span class="keyword">var</span> key <span class="keyword">in</span> frameworksToAdd)</span><br><span class="line">    &#123;</span><br><span class="line">	    <span class="comment">//如果框架是可选框架（即弱关联框架），则此参数为 true，如果框架是必需框架，则为 false。  </span></span><br><span class="line">        pbxProject.AddFrameworkToProject(mFrameworkGuid, key, <span class="literal">true</span>);  </span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="系统设定"><a href="#系统设定" class="headerlink" title="系统设定"></a>系统设定</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用存储结构: com.yuqu.xfish. //添加keychain </span></span><br><span class="line">ProjectCapabilityManager projectCapabilityManager = <span class="keyword">new</span> ProjectCapabilityManager(projectPath, <span class="string">&quot;U3DFishing.entitlements&quot;</span>, <span class="string">&quot;Unity-iPhone&quot;</span>);  </span><br><span class="line">projectCapabilityManager.AddSignInWithApple();  </span><br><span class="line">projectCapabilityManager.AddKeychainSharing(<span class="keyword">new</span>[]  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="string">&quot;$(AppIdentifierPrefix)&quot;</span> + Application.identifier&#125;);  </span><br><span class="line">projectCapabilityManager.AddPushNotifications(<span class="literal">false</span>);  </span><br><span class="line">projectCapabilityManager.AddAssociatedDomains(<span class="keyword">new</span>[]  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="string">&quot;applinks:wx.ifishgames.cn&quot;</span>&#125;);  </span><br><span class="line">projectCapabilityManager.AddBackgroundModes(BackgroundModesOptions.None);  </span><br><span class="line">projectCapabilityManager.WriteToFile();</span><br></pre></td></tr></table></figure>
+
+<h2 id="Plist-修改"><a href="#Plist-修改" class="headerlink" title="Plist 修改"></a>Plist 修改</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 修改pList  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">PlistModify</span>(<span class="params"><span class="built_in">string</span> plistPath</span>)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">var</span> plist = <span class="keyword">new</span> PlistDocument();</span><br><span class="line">    plist.ReadFromFile(plistPath);</span><br><span class="line">    PlistElementArray urlArray = <span class="literal">null</span>;  </span><br><span class="line">    <span class="comment">//Add BackgroundModes  </span></span><br><span class="line">    <span class="keyword">if</span> (!plist.root.values.ContainsKey(<span class="string">&quot;UIBackgroundModes&quot;</span>))  </span><br><span class="line">        urlArray = plist.root.CreateArray(<span class="string">&quot;UIBackgroundModes&quot;</span>);    </span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">	    urlArray = plist.root.values[<span class="string">&quot;UIBackgroundModes&quot;</span>].AsArray();</span><br><span class="line">	urlArray.values.Clear();   </span><br><span class="line">    <span class="comment">//选择语言（字符串）  </span></span><br><span class="line">    plist.root.SetString(<span class="string">&quot;CFBundleDevelopmentRegion&quot;</span>, <span class="string">&quot;en&quot;</span>);  </span><br><span class="line">    plist.root.SetString(<span class="string">&quot;NSUserTrackingUsageDescription&quot;</span>, <span class="string">&quot;是否允许我们的APP使用您的IDFA信息，以此来优化您的使用体验，定向提供服务&quot;</span>);  </span><br><span class="line">    plist.root.SetBoolean(<span class="string">&quot;manageAppVersionAndBuildNumber&quot;</span>, <span class="literal">false</span>); <span class="comment">//苹果默认会把其他library改掉，加这个不让它改  </span></span><br><span class="line">    plist.root.SetBoolean(<span class="string">&quot;ITSAppUsesNonExemptEncryption&quot;</span>, <span class="literal">false</span>); <span class="comment">//苹果出口合格证明信息   </span></span><br><span class="line">	<span class="comment">//fb  </span></span><br><span class="line">    plist.root.SetString(<span class="string">&quot;FacebookAppID&quot;</span>, <span class="string">&quot;730836728394597&quot;</span>);  </span><br><span class="line">    plist.root.SetString(<span class="string">&quot;FacebookClientToken&quot;</span>, <span class="string">&quot;8ee410aa04968c16d0f19df37542dbd6&quot;</span>);</span><br><span class="line">    plist.root.SetString(<span class="string">&quot;FacebookDisplayName&quot;</span>, <span class="string">&quot;捕魚新紀元&quot;</span>);  </span><br><span class="line">    plist.root.SetBoolean(<span class="string">&quot;FacebookAutoLogAppEventsEnabled&quot;</span>, <span class="literal">true</span>); <span class="comment">//FB自动记录事件功能  </span></span><br><span class="line">    plist.root.SetBoolean(<span class="string">&quot;FacebookAdvertiserIDCollectionEnabled&quot;</span>, <span class="literal">true</span>); <span class="comment">//FB广告主编号收集功能  </span></span><br><span class="line">    <span class="comment">//设置LSApplicationQueriesSchemes（数组）  </span></span><br><span class="line">    PlistElementArray loginChannelsArr = plist.root.CreateArray(<span class="string">&quot;LSApplicationQueriesSchemes&quot;</span>);  </span><br><span class="line">    <span class="built_in">string</span>[] applicationQueriesSchemes = <span class="keyword">new</span>[]</span><br><span class="line">    &#123;</span><br><span class="line">	    <span class="comment">//wx  </span></span><br><span class="line">        <span class="string">&quot;weixin&quot;</span>, <span class="string">&quot;weixinULAPI&quot;</span>,<span class="string">&quot;weixinURLParamsAPI&quot;</span>,</span><br><span class="line">        <span class="comment">//qq  </span></span><br><span class="line">        <span class="string">&quot;time&quot;</span>,<span class="string">&quot;mqq&quot;</span>,<span class="string">&quot;mqqapi&quot;</span>,<span class="string">&quot;mqqbrowser&quot;</span>,<span class="string">&quot;mttbrowser&quot;</span>,<span class="string">&quot;mqqOpensdkSSoLogin&quot;</span>,<span class="string">&quot;mqqopensdkapiV2&quot;</span>,<span class="string">&quot;mqqopensdkapiV4&quot;</span>,</span><br><span class="line">        <span class="string">&quot;mqzone&quot;</span>,<span class="string">&quot;mqzoneopensdk&quot;</span>,<span class="string">&quot;mqzoneopensdkapi&quot;</span>,<span class="string">&quot;mqzoneopensdkapi19&quot;</span>,<span class="string">&quot;mqzoneopensdkapiV2&quot;</span>,<span class="string">&quot;mqqapiwallet&quot;</span>,</span><br><span class="line">        <span class="string">&quot;mqqopensdkfriend&quot;</span>,<span class="string">&quot;mqqopensdkavatar&quot;</span>,<span class="string">&quot;mqqopensdkminiapp&quot;</span>,<span class="string">&quot;mqqopensdkdataline&quot;</span>,<span class="string">&quot;mqqgamebindinggroup&quot;</span>,</span><br><span class="line">        <span class="string">&quot;mqqopensdkgrouptribeshare&quot;</span>,<span class="string">&quot;tencentapi.qq.reqContent&quot;</span>,<span class="string">&quot;tencentapi.qzone.reqContent&quot;</span>,<span class="string">&quot;mqqthirdappgroup&quot;</span>,</span><br><span class="line">        <span class="string">&quot;mqqopensdklaunchminiapp&quot;</span>,<span class="string">&quot;mqqopensdkproxylogin&quot;</span>,<span class="string">&quot;mqqopensdknopasteboard&quot;</span>,<span class="string">&quot;mqqopensdknopasteboardios16&quot;</span>,</span><br><span class="line">        <span class="string">&quot;mqqopensdkcheckauth&quot;</span>,<span class="string">&quot;mqqguild&quot;</span>,</span><br><span class="line">        <span class="comment">//fb  </span></span><br><span class="line">        <span class="string">&quot;fbapi&quot;</span>,<span class="string">&quot;fbapi20130214&quot;</span>,<span class="string">&quot;fbapi20130410&quot;</span>,<span class="string">&quot;fbapi20130702&quot;</span>,<span class="string">&quot;fbapi20131010&quot;</span>,<span class="string">&quot;fbapi20131219&quot;</span>,</span><br><span class="line">        <span class="string">&quot;fbapi20140410&quot;</span>,<span class="string">&quot;fbapi20140116&quot;</span>,<span class="string">&quot;fbapi20150313&quot;</span>,<span class="string">&quot;fbapi20150629&quot;</span>,<span class="string">&quot;fbapi20160328&quot;</span>,</span><br><span class="line">        <span class="string">&quot;fbauth&quot;</span>,<span class="string">&quot;fbauth2&quot;</span>,<span class="string">&quot;fb-messenger-share-api&quot;</span></span><br><span class="line">    &#125;;    </span><br><span class="line">    <span class="keyword">foreach</span> (<span class="built_in">string</span> scheme <span class="keyword">in</span> applicationQueriesSchemes)    </span><br><span class="line">    &#123;</span><br><span class="line">	    loginChannelsArr.AddString(scheme);    </span><br><span class="line">	&#125;  </span><br><span class="line">    PlistElementArray urlTypes = plist.root.CreateArray(<span class="string">&quot;CFBundleURLTypes&quot;</span>);    <span class="comment">//wx  </span></span><br><span class="line">    PlistElementDict itemDict = urlTypes.AddDict();  </span><br><span class="line">    itemDict.SetString(<span class="string">&quot;CFBundleTypeRole&quot;</span>, <span class="string">&quot;Editor&quot;</span>);</span><br><span class="line">    itemDict.SetString(<span class="string">&quot;CFBundleURLName&quot;</span>, <span class="string">&quot;wexin&quot;</span>);</span><br><span class="line">    PlistElementArray wxSchemesArray = itemDict.CreateArray(<span class="string">&quot;CFBundleURLSchemes&quot;</span>);</span><br><span class="line">    wxSchemesArray.AddString(<span class="string">&quot;wxea4955cb701dc6f4&quot;</span>);    <span class="comment">//qq  </span></span><br><span class="line">    itemDict = urlTypes.AddDict();</span><br><span class="line">    itemDict.SetString(<span class="string">&quot;CFBundleTypeRole&quot;</span>, <span class="string">&quot;Editor&quot;</span>);</span><br><span class="line">    itemDict.SetString(<span class="string">&quot;CFBundleURLName&quot;</span>, <span class="string">&quot;tencentopenapi&quot;</span>);</span><br><span class="line">    PlistElementArray qqSchemesArray = itemDict.CreateArray(<span class="string">&quot;CFBundleURLSchemes&quot;</span>);</span><br><span class="line">	qqSchemesArray.AddString(<span class="string">&quot;tencent101963101&quot;</span>);<span class="comment">//fb  </span></span><br><span class="line">    itemDict = urlTypes.AddDict();</span><br><span class="line">    itemDict.SetString(<span class="string">&quot;CFBundleTypeRole&quot;</span>, <span class="string">&quot;Editor&quot;</span>);</span><br><span class="line">    itemDict.SetString(<span class="string">&quot;CFBundleURLName&quot;</span>, <span class="string">&quot;facebookapi&quot;</span>);</span><br><span class="line">    PlistElementArray fbSchemesArray = itemDict.CreateArray(<span class="string">&quot;CFBundleURLSchemes&quot;</span>);</span><br><span class="line">    fbSchemesArray.AddString(<span class="string">&quot;fb730836728394597&quot;</span>);  </span><br><span class="line">    File.WriteAllText(plistPath, plist.WriteToString());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Unity-插入代码"><a href="#Unity-插入代码" class="headerlink" title="Unity 插入代码"></a>Unity 插入代码</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> codeBasePath = Path.GetFullPath(path);  </span><br><span class="line">UnityAppControllerCodesAdd(codeBasePath);</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">UnityAppControllerCodesAdd</span>(<span class="params"><span class="built_in">string</span> codeBasePath</span>)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">var</span> orientationSupport = Path.GetFullPath(codeBasePath + <span class="string">&quot;/MainApp/main.mm&quot;</span>);</span><br><span class="line">	<span class="keyword">if</span> (File.Exists(orientationSupport))</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">var</span> allTxt = File.ReadAllLines(orientationSupport);</span><br><span class="line">		allTxt[<span class="number">0</span>] = <span class="string">@&quot;#include &quot;&quot;../UnityFramework/UnityFramework.h&quot;&quot;&quot;</span>;</span><br><span class="line">		File.WriteAllLines(orientationSupport, allTxt);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		Log.Warn(<span class="string">$&quot;[打包App]--&gt;IOS: OnPostprocessBuild file <span class="subst">&#123;orientationSupport&#125;</span> not found!&quot;</span>);  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="OnPostprocessBuild"><a href="#OnPostprocessBuild" class="headerlink" title="OnPostprocessBuild"></a>OnPostprocessBuild</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">OnPostprocessBuild</span>(<span class="params">BuildTarget buildTarget, <span class="built_in">string</span> path</span>)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">if</span> (buildTarget != BuildTarget.iOS)&#123; <span class="keyword">return</span>;&#125;  </span><br><span class="line">    Log.Info(<span class="string">$&quot;[打包] Target: <span class="subst">&#123;buildTarget&#125;</span>---&gt; Path: <span class="subst">&#123;path&#125;</span>&quot;</span>);  </span><br><span class="line">    <span class="keyword">var</span> projPath = Path.Combine(path, <span class="string">&quot;Unity-iPhone.xcodeproj/project.pbxproj&quot;</span>);    <span class="keyword">var</span> pbxProject = <span class="keyword">new</span> PBXProject();    pbxProject.ReadFromString(File.ReadAllText(projPath));    <span class="keyword">var</span> targetGuid = pbxProject.GetUnityFrameworkTargetGuid();    <span class="keyword">var</span> xcodeTarget = pbxProject.GetUnityMainTargetGuid();    <span class="keyword">var</span> projectGuid = pbxProject.ProjectGuid();    <span class="comment">//添加系统库  </span></span><br><span class="line">    SystemFrameworkAdd(pbxProject, targetGuid);  </span><br><span class="line">    <span class="comment">//在Other Linker Flags 添加 -ObjC    //ios 12 闪退 -ld_classic    pbxProject.AddBuildProperty(targetGuid, &quot;OTHER_LDFLAGS&quot;, &quot;-ld_classic&quot;);  </span></span><br><span class="line">    <span class="comment">//设置UnityFramework  </span></span><br><span class="line">    pbxProject.SetBuildProperty(targetGuid, <span class="string">&quot;ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES&quot;</span>, <span class="string">&quot;NO&quot;</span>);  </span><br><span class="line">    pbxProject.SetBuildProperty(xcodeTarget, <span class="string">&quot;ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES&quot;</span>, <span class="string">&quot;YES&quot;</span>);    pbxProject.SetBuildProperty(projectGuid, <span class="string">&quot;ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES&quot;</span>, <span class="string">&quot;NO&quot;</span>);  </span><br><span class="line">    <span class="comment">//pbxProject.AddFileToBuild(frameworkId, pbxProject.FindFileGuidByProjectPath(&quot;Data&quot;));  </span></span><br><span class="line">    pbxProject.WriteToFile(projPath);  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//插入代码  </span></span><br><span class="line">    <span class="keyword">var</span> codeBasePath = Path.GetFullPath(path);  </span><br><span class="line">    UnityAppControllerCodesAdd(codeBasePath);  </span><br><span class="line">    ProjectCapabilityModify(projPath);    <span class="comment">//2、修改Info.plist文件  </span></span><br><span class="line">    <span class="keyword">var</span> plistPath = Path.Combine(path, <span class="string">&quot;Info.plist&quot;</span>);  </span><br><span class="line">    PlistModify(plistPath);    <span class="comment">// 添加文件  </span></span><br><span class="line">    FilesAdd(pbxProject, xcodeTarget, path, projPath);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity Api</title>
+    <url>/posts/abc98e82/</url>
+    <content><![CDATA[<p>![[Pasted image 20221208104558.png]]</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取优化过的图片大小</span></span><br><span class="line">EditorUtilly.FormatBytes(TextureUitl.GetStrorageMemorySizeLong(t));</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AVProVide 插件相关使用</title>
+    <url>/posts/ec26bcba/</url>
+    <content><![CDATA[<h1 id="win7-系统-AVProVide-插件无法播放问题"><a href="#win7-系统-AVProVide-插件无法播放问题" class="headerlink" title="win7 系统 AVProVide 插件无法播放问题"></a>win7 系统 AVProVide 插件无法播放问题</h1><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">---WinRT、Media Foundation 和 DirectShow API。</span></span><br><span class="line"><span class="comment">---Windows 10 及更高版本支持 WinRT，Windows 8 及更高版本支持 Media Foundation，Windows 7 支持 DirectShow。</span></span><br><span class="line"><span class="keyword">if</span> framework.device.windows() <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">local</span> winVersion = framework.device.getWinVersion()</span><br><span class="line">    Log.Info(<span class="string">&quot;系统版本&#123;0&#125;&quot;</span>, winVersion)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">string</span>.<span class="built_in">find</span>(winVersion,<span class="string">&quot;Windows 10&quot;</span>) <span class="keyword">then</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.WinRT</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.MediaFoundation</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    mediaPlayer.PlatformOptionsWindows.audioOutput = CS.RenderHeads.Media.AVProVideo.Windows.AudioOutput.Unity</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity 常用</title>
+    <url>/posts/fec55579/</url>
+    <content><![CDATA[<h1 id="Unity-搜索文件-命令"><a href="#Unity-搜索文件-命令" class="headerlink" title="Unity 搜索文件 命令"></a>Unity 搜索文件 命令</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;t:PlayableAsset&quot; 查询timeLine</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Command</title>
+    <url>/posts/4177d348/</url>
+    <content><![CDATA[<p>ping + ip： 查看某一个 ip 地址是否能够连通，如： ping 164.80.77.163(或者 ping 域名)<br>telnet ip port ： 查看某一个机器上的某一个端口是否可以访问，如：telnet 164.80.77.163 8088</p>
+<h1 id="window"><a href="#window" class="headerlink" title="window"></a>window</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">del</span> /a /f /s /q &quot;*.meta&quot; &quot;*.meta.*&quot;</span><br></pre></td></tr></table></figure>
+
+<p>该指令可删除后缀为 <strong>xxx.meta</strong> <strong>xxx.meta.xxx</strong> 的文件<br>*为通配符<br>&#x2F;a &#x2F;f 是强制删除所有属性的文件<br>&#x2F;q 是无需确认直接删除<br>要是再加上&#x2F;s 开关，就可以删除子文件加中的文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. &quot;dir&quot; : 显示目录中的文件和文件夹</span><br><span class="line">2. &quot;cd&quot; : 更改目录</span><br><span class="line">3. &quot;copy&quot; : 复制文件</span><br><span class="line">4. &quot;xcopy&quot; : 复制文件夹及其内容</span><br><span class="line">5. &quot;del&quot; : 删除文件</span><br><span class="line">6. &quot;rmdir&quot; : 删除文件夹</span><br><span class="line">7. &quot;ren&quot; : 重命名文件或文件夹</span><br><span class="line">8. &quot;netstat&quot; : 显示网络连接状态</span><br><span class="line">9. &quot;ipconfig&quot; : 显示本地计算机的IP地址</span><br><span class="line">10.&quot;ping&quot; : 检测网络连通性</span><br><span class="line">11.&quot;tracert&quot; : 显示数据包从源到目的地经过的路由</span><br><span class="line">12.&quot;nslookup&quot; : 显示域名解析信息</span><br><span class="line">13.&quot;tasklist&quot; : 显示运行中的进程</span><br><span class="line">14.&quot;taskkill&quot; : 结束运行中的进程</span><br><span class="line">15.&quot;net user&quot; : 管理网络账户</span><br><span class="line">16.&quot;net localgroup&quot; : 管理本地组</span><br><span class="line">17.&quot;netstat -ano&quot; : 显示所有连接和监听端口以及它们对应的PID</span><br><span class="line">18.&quot;find&quot; : 在文件中查找文本</span><br><span class="line">19.&quot;for f&quot; : 循环执行命令</span><br><span class="line">20.&quot;date&quot; : 显示或设置系统日期</span><br><span class="line">21.&quot;systeminfo&quot; : 显示系统配置信息</span><br><span class="line">22.&quot;shutdown&quot; : 关闭或重启计算机</span><br><span class="line">23.&quot;cls&quot; : 清除命令行屏幕内容</span><br><span class="line">24.&quot;color&quot; : 更改命令行文本和背景颜色</span><br></pre></td></tr></table></figure>
+
+<h1 id="文件夹命令"><a href="#文件夹命令" class="headerlink" title="文件夹命令"></a>文件夹命令</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">explorer</span><br><span class="line">explorer . //打开当前文件夹</span><br></pre></td></tr></table></figure>
+
+<h1 id="控制面板–-网络和-Internet–-网络连接"><a href="#控制面板–-网络和-Internet–-网络连接" class="headerlink" title="控制面板–&gt;网络和 Internet–&gt;网络连接"></a>控制面板–&gt;网络和 Internet–&gt;网络连接</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">ncpa.cpl</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PowerShell</title>
+    <url>/posts/a2c49dae/</url>
+    <content><![CDATA[<h1 id="PowerShell-相关命令"><a href="#PowerShell-相关命令" class="headerlink" title="PowerShell 相关命令"></a>PowerShell 相关命令</h1><h2 id="安装-pwsh"><a href="#安装-pwsh" class="headerlink" title="安装 pwsh"></a>安装 pwsh</h2><h3 id="升级-PowerShell"><a href="#升级-PowerShell" class="headerlink" title="升级 PowerShell"></a>升级 PowerShell</h3><h4 id="winget-方式"><a href="#winget-方式" class="headerlink" title="winget 方式"></a>winget 方式</h4><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">winget search Microsoft.PowerShell</span><br><span class="line">winget install --id Microsoft.PowerShell --source winget</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123; $(irm https://aka.ms/install-powershell.ps1) &#125; -UseMSI&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看当前-PowerShell-版本"><a href="#查看当前-PowerShell-版本" class="headerlink" title="查看当前 PowerShell 版本"></a>查看当前 PowerShell 版本</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">Get-Host | Select-Object Version</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除匹配后缀的文件"><a href="#删除匹配后缀的文件" class="headerlink" title="删除匹配后缀的文件"></a>删除匹配后缀的文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Remove-Item * -Include *.meta -Recurs</span><br></pre></td></tr></table></figure>
+
+<h2 id="打开当前文件夹"><a href="#打开当前文件夹" class="headerlink" title="打开当前文件夹"></a>打开当前文件夹</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ii .</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scoops</title>
+    <url>/posts/23b7e45f/</url>
+    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser <span class="comment"># Optional: Needed to run a remote script the first time</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iex</span> <span class="string">&quot;&amp; &#123;<span class="variable">$</span>(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Which</title>
+    <url>/posts/f83c1a8b/</url>
+    <content><![CDATA[<h1 id="自建which-命令"><a href="#自建which-命令" class="headerlink" title="自建which 命令"></a>自建which 命令</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">@ <span class="keyword">for</span> <span class="variable">%%e</span> <span class="keyword">in</span> (<span class="variable">%PATHEXT%</span>) <span class="keyword">do</span> @ <span class="keyword">for</span> <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="variable">%1%</span>%e) <span class="keyword">do</span> @ <span class="keyword">if</span> <span class="keyword">NOT</span> &quot;<span class="variable">%%~</span>$<span class="built_in">PATH</span>:i&quot; == &quot;&quot; <span class="built_in">echo</span> <span class="variable">%%~</span>$<span class="built_in">PATH</span>:i</span><br></pre></td></tr></table></figure>
+
+<p>新建 “which.cmd”  放入–&gt; C:\Windows\System32 中即可使用</p>
+<p>内置命令:</p>
+<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">where 命令工具说明可用 where /?  查询用法。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows ---相关进程名和作用</title>
+    <url>/posts/f221fd41/</url>
+    <content><![CDATA[<h1 id="csrss"><a href="#csrss" class="headerlink" title="csrss"></a>csrss</h1><blockquote>
+<p>csrss.exe通常是系统的正常进程，所在的进程文件是csrss或csrss.exe，是微软客户端、服务端运行时子系统，windows的核心进程之一。<br>  管理Windows图形相关任务，对系统的正常运行非常重要。csrss是Client&#x2F;Server Runtime Server Subsystem的简称，即客户&#x2F;服务器运行子系统，用以控制Windows图形相关子系统，必须一直运行。<br>  csrss用于维持Windows的控制，创建或者删除线程和一些16位的虚拟MS-DOS环境。也有可能是W32.Netsky.AB@mm等病毒创建的。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Business Correspondence</title>
+    <url>/posts/3d62c9e7/</url>
+    <content><![CDATA[<p>Dear Mr. Mary Hardy<br>Thank you for your letter of November 10 enquiring about our car model. We are very honored. We are pleased to enclose our latest catalog and price list. All our products are covered by a two-year guarantee. And we offer discounts for large orders. We look forward to receiving your orders.</p>
+<p>Mr. S. Bowen,<br>Justin Box Co.,Ltd.Marketing Manager</p>
+]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Internal Notice</title>
+    <url>/posts/72429f7f/</url>
+    <content><![CDATA[<h1 id="Internal-Notice"><a href="#Internal-Notice" class="headerlink" title="Internal Notice"></a>Internal Notice</h1><p>Internal Notice</p>
+<p>To All Staff,</p>
+<p>We are pleased to inform you that our company will be updating the current telephone system as per our business requirements. We have received three proposals from communication companies regarding the update, and the details can be found in the attached document.</p>
+<p>To ensure the efficient operation of our business, we encourage all staff members to read each proposal carefully and provide their feedback. The deadline for the submission of suggestions is the end of this month, and the company will place the order at the beginning of next month.</p>
+<p>Thank you for your support and cooperation.</p>
+<p>Best regards,</p>
+<p>Ruth Crawford</p>
+<p>Date: September 15, 2011</p>
+]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Sentence OF The Day</title>
+    <url>/posts/752687cf/</url>
+    <content><![CDATA[<h1 id="2023-2-2-21-45"><a href="#2023-2-2-21-45" class="headerlink" title="2023-2-2 21:45"></a>2023-2-2 21:45</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If one day we meet what should I say to you ?</span><br><span class="line">如果有一天我们相遇了我该和你说些什么呢？</span><br><span class="line">Long time no see  or I love you ?</span><br><span class="line">是好久不见，还是我爱你?</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-3-21-58"><a href="#2023-2-3-21-58" class="headerlink" title="2023-2-3 21:58"></a>2023-2-3 21:58</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Take your time and think about it.</span><br><span class="line">慢慢来，好好想一想。</span><br><span class="line">What can make you happy?</span><br><span class="line">什么事情能让你开心</span><br><span class="line">What do you really want to do?</span><br><span class="line">你真正想做什么？</span><br><span class="line">Rather than what makes other people happy .</span><br><span class="line">而不是去想怎么样，取悦别人。</span><br><span class="line">Live in your own way,</span><br><span class="line">以你自己的方式生活。</span><br><span class="line">That&#x27;s the best choice.</span><br><span class="line">才是最好的选择！</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-4-00-22"><a href="#2023-2-4-00-22" class="headerlink" title="2023-2-4 00:22"></a>2023-2-4 00:22</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I can love you for four days.</span><br><span class="line">我可以爱你四天。</span><br><span class="line">Spring,summer,autumn and winter.</span><br><span class="line">春、夏、秋、冬四季</span><br><span class="line">Oh,no! Maybg tree days.</span><br><span class="line">噢，不！也许是三天。</span><br><span class="line">Yesterday，today and tomorrow。</span><br><span class="line">昨天，今天和明天。</span><br><span class="line">How about two day?</span><br><span class="line">要不两天呢？</span><br><span class="line">Day and night.</span><br><span class="line">白天和晚上。</span><br><span class="line">Maybe one day is enough.</span><br><span class="line">也许一天就足够了。</span><br><span class="line">Love you every day.</span><br><span class="line">爱你每一天。</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-5-23-23"><a href="#2023-2-5-23-23" class="headerlink" title="2023-2-5 23:23"></a>2023-2-5 23:23</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hey, my firend.</span><br><span class="line">嘿，我的朋友！</span><br><span class="line">How long does it take to forge someone?</span><br><span class="line">忘记一个人需要多长时间。</span><br><span class="line">If you don&#x27;t care.</span><br><span class="line">如果你不在乎那个人。</span><br><span class="line">It could be one second.</span><br><span class="line">一瞬间就能忘记。</span><br><span class="line">But if you care.</span><br><span class="line">但如果你很在乎。</span><br><span class="line">It might take. Forever!</span><br><span class="line">那也许需要。一辈子！</span><br><span class="line">Give yourself a little time.</span><br><span class="line">给自己一点时间。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Working from Home</title>
+    <url>/posts/3eb0b64d/</url>
+    <content><![CDATA[<h1 id="Working-from-Home"><a href="#Working-from-Home" class="headerlink" title="Working from Home"></a>Working from Home</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I. Advantages of working from home.</span><br><span class="line">(1) Provide more time for productive work</span><br><span class="line">Home office allows people to eliminate or reduce commuting time, will have more time and energy to devote to work. If the home office is properly arranged, it can also reduce the usual distractions in the office, such as loud phone calls from colleagues, ringing phones, unknown odors, and unnecessarily strict policies. By reducing chores and making workers less distracted, home office workers will be able to focus more on what they are doing and get their work done quickly.</span><br><span class="line">(2) Better work-life balance</span><br><span class="line">Research shows that jobs that have a good work-life balance increase employee satisfaction with their jobs. It goes without saying that when you feel better about your job, you will be more motivated to do your job, which is also better for your mental state and physical health.</span><br><span class="line">(3) Save money</span><br><span class="line">Since you don&#x27;t have to leave home, you can save a lot of money. These include spending on commuting, clothing expenses, expensive take-out costs or going out to restaurants, etc.</span><br><span class="line">(4) Higher employee retention</span><br><span class="line">You heard it right, people who work from home are more likely to stay with the company rather than leave, and of course the company can give employees the right to work in the office, giving them more options and more freedom. In this way, working from home increases job and life satisfaction, making employee turnover rates lower, and employers save on the cost of hiring and training new employees when they don&#x27;t leave the company as often.</span><br><span class="line">Second, the disadvantages of working from home.</span><br><span class="line">(1) Delay</span><br><span class="line">One of the main reasons companies allow employees to work from home is to reduce the time they spend on transportation. However, when working from home, you may not schedule your time correctly because of the lack of company management, so that you may overestimate the time you actually have by procrastinating when working from home. So plan your day, do the task at hand, and avoid procrastination.</span><br><span class="line">(2) Burnout</span><br><span class="line">Sometimes we do a lot of work, but when there is a tangle between work responsibilities and household chores with no boundaries, employees have the risk of being more exhausted. This is because you feel overwhelmed by things leading to stress, but still need to sit in front of the computer and work all day. In addition, you may also produce some burnout symptoms including headaches, irritability, increased errors and reduced efficiency.</span><br><span class="line">(3) Collaboration is more difficult</span><br><span class="line">Working from home can be difficult in terms of collaboration, but if you have the tools you need to communicate effectively with your team, this difficulty will be greatly reduced. A few other reasons why working from home makes collaboration more difficult include spotty Internet connections, time zone differences, and technical issues.</span><br><span class="line">Teamwork function</span><br><span class="line">(4) Loneliness</span><br><span class="line">There are times when working side-by-side with colleagues makes work more interesting. One of the main factors contributing to employee engagement and satisfaction is maintaining friendships with colleagues. In fact, one study showed that loneliness affects employee performance and that maintaining positive social communication relationships can alleviate loneliness in the workplace.</span><br><span class="line">There are many drawbacks, though in some industries they can be avoided, so the number of companies using work-at-home has been steadily increasing, especially in industries such as the Internet, digital marketing, and education.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一、居家办公的优势：</span><br><span class="line">（1）为生产工作提供更多时间</span><br><span class="line">居家办公使人可以消除或减少上下班时间，将有更多的时间和精力去投入到工作。如果居家办公安排得当，还可以减少办公室中通常会受到的干扰，例如同事大声打电话、电话响、不明的气味，以及不必要的严格政策。居家办公通过减少琐事来使工作者更少分心，将能够更专注于他们正在做的事情，并且快速完成工作。</span><br><span class="line">（2）工作与生活得到更好地平衡</span><br><span class="line">研究表明，能将工作时间与生活平衡好的工作会提高员工对工作的满意度。不言而喻，当你对工作感觉好一点时，你会更有动力去做你的工作，这也对你的精神状态与身体健康更好。</span><br><span class="line">（3）省钱</span><br><span class="line">由于不必离开家，可以节省许多费用。其中包括用于通勤的花费、服装开支、昂贵的外卖费用或下馆子的花费等。</span><br><span class="line">（4）更高的员工保留率</span><br><span class="line">你没有听错，居家办公的人更有可能留在公司而不是离职，当然公司也可以给予员工办公室工作的权利，让员工获得更多的选择，自由度更高。这样一来，居家上班就提高了工作和生活满意度，使得员工离职率降低，当员工不经常离开公司时，雇主也会节省雇佣和培训新员工的成本。</span><br><span class="line">二、居家办公的缺点：</span><br><span class="line">（1）拖延</span><br><span class="line">公司允许员工在家工作的主要原因之一是减少了他们在交通上的时间。但是，在居家办公时，你可能不会正确地安排时间，因为缺乏公司的管理，这样一来，你在办公时可能会通过拖延来高估你实际拥有的时间。所以计划好你的每一天，做好手头的任务，避免拖延。</span><br><span class="line">（2）倦怠</span><br><span class="line">有时我们做了很多工作，但是当工作责任和家务劳动之间纠缠不清，没有边界时，员工有着更加筋疲力尽的风险。这是因为你觉得事情过于繁杂导致压力过大，却依然需要坐在电脑前工作一整天。除此之外，你还可能产生一些倦怠症状包括头痛、易怒、错误增加和效率降低。</span><br><span class="line">（3）协作难度更大</span><br><span class="line">居家办公在协作方面会很困难，但是如果你拥有与团队进行有效沟通所需的工具，这种困难将大大降低。居家办公使协作更加困难的其他几个原因包括网际网络连接不稳定、时区不同以及技术问题等。</span><br><span class="line">团队协作功能</span><br><span class="line">（4）孤独</span><br><span class="line">有的时候，与同事并肩作战让工作更有趣。促进员工敬业度和满意度的主要因素之一是与同事保持友谊。事实上，一项研究表明，孤独会影响员工的表现，保持积极的社会交流关系可以缓解工作场所的孤独感。</span><br><span class="line">虽然有很多缺点，不过在有些行业，是可以避免这些缺点的，因此使用居家办公的公司数量一直在稳步增加，特别是互联网、数字营销、教育等行业。</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>游戏机制</title>
+    <url>/posts/cbed42b8/</url>
+    <content><![CDATA[<p>“书籍: 游戏设计艺术 2 “圣经””</p>
+<h1 id="游戏机制"><a href="#游戏机制" class="headerlink" title="游戏机制"></a>游戏机制</h1><p>游戏中的过程和规则.机制描述玩家如何才能完成游戏目标,当他们尝试的时候发生什么,游戏机制是游戏真正的核心.剥离美学、技术和故事后,剩下的互动和关系,就是游戏机制</p>
+<h1 id="游戏规则"><a href="#游戏规则" class="headerlink" title="游戏规则"></a>游戏规则</h1><p>更像是印在说明书上让玩家们所了解的指南而游戏机制特别是电子游戏的机制很多时候对于玩家来说是隐藏的</p>
+]]></content>
+      <tags>
+        <tag>Game Mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo Deploy</title>
+    <url>/posts/999af05b/</url>
+    <content><![CDATA[<h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><p><a href="https://hexo.io/zh-cn/docs/">教程链接 “https://hexo.io/zh-cn/docs/"</a></p>
+<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add upstream https://github.com/iissnan/hexo-them-net.git</span><br><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo new page &#x27;分类文件&#x27;</span><br><span class="line">hexo new &#x27;页面&#x27;</span><br><span class="line">hexo generate  生成</span><br><span class="line">hexo deploy  发布</span><br><span class="line">hexo s -p 8080 -l</span><br></pre></td></tr></table></figure>
+
+<h1 id="文章收缩方式"><a href="#文章收缩方式" class="headerlink" title="文章收缩方式"></a>文章收缩方式</h1><ul>
+<li>修改 next 主题 更该 auto_excerpt 修改为 true</li>
+<li>用 md 写的话，在文章里加<span id="more"></span> 会自动截断</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Record</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chrome Record</title>
+    <url>/posts/700fdf6a/</url>
+    <content><![CDATA[<p>![[ZLF6%RW1ZEZ_II]{1NP@~QU.png]]</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>报错的原因是因为是 Google 在 79 版本（2019 年 12 月 20 号左右）的更新中又重新启用了 Renderer Code Integrity Protection（渲染器代码完整性保护），会阻止签名不是谷歌和微软的模块加载。该功能已经在之前一个版本中导致同样的问题，并由 Google 自己禁用了。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li>禁用谷歌 chrome 的这项功能，Win+R 打开运行对话框；输入 regedit 打开注册表导航到：（没有这个文件夹的都新建项就行）HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome</li>
+<li>在右边窗口中，右键单击新建&gt;DWORD(32 位)值，双击创建的新值；</li>
+<li>然后将新值名称改为 RendererCodeIntegrityEnabled 并将值数据输入为 0；</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Chrome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>RedHat shell</title>
+    <url>/posts/b72a2958/</url>
+    <content><![CDATA[<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装英文包</span></span><br><span class="line">dnf install glibc-langpack-en</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Adb Command</title>
+    <url>/posts/f3b5148b/</url>
+    <content><![CDATA[<h1 id="Adb-Command"><a href="#Adb-Command" class="headerlink" title="Adb Command"></a>Adb Command</h1><p>查看所有当前所有进程命令: <code>adb shell ps</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">列名</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">USER</td>
+<td align="left">所属用户</td>
+</tr>
+<tr>
+<td align="left">PID Process ID</td>
+<td align="left">进程 ID</td>
+</tr>
+<tr>
+<td align="left">PPID Process Parent ID</td>
+<td align="left">父进程 ID</td>
+</tr>
+<tr>
+<td align="left">VSIZE Virtual Size</td>
+<td align="left">进程的虚拟内存大小</td>
+</tr>
+<tr>
+<td align="left">RSS Resident Set Size</td>
+<td align="left">实际驻留”在内存中”的内存大小</td>
+</tr>
+<tr>
+<td align="left">WCHAN</td>
+<td align="left">休眠进程在内核中的地址</td>
+</tr>
+<tr>
+<td align="left">NAME</td>
+<td align="left">进程名</td>
+</tr>
+</tbody></table>
+<ul>
+<li>在 Windows 上筛选某个进程：<code>adb shell ps|findstr baidu</code></li>
+<li>在手机上筛选某个进程：<code>adb shell ps baidu 或者 adb shell ps|findstr -i baidu</code></li>
+<li>android 或者 linux 中的 shell 命令是 grep：<code>adb shell ps|grepbaidu</code></li>
+</ul>
+<h1 id="指定设备安装-apk"><a href="#指定设备安装-apk" class="headerlink" title="指定设备安装 apk"></a>指定设备安装 apk</h1><blockquote>
+<p>adb -s 设备 id install app-release.apk</p>
+</blockquote>
+<h1 id="检测端口是否被占用"><a href="#检测端口是否被占用" class="headerlink" title="检测端口是否被占用"></a>检测端口是否被占用</h1><blockquote>
+<p>netstat -a -o -n | find “34999”</p>
+</blockquote>
+<h1 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h1><blockquote>
+<p>taskkill &#x2F;f &#x2F;pid (进程 Id 44468)</p>
+</blockquote>
+<h1 id="调试打开某个应用"><a href="#调试打开某个应用" class="headerlink" title="调试打开某个应用"></a>调试打开某个应用</h1><blockquote>
+<p>adb forward tco:34999 localabstract:Unity-com.xxx.xx</p>
+</blockquote>
+<h1 id="包信息查询"><a href="#包信息查询" class="headerlink" title="包信息查询"></a>包信息查询</h1><blockquote>
+<p>子命令格式：adb shell dumpsys package [-h] [-f] [—checkin] [cmd]…</p>
+</blockquote>
+<h1 id="activity-信息查询"><a href="#activity-信息查询" class="headerlink" title="activity 信息查询"></a>activity 信息查询</h1><blockquote>
+<p>子命令格式：adb shell dumpsys activity [-a] [-c]…</p>
+</blockquote>
+<h1 id="网络信息查询"><a href="#网络信息查询" class="headerlink" title="网络信息查询"></a>网络信息查询</h1><blockquote>
+<p>网络连接 adb shell dumpsys connectivity<br>网络策略 adb shell dumpsys netpolicy<br>网络状态 adb shell dumpsys netstats<br>网络管理 adb shell dumpsys network_management</p>
+</blockquote>
+<h1 id="其他常用服务信息查询"><a href="#其他常用服务信息查询" class="headerlink" title="其他常用服务信息查询"></a>其他常用服务信息查询</h1><blockquote>
+<p>内存 adb shell dumpsys meminfo<br>CPU adb shell dumpsys cpuinfo<br>帧率 adb shell dumpsys gfxinfo<br>显示 adb shell dumpsys display<br>电源 adb shell dumpsys power<br>电池状态 adb shell dumpsys batterystats<br>电池 adb shell dumpsys battery<br>闹钟 adb shell dumpsys alarm<br>位置 adb shell dumpsys location</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Working from Home</title>
+    <url>/posts/3eb0b64d/</url>
+    <content><![CDATA[<h1 id="EmEditor-v22-2-2-便携版本"><a href="#EmEditor-v22-2-2-便携版本" class="headerlink" title="EmEditor v22.2.2 便携版本"></a>EmEditor v22.2.2 便携版本</h1><p><strong>DMAZM-WHY52-AX222-ZQJXN-79JXH</strong></p>
+]]></content>
+      <tags>
+        <tag>Program Software</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Adb Install Progress</title>
+    <url>/posts/bf5f2ea8/</url>
+    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android 内存详解</title>
+    <url>/posts/e230f7b5/</url>
+    <content><![CDATA[<p>![[Pasted image 20230823154158.png]]</p>
+<p>android程序内存被分为2部分：native和dalvik，dalvik就是java堆，普通java对象是在java堆分配，而bitmap是直接在native上分配，对于内存的限制是 native+dalvik 不能超过最大限制。</p>
+<p>android程序内存一般限制在16M，也有24M的。  </p>
+<p>多说明，但是没有解析的太清楚，我这里分析汇总了一下。供大家参数。学习知识，要关注细节，懂与不懂差很多的呦！我说的是薪资：）。</p>
+<p>Native Heap：Native代码分配的内存，虚拟机和Android框架分配内存。关于什么是Native代码，即非Java代码分配的内存。详细介绍请找百度。</p>
+<p>Dalvik Heap：Java对象分配的占据内存</p>
+<p>Dalvik Other：类数据结构和索引占据内存</p>
+<p>Stack：栈内存</p>
+<p>Ashmem：不以dalvik- 开头的内存区域，匿名共享内存用来提供共享内存通过分配一个多个进程可以共享的带名称的内存块。匿名共享内存（Anonymous Shared Memory-Ashmem。Android匿名共享内存是基于Linux共享内存的，都是在tmpfs文件系统上新建文件，并将其映射到不同的进程空间，从而达到共享内存的目的，只是，Android在Linux的基础上进行了改造，并借助Binder+fd文件描述符实现了共享内存的传递。</p>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IOS -- 出包相关问题</title>
+    <url>/posts/e446d6d/</url>
+    <content><![CDATA[<h1 id="AppStore-提审时的“出口合规证明”处理"><a href="#AppStore-提审时的“出口合规证明”处理" class="headerlink" title="AppStore 提审时的“出口合规证明”处理"></a>AppStore 提审时的“出口合规证明”处理</h1><p>![[Pasted image 20230802161133.png]]</p>
+<blockquote>
+<p>每次提交审核的时候都会让确认是否使用了Apple以的 <em>加密算法</em><br>Xcdoe的info.plist文件中增加App Uses Non-Exempt Encryption，将值设置为NO。</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;ITSAppUsesNonExemptEncryption&lt;/key&gt;</span><br><span class="line">&lt;false/&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="打包-select-a-method-for-export-选项"><a href="#打包-select-a-method-for-export-选项" class="headerlink" title="打包 select a method for export 选项"></a>打包 select a method for export 选项</h1><p>1.Save for iOS App Store Deployment</p>
+<blockquote>
+<p>保存到本地 准备上传App Store 或者在越狱的iOS设备上使用</p>
+</blockquote>
+<p>2.Save for Ad Hoc Deployment</p>
+<blockquote>
+<p>保存到本地 准备在账号添加的可使用设备上使用（具体为在开发者账户下添加可用设备的udid），该app包是发布证书编译的（The app will be code signed with the distribution certificate.）</p>
+</blockquote>
+<p>3.Save for Enterprise Deployment</p>
+<blockquote>
+<p>这种主要针对企业级账户下 准备本地服务器分发的app</p>
+</blockquote>
+<p>4.Save for Development Deployment(测试推送的时候用到 dev&amp;dev||dis||disHoc&amp;该选项)</p>
+<blockquote>
+<p>针对内部测试使用，主要给开发者的设备(具体也为在开发者账户下添加可用设备的udid)。该app包是开发证书编译的（The app will be code signed with your development certificate）</p>
+</blockquote>
+<h1 id="iOS-应用”无法安装应用程序-因为证书无效”的解决方案"><a href="#iOS-应用”无法安装应用程序-因为证书无效”的解决方案" class="headerlink" title="iOS 应用”无法安装应用程序 因为证书无效”的解决方案"></a>iOS 应用”无法安装应用程序 因为证书无效”的解决方案</h1><blockquote>
+<p>iOS7.1要安装企业应用，url必须是https的，不能是http</p>
+</blockquote>
+<p>原链接: </p>
+<blockquote>
+<p>itms-services:&#x2F;&#x2F;?action&#x3D;download-manifest&amp;url&#x3D;<a href="http://example.com/manifest.plist">http://example.com/manifest.plist</a></p>
+</blockquote>
+<p>改为</p>
+<blockquote>
+<p>itms-services:&#x2F;&#x2F;?action&#x3D;download-manifest&amp;url&#x3D;<a href="https://example.com/manifest.plist">https://example.com/manifest.plist</a></p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化内存和运行效率</title>
+    <url>/posts/dcaeb9c4/</url>
+    <content><![CDATA[<h1 id="优化内存和运行效率"><a href="#优化内存和运行效率" class="headerlink" title="优化内存和运行效率"></a>优化内存和运行效率</h1><ol>
+<li>用 GetEnumerator () 遍历 dictionary 和 list ，避免使用 foreach</li>
+<li>dictionary 使用 TryGetValue 一次判断取值，避免两次访问</li>
+<li>值类型使用引用方式传递，可提高效率 ref</li>
+<li>避免无意义的初始化，C# 默认初始化是清除内存，所以无意的初始化，会增加内存</li>
+<li>字符串判断，使用比较 length &#x3D;&#x3D; 0 效率更高</li>
+<li>cahe 数据，可以避免反复访问；</li>
+<li>减少字符串的拼接，每次拼接都会产生新的字符串，产生 CG</li>
+<li>常量使用 const 或 readonly 修饰</li>
+<li>用 using 包裹，可自动调用 Dispose</li>
+</ol>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>C# 语言的  ​​foreach​​  语句（在 Visual Basic 中为  ​​For Each​​）隐藏了枚举数的复杂性。因此，建议使用  ​​foreach​​，而不是直接操作枚举数。<br>枚举器可用于读取集合中的数据，但不能用于修改基础集合。<br>最初，枚举数定位在集合中第一个元素的前面。 Reset 方法还将枚举器恢复到此位置。在此位置， Current  属性未定义。因此，在读取的值之前，必须调用  MoveNext  方法，以将枚举器前进到集合的第一个元素  Current 。<br>在调用  Current  或  MoveNext  之前，Reset  返回同一对象。 MoveNext  将  Current  设置为下一个元素。<br>如果  MoveNext  越过集合的末尾，则枚举器将定位在集合中最后一个元素之后，并  MoveNext  返回  ​​false​​ 。当枚举器位于此位置时，对的后续调用  MoveNext  也将返回  ​​false​​ 。如果最后一次调用  MoveNext  返回  ​​false​​ ， Current  则未定义。若要再次将  Current  设置为集合的第一个元素，可以调用  Reset  并接着调用  MoveNext。<br>如果对集合所做的更改（如添加、修改或删除元素），则枚举器的行为是不确定的。<br>枚举数没有对集合的独占访问权；因此，从头到尾对一个集合进行枚举在本质上不是一个线程安全的过程。若要确保枚举过程中的线程安全性，可以在整个枚举过程中锁定集合。若要允许多个线程访问集合以进行读写操作，则必须实现自己的同步。</p>
+]]></content>
+      <tags>
+        <tag>C#</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IOS SDK 接入</title>
+    <url>/posts/f8d88cdd/</url>
+    <content><![CDATA[<p>QQ文档:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd">https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd</a><br>微信稳定:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html">https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html</a><br>记得 这两种腾讯的登录方式 都取玩家的 unionid 这个值当作唯一标识  </p>
+<p>在”Other Linker Flags”中加入”-ObjC -all_load”</p>
+<p>Info.plist</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;NSUserTrackingUsageDescription&lt;/key&gt;</span><br><span class="line">&lt;string&gt;是否允许我们的APP使用您的IDFA信息，以此来优化您的使用体验，定向提供服务&lt;/string&gt;</span><br><span class="line">&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">    &lt;string&gt;weixin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;weixinULAPI&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;weixinURLParamsAPI&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tim&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqq&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqapi&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqbrowser&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mttbrowser&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqOpensdkSSoLogin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkapiV2&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkapiV4&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzone&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdk&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapi&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapi19&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapiV2&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqapiwallet&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkfriend&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkavatar&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkminiapp&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkdataline&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqgamebindinggroup&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkgrouptribeshare&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tencentapi.qq.reqContent&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tencentapi.qzone.reqContent&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqthirdappgroup&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdklaunchminiapp&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkproxylogin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdknopasteboard&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdknopasteboardios16&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkcheckauth&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqguild&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IOS Using Brew</title>
+    <url>/posts/8f5d4be4/</url>
+    <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="brew-常用命令"><a href="#brew-常用命令" class="headerlink" title="[brew 常用命令]"></a>[brew 常用命令]</h2><ul>
+<li>Homebrew 是一款自由及开放源代码的软件包管理系统，用以简化 macOS 和 linux 系统上的软件安装过程</li>
+<li>它拥有安装、卸载、更新、查看、搜索等很多实用的功能，通过简单的一条指令，就可以实现包管理，十分方便快捷</li>
+<li>Homebrew 主要有四个部分组成</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">brew</td>
+<td align="center">Homebrew 源代码仓库</td>
+</tr>
+<tr>
+<td align="center">homebrew-core</td>
+<td align="center">Homebrew 核心软件仓库</td>
+</tr>
+<tr>
+<td align="center">homebrew-bottles</td>
+<td align="center">Homebrew 预编译二进制软件包</td>
+</tr>
+<tr>
+<td align="center">homebrew-cask</td>
+<td align="center">提供 macOS 应用和大型二进制文件</td>
+</tr>
+</tbody></table>
+<h2 id="替换为阿里源"><a href="#替换为阿里源" class="headerlink" title="替换为阿里源"></a>替换为阿里源</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 查看 brew.git 当前源</span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="string">&quot;<span class="subst">$(brew --repo)</span>&quot;</span> &amp;&amp; git remote -v</span><br><span class="line">origin    https://github.com/Homebrew/brew.git (fetch)</span><br><span class="line">origin    https://github.com/Homebrew/brew.git (push)</span><br><span class="line"><span class="comment"># 查看 homebrew-core.git 当前源</span></span><br><span class="line">$ <span class="built_in">cd</span> <span class="string">&quot;<span class="subst">$(brew --repo homebrew/core)</span>&quot;</span> &amp;&amp; git remote -v</span><br><span class="line">origin    https://github.com/Homebrew/homebrew-core.git (fetch)</span><br><span class="line">origin    https://github.com/Homebrew/homebrew-core.git (push)</span><br><span class="line"><span class="comment"># 修改 brew.git 为阿里源</span></span><br><span class="line">$ git -C <span class="string">&quot;<span class="subst">$(brew --repo)</span>&quot;</span> remote set-url origin https://mirrors.aliyun.com/homebrew/brew.git</span><br><span class="line"><span class="comment"># 修改 homebrew-core.git 为阿里源</span></span><br><span class="line">$ git -C <span class="string">&quot;<span class="subst">$(brew --repo homebrew/core)</span>&quot;</span> remote set-url origin https://mirrors.aliyun.com/homebrew/homebrew-core.git</span><br><span class="line"><span class="comment"># zsh 替换 brew bintray 镜像</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles&#x27;</span> &gt;&gt; ~/.zshrc</span><br><span class="line">$ <span class="built_in">source</span> ~/.zshrc</span><br><span class="line"><span class="comment"># bash 替换 brew bintray 镜像</span></span><br><span class="line">$ <span class="built_in">echo</span> <span class="string">&#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles&#x27;</span> &gt;&gt; ~/.bash_profile</span><br><span class="line">$ <span class="built_in">source</span> ~/.bash_profile</span><br><span class="line"><span class="comment"># 刷新源</span></span><br><span class="line">$ brew update</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="替换为中科大源"><a href="#替换为中科大源" class="headerlink" title="替换为中科大源"></a>替换为中科大源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">替换各个源</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git -C <span class="string">&quot;<span class="subst">$(brew --repo)</span>&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/brew.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git -C <span class="string">&quot;<span class="subst">$(brew --repo homebrew/core)</span>&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git -C <span class="string">&quot;<span class="subst">$(brew --repo homebrew/cask)</span>&quot;</span> remote set-url origin https://mirrors.ustc.edu.cn/homebrew-cask.git</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">zsh 替换 brew bintray 镜像</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">echo</span> <span class="string">&#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27;</span> &gt;&gt; ~/.zshrc</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">source</span> ~/.zshrc</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">bash 替换 brew bintray 镜像</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">echo</span> <span class="string">&#x27;export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles&#x27;</span> &gt;&gt; ~/.bash_profile</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash"><span class="built_in">source</span> ~/.bash_profile</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">刷新源</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew update</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="重置为官方源"><a href="#重置为官方源" class="headerlink" title="重置为官方源"></a>重置为官方源</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重置 brew.git 为官方源</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git -C <span class="string">&quot;<span class="subst">$(brew --repo)</span>&quot;</span> remote set-url origin https://github.com/Homebrew/brew.git</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重置 homebrew-core.git 为官方源</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git -C <span class="string">&quot;<span class="subst">$(brew --repo homebrew/core)</span>&quot;</span> remote set-url origin https://github.com/Homebrew/homebrew-core.git</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重置 homebrew-cask.git 为官方源</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">git -C <span class="string">&quot;<span class="subst">$(brew --repo homebrew/cask)</span>&quot;</span> remote set-url origin https://github.com/Homebrew/homebrew-cask</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">zsh 注释掉 HOMEBREW_BOTTLE_DOMAIN 配置</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vi ~/.zshrc</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">export</span> HOMEBREW_BOTTLE_DOMAIN=xxxxxxxxx</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">bash 注释掉 HOMEBREW_BOTTLE_DOMAIN 配置</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">vi ~/.bash_profile</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="built_in">export</span> HOMEBREW_BOTTLE_DOMAIN=xxxxxxxxx</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">刷新源</span></span><br><span class="line"><span class="meta prompt_">$ </span><span class="language-bash">brew update</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>bash 相关命令</title>
+    <url>/posts/feaf77e8/</url>
+    <content><![CDATA[<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">find <span class="operator">./</span> <span class="operator">-</span>name <span class="string">&quot;*.meta&quot;</span> <span class="operator">|</span> xargs rm <span class="operator">-</span>rf</span><br></pre></td></tr></table></figure>
+
+<p>删除当前目录下所有后缀名为 .meta 文件<br>find . -name “*.meta” |xargs rm -rf<br>格式很简单，如下：<br>find 目录 -name 名称 | xargs rm -rf<br>查找你要删除的文件夹或者文件，然后删除即可。<br>但是在macos下有一个问题，文件夹中有空格是不能删除的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//清楚拷贝命令</span><br><span class="line">pbcopy &lt; /dev/null</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>查看日志</title>
+    <url>/posts/e1b1b87/</url>
+    <content><![CDATA[<p>IOS 查看日志<br>搜索 –&gt; ProductName(UnityFramework)</p>
+<p><a href="%22https://docs.google.com/spreadsheets/d/1yFjZvtNaV7cYOB_hRDjgPiNgQDZtMzaLAUhfxv449ZA/edit#gid=0%22">IOS 设备颜色 </a></p>
+<p>which {name} 查询 安装位置</p>
+]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PM2 命令运行参数</title>
+    <url>/posts/230219f6/</url>
+    <content><![CDATA[<ol>
+<li>–name：给应用程序指定一个名称，方便管理和监控。</li>
+<li>–watch：监控指定目录下的文件变化，如果发现文件变化会自动重启应用程序。</li>
+<li>–ignore-watch：忽略指定目录下的文件变化，可以使用通配符 * 指定多个目录。</li>
+<li>–max-memory-restart：当应用程序内存使用超过指定值时，自动重启应用程序。</li>
+<li>–log-date-format：指定日志的时间格式，例如 YYYY-MM-DD HH:mm:ss。</li>
+<li>–log：指定日志文件的路径。</li>
+<li>–env：指定应用程序的环境变量。</li>
+<li>–interpreter：指定解释器路径，例如 &#x2F;usr&#x2F;bin&#x2F;node。</li>
+<li>–no-daemon：关闭守护进程模式，将 PM2 运行在前台。</li>
+<li>–no-autorestart：关闭自动重启功能。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>检测并删除材质中记录的冗余Keywords和Shader属性</title>
+    <url>/posts/78fc990e/</url>
+    <content><![CDATA[<h1 id="检测并删除材质中记录的冗余Keywords和Shader属性"><a href="#检测并删除材质中记录的冗余Keywords和Shader属性" class="headerlink" title="检测并删除材质中记录的冗余Keywords和Shader属性"></a>检测并删除材质中记录的冗余Keywords和Shader属性</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">region</span> classname  </span></span><br><span class="line"><span class="comment">/*  </span></span><br><span class="line"><span class="comment"> *         Title: classname : Ufw</span></span><br><span class="line"><span class="comment"> *         Description: </span></span><br><span class="line"><span class="comment"> *                功能：       检测并删除材质中记录的冗余Keywords和Shader属性  </span></span><br><span class="line"><span class="comment"> *         Author:            xxx  </span></span><br><span class="line"><span class="comment"> *         Time:              2022年9月13日11:21:27  </span></span><br><span class="line"><span class="comment"> *         Version:           0.1版本  </span></span><br><span class="line"><span class="comment"> *         Modify Recorde: */</span>  </span><br><span class="line"><span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> System.Reflection;  </span><br><span class="line"><span class="keyword">using</span> UnityEditor;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Ufw</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnusedKeywordsAndPropertiesCheckerEditor</span> : <span class="title">Editor</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="comment">//获取shader中所有的宏  </span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">GetShaderKeywords</span>(<span class="params">Shader target, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local</span>)</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">try</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                MethodInfo globalKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderGlobalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                MethodInfo localKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderLocalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                <span class="keyword">if</span> (globalKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = (<span class="built_in">string</span>[])globalKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">if</span> (localKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = (<span class="built_in">string</span>[])localKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">catch</span> (Exception e)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Error(<span class="string">$&quot;获取shader中所有的宏,错误: <span class="subst">&#123;e.Message&#125;</span>&quot;</span>);  </span><br><span class="line">                <span class="keyword">global</span> = local = <span class="literal">null</span>;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        [<span class="meta">MenuItem(UfwMenuItemIni.M_Check_MatKey)</span>]  </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CheckMaterials</span>()</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            ProfilerUtils.BeginWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            <span class="built_in">string</span>[] paths = AssetDatabase.FindAssets(<span class="string">&quot;t:material&quot;</span>, <span class="keyword">new</span>[]  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="string">&quot;Assets/Res&quot;</span>  </span><br><span class="line">            &#125;);  </span><br><span class="line">            <span class="keyword">if</span> (paths == <span class="literal">null</span> || paths.Length == <span class="number">0</span>)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Info(<span class="string">$&quot;未找到相匹配的文件 匹配格式: t:material 匹配路径: Assets/Res&quot;</span>);  </span><br><span class="line">                <span class="keyword">return</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="built_in">int</span> index = <span class="number">0</span>;  </span><br><span class="line">            <span class="built_in">int</span> maxCount = paths.Length;  </span><br><span class="line">            <span class="keyword">foreach</span> (<span class="built_in">string</span> materialGuid <span class="keyword">in</span> paths)  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="built_in">string</span> materialAssetPath = AssetDatabase.GUIDToAssetPath(materialGuid);  </span><br><span class="line">                Material material = AssetDatabase.LoadAssetAtPath&lt;Material&gt;(materialAssetPath);  </span><br><span class="line">                EditorUtility.DisplayProgressBar(<span class="string">$&quot;读取文件Material文件: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;正在查询内容&quot;</span>, (<span class="built_in">float</span>)index / maxCount);  </span><br><span class="line">                <span class="keyword">if</span> (GetShaderKeywords(material.shader, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local))  </span><br><span class="line">                &#123;  </span><br><span class="line">                    HashSet&lt;<span class="built_in">string</span>&gt; keywords = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                    <span class="keyword">if</span> (<span class="keyword">global</span> != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> g <span class="keyword">in</span> <span class="keyword">global</span>)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(g);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (local != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> l <span class="keyword">in</span> local)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(l);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (keywords.Count == <span class="number">0</span>)  </span><br><span class="line">                    &#123;                        Log.Warn(<span class="string">$&quot;读取文件失效,请检查Material: <span class="subst">&#123;material.name&#125;</span>  Shader: <span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                        <span class="keyword">continue</span>;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    EditorUtility.ClearProgressBar();  </span><br><span class="line">  </span><br><span class="line">                    <span class="comment">//重置keywords  </span></span><br><span class="line">                    List&lt;<span class="built_in">string</span>&gt; resetKeywords = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;(material.shaderKeywords);  </span><br><span class="line">                    <span class="built_in">int</span> removeIndex = <span class="number">0</span>;  </span><br><span class="line">                    <span class="keyword">foreach</span> (<span class="built_in">string</span> item <span class="keyword">in</span> material.shaderKeywords)  </span><br><span class="line">                    &#123;                        EditorUtility.DisplayProgressBar(<span class="string">$&quot;检查KeyWords: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;匹配字段 <span class="subst">&#123;item&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeIndex / resetKeywords.Count);  </span><br><span class="line">                        <span class="keyword">if</span> (!keywords.Contains(item))  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            resetKeywords.Remove(item);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                        removeIndex++;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    material.shaderKeywords = resetKeywords.ToArray();  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    Log.Warn(<span class="string">$&quot;获取shader中所有的宏,Error: Material:<span class="subst">&#123;material.name&#125;</span>  shader:<span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                    <span class="keyword">continue</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                HashSet&lt;<span class="built_in">string</span>&gt; property = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                <span class="built_in">int</span> count = material.shader.GetPropertyCount();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; count; i++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    property.Add(material.shader.GetPropertyName(i));  </span><br><span class="line">                &#125;  </span><br><span class="line">                SerializedObject o = <span class="keyword">new</span> SerializedObject(material);  </span><br><span class="line">                SerializedProperty disabledShaderPasses = o.FindProperty(<span class="string">&quot;disabledShaderPasses&quot;</span>);  </span><br><span class="line">                SerializedProperty savedProperties = o.FindProperty(<span class="string">&quot;m_SavedProperties&quot;</span>);  </span><br><span class="line">                SerializedProperty texEnvs = savedProperties.FindPropertyRelative(<span class="string">&quot;m_TexEnvs&quot;</span>);  </span><br><span class="line">                SerializedProperty floats = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Floats&quot;</span>);  </span><br><span class="line">                SerializedProperty colors = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Colors&quot;</span>);  </span><br><span class="line">                <span class="built_in">int</span> removeAttrId = <span class="number">0</span>;  </span><br><span class="line">                <span class="built_in">int</span> removeAttrCount = disabledShaderPasses.arraySize + texEnvs.arraySize + floats.arraySize + colors.arraySize;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="comment">//对比属性删除残留的属性  </span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = disabledShaderPasses.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = disabledShaderPasses.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:disabledShaderPasses&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        disabledShaderPasses.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = texEnvs.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = texEnvs.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_TexEnvs&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        texEnvs.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = floats.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = floats.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Floats&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        floats.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = colors.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = colors.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Colors&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        colors.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                o.ApplyModifiedProperties();  </span><br><span class="line">                index += <span class="number">1</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            UWatchResult result = ProfilerUtils.EndWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            Log.Info(<span class="string">$&quot;清理Material残留 时间<span class="subst">&#123;result.costTime&#125;</span> [内存]<span class="subst">&#123;result.costMemory&#125;</span>&quot;</span>);  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            AssetDatabase.SaveAssets();  </span><br><span class="line">            Log.Info(<span class="string">&quot;检查完毕&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity Shader</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>标签注解</title>
+    <url>/posts/20410000/</url>
+    <content><![CDATA[<p><strong>XLua.GCOptimize：</strong> <br>GC 代码优化对于一个 c#纯值类型(官网指一个只包含值类型的 struct，可以嵌套其它只包含值类型的 struct)或者 c#枚举值加上了这个配置，会使得该类型在 lua 和 c#间传递不产生 gc alloc，该类型的数组访问也不会产生 gc。<br>(除枚举之外，包含无参构造函数的复杂类型，都会生成 lua table 到该类型，以及该类型的一维数组转换代码，可以优化转换性能)</p>
+]]></content>
+      <tags>
+        <tag>XLua</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity PC 出包相关</title>
+    <url>/posts/5714b715/</url>
+    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
+<ol>
+<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
+<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
+<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
+<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
+<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化资产</title>
+    <url>/posts/f7fefa74/</url>
+    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IOS XCode 快捷键</title>
+    <url>/posts/aaa77cb1/</url>
+    <content><![CDATA[<h1 id="快速定位文件"><a href="#快速定位文件" class="headerlink" title="快速定位文件"></a>快速定位文件</h1><p><strong>commit+shift+J 然后就跳转到你当前文件</strong></p>
+<h1 id="Mac-上隐藏的文件和文件夹"><a href="#Mac-上隐藏的文件和文件夹" class="headerlink" title="Mac 上隐藏的文件和文件夹"></a>Mac 上隐藏的文件和文件夹</h1><p><strong>按快捷键 ​ ​cmd+shift+</strong>.</p>
+]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>IOS FacebookSDK</title>
+    <url>/posts/2414f1c4/</url>
+    <content><![CDATA[<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/facebook/facebook-ios-sdk</span><br></pre></td></tr></table></figure>
+
+<h1 id="源码配置"><a href="#源码配置" class="headerlink" title="源码配置"></a>源码配置</h1><figure class="highlight plist"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLTypes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbAPP-ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookAppID<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>APP-ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookClientToken<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>CLIENT-TOKEN<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookDisplayName<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>APP-NAME<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">1.  在 `[CFBundleURLSchemes]` 键内的 `<span class="tag">&lt;<span class="name">array</span>&gt;</span><span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-ID_ 替换为您的应用编号。</span><br><span class="line">2.  在 `FacebookAppID` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-ID_ 替换为您的应用编号。</span><br><span class="line">3.  在 `FacebookClientToken` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _CLIENT-TOKEN_ 替换为您在应用面板**设置** &gt; **高级** &gt; **客户端口令**中找到的值。</span><br><span class="line">4.  在 `FacebookDisplayName` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-NAME_ 替换为您的应用名称。</span><br><span class="line">5.  如要使用任何可将应用切换至 Facebook 应用的 Facebook 对话框（如登录、分享、应用邀请等），应用程序的 `Info.plist` 还需包含以下代码：</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>LSApplicationQueriesSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130214<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130410<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130702<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20131010<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20131219<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20140410<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20140116<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20150313<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20150629<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20160328<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbauth<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fb-messenger-share-api<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbauth2<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbshareextension<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> Keychain Sharing 功能，才能使登录功能在 Mac Catalyst 应用程序中正常运作。</p>
+<h1 id="触发问题"><a href="#触发问题" class="headerlink" title="触发问题"></a>触发问题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Undefined symbol: __swift_FORCE_LOAD_$_swiftDataDetection</span><br><span class="line">引入之后，编译一下，出现100多个报错，看很多报错都带swift字眼，搜了下解决方案，也很简单，新建一个空的Swift文件，重新编译一下就没了，试了下也确实可行，真坑啊，oc的代码，导入一个库，还得加个swift的文件才能编译过</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+</search>
