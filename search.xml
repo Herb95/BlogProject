@@ -35,10 +35,10 @@
 <li>cd ~&#x2F;.ssh #查看本机是否存在 SSH Key ###<strong>存在</strong></li>
 <li>clip &lt;~&#x2F;.ssh&#x2F;id_rsa.pub #复制公钥到 clipboard</li>
 <li>登录 github 设置秘钥</li>
-<li>ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a> #测试秘钥</li>
+<li>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;">&#x67;&#x69;&#116;&#x40;&#103;&#105;&#x74;&#104;&#117;&#x62;&#46;&#x63;&#111;&#109;</a> #测试秘钥</li>
 </ul>
 <h3 id="不存在"><a href="#不存在" class="headerlink" title="不存在"></a><strong>不存在</strong></h3><ul>
-<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#x72;&#95;&#101;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#x72;&#95;&#101;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
+<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#121;&#111;&#117;&#x72;&#x5f;&#101;&#x6d;&#97;&#105;&#108;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;">&#121;&#111;&#117;&#x72;&#x5f;&#101;&#x6d;&#97;&#105;&#108;&#64;&#x65;&#120;&#97;&#109;&#112;&#108;&#101;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
 <ul>
 <li>弹出界面</li>
 <li>直接回车:默认文件进行存储<ul>
@@ -538,15 +538,16 @@
       </tags>
   </entry>
   <entry>
-    <title>获取当前仓库文件状态</title>
-    <url>/posts/be7912d9/</url>
-    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+    <title>Git 相关解决方案</title>
+    <url>/posts/12e58447/</url>
+    <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+<h2 id="删除某一个配置Key"><a href="#删除某一个配置Key" class="headerlink" title="删除某一个配置Key"></a>删除某一个配置Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//删除某一个配置key</span><br><span class="line">git config --global --unset &quot;key Name&quot;</span><br></pre></td></tr></table></figure>
 
-<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="单独设置GitHub代理"><a href="#单独设置GitHub代理" class="headerlink" title="单独设置GitHub代理"></a>单独设置GitHub代理</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 命令。port：自定义端口</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:port</span><br></pre></td></tr></table></figure>
 
-<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="old-mode-100644-new-mode-100755"><a href="#old-mode-100644-new-mode-100755" class="headerlink" title="old mode 100644 new mode 100755"></a>old mode 100644 new mode 100755</h2><p>  old mode 100644 new mode 100755 的提示，如下图：<br>  ![[Pasted image 20230801150009.png]]<br>  ### 产生这个问题的原因就是<br>  filemode的变化，文件chmod后其文件某些位是改变了的，如果严格的比较原文件和chmod后的文件，两者是有区别的，但是源代码通常只关心文本内容，因此chmod产生的变化应该忽略，所以设置一下：<br>  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">  切到源码的根目录下，</span><br><span class="line">  git config --add core.filemode false</span><br></pre></td></tr></table></figure><br>  这样你的所有的git库都会忽略filemode变更了～</p>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -565,16 +566,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Git 相关解决方案</title>
-    <url>/posts/12e58447/</url>
-    <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+    <title>获取当前仓库文件状态</title>
+    <url>/posts/be7912d9/</url>
+    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
-<h2 id="删除某一个配置Key"><a href="#删除某一个配置Key" class="headerlink" title="删除某一个配置Key"></a>删除某一个配置Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//删除某一个配置key</span><br><span class="line">git config --global --unset &quot;key Name&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
 
-<h2 id="单独设置GitHub代理"><a href="#单独设置GitHub代理" class="headerlink" title="单独设置GitHub代理"></a>单独设置GitHub代理</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 命令。port：自定义端口</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:port</span><br></pre></td></tr></table></figure>
+<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
 
-
-<h2 id="old-mode-100644-new-mode-100755"><a href="#old-mode-100644-new-mode-100755" class="headerlink" title="old mode 100644 new mode 100755"></a>old mode 100644 new mode 100755</h2><p>  old mode 100644 new mode 100755 的提示，如下图：<br>  ![[Pasted image 20230801150009.png]]<br>  ### 产生这个问题的原因就是<br>  filemode的变化，文件chmod后其文件某些位是改变了的，如果严格的比较原文件和chmod后的文件，两者是有区别的，但是源代码通常只关心文本内容，因此chmod产生的变化应该忽略，所以设置一下：<br>  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">  切到源码的根目录下，</span><br><span class="line">  git config --add core.filemode false</span><br></pre></td></tr></table></figure><br>  这样你的所有的git库都会忽略filemode变更了～</p>
+<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -600,7 +600,7 @@
   <entry>
     <title>生成密钥</title>
     <url>/posts/7b852c9/</url>
-    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#x78;&#x40;&#120;&#x78;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#x78;&#120;&#120;&#x78;&#x40;&#120;&#x78;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#120;&#120;&#x78;&#120;&#64;&#x78;&#120;&#x78;&#x78;&#x2e;&#x63;&#x6f;&#109;">&#120;&#120;&#x78;&#120;&#64;&#x78;&#120;&#x78;&#x78;&#x2e;&#x63;&#x6f;&#109;</a>“</p>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -647,15 +647,6 @@
 ]]></content>
       <tags>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Love Steam Game</title>
-    <url>/posts/33b8e905/</url>
-    <content><![CDATA[<p>Desynced <a href="https://store.steampowered.com/app/1450900/Desynced/">https://store.steampowered.com/app/1450900/Desynced/</a></p>
-]]></content>
-      <tags>
-        <tag>SteamGame</tag>
       </tags>
   </entry>
   <entry>
@@ -793,6 +784,42 @@
       </tags>
   </entry>
   <entry>
+    <title>常用端口记录</title>
+    <url>/posts/3fb58c6b/</url>
+    <content><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">注解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">3306</td>
+<td align="center">数据库端口</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td align="center">通用端口</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">SSh 端口</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">FTP 端口</td>
+</tr>
+<tr>
+<td align="center">443</td>
+<td align="center">https</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux Firewall</title>
     <url>/posts/cebd6f84/</url>
     <content><![CDATA[<h1 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h1><ul>
@@ -845,42 +872,6 @@
 <li>检查端口被那个进程占用</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nestat -lnp |grep 3306</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用端口记录</title>
-    <url>/posts/3fb58c6b/</url>
-    <content><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><table>
-<thead>
-<tr>
-<th align="center">端口</th>
-<th align="center">注解</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">3306</td>
-<td align="center">数据库端口</td>
-</tr>
-<tr>
-<td align="center">80</td>
-<td align="center">通用端口</td>
-</tr>
-<tr>
-<td align="center">22</td>
-<td align="center">SSh 端口</td>
-</tr>
-<tr>
-<td align="center">21</td>
-<td align="center">FTP 端口</td>
-</tr>
-<tr>
-<td align="center">443</td>
-<td align="center">https</td>
-</tr>
-</tbody></table>
 ]]></content>
       <tags>
         <tag>Linux</tag>
@@ -1071,18 +1062,18 @@
       </tags>
   </entry>
   <entry>
-    <title>DisallowMultipleComponent</title>
-    <url>/posts/5c9c1269/</url>
-    <content><![CDATA[<h1 id="DisallowMultipleComponent"><a href="#DisallowMultipleComponent" class="headerlink" title="DisallowMultipleComponent"></a>DisallowMultipleComponent</h1><p>DisallowMultipleComponent : 不允许多个相同的组件挂载在同一个 GameObject 上</p>
+    <title>Free Assets</title>
+    <url>/posts/293bbd56/</url>
+    <content><![CDATA[<p>✅Flooded Grounds - <a href="https://bit.ly/2ZfAxIT">https://bit.ly/2ZfAxIT</a><br>✅Sun Temple - <a href="https://bit.ly/38m5A8L">https://bit.ly/38m5A8L</a><br>✅Realistic Terrain Collection LITE - <a href="https://bit.ly/2L48vLB">https://bit.ly/2L48vLB</a><br>✅Rocky Hills Environment - Light Pack <a href="https://bit.ly/39uEkW8">https://bit.ly/39uEkW8</a><br>✅Conifers [BOTD] - <a href="https://bit.ly/3h6xXel">https://bit.ly/3h6xXel</a><br>✅Coconut Palm Tree Pack : <a href="https://bit.ly/363LTSg">https://bit.ly/363LTSg</a><br>✅Nature Starter Kit - 2<a href="https://bit.ly/3oHW6vF">https://bit.ly/3oHW6vF</a><br>✅Outdoor Ground Textures - <a href="https://bit.ly/306eljm">https://bit.ly/306eljm</a><br>✅Grass Flowers Pack Free - <a href="https://bit.ly/30cbmWS">https://bit.ly/30cbmWS</a><br>✅Terrain Tools Sample Asset Pack - <a href="https://bit.ly/2QnnI9S">https://bit.ly/2QnnI9S</a><br>✅Book of the Dead Project : <a href="https://bit.ly/2URXyPa">https://bit.ly/2URXyPa</a> </p>
 ]]></content>
       <tags>
         <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
-    <title>Free Assets</title>
-    <url>/posts/293bbd56/</url>
-    <content><![CDATA[<p>✅Flooded Grounds - <a href="https://bit.ly/2ZfAxIT">https://bit.ly/2ZfAxIT</a><br>✅Sun Temple - <a href="https://bit.ly/38m5A8L">https://bit.ly/38m5A8L</a><br>✅Realistic Terrain Collection LITE - <a href="https://bit.ly/2L48vLB">https://bit.ly/2L48vLB</a><br>✅Rocky Hills Environment - Light Pack <a href="https://bit.ly/39uEkW8">https://bit.ly/39uEkW8</a><br>✅Conifers [BOTD] - <a href="https://bit.ly/3h6xXel">https://bit.ly/3h6xXel</a><br>✅Coconut Palm Tree Pack : <a href="https://bit.ly/363LTSg">https://bit.ly/363LTSg</a><br>✅Nature Starter Kit - 2<a href="https://bit.ly/3oHW6vF">https://bit.ly/3oHW6vF</a><br>✅Outdoor Ground Textures - <a href="https://bit.ly/306eljm">https://bit.ly/306eljm</a><br>✅Grass Flowers Pack Free - <a href="https://bit.ly/30cbmWS">https://bit.ly/30cbmWS</a><br>✅Terrain Tools Sample Asset Pack - <a href="https://bit.ly/2QnnI9S">https://bit.ly/2QnnI9S</a><br>✅Book of the Dead Project : <a href="https://bit.ly/2URXyPa">https://bit.ly/2URXyPa</a> </p>
+    <title>DisallowMultipleComponent</title>
+    <url>/posts/5c9c1269/</url>
+    <content><![CDATA[<h1 id="DisallowMultipleComponent"><a href="#DisallowMultipleComponent" class="headerlink" title="DisallowMultipleComponent"></a>DisallowMultipleComponent</h1><p>DisallowMultipleComponent : 不允许多个相同的组件挂载在同一个 GameObject 上</p>
 ]]></content>
       <tags>
         <tag>Unity</tag>
@@ -1125,35 +1116,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Resolution and Presentation</title>
-    <url>/posts/b4834b29/</url>
-    <content><![CDATA[<h1 id="分变率设置区域（Resolution-Section）"><a href="#分变率设置区域（Resolution-Section）" class="headerlink" title="分变率设置区域（Resolution Section）"></a>分变率设置区域（Resolution Section）</h1><ol>
-<li>Fullscreen Mode</li>
-<li>Default Is Native Resolution</li>
-<li>Mac Retina Support</li>
-<li>Run in Background</li>
-</ol>
-<h2 id="Fullscreen-Mode"><a href="#Fullscreen-Mode" class="headerlink" title="Fullscreen Mode"></a>Fullscreen Mode</h2><h3 id="Fullscreen-Window"><a href="#Fullscreen-Window" class="headerlink" title="Fullscreen Window"></a>Fullscreen Window</h3><p>Fullscreen Window是将发布的APP自动全屏到目标机器（运行APP的机器）的分辨率，注意，<strong>这里仅仅是将APP自动全屏</strong>，并不一定会APP渲染的内容自动全屏，因为还有黑边机制，下面会讲到。APP中所渲染的场景的分辨率则是通过代码或者是用户启动的时候所选择的分变率决定的，因为此分辨率不一定会占满屏幕，Unity则会自动放大到显示器的分辨率。但是Unity为了保证场景不被拉伸变形，会自动在APP场景的分辨率（宽高比）的基础上添加黑边，以保证适配目标机器的分辨率。</p>
-<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>加入选择场景的渲染场景分辨率为800X600（aspect ratio 1.333），目标机器的分变率为 1920X1080（aspect ratio 1.777），运行之后发现APP是全屏的，但是两侧有相应的黑边，这就是上面所说的黑边机制（letterboxing）。在这里补充一点，常见的屏幕分辨率的宽高比（aspect ratio）有1.25、1.333、1.5、1.6、1.6666、1.7777（常说的16：9）几种，目前最后一种最为流行</p>
-<h3 id="Exclusive-Fullscreen"><a href="#Exclusive-Fullscreen" class="headerlink" title="Exclusive Fullscreen"></a>Exclusive Fullscreen</h3><p>Exclusive Fullscreen是只在Windows平台上起作用的模式，这种模式也是在自动将APP自动全屏到目标机器屏幕，但是与上述的Fullscreen Window不同，这种模式会改变目标屏幕的分辨率，并且不会有黑边机制，场景出现拉伸情况。</p>
-<p><strong>此选项仅在 Windows 上受支持；在其他平台上，设置将回退到 _<strong><strong>Fullscreen Window</strong></strong>_。</strong></p>
-<h4 id="举个例子-1"><a href="#举个例子-1" class="headerlink" title="举个例子"></a>举个例子</h4><p>当我们将APP的分辨率设置为1280X960（1.333），运行后没有黑边，场景则被拉伸，对应的屏幕分辨率。这种模式下不容易被截图，读者可以亲自动手试一试。</p>
-<h3 id="Maximized-Window这种模式只能在MAC上被支持，Windows系统则不支持。"><a href="#Maximized-Window这种模式只能在MAC上被支持，Windows系统则不支持。" class="headerlink" title="Maximized Window这种模式只能在MAC上被支持，Windows系统则不支持。"></a>Maximized Window这种模式只能在MAC上被支持，Windows系统则不支持。</h3><h3 id="Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。"><a href="#Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。" class="headerlink" title="Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。"></a>Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。</h3><h3 id="Default-Is-Native-Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。"><a href="#Default-Is-Native-Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。" class="headerlink" title="Default Is Native Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。"></a>Default Is Native Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。</h3><h3 id="Force-single-instance是保证APP只被打开一次，不能同时打开多个"><a href="#Force-single-instance是保证APP只被打开一次，不能同时打开多个" class="headerlink" title="Force single instance是保证APP只被打开一次，不能同时打开多个"></a>Force single instance是保证APP只被打开一次，不能同时打开多个</h3><p>Unity之Application.runInBackground &#x3D; true</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">默认是False，设置Application.runInBackground = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">则<span class="function"><span class="keyword">void</span> <span class="title">OnApplicationPause</span>(<span class="params"><span class="built_in">bool</span> pause</span>)不再起作用</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="Standalone-Player-Options-部分"><a href="#Standalone-Player-Options-部分" class="headerlink" title="Standalone Player Options 部分"></a>Standalone Player Options 部分</h2><h3 id="Capture-Single-Screen"><a href="#Capture-Single-Screen" class="headerlink" title="Capture Single Screen"></a><strong>Capture Single Screen</strong></h3><p>启用此选项可确保全屏模式 (Fullscreen Mode) 下的独立平台游戏不会使多显示屏设置中的辅助显示屏变暗。Mac OS X 上不支持该功能。</p>
-<h3 id="Use-Player-Log"><a href="#Use-Player-Log" class="headerlink" title="Use Player Log"></a><strong>Use Player Log</strong></h3><p>启用此选项可向日志文件写入调试信息。默认已启用。 <strong>警告：</strong>如果计划将应用程序提交到 Mac App Store，请禁用此选项。有关更多信息，请参阅<a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#AppStore">发布到 Mac App Store</a>。</p>
-<h3 id="Resizable-Window"><a href="#Resizable-Window" class="headerlink" title="Resizable Window"></a><strong>Resizable Window</strong></h3><p>启用此选项可允许用户调整独立平台播放器窗口的大小。<br><strong>注意：</strong>如果禁用此选项，您的应用程序无法将 <a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_。</p>
-<h3 id="Visible-in-Background"><a href="#Visible-in-Background" class="headerlink" title="Visible in Background"></a>Visible in Background</h3><p>如果已将 <a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_，启用此选项可在背景中显示应用程序（在 Windows 中）。</p>
-<h3 id="Allow-Fullscreen-Switch"><a href="#Allow-Fullscreen-Switch" class="headerlink" title="Allow Fullscreen Switch"></a><strong>Allow Fullscreen Switch</strong></h3><p>启用此选项可允许通过默认操作系统全屏按键在全屏模式和窗口模式之间切换。</p>
-<h3 id="Force-Single-Instance"><a href="#Force-Single-Instance" class="headerlink" title="Force Single Instance"></a><strong>Force Single Instance</strong></h3><p>启用此选项可将独立平台播放器限制为单个并发运行实例。</p>
-<h3 id="Supported-Aspect-Ratios"><a href="#Supported-Aspect-Ratios" class="headerlink" title="Supported Aspect Ratios"></a>Supported Aspect Ratios</h3><p>启用希望游戏启动时出现在分辨率对话框中的每个宽高比（只要用户的显示屏支持这些宽高比设置）。</p>
-]]></content>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Temp Unity Scripts</title>
     <url>/posts/afa13234/</url>
     <content><![CDATA[<h3 id="GUI-Script"><a href="#GUI-Script" class="headerlink" title="GUI Script"></a>GUI Script</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isActiveGUIUI = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isActiveGUIUI2 = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">private</span> Rect _winRect = <span class="keyword">new</span> Rect(<span class="number">150</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(<span class="number">100</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>),<span class="string">&quot;是否开启测试弹窗&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        isActiveGUIUI = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width<span class="number">-100</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>),<span class="string">&quot;我是测试按钮&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        isActiveGUIUI2 = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (isActiveGUIUI)</span><br><span class="line">    &#123;</span><br><span class="line">        _winRect = GUILayout.Window(<span class="number">0</span>, <span class="keyword">new</span> Rect(<span class="number">150</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>), OpenLog, <span class="string">&quot;我是测试&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isActiveGUIUI2)</span><br><span class="line">    &#123;</span><br><span class="line">        _winRect = GUILayout.Window(<span class="number">1</span>, <span class="keyword">new</span> Rect(Screen.width<span class="number">-300</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>), OpenLog, <span class="string">&quot;我是测试2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OpenLog</span>(<span class="params"><span class="built_in">int</span> winId</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (winId == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;我是打印按钮&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            Log.Warn(<span class="string">&quot;我是测试,我是测试我是测试我是测试我是测试&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;关闭窗口&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            isActiveGUIUI = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
@@ -1184,6 +1146,24 @@
       </tags>
   </entry>
   <entry>
+    <title>AVProVide 插件相关使用</title>
+    <url>/posts/ec26bcba/</url>
+    <content><![CDATA[<h1 id="win7-系统-AVProVide-插件无法播放问题"><a href="#win7-系统-AVProVide-插件无法播放问题" class="headerlink" title="win7 系统 AVProVide 插件无法播放问题"></a>win7 系统 AVProVide 插件无法播放问题</h1><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">---WinRT、Media Foundation 和 DirectShow API。</span></span><br><span class="line"><span class="comment">---Windows 10 及更高版本支持 WinRT，Windows 8 及更高版本支持 Media Foundation，Windows 7 支持 DirectShow。</span></span><br><span class="line"><span class="keyword">if</span> framework.device.windows() <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">local</span> winVersion = framework.device.getWinVersion()</span><br><span class="line">    Log.Info(<span class="string">&quot;系统版本&#123;0&#125;&quot;</span>, winVersion)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">string</span>.<span class="built_in">find</span>(winVersion,<span class="string">&quot;Windows 10&quot;</span>) <span class="keyword">then</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.WinRT</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.MediaFoundation</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    mediaPlayer.PlatformOptionsWindows.audioOutput = CS.RenderHeads.Media.AVProVideo.Windows.AudioOutput.Unity</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity Api</title>
+    <url>/posts/abc98e82/</url>
+    <content><![CDATA[<p>![[Pasted image 20221208104558.png]]</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取优化过的图片大小</span></span><br><span class="line">EditorUtilly.FormatBytes(TextureUitl.GetStrorageMemorySizeLong(t));</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IOS 平台相关内容</title>
     <url>/posts/db41d8/</url>
     <content><![CDATA[<h1 id="IOS-平台相关内容"><a href="#IOS-平台相关内容" class="headerlink" title="IOS 平台相关内容"></a>IOS 平台相关内容</h1><h1 id="IOS-Build-Config"><a href="#IOS-Build-Config" class="headerlink" title="IOS Build Config"></a>IOS Build Config</h1><h2 id="FrameworkId"><a href="#FrameworkId" class="headerlink" title="FrameworkId"></a>FrameworkId</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 添加系统库  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;pbxProject&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;mFrameworkGuid&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">SystemFrameworkAdd</span>(<span class="params">PBXProject pbxProject, <span class="built_in">string</span> mFrameworkGuid</span>)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">string</span>[] frameworksToAdd =</span><br><span class="line">    &#123;        <span class="comment">//压缩库  </span></span><br><span class="line">        <span class="string">&quot;libz.dylib&quot;</span>,  </span><br><span class="line">        <span class="string">&quot;libsqlite3.tbd&quot;</span>,        <span class="comment">//IAD是苹果推出的广告平台  </span></span><br><span class="line">        <span class="string">&quot;iAd.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//获取设备唯一的一个广告标识符  </span></span><br><span class="line">        <span class="string">&quot;AdSupport.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//输出手机的运营商信息  </span></span><br><span class="line">        <span class="string">&quot;CoreTelephony.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//数字商品或服务  </span></span><br><span class="line">        <span class="string">&quot;StoreKit.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//认证服务  </span></span><br><span class="line">        <span class="string">&quot;AuthenticationServices.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//请求用户授权，获取对可用于跟踪用户或设备的应用程序相关数据的访问权限  </span></span><br><span class="line">        <span class="string">&quot;AppTrackingTransparency.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//账户管理框架  </span></span><br><span class="line">        <span class="string">&quot;Accounts.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//社交框架为中国用户提供统一的API，用于与社交网络（包括Twitter 和Facebook）以及新浪微博交互  </span></span><br><span class="line">        <span class="string">&quot;Social.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//进行大规模的数学计算和图像计算，优化为高性能和低能耗  </span></span><br><span class="line">        <span class="string">&quot;Accelerate.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//框架用于保证应用程序所管理之数据的安全  </span></span><br><span class="line">        <span class="string">&quot;Security.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//一套基于 C 的API 框架，使用了Quartz 作为绘图引擎，可用于一切绘图操作  </span></span><br><span class="line">        <span class="string">&quot;CoreGraphics.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//读取异常发生的系统信息  </span></span><br><span class="line">        <span class="string">&quot;SystemConfiguration.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//WX  </span></span><br><span class="line">        <span class="string">&quot;WebKit.framework&quot;</span>,  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">foreach</span> (<span class="keyword">var</span> key <span class="keyword">in</span> frameworksToAdd)</span><br><span class="line">    &#123;</span><br><span class="line">	    <span class="comment">//如果框架是可选框架（即弱关联框架），则此参数为 true，如果框架是必需框架，则为 false。  </span></span><br><span class="line">        pbxProject.AddFrameworkToProject(mFrameworkGuid, key, <span class="literal">true</span>);  </span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
@@ -1201,27 +1181,38 @@
       </tags>
   </entry>
   <entry>
-    <title>Unity Api</title>
-    <url>/posts/abc98e82/</url>
-    <content><![CDATA[<p>![[Pasted image 20221208104558.png]]</p>
-<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取优化过的图片大小</span></span><br><span class="line">EditorUtilly.FormatBytes(TextureUitl.GetStrorageMemorySizeLong(t));</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>AVProVide 插件相关使用</title>
-    <url>/posts/ec26bcba/</url>
-    <content><![CDATA[<h1 id="win7-系统-AVProVide-插件无法播放问题"><a href="#win7-系统-AVProVide-插件无法播放问题" class="headerlink" title="win7 系统 AVProVide 插件无法播放问题"></a>win7 系统 AVProVide 插件无法播放问题</h1><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">---WinRT、Media Foundation 和 DirectShow API。</span></span><br><span class="line"><span class="comment">---Windows 10 及更高版本支持 WinRT，Windows 8 及更高版本支持 Media Foundation，Windows 7 支持 DirectShow。</span></span><br><span class="line"><span class="keyword">if</span> framework.device.windows() <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">local</span> winVersion = framework.device.getWinVersion()</span><br><span class="line">    Log.Info(<span class="string">&quot;系统版本&#123;0&#125;&quot;</span>, winVersion)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">string</span>.<span class="built_in">find</span>(winVersion,<span class="string">&quot;Windows 10&quot;</span>) <span class="keyword">then</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.WinRT</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.MediaFoundation</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    mediaPlayer.PlatformOptionsWindows.audioOutput = CS.RenderHeads.Media.AVProVideo.Windows.AudioOutput.Unity</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
+    <title>Unity 常用</title>
+    <url>/posts/fec55579/</url>
+    <content><![CDATA[<h1 id="Unity-搜索文件-命令"><a href="#Unity-搜索文件-命令" class="headerlink" title="Unity 搜索文件 命令"></a>Unity 搜索文件 命令</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;t:PlayableAsset&quot; 查询timeLine</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
-    <title>Unity 常用</title>
-    <url>/posts/fec55579/</url>
-    <content><![CDATA[<h1 id="Unity-搜索文件-命令"><a href="#Unity-搜索文件-命令" class="headerlink" title="Unity 搜索文件 命令"></a>Unity 搜索文件 命令</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;t:PlayableAsset&quot; 查询timeLine</span><br></pre></td></tr></table></figure>
+    <title>Resolution and Presentation</title>
+    <url>/posts/b4834b29/</url>
+    <content><![CDATA[<h1 id="分变率设置区域（Resolution-Section）"><a href="#分变率设置区域（Resolution-Section）" class="headerlink" title="分变率设置区域（Resolution Section）"></a>分变率设置区域（Resolution Section）</h1><ol>
+<li>Fullscreen Mode</li>
+<li>Default Is Native Resolution</li>
+<li>Mac Retina Support</li>
+<li>Run in Background</li>
+</ol>
+<h2 id="Fullscreen-Mode"><a href="#Fullscreen-Mode" class="headerlink" title="Fullscreen Mode"></a>Fullscreen Mode</h2><h3 id="Fullscreen-Window"><a href="#Fullscreen-Window" class="headerlink" title="Fullscreen Window"></a>Fullscreen Window</h3><p>Fullscreen Window是将发布的APP自动全屏到目标机器（运行APP的机器）的分辨率，注意，<strong>这里仅仅是将APP自动全屏</strong>，并不一定会APP渲染的内容自动全屏，因为还有黑边机制，下面会讲到。APP中所渲染的场景的分辨率则是通过代码或者是用户启动的时候所选择的分变率决定的，因为此分辨率不一定会占满屏幕，Unity则会自动放大到显示器的分辨率。但是Unity为了保证场景不被拉伸变形，会自动在APP场景的分辨率（宽高比）的基础上添加黑边，以保证适配目标机器的分辨率。</p>
+<h4 id="举个例子"><a href="#举个例子" class="headerlink" title="举个例子"></a>举个例子</h4><p>加入选择场景的渲染场景分辨率为800X600（aspect ratio 1.333），目标机器的分变率为 1920X1080（aspect ratio 1.777），运行之后发现APP是全屏的，但是两侧有相应的黑边，这就是上面所说的黑边机制（letterboxing）。在这里补充一点，常见的屏幕分辨率的宽高比（aspect ratio）有1.25、1.333、1.5、1.6、1.6666、1.7777（常说的16：9）几种，目前最后一种最为流行</p>
+<h3 id="Exclusive-Fullscreen"><a href="#Exclusive-Fullscreen" class="headerlink" title="Exclusive Fullscreen"></a>Exclusive Fullscreen</h3><p>Exclusive Fullscreen是只在Windows平台上起作用的模式，这种模式也是在自动将APP自动全屏到目标机器屏幕，但是与上述的Fullscreen Window不同，这种模式会改变目标屏幕的分辨率，并且不会有黑边机制，场景出现拉伸情况。</p>
+<p><strong>此选项仅在 Windows 上受支持；在其他平台上，设置将回退到 _<strong><strong>Fullscreen Window</strong></strong>_。</strong></p>
+<h4 id="举个例子-1"><a href="#举个例子-1" class="headerlink" title="举个例子"></a>举个例子</h4><p>当我们将APP的分辨率设置为1280X960（1.333），运行后没有黑边，场景则被拉伸，对应的屏幕分辨率。这种模式下不容易被截图，读者可以亲自动手试一试。</p>
+<h3 id="Maximized-Window这种模式只能在MAC上被支持，Windows系统则不支持。"><a href="#Maximized-Window这种模式只能在MAC上被支持，Windows系统则不支持。" class="headerlink" title="Maximized Window这种模式只能在MAC上被支持，Windows系统则不支持。"></a>Maximized Window这种模式只能在MAC上被支持，Windows系统则不支持。</h3><h3 id="Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。"><a href="#Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。" class="headerlink" title="Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。"></a>Windowed该模式是发布一个标准的可以移动的非全屏的APP，其分辨率可以在分辨率列表中选择。</h3><h3 id="Default-Is-Native-Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。"><a href="#Default-Is-Native-Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。" class="headerlink" title="Default Is Native Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。"></a>Default Is Native Resolution（只在在选择全屏模式下有）选项激活的情况下，APP的渲染的分辨率会是目标机器的分变率。</h3><h3 id="Force-single-instance是保证APP只被打开一次，不能同时打开多个"><a href="#Force-single-instance是保证APP只被打开一次，不能同时打开多个" class="headerlink" title="Force single instance是保证APP只被打开一次，不能同时打开多个"></a>Force single instance是保证APP只被打开一次，不能同时打开多个</h3><p>Unity之Application.runInBackground &#x3D; true</p>
+<figure class="highlight c#"><table><tr><td class="code"><pre><span class="line">默认是False，设置Application.runInBackground = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">则<span class="function"><span class="keyword">void</span> <span class="title">OnApplicationPause</span>(<span class="params"><span class="built_in">bool</span> pause</span>)不再起作用</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Standalone-Player-Options-部分"><a href="#Standalone-Player-Options-部分" class="headerlink" title="Standalone Player Options 部分"></a>Standalone Player Options 部分</h2><h3 id="Capture-Single-Screen"><a href="#Capture-Single-Screen" class="headerlink" title="Capture Single Screen"></a><strong>Capture Single Screen</strong></h3><p>启用此选项可确保全屏模式 (Fullscreen Mode) 下的独立平台游戏不会使多显示屏设置中的辅助显示屏变暗。Mac OS X 上不支持该功能。</p>
+<h3 id="Use-Player-Log"><a href="#Use-Player-Log" class="headerlink" title="Use Player Log"></a><strong>Use Player Log</strong></h3><p>启用此选项可向日志文件写入调试信息。默认已启用。 <strong>警告：</strong>如果计划将应用程序提交到 Mac App Store，请禁用此选项。有关更多信息，请参阅<a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#AppStore">发布到 Mac App Store</a>。</p>
+<h3 id="Resizable-Window"><a href="#Resizable-Window" class="headerlink" title="Resizable Window"></a><strong>Resizable Window</strong></h3><p>启用此选项可允许用户调整独立平台播放器窗口的大小。<br><strong>注意：</strong>如果禁用此选项，您的应用程序无法将 <a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_。</p>
+<h3 id="Visible-in-Background"><a href="#Visible-in-Background" class="headerlink" title="Visible in Background"></a>Visible in Background</h3><p>如果已将 <a href="https://docs.unity3d.com/cn/2020.3/Manual/class-PlayerSettingsStandalone.html#fullscreen">Fullscreen Mode</a> 设置为 _Windowed_，启用此选项可在背景中显示应用程序（在 Windows 中）。</p>
+<h3 id="Allow-Fullscreen-Switch"><a href="#Allow-Fullscreen-Switch" class="headerlink" title="Allow Fullscreen Switch"></a><strong>Allow Fullscreen Switch</strong></h3><p>启用此选项可允许通过默认操作系统全屏按键在全屏模式和窗口模式之间切换。</p>
+<h3 id="Force-Single-Instance"><a href="#Force-Single-Instance" class="headerlink" title="Force Single Instance"></a><strong>Force Single Instance</strong></h3><p>启用此选项可将独立平台播放器限制为单个并发运行实例。</p>
+<h3 id="Supported-Aspect-Ratios"><a href="#Supported-Aspect-Ratios" class="headerlink" title="Supported Aspect Ratios"></a>Supported Aspect Ratios</h3><p>启用希望游戏启动时出现在分辨率对话框中的每个宽高比（只要用户的显示屏支持这些宽高比设置）。</p>
 ]]></content>
       <tags>
         <tag>Unity</tag>
@@ -1294,6 +1285,15 @@
 ]]></content>
       <tags>
         <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Love Steam Game</title>
+    <url>/posts/33b8e905/</url>
+    <content><![CDATA[<p>Desynced <a href="https://store.steampowered.com/app/1450900/Desynced/">https://store.steampowered.com/app/1450900/Desynced/</a></p>
+]]></content>
+      <tags>
+        <tag>SteamGame</tag>
       </tags>
   </entry>
   <entry>
@@ -1409,104 +1409,28 @@
       </tags>
   </entry>
   <entry>
-    <title>Adb Command</title>
-    <url>/posts/f3b5148b/</url>
-    <content><![CDATA[<h1 id="Adb-Command"><a href="#Adb-Command" class="headerlink" title="Adb Command"></a>Adb Command</h1><p>查看所有当前所有进程命令: <code>adb shell ps</code></p>
-<table>
-<thead>
-<tr>
-<th align="left">列名</th>
-<th align="left">含义</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">USER</td>
-<td align="left">所属用户</td>
-</tr>
-<tr>
-<td align="left">PID Process ID</td>
-<td align="left">进程 ID</td>
-</tr>
-<tr>
-<td align="left">PPID Process Parent ID</td>
-<td align="left">父进程 ID</td>
-</tr>
-<tr>
-<td align="left">VSIZE Virtual Size</td>
-<td align="left">进程的虚拟内存大小</td>
-</tr>
-<tr>
-<td align="left">RSS Resident Set Size</td>
-<td align="left">实际驻留”在内存中”的内存大小</td>
-</tr>
-<tr>
-<td align="left">WCHAN</td>
-<td align="left">休眠进程在内核中的地址</td>
-</tr>
-<tr>
-<td align="left">NAME</td>
-<td align="left">进程名</td>
-</tr>
-</tbody></table>
-<ul>
-<li>在 Windows 上筛选某个进程：<code>adb shell ps|findstr baidu</code></li>
-<li>在手机上筛选某个进程：<code>adb shell ps baidu 或者 adb shell ps|findstr -i baidu</code></li>
-<li>android 或者 linux 中的 shell 命令是 grep：<code>adb shell ps|grepbaidu</code></li>
-</ul>
-<h1 id="指定设备安装-apk"><a href="#指定设备安装-apk" class="headerlink" title="指定设备安装 apk"></a>指定设备安装 apk</h1><blockquote>
-<p>adb -s 设备 id install app-release.apk</p>
-</blockquote>
-<h1 id="检测端口是否被占用"><a href="#检测端口是否被占用" class="headerlink" title="检测端口是否被占用"></a>检测端口是否被占用</h1><blockquote>
-<p>netstat -a -o -n | find “34999”</p>
-</blockquote>
-<h1 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h1><blockquote>
-<p>taskkill &#x2F;f &#x2F;pid (进程 Id 44468)</p>
-</blockquote>
-<h1 id="调试打开某个应用"><a href="#调试打开某个应用" class="headerlink" title="调试打开某个应用"></a>调试打开某个应用</h1><blockquote>
-<p>adb forward tco:34999 localabstract:Unity-com.xxx.xx</p>
-</blockquote>
-<h1 id="包信息查询"><a href="#包信息查询" class="headerlink" title="包信息查询"></a>包信息查询</h1><blockquote>
-<p>子命令格式：adb shell dumpsys package [-h] [-f] [—checkin] [cmd]…</p>
-</blockquote>
-<h1 id="activity-信息查询"><a href="#activity-信息查询" class="headerlink" title="activity 信息查询"></a>activity 信息查询</h1><blockquote>
-<p>子命令格式：adb shell dumpsys activity [-a] [-c]…</p>
-</blockquote>
-<h1 id="网络信息查询"><a href="#网络信息查询" class="headerlink" title="网络信息查询"></a>网络信息查询</h1><blockquote>
-<p>网络连接 adb shell dumpsys connectivity<br>网络策略 adb shell dumpsys netpolicy<br>网络状态 adb shell dumpsys netstats<br>网络管理 adb shell dumpsys network_management</p>
-</blockquote>
-<h1 id="其他常用服务信息查询"><a href="#其他常用服务信息查询" class="headerlink" title="其他常用服务信息查询"></a>其他常用服务信息查询</h1><blockquote>
-<p>内存 adb shell dumpsys meminfo<br>CPU adb shell dumpsys cpuinfo<br>帧率 adb shell dumpsys gfxinfo<br>显示 adb shell dumpsys display<br>电源 adb shell dumpsys power<br>电池状态 adb shell dumpsys batterystats<br>电池 adb shell dumpsys battery<br>闹钟 adb shell dumpsys alarm<br>位置 adb shell dumpsys location</p>
-</blockquote>
+    <title>Unity PC 出包相关</title>
+    <url>/posts/5714b715/</url>
+    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
+<ol>
+<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
+<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
+<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
+<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
+<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
+</ol>
 ]]></content>
       <tags>
-        <tag>Android</tag>
+        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
-    <title>Adb Install Progress</title>
-    <url>/posts/bf5f2ea8/</url>
-    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
+    <title>优化资产</title>
+    <url>/posts/f7fefa74/</url>
+    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
 ]]></content>
       <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Android 内存详解</title>
-    <url>/posts/e230f7b5/</url>
-    <content><![CDATA[<p>![[Pasted image 20230823154158.png]]</p>
-<p>android程序内存被分为2部分：native和dalvik，dalvik就是java堆，普通java对象是在java堆分配，而bitmap是直接在native上分配，对于内存的限制是 native+dalvik 不能超过最大限制。</p>
-<p>android程序内存一般限制在16M，也有24M的。  </p>
-<p>多说明，但是没有解析的太清楚，我这里分析汇总了一下。供大家参数。学习知识，要关注细节，懂与不懂差很多的呦！我说的是薪资：）。</p>
-<p>Native Heap：Native代码分配的内存，虚拟机和Android框架分配内存。关于什么是Native代码，即非Java代码分配的内存。详细介绍请找百度。</p>
-<p>Dalvik Heap：Java对象分配的占据内存</p>
-<p>Dalvik Other：类数据结构和索引占据内存</p>
-<p>Stack：栈内存</p>
-<p>Ashmem：不以dalvik- 开头的内存区域，匿名共享内存用来提供共享内存通过分配一个多个进程可以共享的带名称的内存块。匿名共享内存（Anonymous Shared Memory-Ashmem。Android匿名共享内存是基于Linux共享内存的，都是在tmpfs文件系统上新建文件，并将其映射到不同的进程空间，从而达到共享内存的目的，只是，Android在Linux的基础上进行了改造，并借助Binder+fd文件描述符实现了共享内存的传递。</p>
-]]></content>
-      <tags>
-        <tag>Android</tag>
+        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
@@ -1690,6 +1614,107 @@
       </tags>
   </entry>
   <entry>
+    <title>Adb Install Progress</title>
+    <url>/posts/bf5f2ea8/</url>
+    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Adb Command</title>
+    <url>/posts/f3b5148b/</url>
+    <content><![CDATA[<h1 id="Adb-Command"><a href="#Adb-Command" class="headerlink" title="Adb Command"></a>Adb Command</h1><p>查看所有当前所有进程命令: <code>adb shell ps</code></p>
+<table>
+<thead>
+<tr>
+<th align="left">列名</th>
+<th align="left">含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">USER</td>
+<td align="left">所属用户</td>
+</tr>
+<tr>
+<td align="left">PID Process ID</td>
+<td align="left">进程 ID</td>
+</tr>
+<tr>
+<td align="left">PPID Process Parent ID</td>
+<td align="left">父进程 ID</td>
+</tr>
+<tr>
+<td align="left">VSIZE Virtual Size</td>
+<td align="left">进程的虚拟内存大小</td>
+</tr>
+<tr>
+<td align="left">RSS Resident Set Size</td>
+<td align="left">实际驻留”在内存中”的内存大小</td>
+</tr>
+<tr>
+<td align="left">WCHAN</td>
+<td align="left">休眠进程在内核中的地址</td>
+</tr>
+<tr>
+<td align="left">NAME</td>
+<td align="left">进程名</td>
+</tr>
+</tbody></table>
+<ul>
+<li>在 Windows 上筛选某个进程：<code>adb shell ps|findstr baidu</code></li>
+<li>在手机上筛选某个进程：<code>adb shell ps baidu 或者 adb shell ps|findstr -i baidu</code></li>
+<li>android 或者 linux 中的 shell 命令是 grep：<code>adb shell ps|grepbaidu</code></li>
+</ul>
+<h1 id="指定设备安装-apk"><a href="#指定设备安装-apk" class="headerlink" title="指定设备安装 apk"></a>指定设备安装 apk</h1><blockquote>
+<p>adb -s 设备 id install app-release.apk</p>
+</blockquote>
+<h1 id="检测端口是否被占用"><a href="#检测端口是否被占用" class="headerlink" title="检测端口是否被占用"></a>检测端口是否被占用</h1><blockquote>
+<p>netstat -a -o -n | find “34999”</p>
+</blockquote>
+<h1 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h1><blockquote>
+<p>taskkill &#x2F;f &#x2F;pid (进程 Id 44468)</p>
+</blockquote>
+<h1 id="调试打开某个应用"><a href="#调试打开某个应用" class="headerlink" title="调试打开某个应用"></a>调试打开某个应用</h1><blockquote>
+<p>adb forward tco:34999 localabstract:Unity-com.xxx.xx</p>
+</blockquote>
+<h1 id="包信息查询"><a href="#包信息查询" class="headerlink" title="包信息查询"></a>包信息查询</h1><blockquote>
+<p>子命令格式：adb shell dumpsys package [-h] [-f] [—checkin] [cmd]…</p>
+</blockquote>
+<h1 id="activity-信息查询"><a href="#activity-信息查询" class="headerlink" title="activity 信息查询"></a>activity 信息查询</h1><blockquote>
+<p>子命令格式：adb shell dumpsys activity [-a] [-c]…</p>
+</blockquote>
+<h1 id="网络信息查询"><a href="#网络信息查询" class="headerlink" title="网络信息查询"></a>网络信息查询</h1><blockquote>
+<p>网络连接 adb shell dumpsys connectivity<br>网络策略 adb shell dumpsys netpolicy<br>网络状态 adb shell dumpsys netstats<br>网络管理 adb shell dumpsys network_management</p>
+</blockquote>
+<h1 id="其他常用服务信息查询"><a href="#其他常用服务信息查询" class="headerlink" title="其他常用服务信息查询"></a>其他常用服务信息查询</h1><blockquote>
+<p>内存 adb shell dumpsys meminfo<br>CPU adb shell dumpsys cpuinfo<br>帧率 adb shell dumpsys gfxinfo<br>显示 adb shell dumpsys display<br>电源 adb shell dumpsys power<br>电池状态 adb shell dumpsys batterystats<br>电池 adb shell dumpsys battery<br>闹钟 adb shell dumpsys alarm<br>位置 adb shell dumpsys location</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Android 内存详解</title>
+    <url>/posts/e230f7b5/</url>
+    <content><![CDATA[<p>![[Pasted image 20230823154158.png]]</p>
+<p>android程序内存被分为2部分：native和dalvik，dalvik就是java堆，普通java对象是在java堆分配，而bitmap是直接在native上分配，对于内存的限制是 native+dalvik 不能超过最大限制。</p>
+<p>android程序内存一般限制在16M，也有24M的。  </p>
+<p>多说明，但是没有解析的太清楚，我这里分析汇总了一下。供大家参数。学习知识，要关注细节，懂与不懂差很多的呦！我说的是薪资：）。</p>
+<p>Native Heap：Native代码分配的内存，虚拟机和Android框架分配内存。关于什么是Native代码，即非Java代码分配的内存。详细介绍请找百度。</p>
+<p>Dalvik Heap：Java对象分配的占据内存</p>
+<p>Dalvik Other：类数据结构和索引占据内存</p>
+<p>Stack：栈内存</p>
+<p>Ashmem：不以dalvik- 开头的内存区域，匿名共享内存用来提供共享内存通过分配一个多个进程可以共享的带名称的内存块。匿名共享内存（Anonymous Shared Memory-Ashmem。Android匿名共享内存是基于Linux共享内存的，都是在tmpfs文件系统上新建文件，并将其映射到不同的进程空间，从而达到共享内存的目的，只是，Android在Linux的基础上进行了改造，并借助Binder+fd文件描述符实现了共享内存的传递。</p>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>检测并删除材质中记录的冗余Keywords和Shader属性</title>
     <url>/posts/78fc990e/</url>
     <content><![CDATA[<h1 id="检测并删除材质中记录的冗余Keywords和Shader属性"><a href="#检测并删除材质中记录的冗余Keywords和Shader属性" class="headerlink" title="检测并删除材质中记录的冗余Keywords和Shader属性"></a>检测并删除材质中记录的冗余Keywords和Shader属性</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">region</span> classname  </span></span><br><span class="line"><span class="comment">/*  </span></span><br><span class="line"><span class="comment"> *         Title: classname : Ufw</span></span><br><span class="line"><span class="comment"> *         Description: </span></span><br><span class="line"><span class="comment"> *                功能：       检测并删除材质中记录的冗余Keywords和Shader属性  </span></span><br><span class="line"><span class="comment"> *         Author:            xxx  </span></span><br><span class="line"><span class="comment"> *         Time:              2022年9月13日11:21:27  </span></span><br><span class="line"><span class="comment"> *         Version:           0.1版本  </span></span><br><span class="line"><span class="comment"> *         Modify Recorde: */</span>  </span><br><span class="line"><span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> System.Reflection;  </span><br><span class="line"><span class="keyword">using</span> UnityEditor;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Ufw</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnusedKeywordsAndPropertiesCheckerEditor</span> : <span class="title">Editor</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="comment">//获取shader中所有的宏  </span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">GetShaderKeywords</span>(<span class="params">Shader target, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local</span>)</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">try</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                MethodInfo globalKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderGlobalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                MethodInfo localKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderLocalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                <span class="keyword">if</span> (globalKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = (<span class="built_in">string</span>[])globalKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">if</span> (localKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = (<span class="built_in">string</span>[])localKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">catch</span> (Exception e)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Error(<span class="string">$&quot;获取shader中所有的宏,错误: <span class="subst">&#123;e.Message&#125;</span>&quot;</span>);  </span><br><span class="line">                <span class="keyword">global</span> = local = <span class="literal">null</span>;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        [<span class="meta">MenuItem(UfwMenuItemIni.M_Check_MatKey)</span>]  </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CheckMaterials</span>()</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            ProfilerUtils.BeginWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            <span class="built_in">string</span>[] paths = AssetDatabase.FindAssets(<span class="string">&quot;t:material&quot;</span>, <span class="keyword">new</span>[]  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="string">&quot;Assets/Res&quot;</span>  </span><br><span class="line">            &#125;);  </span><br><span class="line">            <span class="keyword">if</span> (paths == <span class="literal">null</span> || paths.Length == <span class="number">0</span>)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Info(<span class="string">$&quot;未找到相匹配的文件 匹配格式: t:material 匹配路径: Assets/Res&quot;</span>);  </span><br><span class="line">                <span class="keyword">return</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="built_in">int</span> index = <span class="number">0</span>;  </span><br><span class="line">            <span class="built_in">int</span> maxCount = paths.Length;  </span><br><span class="line">            <span class="keyword">foreach</span> (<span class="built_in">string</span> materialGuid <span class="keyword">in</span> paths)  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="built_in">string</span> materialAssetPath = AssetDatabase.GUIDToAssetPath(materialGuid);  </span><br><span class="line">                Material material = AssetDatabase.LoadAssetAtPath&lt;Material&gt;(materialAssetPath);  </span><br><span class="line">                EditorUtility.DisplayProgressBar(<span class="string">$&quot;读取文件Material文件: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;正在查询内容&quot;</span>, (<span class="built_in">float</span>)index / maxCount);  </span><br><span class="line">                <span class="keyword">if</span> (GetShaderKeywords(material.shader, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local))  </span><br><span class="line">                &#123;  </span><br><span class="line">                    HashSet&lt;<span class="built_in">string</span>&gt; keywords = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                    <span class="keyword">if</span> (<span class="keyword">global</span> != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> g <span class="keyword">in</span> <span class="keyword">global</span>)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(g);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (local != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> l <span class="keyword">in</span> local)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(l);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (keywords.Count == <span class="number">0</span>)  </span><br><span class="line">                    &#123;                        Log.Warn(<span class="string">$&quot;读取文件失效,请检查Material: <span class="subst">&#123;material.name&#125;</span>  Shader: <span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                        <span class="keyword">continue</span>;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    EditorUtility.ClearProgressBar();  </span><br><span class="line">  </span><br><span class="line">                    <span class="comment">//重置keywords  </span></span><br><span class="line">                    List&lt;<span class="built_in">string</span>&gt; resetKeywords = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;(material.shaderKeywords);  </span><br><span class="line">                    <span class="built_in">int</span> removeIndex = <span class="number">0</span>;  </span><br><span class="line">                    <span class="keyword">foreach</span> (<span class="built_in">string</span> item <span class="keyword">in</span> material.shaderKeywords)  </span><br><span class="line">                    &#123;                        EditorUtility.DisplayProgressBar(<span class="string">$&quot;检查KeyWords: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;匹配字段 <span class="subst">&#123;item&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeIndex / resetKeywords.Count);  </span><br><span class="line">                        <span class="keyword">if</span> (!keywords.Contains(item))  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            resetKeywords.Remove(item);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                        removeIndex++;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    material.shaderKeywords = resetKeywords.ToArray();  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    Log.Warn(<span class="string">$&quot;获取shader中所有的宏,Error: Material:<span class="subst">&#123;material.name&#125;</span>  shader:<span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                    <span class="keyword">continue</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                HashSet&lt;<span class="built_in">string</span>&gt; property = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                <span class="built_in">int</span> count = material.shader.GetPropertyCount();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; count; i++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    property.Add(material.shader.GetPropertyName(i));  </span><br><span class="line">                &#125;  </span><br><span class="line">                SerializedObject o = <span class="keyword">new</span> SerializedObject(material);  </span><br><span class="line">                SerializedProperty disabledShaderPasses = o.FindProperty(<span class="string">&quot;disabledShaderPasses&quot;</span>);  </span><br><span class="line">                SerializedProperty savedProperties = o.FindProperty(<span class="string">&quot;m_SavedProperties&quot;</span>);  </span><br><span class="line">                SerializedProperty texEnvs = savedProperties.FindPropertyRelative(<span class="string">&quot;m_TexEnvs&quot;</span>);  </span><br><span class="line">                SerializedProperty floats = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Floats&quot;</span>);  </span><br><span class="line">                SerializedProperty colors = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Colors&quot;</span>);  </span><br><span class="line">                <span class="built_in">int</span> removeAttrId = <span class="number">0</span>;  </span><br><span class="line">                <span class="built_in">int</span> removeAttrCount = disabledShaderPasses.arraySize + texEnvs.arraySize + floats.arraySize + colors.arraySize;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="comment">//对比属性删除残留的属性  </span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = disabledShaderPasses.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = disabledShaderPasses.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:disabledShaderPasses&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        disabledShaderPasses.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = texEnvs.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = texEnvs.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_TexEnvs&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        texEnvs.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = floats.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = floats.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Floats&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        floats.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = colors.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = colors.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Colors&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        colors.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                o.ApplyModifiedProperties();  </span><br><span class="line">                index += <span class="number">1</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            UWatchResult result = ProfilerUtils.EndWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            Log.Info(<span class="string">$&quot;清理Material残留 时间<span class="subst">&#123;result.costTime&#125;</span> [内存]<span class="subst">&#123;result.costMemory&#125;</span>&quot;</span>);  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            AssetDatabase.SaveAssets();  </span><br><span class="line">            Log.Info(<span class="string">&quot;检查完毕&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
@@ -1704,31 +1729,6 @@
 ]]></content>
       <tags>
         <tag>XLua</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity PC 出包相关</title>
-    <url>/posts/5714b715/</url>
-    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
-<ol>
-<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
-<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
-<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
-<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
-<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化资产</title>
-    <url>/posts/f7fefa74/</url>
-    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
-]]></content>
-      <tags>
-        <tag>Unity</tag>
       </tags>
   </entry>
 </search>
