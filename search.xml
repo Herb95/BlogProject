@@ -35,10 +35,10 @@
 <li>cd ~&#x2F;.ssh #查看本机是否存在 SSH Key ###<strong>存在</strong></li>
 <li>clip &lt;~&#x2F;.ssh&#x2F;id_rsa.pub #复制公钥到 clipboard</li>
 <li>登录 github 设置秘钥</li>
-<li>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#98;&#46;&#x63;&#111;&#109;</a> #测试秘钥</li>
+<li>ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#x62;&#x2e;&#x63;&#x6f;&#109;</a> #测试秘钥</li>
 </ul>
 <h3 id="不存在"><a href="#不存在" class="headerlink" title="不存在"></a><strong>不存在</strong></h3><ul>
-<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#x75;&#114;&#x5f;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;">&#x79;&#x6f;&#x75;&#114;&#x5f;&#x65;&#109;&#97;&#x69;&#x6c;&#x40;&#x65;&#120;&#97;&#x6d;&#112;&#x6c;&#x65;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#x72;&#95;&#101;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#111;&#117;&#x72;&#95;&#101;&#x6d;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#101;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
 <ul>
 <li>弹出界面</li>
 <li>直接回车:默认文件进行存储<ul>
@@ -538,22 +538,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Git 相关解决方案</title>
-    <url>/posts/12e58447/</url>
-    <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="删除某一个配置Key"><a href="#删除某一个配置Key" class="headerlink" title="删除某一个配置Key"></a>删除某一个配置Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//删除某一个配置key</span><br><span class="line">git config --global --unset &quot;key Name&quot;</span><br></pre></td></tr></table></figure>
-
-<h2 id="单独设置GitHub代理"><a href="#单独设置GitHub代理" class="headerlink" title="单独设置GitHub代理"></a>单独设置GitHub代理</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 命令。port：自定义端口</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:port</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="old-mode-100644-new-mode-100755"><a href="#old-mode-100644-new-mode-100755" class="headerlink" title="old mode 100644 new mode 100755"></a>old mode 100644 new mode 100755</h2><p>  old mode 100644 new mode 100755 的提示，如下图：<br>  ![[Pasted image 20230801150009.png]]<br>  ### 产生这个问题的原因就是<br>  filemode的变化，文件chmod后其文件某些位是改变了的，如果严格的比较原文件和chmod后的文件，两者是有区别的，但是源代码通常只关心文本内容，因此chmod产生的变化应该忽略，所以设置一下：<br>  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">  切到源码的根目录下，</span><br><span class="line">  git config --add core.filemode false</span><br></pre></td></tr></table></figure><br>  这样你的所有的git库都会忽略filemode变更了～</p>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>获取当前仓库文件状态</title>
     <url>/posts/be7912d9/</url>
     <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
@@ -581,6 +565,22 @@
       </tags>
   </entry>
   <entry>
+    <title>Git 相关解决方案</title>
+    <url>/posts/12e58447/</url>
+    <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="删除某一个配置Key"><a href="#删除某一个配置Key" class="headerlink" title="删除某一个配置Key"></a>删除某一个配置Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//删除某一个配置key</span><br><span class="line">git config --global --unset &quot;key Name&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="单独设置GitHub代理"><a href="#单独设置GitHub代理" class="headerlink" title="单独设置GitHub代理"></a>单独设置GitHub代理</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- 命令。port：自定义端口</span><br><span class="line">git config --global http.https://github.com.proxy socks5://127.0.0.1:port</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="old-mode-100644-new-mode-100755"><a href="#old-mode-100644-new-mode-100755" class="headerlink" title="old mode 100644 new mode 100755"></a>old mode 100644 new mode 100755</h2><p>  old mode 100644 new mode 100755 的提示，如下图：<br>  ![[Pasted image 20230801150009.png]]<br>  ### 产生这个问题的原因就是<br>  filemode的变化，文件chmod后其文件某些位是改变了的，如果严格的比较原文件和chmod后的文件，两者是有区别的，但是源代码通常只关心文本内容，因此chmod产生的变化应该忽略，所以设置一下：<br>  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">  切到源码的根目录下，</span><br><span class="line">  git config --add core.filemode false</span><br></pre></td></tr></table></figure><br>  这样你的所有的git库都会忽略filemode变更了～</p>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>查看仓库大小</title>
     <url>/posts/b44735da/</url>
     <content><![CDATA[<p>git count-objects -vh<br>![[Pasted image 20230908115042.png]]</p>
@@ -600,7 +600,7 @@
   <entry>
     <title>生成密钥</title>
     <url>/posts/7b852c9/</url>
-    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#120;&#64;&#x78;&#x78;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#x78;&#120;&#120;&#120;&#64;&#x78;&#x78;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
+    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#x78;&#x40;&#120;&#x78;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;">&#x78;&#120;&#120;&#x78;&#x40;&#120;&#x78;&#x78;&#x78;&#46;&#x63;&#x6f;&#x6d;</a>“</p>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -851,6 +851,42 @@
       </tags>
   </entry>
   <entry>
+    <title>常用端口记录</title>
+    <url>/posts/3fb58c6b/</url>
+    <content><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><table>
+<thead>
+<tr>
+<th align="center">端口</th>
+<th align="center">注解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">3306</td>
+<td align="center">数据库端口</td>
+</tr>
+<tr>
+<td align="center">80</td>
+<td align="center">通用端口</td>
+</tr>
+<tr>
+<td align="center">22</td>
+<td align="center">SSh 端口</td>
+</tr>
+<tr>
+<td align="center">21</td>
+<td align="center">FTP 端口</td>
+</tr>
+<tr>
+<td align="center">443</td>
+<td align="center">https</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Changelog Record</title>
     <url>/posts/8efc86c4/</url>
     <content><![CDATA[<h1 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h1><p>All notable changes to this project will be documented in this file.</p>
@@ -1007,42 +1043,6 @@
 ]]></content>
       <tags>
         <tag>Record</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>常用端口记录</title>
-    <url>/posts/3fb58c6b/</url>
-    <content><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><table>
-<thead>
-<tr>
-<th align="center">端口</th>
-<th align="center">注解</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">3306</td>
-<td align="center">数据库端口</td>
-</tr>
-<tr>
-<td align="center">80</td>
-<td align="center">通用端口</td>
-</tr>
-<tr>
-<td align="center">22</td>
-<td align="center">SSh 端口</td>
-</tr>
-<tr>
-<td align="center">21</td>
-<td align="center">FTP 端口</td>
-</tr>
-<tr>
-<td align="center">443</td>
-<td align="center">https</td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -1262,17 +1262,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Scoops</title>
-    <url>/posts/23b7e45f/</url>
-    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser <span class="comment"># Optional: Needed to run a remote script the first time</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iex</span> <span class="string">&quot;&amp; &#123;<span class="variable">$</span>(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Window</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Which</title>
     <url>/posts/f83c1a8b/</url>
     <content><![CDATA[<h1 id="自建which-命令"><a href="#自建which-命令" class="headerlink" title="自建which 命令"></a>自建which 命令</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">@ <span class="keyword">for</span> <span class="variable">%%e</span> <span class="keyword">in</span> (<span class="variable">%PATHEXT%</span>) <span class="keyword">do</span> @ <span class="keyword">for</span> <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="variable">%1%</span>%e) <span class="keyword">do</span> @ <span class="keyword">if</span> <span class="keyword">NOT</span> &quot;<span class="variable">%%~</span>$<span class="built_in">PATH</span>:i&quot; == &quot;&quot; <span class="built_in">echo</span> <span class="variable">%%~</span>$<span class="built_in">PATH</span>:i</span><br></pre></td></tr></table></figure>
@@ -1280,6 +1269,17 @@
 <p>新建 “which.cmd”  放入–&gt; C:\Windows\System32 中即可使用</p>
 <p>内置命令:</p>
 <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">where 命令工具说明可用 where /?  查询用法。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scoops</title>
+    <url>/posts/23b7e45f/</url>
+    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser <span class="comment"># Optional: Needed to run a remote script the first time</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iex</span> <span class="string">&quot;&amp; &#123;<span class="variable">$</span>(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Window</tag>
@@ -1530,6 +1530,26 @@
       </tags>
   </entry>
   <entry>
+    <title>PM2 命令运行参数</title>
+    <url>/posts/230219f6/</url>
+    <content><![CDATA[<ol>
+<li>–name：给应用程序指定一个名称，方便管理和监控。</li>
+<li>–watch：监控指定目录下的文件变化，如果发现文件变化会自动重启应用程序。</li>
+<li>–ignore-watch：忽略指定目录下的文件变化，可以使用通配符 * 指定多个目录。</li>
+<li>–max-memory-restart：当应用程序内存使用超过指定值时，自动重启应用程序。</li>
+<li>–log-date-format：指定日志的时间格式，例如 YYYY-MM-DD HH:mm:ss。</li>
+<li>–log：指定日志文件的路径。</li>
+<li>–env：指定应用程序的环境变量。</li>
+<li>–interpreter：指定解释器路径，例如 &#x2F;usr&#x2F;bin&#x2F;node。</li>
+<li>–no-daemon：关闭守护进程模式，将 PM2 运行在前台。</li>
+<li>–no-autorestart：关闭自动重启功能。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IOS -- 出包相关问题</title>
     <url>/posts/e446d6d/</url>
     <content><![CDATA[<h1 id="AppStore-提审时的“出口合规证明”处理"><a href="#AppStore-提审时的“出口合规证明”处理" class="headerlink" title="AppStore 提审时的“出口合规证明”处理"></a>AppStore 提审时的“出口合规证明”处理</h1><p>![[Pasted image 20230802161133.png]]</p>
@@ -1678,23 +1698,12 @@
       </tags>
   </entry>
   <entry>
-    <title>PM2 命令运行参数</title>
-    <url>/posts/230219f6/</url>
-    <content><![CDATA[<ol>
-<li>–name：给应用程序指定一个名称，方便管理和监控。</li>
-<li>–watch：监控指定目录下的文件变化，如果发现文件变化会自动重启应用程序。</li>
-<li>–ignore-watch：忽略指定目录下的文件变化，可以使用通配符 * 指定多个目录。</li>
-<li>–max-memory-restart：当应用程序内存使用超过指定值时，自动重启应用程序。</li>
-<li>–log-date-format：指定日志的时间格式，例如 YYYY-MM-DD HH:mm:ss。</li>
-<li>–log：指定日志文件的路径。</li>
-<li>–env：指定应用程序的环境变量。</li>
-<li>–interpreter：指定解释器路径，例如 &#x2F;usr&#x2F;bin&#x2F;node。</li>
-<li>–no-daemon：关闭守护进程模式，将 PM2 运行在前台。</li>
-<li>–no-autorestart：关闭自动重启功能。</li>
-</ol>
+    <title>标签注解</title>
+    <url>/posts/20410000/</url>
+    <content><![CDATA[<p><strong>XLua.GCOptimize：</strong> <br>GC 代码优化对于一个 c#纯值类型(官网指一个只包含值类型的 struct，可以嵌套其它只包含值类型的 struct)或者 c#枚举值加上了这个配置，会使得该类型在 lua 和 c#间传递不产生 gc alloc，该类型的数组访问也不会产生 gc。<br>(除枚举之外，包含无参构造函数的复杂类型，都会生成 lua table 到该类型，以及该类型的一维数组转换代码，可以优化转换性能)</p>
 ]]></content>
       <tags>
-        <tag>Nodejs</tag>
+        <tag>XLua</tag>
       </tags>
   </entry>
   <entry>
@@ -1720,15 +1729,6 @@
 ]]></content>
       <tags>
         <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>标签注解</title>
-    <url>/posts/20410000/</url>
-    <content><![CDATA[<p><strong>XLua.GCOptimize：</strong> <br>GC 代码优化对于一个 c#纯值类型(官网指一个只包含值类型的 struct，可以嵌套其它只包含值类型的 struct)或者 c#枚举值加上了这个配置，会使得该类型在 lua 和 c#间传递不产生 gc alloc，该类型的数组访问也不会产生 gc。<br>(除枚举之外，包含无参构造函数的复杂类型，都会生成 lua table 到该类型，以及该类型的一维数组转换代码，可以优化转换性能)</p>
-]]></content>
-      <tags>
-        <tag>XLua</tag>
       </tags>
   </entry>
 </search>
