@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>数据结构</title>
-    <url>/posts/ba907200/</url>
+    <url>/BlogProject/posts/ba907200/</url>
     <content><![CDATA[<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><blockquote>
 <p>1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式. 2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。 3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。 4.正确的数据机构可提高算法的效率 5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构</p>
 </blockquote>
@@ -17,7 +17,7 @@
   </entry>
   <entry>
     <title>部署个人博客方法</title>
-    <url>/posts/4441/</url>
+    <url>/BlogProject/posts/4441/</url>
     <content><![CDATA[<p>部署个人博客命令<br>npm+hexo</p>
 <ul>
 <li><p>npm install hexo-cli -g #安装 Hexo</p>
@@ -35,10 +35,10 @@
 <li>cd ~&#x2F;.ssh #查看本机是否存在 SSH Key ###<strong>存在</strong></li>
 <li>clip &lt;~&#x2F;.ssh&#x2F;id_rsa.pub #复制公钥到 clipboard</li>
 <li>登录 github 设置秘钥</li>
-<li>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#116;&#64;&#x67;&#105;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#x6f;&#x6d;</a> #测试秘钥</li>
+<li>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a> #测试秘钥</li>
 </ul>
 <h3 id="不存在"><a href="#不存在" class="headerlink" title="不存在"></a><strong>不存在</strong></h3><ul>
-<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#117;&#114;&#x5f;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#x79;&#x6f;&#117;&#114;&#x5f;&#101;&#x6d;&#x61;&#x69;&#x6c;&#x40;&#x65;&#x78;&#x61;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>“</p>
+<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#x72;&#x5f;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#111;&#117;&#x72;&#x5f;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
 <ul>
 <li>弹出界面</li>
 <li>直接回车:默认文件进行存储<ul>
@@ -119,7 +119,7 @@
   </entry>
   <entry>
     <title>Lua初识</title>
-    <url>/posts/undefined/</url>
+    <url>/BlogProject/posts/undefined/</url>
     <content><![CDATA[<h2 id="Lua-初识"><a href="#Lua-初识" class="headerlink" title="Lua 初识"></a>Lua 初识</h2><h3 id="Lua-数据类型"><a href="#Lua-数据类型" class="headerlink" title="Lua 数据类型"></a>Lua 数据类型</h3><ul>
 <li>8 种基本类型:</li>
 <li>nil :表示无效值(条件表达式代表 false)</li>
@@ -165,12 +165,12 @@
   </entry>
   <entry>
     <title>Make Backpack</title>
-    <url>/posts/undefined/</url>
+    <url>/BlogProject/posts/undefined/</url>
     <content><![CDATA[<h4 id="Unity3D-背包的制作"><a href="#Unity3D-背包的制作" class="headerlink" title="Unity3D 背包的制作"></a>Unity3D 背包的制作</h4>]]></content>
   </entry>
   <entry>
     <title>Hello World</title>
-    <url>/posts/16107/</url>
+    <url>/BlogProject/posts/16107/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -188,14 +188,14 @@
   </entry>
   <entry>
     <title></title>
-    <url>/posts/0/</url>
+    <url>/BlogProject/posts/0/</url>
     <content><![CDATA[<h1 id="GWNotebookLibrary"><a href="#GWNotebookLibrary" class="headerlink" title="GWNotebookLibrary"></a>GWNotebookLibrary</h1><p>生活工作笔记记录库</p>
 <h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>[[Git -Command — Some Solutions]](Git 相关解决方案)</p>
 ]]></content>
   </entry>
   <entry>
     <title>List</title>
-    <url>/posts/e4fa5726/</url>
+    <url>/BlogProject/posts/e4fa5726/</url>
     <content><![CDATA[<h2 id="List-集合之基本使用"><a href="#List-集合之基本使用" class="headerlink" title="List 集合之基本使用"></a>List 集合之基本使用</h2><h4 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h4><blockquote>
 <p>泛型是 C#2.0 中的新增元素(C++中称为模板),主要用于解决一系列类似的问题.这种机制允许将类名左为参数传递给泛型类型,并生成相应的对象.将泛型(类,接口,方法,委托等)看做模板可能更好解释,模板中的变体部分将被作为参数传进来的类名所代替,从而得到一个新的类型定义.</p>
 </blockquote>
@@ -332,7 +332,7 @@
   </entry>
   <entry>
     <title>说话心理学</title>
-    <url>/posts/2c4a00a4/</url>
+    <url>/BlogProject/posts/2c4a00a4/</url>
     <content><![CDATA[<h1 id="会说话懂心里，迈出成功第一步"><a href="#会说话懂心里，迈出成功第一步" class="headerlink" title="会说话懂心里，迈出成功第一步"></a>会说话懂心里，迈出成功第一步</h1><blockquote>
 <p>说话，是一种可以训练的技能。它取决于你的思维和表达方式，更取决于你是否能抓住听者的心里。掌握说话心理学，迈出成功第一步。</p>
 </blockquote>
@@ -350,7 +350,7 @@
   </entry>
   <entry>
     <title>Git Log</title>
-    <url>/posts/d768d41d/</url>
+    <url>/BlogProject/posts/d768d41d/</url>
     <content><![CDATA[<h1 id="Git-Log"><a href="#Git-Log" class="headerlink" title="Git Log"></a>Git Log</h1><h2 id="git-log"><a href="#git-log" class="headerlink" title="git log"></a>git log</h2><p>不传入任何参数的默认情况下，<code>git log</code> 会按时间先后顺序列出所有的提交，最近的更新排在最上面。 正如你所看到的，这个命令会列出每个提交的 SHA-1 校验和、作者的名字和电子邮件地址、提交时间以及提交说明。</p>
 <h2 id="git-log-p-2"><a href="#git-log-p-2" class="headerlink" title="git log -p -2"></a>git log -p -2</h2><p>其中一个比较有用的选项是 <code>-p</code> 或 <code>--patch</code> ，显示每次提交所引入的差异（按 <strong>补丁</strong> 的格式输出）。 你也可以限制显示的日志条目数量，例如使用 <code>-2</code> 选项来只显示最近的两次提交。</p>
 <h2 id="git-log-–stat"><a href="#git-log-–stat" class="headerlink" title="git log –stat"></a>git log –stat</h2><p> 输出每次提交的简略统计信息。选项在每次提交的下面列出所有被修改过的文件、有多少文件被修改了以及被修改过的文件的哪些行被移除或是添加了。</p>
@@ -522,7 +522,7 @@
   </entry>
   <entry>
     <title>撤销提交操作</title>
-    <url>/posts/beba20e2/</url>
+    <url>/BlogProject/posts/beba20e2/</url>
     <content><![CDATA[<h1 id="撤销提交操作"><a href="#撤销提交操作" class="headerlink" title="撤销提交操作"></a>撤销提交操作</h1><p>git add . &#x2F;&#x2F;添加所有文件<br>git commit -m “本功能全部完成”<br>执行完commit后，想撤回commit，怎么办？</p>
 <p>git reset –soft HEAD^<br>这样就成功的撤销了你的commit<br>注意，仅仅是撤回commit操作，您写的代码仍然保留。</p>
 <p>说一下个人理解：<br>HEAD^的意思是上一个版本，也可以写成HEAD<del>1<br>如果你进行了2次commit，想都撤回，可以使用HEAD</del>2</p>
@@ -539,7 +539,7 @@
   </entry>
   <entry>
     <title>Git 相关解决方案</title>
-    <url>/posts/12e58447/</url>
+    <url>/BlogProject/posts/12e58447/</url>
     <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="删除某一个配置Key"><a href="#删除某一个配置Key" class="headerlink" title="删除某一个配置Key"></a>删除某一个配置Key</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//删除某一个配置key</span><br><span class="line">git config --global --unset &quot;key Name&quot;</span><br></pre></td></tr></table></figure>
@@ -555,7 +555,7 @@
   </entry>
   <entry>
     <title>获取当前仓库文件状态</title>
-    <url>/posts/be7912d9/</url>
+    <url>/BlogProject/posts/be7912d9/</url>
     <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
@@ -570,7 +570,7 @@
   </entry>
   <entry>
     <title>Git 命令使用记录</title>
-    <url>/posts/0/</url>
+    <url>/BlogProject/posts/0/</url>
     <content><![CDATA[<h1 id="Git-相关命令使用记录"><a href="#Git-相关命令使用记录" class="headerlink" title="Git 相关命令使用记录"></a>Git 相关命令使用记录</h1><h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks merge &#123;branch Name&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="获取内容-sourceTree"><a href="#获取内容-sourceTree" class="headerlink" title="获取内容-sourceTree"></a>获取内容-sourceTree</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git --no-optional-locks -c color.branch=<span class="literal">false</span> -c color.diff=<span class="literal">false</span> -c color.status=<span class="literal">false</span> -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> -c credential.helper=sourcetree fetch origin </span><br></pre></td></tr></table></figure>
 <h2 id="删除-Tag"><a href="#删除-Tag" class="headerlink" title="删除 Tag"></a>删除 Tag</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks tag -d &#123;Tag Name&#125;</span><br></pre></td></tr></table></figure>
@@ -582,7 +582,7 @@
   </entry>
   <entry>
     <title>查看仓库大小</title>
-    <url>/posts/b44735da/</url>
+    <url>/BlogProject/posts/b44735da/</url>
     <content><![CDATA[<p>git count-objects -vh<br>![[Pasted image 20230908115042.png]]</p>
 <p>count：松散物体的数量</p>
 <p>size：松散对象消耗的磁盘空间，以KiB为单位（除非指定了-H）</p>
@@ -599,8 +599,8 @@
   </entry>
   <entry>
     <title>生成密钥</title>
-    <url>/posts/7b852c9/</url>
-    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#x78;&#120;&#x40;&#120;&#120;&#120;&#120;&#46;&#99;&#x6f;&#x6d;">&#x78;&#120;&#x78;&#120;&#x40;&#120;&#120;&#120;&#120;&#46;&#99;&#x6f;&#x6d;</a>“</p>
+    <url>/BlogProject/posts/7b852c9/</url>
+    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#120;&#x40;&#120;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#109;">&#x78;&#120;&#120;&#120;&#x40;&#120;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#109;</a>“</p>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -608,7 +608,7 @@
   </entry>
   <entry>
     <title>Good  Word Page</title>
-    <url>/posts/34a163a4/</url>
+    <url>/BlogProject/posts/34a163a4/</url>
     <content><![CDATA[<h2 id="Jekyll"><a href="#Jekyll" class="headerlink" title="Jekyll"></a>Jekyll</h2><p><a href="%22https://jekyllrb.com/%22">链接–&gt;jekyll</a></p>
 <p><strong>Free hosting</strong> with GitHub Pages<br>将纯文本转换为静态网站和博客。</p>
 <h2 id="GithubPages"><a href="#GithubPages" class="headerlink" title="GithubPages"></a>GithubPages</h2><p><a href="https://pages.github.com/">链接–&gt;Github-pages</a></p>
@@ -627,7 +627,7 @@
   </entry>
   <entry>
     <title>Git 配置多个ssh Key</title>
-    <url>/posts/72277d8b/</url>
+    <url>/BlogProject/posts/72277d8b/</url>
     <content><![CDATA[<h1 id="1-生成-ssh-key"><a href="#1-生成-ssh-key" class="headerlink" title="1. 生成 ssh key"></a>1. 生成 ssh key</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t ed25519 -C &quot;Gitee User A&quot; -f gitee_user_a_ed25519</span><br></pre></td></tr></table></figure>
 
 <h1 id="2-创建或者修改文件-ssh-config，添加如下内容："><a href="#2-创建或者修改文件-ssh-config，添加如下内容：" class="headerlink" title="2. 创建或者修改文件  ~/.ssh/config，添加如下内容："></a>2. 创建或者修改文件  <code>~/.ssh/config</code>，添加如下内容：</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Host gt_a</span><br><span class="line">    User git</span><br><span class="line">    Hostname gitee.com</span><br><span class="line">    Port 22</span><br><span class="line">    IdentityFile ~/.ssh/gitee_user_a_ed25519</span><br></pre></td></tr></table></figure>
@@ -642,7 +642,7 @@
   </entry>
   <entry>
     <title>Good  博客</title>
-    <url>/posts/91dd904b/</url>
+    <url>/BlogProject/posts/91dd904b/</url>
     <content><![CDATA[<h1 id="博客"><a href="#博客" class="headerlink" title="博客"></a>博客</h1><p><a href="https://www.lfzxb.top/gameframework-all/">烟雨的博客</a><br><a href="https://cathole.top/">自然妙有猫仙人的博客</a> <a href="https://blog.csdn.net/qq_32821435/category_7709588.html">CSDN-喵</a><br><a href="https://www.drflower.top/posts/6ca825f5/">花桑</a><br><a href="https://blog.csdn.net/qq_32821435/category_7753219.html">一个FlappyBird例子 </a><br><a href="https://blog.csdn.net/pricecheap/category_11664353.html">一个将unity第三人称控制器改成gf框架的例子 </a><br><a href="https://www.bilibili.com/read/cv14100707/">比较全的视频讲解</a><br><a href="https://learn.u3d.cn/tutorial/game-framework-rolling-ball-gbe">零基础入门GameFramwork框架：制作一个滚动小球</a></p>
 ]]></content>
       <tags>
@@ -651,7 +651,7 @@
   </entry>
   <entry>
     <title>Love Steam Game</title>
-    <url>/posts/33b8e905/</url>
+    <url>/BlogProject/posts/33b8e905/</url>
     <content><![CDATA[<p>Desynced <a href="https://store.steampowered.com/app/1450900/Desynced/">https://store.steampowered.com/app/1450900/Desynced/</a></p>
 ]]></content>
       <tags>
@@ -660,7 +660,7 @@
   </entry>
   <entry>
     <title>CentOS 8 Install Python</title>
-    <url>/posts/b5a8ead0/</url>
+    <url>/BlogProject/posts/b5a8ead0/</url>
     <content><![CDATA[<h1 id="检查系统安装版本"><a href="#检查系统安装版本" class="headerlink" title="检查系统安装版本"></a>检查系统安装版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment"># pwd</span></span><br><span class="line">/user/bin</span><br><span class="line">[root@xsource bin]<span class="comment"># ls -al | grep python</span></span><br></pre></td></tr></table></figure>
 
 <h1 id="安装编译时依赖库"><a href="#安装编译时依赖库" class="headerlink" title="安装编译时依赖库"></a>安装编译时依赖库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># dnf -y groupinstall &quot;Development tools&quot;</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install libuuid-devel.x86_64 libuuid.x86_64 uuid.x86_64</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf install -y openssl-devel # 安装openssl</span></span><br><span class="line">opensll version  <span class="comment">#检查版本</span></span><br></pre></td></tr></table></figure>
@@ -684,7 +684,7 @@
   </entry>
   <entry>
     <title>CentOS Instal Report</title>
-    <url>/posts/c975ca3a/</url>
+    <url>/BlogProject/posts/c975ca3a/</url>
     <content><![CDATA[<h1 id="目录介绍"><a href="#目录介绍" class="headerlink" title="目录介绍"></a>目录介绍</h1><hr>
 <ul>
 <li>&#x2F; 根目录,存放系统命令和用户数据等</li>
@@ -794,7 +794,7 @@
   </entry>
   <entry>
     <title>Linux Firewall</title>
-    <url>/posts/cebd6f84/</url>
+    <url>/BlogProject/posts/cebd6f84/</url>
     <content><![CDATA[<h1 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h1><ul>
 <li>查看防火墙某个端口是否开放</li>
 </ul>
@@ -852,7 +852,7 @@
   </entry>
   <entry>
     <title>常用端口记录</title>
-    <url>/posts/3fb58c6b/</url>
+    <url>/BlogProject/posts/3fb58c6b/</url>
     <content><![CDATA[<h1 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h1><table>
 <thead>
 <tr>
@@ -888,7 +888,7 @@
   </entry>
   <entry>
     <title>Changelog Record</title>
-    <url>/posts/8efc86c4/</url>
+    <url>/BlogProject/posts/8efc86c4/</url>
     <content><![CDATA[<h1 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h1><p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>,<br>and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
 <h2 id="Unreleased"><a href="#Unreleased" class="headerlink" title="Unreleased"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.1...HEAD">Unreleased</a></h2><h2 id="1-1-1-2023-03-05"><a href="#1-1-1-2023-03-05" class="headerlink" title="1.1.1 - 2023-03-05"></a><a href="https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.0...v1.1.1">1.1.1</a> - 2023-03-05</h2><h3 id="Added"><a href="#Added" class="headerlink" title="Added"></a>Added</h3><ul>
@@ -1047,7 +1047,7 @@
   </entry>
   <entry>
     <title>OpenAI</title>
-    <url>/posts/1ecd9fbe/</url>
+    <url>/BlogProject/posts/1ecd9fbe/</url>
     <content><![CDATA[<h1 id="出现-OpenAI’s-services-are-not-available-in-your-country-错误主要是地区不允许导致"><a href="#出现-OpenAI’s-services-are-not-available-in-your-country-错误主要是地区不允许导致" class="headerlink" title="出现 OpenAI’s services are not available in your country 错误主要是地区不允许导致"></a>出现 OpenAI’s services are not available in your country 错误主要是地区不允许导致</h1><ol>
 <li>开启全局代理</li>
 <li>浏览器进行如下操作</li>
@@ -1064,7 +1064,7 @@
   </entry>
   <entry>
     <title>预定义模板变量</title>
-    <url>/posts/50d8601f/</url>
+    <url>/BlogProject/posts/50d8601f/</url>
     <content><![CDATA[<h2 id="预定义模板变量"><a href="#预定义模板变量" class="headerlink" title="预定义模板变量"></a>预定义模板变量</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$&#123;DATE&#125; 当前系统日期</span><br><span class="line">$&#123;DAY&#125; 该月的当前日期</span><br><span class="line">$&#123;DIR_PATH&#125; 新文件目录的路径（相对于项目根目录）</span><br><span class="line">$&#123;DS&#125; 美元符号$。此变量用于转义美元字符，因此它不会被视为模板变量的前缀。</span><br><span class="line">$&#123;HOUR&#125; 当前时间</span><br><span class="line">$&#123;MINUTE&#125; 当前分钟</span><br><span class="line">$&#123;SECOND&#125; 当前秒</span><br><span class="line">$&#123;MONTH&#125; 这个月</span><br><span class="line">$&#123;MONTH_NAME_FULL&#125; 当前月份的全名（一月、二月等）</span><br><span class="line">$&#123;MONTH_NAME_SHORT&#125; 当前月份名称的前三个字母（Jan、Feb 等）</span><br><span class="line">$&#123;NAME&#125; 新实体的名称（文件、%class%、接口等）</span><br><span class="line">$&#123;PRODUCT_NAME&#125; IDE 的名称（例如 JetBrains Rider）</span><br><span class="line">$&#123;PROJECT_NAME&#125; 当前项目名称</span><br><span class="line">$&#123;TIME&#125; 当前系统时间</span><br><span class="line">$&#123;USER&#125; 当前用户的登录名</span><br><span class="line">$&#123;YEAR&#125; 今年</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Record</tag>
@@ -1072,7 +1072,7 @@
   </entry>
   <entry>
     <title>DisallowMultipleComponent</title>
-    <url>/posts/5c9c1269/</url>
+    <url>/BlogProject/posts/5c9c1269/</url>
     <content><![CDATA[<h1 id="DisallowMultipleComponent"><a href="#DisallowMultipleComponent" class="headerlink" title="DisallowMultipleComponent"></a>DisallowMultipleComponent</h1><p>DisallowMultipleComponent : 不允许多个相同的组件挂载在同一个 GameObject 上</p>
 ]]></content>
       <tags>
@@ -1081,7 +1081,7 @@
   </entry>
   <entry>
     <title>Free Assets</title>
-    <url>/posts/293bbd56/</url>
+    <url>/BlogProject/posts/293bbd56/</url>
     <content><![CDATA[<p>✅Flooded Grounds - <a href="https://bit.ly/2ZfAxIT">https://bit.ly/2ZfAxIT</a><br>✅Sun Temple - <a href="https://bit.ly/38m5A8L">https://bit.ly/38m5A8L</a><br>✅Realistic Terrain Collection LITE - <a href="https://bit.ly/2L48vLB">https://bit.ly/2L48vLB</a><br>✅Rocky Hills Environment - Light Pack <a href="https://bit.ly/39uEkW8">https://bit.ly/39uEkW8</a><br>✅Conifers [BOTD] - <a href="https://bit.ly/3h6xXel">https://bit.ly/3h6xXel</a><br>✅Coconut Palm Tree Pack : <a href="https://bit.ly/363LTSg">https://bit.ly/363LTSg</a><br>✅Nature Starter Kit - 2<a href="https://bit.ly/3oHW6vF">https://bit.ly/3oHW6vF</a><br>✅Outdoor Ground Textures - <a href="https://bit.ly/306eljm">https://bit.ly/306eljm</a><br>✅Grass Flowers Pack Free - <a href="https://bit.ly/30cbmWS">https://bit.ly/30cbmWS</a><br>✅Terrain Tools Sample Asset Pack - <a href="https://bit.ly/2QnnI9S">https://bit.ly/2QnnI9S</a><br>✅Book of the Dead Project : <a href="https://bit.ly/2URXyPa">https://bit.ly/2URXyPa</a> </p>
 ]]></content>
       <tags>
@@ -1090,7 +1090,7 @@
   </entry>
   <entry>
     <title>Json</title>
-    <url>/posts/cb358a7b/</url>
+    <url>/BlogProject/posts/cb358a7b/</url>
     <content><![CDATA[<h1 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h1><h2 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h2><ul>
 <li>Newtonsoft、LitJson都可以转成List和数组</li>
 <li>Newtonsoft可以转成任意key的字典，LitJson只能转成key为string类型的字典</li>
@@ -1126,7 +1126,7 @@
   </entry>
   <entry>
     <title>Resolution and Presentation</title>
-    <url>/posts/b4834b29/</url>
+    <url>/BlogProject/posts/b4834b29/</url>
     <content><![CDATA[<h1 id="分变率设置区域（Resolution-Section）"><a href="#分变率设置区域（Resolution-Section）" class="headerlink" title="分变率设置区域（Resolution Section）"></a>分变率设置区域（Resolution Section）</h1><ol>
 <li>Fullscreen Mode</li>
 <li>Default Is Native Resolution</li>
@@ -1155,7 +1155,7 @@
   </entry>
   <entry>
     <title>Temp Unity Scripts</title>
-    <url>/posts/afa13234/</url>
+    <url>/BlogProject/posts/afa13234/</url>
     <content><![CDATA[<h3 id="GUI-Script"><a href="#GUI-Script" class="headerlink" title="GUI Script"></a>GUI Script</h3><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isActiveGUIUI = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">private</span> <span class="built_in">bool</span> isActiveGUIUI2 = <span class="literal">false</span>;</span><br><span class="line"><span class="keyword">private</span> Rect _winRect = <span class="keyword">new</span> Rect(<span class="number">150</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OnGUI</span>()</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(<span class="number">100</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>),<span class="string">&quot;是否开启测试弹窗&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        isActiveGUIUI = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (GUI.Button(<span class="keyword">new</span> Rect(Screen.width<span class="number">-100</span>,<span class="number">0</span>,<span class="number">100</span>,<span class="number">100</span>),<span class="string">&quot;我是测试按钮&quot;</span>))</span><br><span class="line">    &#123;</span><br><span class="line">        isActiveGUIUI2 = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (isActiveGUIUI)</span><br><span class="line">    &#123;</span><br><span class="line">        _winRect = GUILayout.Window(<span class="number">0</span>, <span class="keyword">new</span> Rect(<span class="number">150</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>), OpenLog, <span class="string">&quot;我是测试&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (isActiveGUIUI2)</span><br><span class="line">    &#123;</span><br><span class="line">        _winRect = GUILayout.Window(<span class="number">1</span>, <span class="keyword">new</span> Rect(Screen.width<span class="number">-300</span>, <span class="number">150</span>, <span class="number">300</span>, <span class="number">300</span>), OpenLog, <span class="string">&quot;我是测试2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">OpenLog</span>(<span class="params"><span class="built_in">int</span> winId</span>)</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (winId == <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;我是打印按钮&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            Log.Warn(<span class="string">&quot;我是测试,我是测试我是测试我是测试我是测试&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (GUILayout.Button(<span class="string">&quot;关闭窗口&quot;</span>))</span><br><span class="line">        &#123;</span><br><span class="line">            isActiveGUIUI = <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Unity</tag>
@@ -1163,7 +1163,7 @@
   </entry>
   <entry>
     <title>EXE App 文件说明</title>
-    <url>/posts/5074e280/</url>
+    <url>/BlogProject/posts/5074e280/</url>
     <content><![CDATA[<h1 id="Exe-导出包相关内容"><a href="#Exe-导出包相关内容" class="headerlink" title="Exe 导出包相关内容"></a>Exe 导出包相关内容</h1><h2 id="EXE-App-文件说明"><a href="#EXE-App-文件说明" class="headerlink" title="EXE App 文件说明"></a>EXE App 文件说明</h2><ol>
 <li>xxx_BackUpThisFolder_ButDontShipItWithYourGame &#x2F;&#x2F;用来帮助查看调试当前打包的信息 XX_Data &#x2F;&#x2F;文件夹里面包含 unity 的一些默认资源和当前工程的一些必须资源</li>
 <li>MonoBleedingEdge &#x2F;&#x2F;文件夹包含运行应用程序所需的 C# 和 MonoDevelop 库,UnityPlayer.dll 包含引擎的核心，脚本库位于 MonoBleedingEdge 中。虽然运行游戏&#x2F;应用程序需要其部分内容，但我们能够删除其中的“etc”文件夹，只保留 EmbedRuntime 文件夹。</li>
@@ -1185,7 +1185,7 @@
   </entry>
   <entry>
     <title>IOS 平台相关内容</title>
-    <url>/posts/db41d8/</url>
+    <url>/BlogProject/posts/db41d8/</url>
     <content><![CDATA[<h1 id="IOS-平台相关内容"><a href="#IOS-平台相关内容" class="headerlink" title="IOS 平台相关内容"></a>IOS 平台相关内容</h1><h1 id="IOS-Build-Config"><a href="#IOS-Build-Config" class="headerlink" title="IOS Build Config"></a>IOS Build Config</h1><h2 id="FrameworkId"><a href="#FrameworkId" class="headerlink" title="FrameworkId"></a>FrameworkId</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> 添加系统库  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;/summary&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;pbxProject&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>  </span></span><br><span class="line"><span class="comment"><span class="doctag">///</span> <span class="doctag">&lt;param name=&quot;mFrameworkGuid&quot;&gt;</span><span class="doctag">&lt;/param&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">SystemFrameworkAdd</span>(<span class="params">PBXProject pbxProject, <span class="built_in">string</span> mFrameworkGuid</span>)</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="built_in">string</span>[] frameworksToAdd =</span><br><span class="line">    &#123;        <span class="comment">//压缩库  </span></span><br><span class="line">        <span class="string">&quot;libz.dylib&quot;</span>,  </span><br><span class="line">        <span class="string">&quot;libsqlite3.tbd&quot;</span>,        <span class="comment">//IAD是苹果推出的广告平台  </span></span><br><span class="line">        <span class="string">&quot;iAd.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//获取设备唯一的一个广告标识符  </span></span><br><span class="line">        <span class="string">&quot;AdSupport.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//输出手机的运营商信息  </span></span><br><span class="line">        <span class="string">&quot;CoreTelephony.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//数字商品或服务  </span></span><br><span class="line">        <span class="string">&quot;StoreKit.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//认证服务  </span></span><br><span class="line">        <span class="string">&quot;AuthenticationServices.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//请求用户授权，获取对可用于跟踪用户或设备的应用程序相关数据的访问权限  </span></span><br><span class="line">        <span class="string">&quot;AppTrackingTransparency.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//账户管理框架  </span></span><br><span class="line">        <span class="string">&quot;Accounts.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//社交框架为中国用户提供统一的API，用于与社交网络（包括Twitter 和Facebook）以及新浪微博交互  </span></span><br><span class="line">        <span class="string">&quot;Social.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//进行大规模的数学计算和图像计算，优化为高性能和低能耗  </span></span><br><span class="line">        <span class="string">&quot;Accelerate.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//框架用于保证应用程序所管理之数据的安全  </span></span><br><span class="line">        <span class="string">&quot;Security.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//一套基于 C 的API 框架，使用了Quartz 作为绘图引擎，可用于一切绘图操作  </span></span><br><span class="line">        <span class="string">&quot;CoreGraphics.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//读取异常发生的系统信息  </span></span><br><span class="line">        <span class="string">&quot;SystemConfiguration.framework&quot;</span>,  </span><br><span class="line">        <span class="comment">//WX  </span></span><br><span class="line">        <span class="string">&quot;WebKit.framework&quot;</span>,  </span><br><span class="line">    &#125;;  </span><br><span class="line">    <span class="keyword">foreach</span> (<span class="keyword">var</span> key <span class="keyword">in</span> frameworksToAdd)</span><br><span class="line">    &#123;</span><br><span class="line">	    <span class="comment">//如果框架是可选框架（即弱关联框架），则此参数为 true，如果框架是必需框架，则为 false。  </span></span><br><span class="line">        pbxProject.AddFrameworkToProject(mFrameworkGuid, key, <span class="literal">true</span>);  </span><br><span class="line">    &#125;&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="系统设定"><a href="#系统设定" class="headerlink" title="系统设定"></a>系统设定</h2><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//使用存储结构: com.yuqu.xfish. //添加keychain </span></span><br><span class="line">ProjectCapabilityManager projectCapabilityManager = <span class="keyword">new</span> ProjectCapabilityManager(projectPath, <span class="string">&quot;U3DFishing.entitlements&quot;</span>, <span class="string">&quot;Unity-iPhone&quot;</span>);  </span><br><span class="line">projectCapabilityManager.AddSignInWithApple();  </span><br><span class="line">projectCapabilityManager.AddKeychainSharing(<span class="keyword">new</span>[]  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="string">&quot;$(AppIdentifierPrefix)&quot;</span> + Application.identifier&#125;);  </span><br><span class="line">projectCapabilityManager.AddPushNotifications(<span class="literal">false</span>);  </span><br><span class="line">projectCapabilityManager.AddAssociatedDomains(<span class="keyword">new</span>[]  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="string">&quot;applinks:wx.ifishgames.cn&quot;</span>&#125;);  </span><br><span class="line">projectCapabilityManager.AddBackgroundModes(BackgroundModesOptions.None);  </span><br><span class="line">projectCapabilityManager.WriteToFile();</span><br></pre></td></tr></table></figure>
@@ -1202,7 +1202,7 @@
   </entry>
   <entry>
     <title>Unity Api</title>
-    <url>/posts/abc98e82/</url>
+    <url>/BlogProject/posts/abc98e82/</url>
     <content><![CDATA[<p>![[Pasted image 20221208104558.png]]</p>
 <figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="comment">//获取优化过的图片大小</span></span><br><span class="line">EditorUtilly.FormatBytes(TextureUitl.GetStrorageMemorySizeLong(t));</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
@@ -1211,7 +1211,7 @@
   </entry>
   <entry>
     <title>AVProVide 插件相关使用</title>
-    <url>/posts/ec26bcba/</url>
+    <url>/BlogProject/posts/ec26bcba/</url>
     <content><![CDATA[<h1 id="win7-系统-AVProVide-插件无法播放问题"><a href="#win7-系统-AVProVide-插件无法播放问题" class="headerlink" title="win7 系统 AVProVide 插件无法播放问题"></a>win7 系统 AVProVide 插件无法播放问题</h1><figure class="highlight lua"><table><tr><td class="code"><pre><span class="line"><span class="comment">---WinRT、Media Foundation 和 DirectShow API。</span></span><br><span class="line"><span class="comment">---Windows 10 及更高版本支持 WinRT，Windows 8 及更高版本支持 Media Foundation，Windows 7 支持 DirectShow。</span></span><br><span class="line"><span class="keyword">if</span> framework.device.windows() <span class="keyword">then</span></span><br><span class="line">    <span class="keyword">local</span> winVersion = framework.device.getWinVersion()</span><br><span class="line">    Log.Info(<span class="string">&quot;系统版本&#123;0&#125;&quot;</span>, winVersion)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">string</span>.<span class="built_in">find</span>(winVersion,<span class="string">&quot;Windows 10&quot;</span>) <span class="keyword">then</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.WinRT</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        mediaPlayer.PlatformOptionsWindows.videoApi = CS.RenderHeads.Media.AVProVideo.Windows.VideoApi.MediaFoundation</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    mediaPlayer.PlatformOptionsWindows.audioOutput = CS.RenderHeads.Media.AVProVideo.Windows.AudioOutput.Unity</span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
@@ -1220,7 +1220,7 @@
   </entry>
   <entry>
     <title>Unity 常用</title>
-    <url>/posts/fec55579/</url>
+    <url>/BlogProject/posts/fec55579/</url>
     <content><![CDATA[<h1 id="Unity-搜索文件-命令"><a href="#Unity-搜索文件-命令" class="headerlink" title="Unity 搜索文件 命令"></a>Unity 搜索文件 命令</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot;t:PlayableAsset&quot; 查询timeLine</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
@@ -1229,7 +1229,7 @@
   </entry>
   <entry>
     <title>Command</title>
-    <url>/posts/4177d348/</url>
+    <url>/BlogProject/posts/4177d348/</url>
     <content><![CDATA[<p>ping + ip： 查看某一个 ip 地址是否能够连通，如： ping 164.80.77.163(或者 ping 域名)<br>telnet ip port ： 查看某一个机器上的某一个端口是否可以访问，如：telnet 164.80.77.163 8088</p>
 <h1 id="window"><a href="#window" class="headerlink" title="window"></a>window</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">del</span> /a /f /s /q &quot;*.meta&quot; &quot;*.meta.*&quot;</span><br></pre></td></tr></table></figure>
 
@@ -1245,19 +1245,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Scoops</title>
-    <url>/posts/23b7e45f/</url>
-    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser <span class="comment"># Optional: Needed to run a remote script the first time</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iex</span> <span class="string">&quot;&amp; &#123;<span class="variable">$</span>(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Window</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>PowerShell</title>
-    <url>/posts/a2c49dae/</url>
+    <url>/BlogProject/posts/a2c49dae/</url>
     <content><![CDATA[<h1 id="PowerShell-相关命令"><a href="#PowerShell-相关命令" class="headerlink" title="PowerShell 相关命令"></a>PowerShell 相关命令</h1><h2 id="安装-pwsh"><a href="#安装-pwsh" class="headerlink" title="安装 pwsh"></a>安装 pwsh</h2><h3 id="升级-PowerShell"><a href="#升级-PowerShell" class="headerlink" title="升级 PowerShell"></a>升级 PowerShell</h3><h4 id="winget-方式"><a href="#winget-方式" class="headerlink" title="winget 方式"></a>winget 方式</h4><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">winget search Microsoft.PowerShell</span><br><span class="line">winget install --id Microsoft.PowerShell --source winget</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123; $(irm https://aka.ms/install-powershell.ps1) &#125; -UseMSI&quot;</span><br></pre></td></tr></table></figure>
@@ -1273,8 +1262,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Scoops</title>
+    <url>/BlogProject/posts/23b7e45f/</url>
+    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser <span class="comment"># Optional: Needed to run a remote script the first time</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iex</span> <span class="string">&quot;&amp; &#123;<span class="variable">$</span>(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Which</title>
-    <url>/posts/f83c1a8b/</url>
+    <url>/BlogProject/posts/f83c1a8b/</url>
     <content><![CDATA[<h1 id="自建which-命令"><a href="#自建which-命令" class="headerlink" title="自建which 命令"></a>自建which 命令</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">@ <span class="keyword">for</span> <span class="variable">%%e</span> <span class="keyword">in</span> (<span class="variable">%PATHEXT%</span>) <span class="keyword">do</span> @ <span class="keyword">for</span> <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="variable">%1%</span>%e) <span class="keyword">do</span> @ <span class="keyword">if</span> <span class="keyword">NOT</span> &quot;<span class="variable">%%~</span>$<span class="built_in">PATH</span>:i&quot; == &quot;&quot; <span class="built_in">echo</span> <span class="variable">%%~</span>$<span class="built_in">PATH</span>:i</span><br></pre></td></tr></table></figure>
 
 <p>新建 “which.cmd”  放入–&gt; C:\Windows\System32 中即可使用</p>
@@ -1287,7 +1287,7 @@
   </entry>
   <entry>
     <title>Windows ---相关进程名和作用</title>
-    <url>/posts/f221fd41/</url>
+    <url>/BlogProject/posts/f221fd41/</url>
     <content><![CDATA[<h1 id="csrss"><a href="#csrss" class="headerlink" title="csrss"></a>csrss</h1><blockquote>
 <p>csrss.exe通常是系统的正常进程，所在的进程文件是csrss或csrss.exe，是微软客户端、服务端运行时子系统，windows的核心进程之一。<br>  管理Windows图形相关任务，对系统的正常运行非常重要。csrss是Client&#x2F;Server Runtime Server Subsystem的简称，即客户&#x2F;服务器运行子系统，用以控制Windows图形相关子系统，必须一直运行。<br>  csrss用于维持Windows的控制，创建或者删除线程和一些16位的虚拟MS-DOS环境。也有可能是W32.Netsky.AB@mm等病毒创建的。</p>
 </blockquote>
@@ -1298,7 +1298,7 @@
   </entry>
   <entry>
     <title>RedHat shell</title>
-    <url>/posts/b72a2958/</url>
+    <url>/BlogProject/posts/b72a2958/</url>
     <content><![CDATA[<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装英文包</span></span><br><span class="line">dnf install glibc-langpack-en</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
@@ -1307,7 +1307,7 @@
   </entry>
   <entry>
     <title>Business Correspondence</title>
-    <url>/posts/3d62c9e7/</url>
+    <url>/BlogProject/posts/3d62c9e7/</url>
     <content><![CDATA[<p>Dear Mr. Mary Hardy<br>Thank you for your letter of November 10 enquiring about our car model. We are very honored. We are pleased to enclose our latest catalog and price list. All our products are covered by a two-year guarantee. And we offer discounts for large orders. We look forward to receiving your orders.</p>
 <p>Mr. S. Bowen,<br>Justin Box Co.,Ltd.Marketing Manager</p>
 ]]></content>
@@ -1317,7 +1317,7 @@
   </entry>
   <entry>
     <title>Internal Notice</title>
-    <url>/posts/72429f7f/</url>
+    <url>/BlogProject/posts/72429f7f/</url>
     <content><![CDATA[<h1 id="Internal-Notice"><a href="#Internal-Notice" class="headerlink" title="Internal Notice"></a>Internal Notice</h1><p>Internal Notice</p>
 <p>To All Staff,</p>
 <p>We are pleased to inform you that our company will be updating the current telephone system as per our business requirements. We have received three proposals from communication companies regarding the update, and the details can be found in the attached document.</p>
@@ -1333,7 +1333,7 @@
   </entry>
   <entry>
     <title>Sentence OF The Day</title>
-    <url>/posts/752687cf/</url>
+    <url>/BlogProject/posts/752687cf/</url>
     <content><![CDATA[<h1 id="2023-2-2-21-45"><a href="#2023-2-2-21-45" class="headerlink" title="2023-2-2 21:45"></a>2023-2-2 21:45</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If one day we meet what should I say to you ?</span><br><span class="line">如果有一天我们相遇了我该和你说些什么呢？</span><br><span class="line">Long time no see  or I love you ?</span><br><span class="line">是好久不见，还是我爱你?</span><br></pre></td></tr></table></figure>
 
 <h1 id="2023-2-3-21-58"><a href="#2023-2-3-21-58" class="headerlink" title="2023-2-3 21:58"></a>2023-2-3 21:58</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Take your time and think about it.</span><br><span class="line">慢慢来，好好想一想。</span><br><span class="line">What can make you happy?</span><br><span class="line">什么事情能让你开心</span><br><span class="line">What do you really want to do?</span><br><span class="line">你真正想做什么？</span><br><span class="line">Rather than what makes other people happy .</span><br><span class="line">而不是去想怎么样，取悦别人。</span><br><span class="line">Live in your own way,</span><br><span class="line">以你自己的方式生活。</span><br><span class="line">That&#x27;s the best choice.</span><br><span class="line">才是最好的选择！</span><br></pre></td></tr></table></figure>
@@ -1348,7 +1348,7 @@
   </entry>
   <entry>
     <title>Working from Home</title>
-    <url>/posts/3eb0b64d/</url>
+    <url>/BlogProject/posts/3eb0b64d/</url>
     <content><![CDATA[<h1 id="Working-from-Home"><a href="#Working-from-Home" class="headerlink" title="Working from Home"></a>Working from Home</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I. Advantages of working from home.</span><br><span class="line">(1) Provide more time for productive work</span><br><span class="line">Home office allows people to eliminate or reduce commuting time, will have more time and energy to devote to work. If the home office is properly arranged, it can also reduce the usual distractions in the office, such as loud phone calls from colleagues, ringing phones, unknown odors, and unnecessarily strict policies. By reducing chores and making workers less distracted, home office workers will be able to focus more on what they are doing and get their work done quickly.</span><br><span class="line">(2) Better work-life balance</span><br><span class="line">Research shows that jobs that have a good work-life balance increase employee satisfaction with their jobs. It goes without saying that when you feel better about your job, you will be more motivated to do your job, which is also better for your mental state and physical health.</span><br><span class="line">(3) Save money</span><br><span class="line">Since you don&#x27;t have to leave home, you can save a lot of money. These include spending on commuting, clothing expenses, expensive take-out costs or going out to restaurants, etc.</span><br><span class="line">(4) Higher employee retention</span><br><span class="line">You heard it right, people who work from home are more likely to stay with the company rather than leave, and of course the company can give employees the right to work in the office, giving them more options and more freedom. In this way, working from home increases job and life satisfaction, making employee turnover rates lower, and employers save on the cost of hiring and training new employees when they don&#x27;t leave the company as often.</span><br><span class="line">Second, the disadvantages of working from home.</span><br><span class="line">(1) Delay</span><br><span class="line">One of the main reasons companies allow employees to work from home is to reduce the time they spend on transportation. However, when working from home, you may not schedule your time correctly because of the lack of company management, so that you may overestimate the time you actually have by procrastinating when working from home. So plan your day, do the task at hand, and avoid procrastination.</span><br><span class="line">(2) Burnout</span><br><span class="line">Sometimes we do a lot of work, but when there is a tangle between work responsibilities and household chores with no boundaries, employees have the risk of being more exhausted. This is because you feel overwhelmed by things leading to stress, but still need to sit in front of the computer and work all day. In addition, you may also produce some burnout symptoms including headaches, irritability, increased errors and reduced efficiency.</span><br><span class="line">(3) Collaboration is more difficult</span><br><span class="line">Working from home can be difficult in terms of collaboration, but if you have the tools you need to communicate effectively with your team, this difficulty will be greatly reduced. A few other reasons why working from home makes collaboration more difficult include spotty Internet connections, time zone differences, and technical issues.</span><br><span class="line">Teamwork function</span><br><span class="line">(4) Loneliness</span><br><span class="line">There are times when working side-by-side with colleagues makes work more interesting. One of the main factors contributing to employee engagement and satisfaction is maintaining friendships with colleagues. In fact, one study showed that loneliness affects employee performance and that maintaining positive social communication relationships can alleviate loneliness in the workplace.</span><br><span class="line">There are many drawbacks, though in some industries they can be avoided, so the number of companies using work-at-home has been steadily increasing, especially in industries such as the Internet, digital marketing, and education.</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一、居家办公的优势：</span><br><span class="line">（1）为生产工作提供更多时间</span><br><span class="line">居家办公使人可以消除或减少上下班时间，将有更多的时间和精力去投入到工作。如果居家办公安排得当，还可以减少办公室中通常会受到的干扰，例如同事大声打电话、电话响、不明的气味，以及不必要的严格政策。居家办公通过减少琐事来使工作者更少分心，将能够更专注于他们正在做的事情，并且快速完成工作。</span><br><span class="line">（2）工作与生活得到更好地平衡</span><br><span class="line">研究表明，能将工作时间与生活平衡好的工作会提高员工对工作的满意度。不言而喻，当你对工作感觉好一点时，你会更有动力去做你的工作，这也对你的精神状态与身体健康更好。</span><br><span class="line">（3）省钱</span><br><span class="line">由于不必离开家，可以节省许多费用。其中包括用于通勤的花费、服装开支、昂贵的外卖费用或下馆子的花费等。</span><br><span class="line">（4）更高的员工保留率</span><br><span class="line">你没有听错，居家办公的人更有可能留在公司而不是离职，当然公司也可以给予员工办公室工作的权利，让员工获得更多的选择，自由度更高。这样一来，居家上班就提高了工作和生活满意度，使得员工离职率降低，当员工不经常离开公司时，雇主也会节省雇佣和培训新员工的成本。</span><br><span class="line">二、居家办公的缺点：</span><br><span class="line">（1）拖延</span><br><span class="line">公司允许员工在家工作的主要原因之一是减少了他们在交通上的时间。但是，在居家办公时，你可能不会正确地安排时间，因为缺乏公司的管理，这样一来，你在办公时可能会通过拖延来高估你实际拥有的时间。所以计划好你的每一天，做好手头的任务，避免拖延。</span><br><span class="line">（2）倦怠</span><br><span class="line">有时我们做了很多工作，但是当工作责任和家务劳动之间纠缠不清，没有边界时，员工有着更加筋疲力尽的风险。这是因为你觉得事情过于繁杂导致压力过大，却依然需要坐在电脑前工作一整天。除此之外，你还可能产生一些倦怠症状包括头痛、易怒、错误增加和效率降低。</span><br><span class="line">（3）协作难度更大</span><br><span class="line">居家办公在协作方面会很困难，但是如果你拥有与团队进行有效沟通所需的工具，这种困难将大大降低。居家办公使协作更加困难的其他几个原因包括网际网络连接不稳定、时区不同以及技术问题等。</span><br><span class="line">团队协作功能</span><br><span class="line">（4）孤独</span><br><span class="line">有的时候，与同事并肩作战让工作更有趣。促进员工敬业度和满意度的主要因素之一是与同事保持友谊。事实上，一项研究表明，孤独会影响员工的表现，保持积极的社会交流关系可以缓解工作场所的孤独感。</span><br><span class="line">虽然有很多缺点，不过在有些行业，是可以避免这些缺点的，因此使用居家办公的公司数量一直在稳步增加，特别是互联网、数字营销、教育等行业。</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
@@ -1358,7 +1358,7 @@
   </entry>
   <entry>
     <title>游戏机制</title>
-    <url>/posts/cbed42b8/</url>
+    <url>/BlogProject/posts/cbed42b8/</url>
     <content><![CDATA[<p>“书籍: 游戏设计艺术 2 “圣经””</p>
 <h1 id="游戏机制"><a href="#游戏机制" class="headerlink" title="游戏机制"></a>游戏机制</h1><p>游戏中的过程和规则.机制描述玩家如何才能完成游戏目标,当他们尝试的时候发生什么,游戏机制是游戏真正的核心.剥离美学、技术和故事后,剩下的互动和关系,就是游戏机制</p>
 <h1 id="游戏规则"><a href="#游戏规则" class="headerlink" title="游戏规则"></a>游戏规则</h1><p>更像是印在说明书上让玩家们所了解的指南而游戏机制特别是电子游戏的机制很多时候对于玩家来说是隐藏的</p>
@@ -1369,7 +1369,7 @@
   </entry>
   <entry>
     <title>Hexo Deploy</title>
-    <url>/posts/999af05b/</url>
+    <url>/BlogProject/posts/999af05b/</url>
     <content><![CDATA[<h1 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h1><p><a href="https://hexo.io/zh-cn/docs/">教程链接 “https://hexo.io/zh-cn/docs/"</a></p>
 <h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git remote add upstream https://github.com/iissnan/hexo-them-net.git</span><br><span class="line">git fetch upstream</span><br><span class="line">git merge upstream/master</span><br></pre></td></tr></table></figure>
 
@@ -1385,17 +1385,8 @@
       </tags>
   </entry>
   <entry>
-    <title>Working from Home</title>
-    <url>/posts/3eb0b64d/</url>
-    <content><![CDATA[<h1 id="EmEditor-v22-2-2-便携版本"><a href="#EmEditor-v22-2-2-便携版本" class="headerlink" title="EmEditor v22.2.2 便携版本"></a>EmEditor v22.2.2 便携版本</h1><p><strong>DMAZM-WHY52-AX222-ZQJXN-79JXH</strong></p>
-]]></content>
-      <tags>
-        <tag>Program Software</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Chrome Record</title>
-    <url>/posts/700fdf6a/</url>
+    <url>/BlogProject/posts/700fdf6a/</url>
     <content><![CDATA[<p>![[ZLF6%RW1ZEZ_II]{1NP@~QU.png]]</p>
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>报错的原因是因为是 Google 在 79 版本（2019 年 12 月 20 号左右）的更新中又重新启用了 Renderer Code Integrity Protection（渲染器代码完整性保护），会阻止签名不是谷歌和微软的模块加载。该功能已经在之前一个版本中导致同样的问题，并由 Google 自己禁用了。</p>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
@@ -1409,8 +1400,17 @@
       </tags>
   </entry>
   <entry>
+    <title>Working from Home</title>
+    <url>/BlogProject/posts/3eb0b64d/</url>
+    <content><![CDATA[<h1 id="EmEditor-v22-2-2-便携版本"><a href="#EmEditor-v22-2-2-便携版本" class="headerlink" title="EmEditor v22.2.2 便携版本"></a>EmEditor v22.2.2 便携版本</h1><p><strong>DMAZM-WHY52-AX222-ZQJXN-79JXH</strong></p>
+]]></content>
+      <tags>
+        <tag>Program Software</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Adb Command</title>
-    <url>/posts/f3b5148b/</url>
+    <url>/BlogProject/posts/f3b5148b/</url>
     <content><![CDATA[<h1 id="Adb-Command"><a href="#Adb-Command" class="headerlink" title="Adb Command"></a>Adb Command</h1><p>查看所有当前所有进程命令: <code>adb shell ps</code></p>
 <table>
 <thead>
@@ -1484,7 +1484,7 @@
   </entry>
   <entry>
     <title>Adb Install Progress</title>
-    <url>/posts/bf5f2ea8/</url>
+    <url>/BlogProject/posts/bf5f2ea8/</url>
     <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
 <figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -1494,7 +1494,7 @@
   </entry>
   <entry>
     <title>Android 内存详解</title>
-    <url>/posts/e230f7b5/</url>
+    <url>/BlogProject/posts/e230f7b5/</url>
     <content><![CDATA[<p>![[Pasted image 20230823154158.png]]</p>
 <p>android程序内存被分为2部分：native和dalvik，dalvik就是java堆，普通java对象是在java堆分配，而bitmap是直接在native上分配，对于内存的限制是 native+dalvik 不能超过最大限制。</p>
 <p>android程序内存一般限制在16M，也有24M的。  </p>
@@ -1511,7 +1511,7 @@
   </entry>
   <entry>
     <title>优化内存和运行效率</title>
-    <url>/posts/dcaeb9c4/</url>
+    <url>/BlogProject/posts/dcaeb9c4/</url>
     <content><![CDATA[<h1 id="优化内存和运行效率"><a href="#优化内存和运行效率" class="headerlink" title="优化内存和运行效率"></a>优化内存和运行效率</h1><ol>
 <li>用 GetEnumerator () 遍历 dictionary 和 list ，避免使用 foreach</li>
 <li>dictionary 使用 TryGetValue 一次判断取值，避免两次访问</li>
@@ -1530,16 +1530,8 @@
       </tags>
   </entry>
   <entry>
-    <title>检测并删除材质中记录的冗余Keywords和Shader属性</title>
-    <url>/posts/78fc990e/</url>
-    <content><![CDATA[<h1 id="检测并删除材质中记录的冗余Keywords和Shader属性"><a href="#检测并删除材质中记录的冗余Keywords和Shader属性" class="headerlink" title="检测并删除材质中记录的冗余Keywords和Shader属性"></a>检测并删除材质中记录的冗余Keywords和Shader属性</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">region</span> classname  </span></span><br><span class="line"><span class="comment">/*  </span></span><br><span class="line"><span class="comment"> *         Title: classname : Ufw</span></span><br><span class="line"><span class="comment"> *         Description: </span></span><br><span class="line"><span class="comment"> *                功能：       检测并删除材质中记录的冗余Keywords和Shader属性  </span></span><br><span class="line"><span class="comment"> *         Author:            xxx  </span></span><br><span class="line"><span class="comment"> *         Time:              2022年9月13日11:21:27  </span></span><br><span class="line"><span class="comment"> *         Version:           0.1版本  </span></span><br><span class="line"><span class="comment"> *         Modify Recorde: */</span>  </span><br><span class="line"><span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> System.Reflection;  </span><br><span class="line"><span class="keyword">using</span> UnityEditor;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Ufw</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnusedKeywordsAndPropertiesCheckerEditor</span> : <span class="title">Editor</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="comment">//获取shader中所有的宏  </span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">GetShaderKeywords</span>(<span class="params">Shader target, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local</span>)</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">try</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                MethodInfo globalKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderGlobalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                MethodInfo localKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderLocalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                <span class="keyword">if</span> (globalKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = (<span class="built_in">string</span>[])globalKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">if</span> (localKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = (<span class="built_in">string</span>[])localKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">catch</span> (Exception e)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Error(<span class="string">$&quot;获取shader中所有的宏,错误: <span class="subst">&#123;e.Message&#125;</span>&quot;</span>);  </span><br><span class="line">                <span class="keyword">global</span> = local = <span class="literal">null</span>;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        [<span class="meta">MenuItem(UfwMenuItemIni.M_Check_MatKey)</span>]  </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CheckMaterials</span>()</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            ProfilerUtils.BeginWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            <span class="built_in">string</span>[] paths = AssetDatabase.FindAssets(<span class="string">&quot;t:material&quot;</span>, <span class="keyword">new</span>[]  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="string">&quot;Assets/Res&quot;</span>  </span><br><span class="line">            &#125;);  </span><br><span class="line">            <span class="keyword">if</span> (paths == <span class="literal">null</span> || paths.Length == <span class="number">0</span>)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Info(<span class="string">$&quot;未找到相匹配的文件 匹配格式: t:material 匹配路径: Assets/Res&quot;</span>);  </span><br><span class="line">                <span class="keyword">return</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="built_in">int</span> index = <span class="number">0</span>;  </span><br><span class="line">            <span class="built_in">int</span> maxCount = paths.Length;  </span><br><span class="line">            <span class="keyword">foreach</span> (<span class="built_in">string</span> materialGuid <span class="keyword">in</span> paths)  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="built_in">string</span> materialAssetPath = AssetDatabase.GUIDToAssetPath(materialGuid);  </span><br><span class="line">                Material material = AssetDatabase.LoadAssetAtPath&lt;Material&gt;(materialAssetPath);  </span><br><span class="line">                EditorUtility.DisplayProgressBar(<span class="string">$&quot;读取文件Material文件: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;正在查询内容&quot;</span>, (<span class="built_in">float</span>)index / maxCount);  </span><br><span class="line">                <span class="keyword">if</span> (GetShaderKeywords(material.shader, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local))  </span><br><span class="line">                &#123;  </span><br><span class="line">                    HashSet&lt;<span class="built_in">string</span>&gt; keywords = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                    <span class="keyword">if</span> (<span class="keyword">global</span> != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> g <span class="keyword">in</span> <span class="keyword">global</span>)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(g);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (local != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> l <span class="keyword">in</span> local)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(l);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (keywords.Count == <span class="number">0</span>)  </span><br><span class="line">                    &#123;                        Log.Warn(<span class="string">$&quot;读取文件失效,请检查Material: <span class="subst">&#123;material.name&#125;</span>  Shader: <span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                        <span class="keyword">continue</span>;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    EditorUtility.ClearProgressBar();  </span><br><span class="line">  </span><br><span class="line">                    <span class="comment">//重置keywords  </span></span><br><span class="line">                    List&lt;<span class="built_in">string</span>&gt; resetKeywords = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;(material.shaderKeywords);  </span><br><span class="line">                    <span class="built_in">int</span> removeIndex = <span class="number">0</span>;  </span><br><span class="line">                    <span class="keyword">foreach</span> (<span class="built_in">string</span> item <span class="keyword">in</span> material.shaderKeywords)  </span><br><span class="line">                    &#123;                        EditorUtility.DisplayProgressBar(<span class="string">$&quot;检查KeyWords: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;匹配字段 <span class="subst">&#123;item&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeIndex / resetKeywords.Count);  </span><br><span class="line">                        <span class="keyword">if</span> (!keywords.Contains(item))  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            resetKeywords.Remove(item);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                        removeIndex++;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    material.shaderKeywords = resetKeywords.ToArray();  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    Log.Warn(<span class="string">$&quot;获取shader中所有的宏,Error: Material:<span class="subst">&#123;material.name&#125;</span>  shader:<span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                    <span class="keyword">continue</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                HashSet&lt;<span class="built_in">string</span>&gt; property = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                <span class="built_in">int</span> count = material.shader.GetPropertyCount();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; count; i++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    property.Add(material.shader.GetPropertyName(i));  </span><br><span class="line">                &#125;  </span><br><span class="line">                SerializedObject o = <span class="keyword">new</span> SerializedObject(material);  </span><br><span class="line">                SerializedProperty disabledShaderPasses = o.FindProperty(<span class="string">&quot;disabledShaderPasses&quot;</span>);  </span><br><span class="line">                SerializedProperty savedProperties = o.FindProperty(<span class="string">&quot;m_SavedProperties&quot;</span>);  </span><br><span class="line">                SerializedProperty texEnvs = savedProperties.FindPropertyRelative(<span class="string">&quot;m_TexEnvs&quot;</span>);  </span><br><span class="line">                SerializedProperty floats = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Floats&quot;</span>);  </span><br><span class="line">                SerializedProperty colors = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Colors&quot;</span>);  </span><br><span class="line">                <span class="built_in">int</span> removeAttrId = <span class="number">0</span>;  </span><br><span class="line">                <span class="built_in">int</span> removeAttrCount = disabledShaderPasses.arraySize + texEnvs.arraySize + floats.arraySize + colors.arraySize;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="comment">//对比属性删除残留的属性  </span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = disabledShaderPasses.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = disabledShaderPasses.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:disabledShaderPasses&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        disabledShaderPasses.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = texEnvs.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = texEnvs.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_TexEnvs&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        texEnvs.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = floats.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = floats.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Floats&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        floats.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = colors.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = colors.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Colors&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        colors.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                o.ApplyModifiedProperties();  </span><br><span class="line">                index += <span class="number">1</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            UWatchResult result = ProfilerUtils.EndWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            Log.Info(<span class="string">$&quot;清理Material残留 时间<span class="subst">&#123;result.costTime&#125;</span> [内存]<span class="subst">&#123;result.costMemory&#125;</span>&quot;</span>);  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            AssetDatabase.SaveAssets();  </span><br><span class="line">            Log.Info(<span class="string">&quot;检查完毕&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Unity Shader</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IOS -- 出包相关问题</title>
-    <url>/posts/e446d6d/</url>
+    <url>/BlogProject/posts/e446d6d/</url>
     <content><![CDATA[<h1 id="AppStore-提审时的“出口合规证明”处理"><a href="#AppStore-提审时的“出口合规证明”处理" class="headerlink" title="AppStore 提审时的“出口合规证明”处理"></a>AppStore 提审时的“出口合规证明”处理</h1><p>![[Pasted image 20230802161133.png]]</p>
 <blockquote>
 <p>每次提交审核的时候都会让确认是否使用了Apple以的 <em>加密算法</em><br>Xcdoe的info.plist文件中增加App Uses Non-Exempt Encryption，将值设置为NO。</p>
@@ -1580,7 +1572,7 @@
   </entry>
   <entry>
     <title>IOS SDK 接入</title>
-    <url>/posts/f8d88cdd/</url>
+    <url>/BlogProject/posts/f8d88cdd/</url>
     <content><![CDATA[<p>QQ文档:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd">https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd</a><br>微信稳定:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html">https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html</a><br>记得 这两种腾讯的登录方式 都取玩家的 unionid 这个值当作唯一标识  </p>
 <p>在”Other Linker Flags”中加入”-ObjC -all_load”</p>
 <p>Info.plist</p>
@@ -1591,7 +1583,7 @@
   </entry>
   <entry>
     <title>IOS Using Brew</title>
-    <url>/posts/8f5d4be4/</url>
+    <url>/BlogProject/posts/8f5d4be4/</url>
     <content><![CDATA[<h1 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h1><h2 id="brew-常用命令"><a href="#brew-常用命令" class="headerlink" title="[brew 常用命令]"></a>[brew 常用命令]</h2><ul>
 <li>Homebrew 是一款自由及开放源代码的软件包管理系统，用以简化 macOS 和 linux 系统上的软件安装过程</li>
 <li>它拥有安装、卸载、更新、查看、搜索等很多实用的功能，通过简单的一条指令，就可以实现包管理，十分方便快捷</li>
@@ -1634,7 +1626,7 @@
   </entry>
   <entry>
     <title>IOS XCode 快捷键</title>
-    <url>/posts/aaa77cb1/</url>
+    <url>/BlogProject/posts/aaa77cb1/</url>
     <content><![CDATA[<h1 id="快速定位文件"><a href="#快速定位文件" class="headerlink" title="快速定位文件"></a>快速定位文件</h1><p><strong>commit+shift+J 然后就跳转到你当前文件</strong></p>
 <h1 id="Mac-上隐藏的文件和文件夹"><a href="#Mac-上隐藏的文件和文件夹" class="headerlink" title="Mac 上隐藏的文件和文件夹"></a>Mac 上隐藏的文件和文件夹</h1><p><strong>按快捷键 ​ ​cmd+shift+</strong>.</p>
 ]]></content>
@@ -1644,7 +1636,7 @@
   </entry>
   <entry>
     <title>bash 相关命令</title>
-    <url>/posts/feaf77e8/</url>
+    <url>/BlogProject/posts/feaf77e8/</url>
     <content><![CDATA[<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">find <span class="operator">./</span> <span class="operator">-</span>name <span class="string">&quot;*.meta&quot;</span> <span class="operator">|</span> xargs rm <span class="operator">-</span>rf</span><br></pre></td></tr></table></figure>
 
 <p>删除当前目录下所有后缀名为 .meta 文件<br>find . -name “*.meta” |xargs rm -rf<br>格式很简单，如下：<br>find 目录 -name 名称 | xargs rm -rf<br>查找你要删除的文件夹或者文件，然后删除即可。<br>但是在macos下有一个问题，文件夹中有空格是不能删除的。</p>
@@ -1654,8 +1646,32 @@
       </tags>
   </entry>
   <entry>
+    <title>IOS FacebookSDK</title>
+    <url>/BlogProject/posts/2414f1c4/</url>
+    <content><![CDATA[<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/facebook/facebook-ios-sdk</span><br></pre></td></tr></table></figure>
+
+<h1 id="源码配置"><a href="#源码配置" class="headerlink" title="源码配置"></a>源码配置</h1><figure class="highlight plist"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLTypes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbAPP-ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookAppID<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>APP-ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookClientToken<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>CLIENT-TOKEN<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookDisplayName<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>APP-NAME<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">1.  在 `[CFBundleURLSchemes]` 键内的 `<span class="tag">&lt;<span class="name">array</span>&gt;</span><span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-ID_ 替换为您的应用编号。</span><br><span class="line">2.  在 `FacebookAppID` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-ID_ 替换为您的应用编号。</span><br><span class="line">3.  在 `FacebookClientToken` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _CLIENT-TOKEN_ 替换为您在应用面板**设置** &gt; **高级** &gt; **客户端口令**中找到的值。</span><br><span class="line">4.  在 `FacebookDisplayName` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-NAME_ 替换为您的应用名称。</span><br><span class="line">5.  如要使用任何可将应用切换至 Facebook 应用的 Facebook 对话框（如登录、分享、应用邀请等），应用程序的 `Info.plist` 还需包含以下代码：</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>LSApplicationQueriesSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130214<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130410<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130702<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20131010<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20131219<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20140410<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20140116<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20150313<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20150629<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20160328<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbauth<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fb-messenger-share-api<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbauth2<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbshareextension<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p> Keychain Sharing 功能，才能使登录功能在 Mac Catalyst 应用程序中正常运作。</p>
+<h1 id="触发问题"><a href="#触发问题" class="headerlink" title="触发问题"></a>触发问题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Undefined symbol: __swift_FORCE_LOAD_$_swiftDataDetection</span><br><span class="line">引入之后，编译一下，出现100多个报错，看很多报错都带swift字眼，搜了下解决方案，也很简单，新建一个空的Swift文件，重新编译一下就没了，试了下也确实可行，真坑啊，oc的代码，导入一个库，还得加个swift的文件才能编译过</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>查看日志</title>
+    <url>/BlogProject/posts/e1b1b87/</url>
+    <content><![CDATA[<p>IOS 查看日志<br>搜索 –&gt; ProductName(UnityFramework)</p>
+<p><a href="%22https://docs.google.com/spreadsheets/d/1yFjZvtNaV7cYOB_hRDjgPiNgQDZtMzaLAUhfxv449ZA/edit#gid=0%22">IOS 设备颜色 </a></p>
+<p>which {name} 查询 安装位置</p>
+]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PM2 命令运行参数</title>
-    <url>/posts/230219f6/</url>
+    <url>/BlogProject/posts/230219f6/</url>
     <content><![CDATA[<ol>
 <li>–name：给应用程序指定一个名称，方便管理和监控。</li>
 <li>–watch：监控指定目录下的文件变化，如果发现文件变化会自动重启应用程序。</li>
@@ -1674,32 +1690,16 @@
       </tags>
   </entry>
   <entry>
-    <title>IOS FacebookSDK</title>
-    <url>/posts/2414f1c4/</url>
-    <content><![CDATA[<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/facebook/facebook-ios-sdk</span><br></pre></td></tr></table></figure>
-
-<h1 id="源码配置"><a href="#源码配置" class="headerlink" title="源码配置"></a>源码配置</h1><figure class="highlight plist"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLTypes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">dict</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">key</span>&gt;</span>CFBundleURLSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbAPP-ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">dict</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookAppID<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>APP-ID<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookClientToken<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>CLIENT-TOKEN<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>FacebookDisplayName<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">string</span>&gt;</span>APP-NAME<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">1.  在 `[CFBundleURLSchemes]` 键内的 `<span class="tag">&lt;<span class="name">array</span>&gt;</span><span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-ID_ 替换为您的应用编号。</span><br><span class="line">2.  在 `FacebookAppID` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-ID_ 替换为您的应用编号。</span><br><span class="line">3.  在 `FacebookClientToken` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _CLIENT-TOKEN_ 替换为您在应用面板**设置** &gt; **高级** &gt; **客户端口令**中找到的值。</span><br><span class="line">4.  在 `FacebookDisplayName` 键内的 `<span class="tag">&lt;<span class="name">string</span>&gt;</span>` 中，将 _APP-NAME_ 替换为您的应用名称。</span><br><span class="line">5.  如要使用任何可将应用切换至 Facebook 应用的 Facebook 对话框（如登录、分享、应用邀请等），应用程序的 `Info.plist` 还需包含以下代码：</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">key</span>&gt;</span>LSApplicationQueriesSchemes<span class="tag">&lt;/<span class="name">key</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">array</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130214<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130410<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20130702<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20131010<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20131219<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20140410<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20140116<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20150313<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20150629<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbapi20160328<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbauth<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fb-messenger-share-api<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbauth2<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">string</span>&gt;</span>fbshareextension<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">array</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> Keychain Sharing 功能，才能使登录功能在 Mac Catalyst 应用程序中正常运作。</p>
-<h1 id="触发问题"><a href="#触发问题" class="headerlink" title="触发问题"></a>触发问题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Undefined symbol: __swift_FORCE_LOAD_$_swiftDataDetection</span><br><span class="line">引入之后，编译一下，出现100多个报错，看很多报错都带swift字眼，搜了下解决方案，也很简单，新建一个空的Swift文件，重新编译一下就没了，试了下也确实可行，真坑啊，oc的代码，导入一个库，还得加个swift的文件才能编译过</span><br></pre></td></tr></table></figure>]]></content>
+    <title>检测并删除材质中记录的冗余Keywords和Shader属性</title>
+    <url>/BlogProject/posts/78fc990e/</url>
+    <content><![CDATA[<h1 id="检测并删除材质中记录的冗余Keywords和Shader属性"><a href="#检测并删除材质中记录的冗余Keywords和Shader属性" class="headerlink" title="检测并删除材质中记录的冗余Keywords和Shader属性"></a>检测并删除材质中记录的冗余Keywords和Shader属性</h1><figure class="highlight c#"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">region</span> classname  </span></span><br><span class="line"><span class="comment">/*  </span></span><br><span class="line"><span class="comment"> *         Title: classname : Ufw</span></span><br><span class="line"><span class="comment"> *         Description: </span></span><br><span class="line"><span class="comment"> *                功能：       检测并删除材质中记录的冗余Keywords和Shader属性  </span></span><br><span class="line"><span class="comment"> *         Author:            xxx  </span></span><br><span class="line"><span class="comment"> *         Time:              2022年9月13日11:21:27  </span></span><br><span class="line"><span class="comment"> *         Version:           0.1版本  </span></span><br><span class="line"><span class="comment"> *         Modify Recorde: */</span>  </span><br><span class="line"><span class="meta">#<span class="keyword">endregion</span>  </span></span><br><span class="line"><span class="keyword">using</span> System;  </span><br><span class="line"><span class="keyword">using</span> System.Collections.Generic;  </span><br><span class="line"><span class="keyword">using</span> System.Reflection;  </span><br><span class="line"><span class="keyword">using</span> UnityEditor;  </span><br><span class="line"><span class="keyword">using</span> UnityEngine;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Ufw</span>  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">class</span> <span class="title">UnusedKeywordsAndPropertiesCheckerEditor</span> : <span class="title">Editor</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="comment">//获取shader中所有的宏  </span></span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="built_in">bool</span> <span class="title">GetShaderKeywords</span>(<span class="params">Shader target, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local</span>)</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">try</span>  </span><br><span class="line">            &#123;  </span><br><span class="line">                MethodInfo globalKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderGlobalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                MethodInfo localKeywords = <span class="keyword">typeof</span>(ShaderUtil).GetMethod(<span class="string">&quot;GetShaderLocalKeywords&quot;</span>, BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);  </span><br><span class="line">                <span class="keyword">if</span> (globalKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = (<span class="built_in">string</span>[])globalKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="keyword">global</span> = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">if</span> (localKeywords != <span class="literal">null</span>)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = (<span class="built_in">string</span>[])localKeywords.Invoke(<span class="literal">null</span>, <span class="keyword">new</span> <span class="built_in">object</span>[]  </span><br><span class="line">                    &#123;                        target  </span><br><span class="line">                    &#125;);  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    local = <span class="literal">null</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">true</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">catch</span> (Exception e)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Error(<span class="string">$&quot;获取shader中所有的宏,错误: <span class="subst">&#123;e.Message&#125;</span>&quot;</span>);  </span><br><span class="line">                <span class="keyword">global</span> = local = <span class="literal">null</span>;  </span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        [<span class="meta">MenuItem(UfwMenuItemIni.M_Check_MatKey)</span>]  </span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">CheckMaterials</span>()</span>  </span><br><span class="line">        &#123;  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            ProfilerUtils.BeginWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            <span class="built_in">string</span>[] paths = AssetDatabase.FindAssets(<span class="string">&quot;t:material&quot;</span>, <span class="keyword">new</span>[]  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="string">&quot;Assets/Res&quot;</span>  </span><br><span class="line">            &#125;);  </span><br><span class="line">            <span class="keyword">if</span> (paths == <span class="literal">null</span> || paths.Length == <span class="number">0</span>)  </span><br><span class="line">            &#123;  </span><br><span class="line">                Log.Info(<span class="string">$&quot;未找到相匹配的文件 匹配格式: t:material 匹配路径: Assets/Res&quot;</span>);  </span><br><span class="line">                <span class="keyword">return</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="built_in">int</span> index = <span class="number">0</span>;  </span><br><span class="line">            <span class="built_in">int</span> maxCount = paths.Length;  </span><br><span class="line">            <span class="keyword">foreach</span> (<span class="built_in">string</span> materialGuid <span class="keyword">in</span> paths)  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="built_in">string</span> materialAssetPath = AssetDatabase.GUIDToAssetPath(materialGuid);  </span><br><span class="line">                Material material = AssetDatabase.LoadAssetAtPath&lt;Material&gt;(materialAssetPath);  </span><br><span class="line">                EditorUtility.DisplayProgressBar(<span class="string">$&quot;读取文件Material文件: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;正在查询内容&quot;</span>, (<span class="built_in">float</span>)index / maxCount);  </span><br><span class="line">                <span class="keyword">if</span> (GetShaderKeywords(material.shader, <span class="keyword">out</span> <span class="built_in">string</span>[] <span class="keyword">global</span>, <span class="keyword">out</span> <span class="built_in">string</span>[] local))  </span><br><span class="line">                &#123;  </span><br><span class="line">                    HashSet&lt;<span class="built_in">string</span>&gt; keywords = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                    <span class="keyword">if</span> (<span class="keyword">global</span> != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> g <span class="keyword">in</span> <span class="keyword">global</span>)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(g);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (local != <span class="literal">null</span>)  </span><br><span class="line">                    &#123;                        <span class="keyword">foreach</span> (<span class="built_in">string</span> l <span class="keyword">in</span> local)  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            keywords.Add(l);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    <span class="keyword">if</span> (keywords.Count == <span class="number">0</span>)  </span><br><span class="line">                    &#123;                        Log.Warn(<span class="string">$&quot;读取文件失效,请检查Material: <span class="subst">&#123;material.name&#125;</span>  Shader: <span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                        <span class="keyword">continue</span>;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    EditorUtility.ClearProgressBar();  </span><br><span class="line">  </span><br><span class="line">                    <span class="comment">//重置keywords  </span></span><br><span class="line">                    List&lt;<span class="built_in">string</span>&gt; resetKeywords = <span class="keyword">new</span> List&lt;<span class="built_in">string</span>&gt;(material.shaderKeywords);  </span><br><span class="line">                    <span class="built_in">int</span> removeIndex = <span class="number">0</span>;  </span><br><span class="line">                    <span class="keyword">foreach</span> (<span class="built_in">string</span> item <span class="keyword">in</span> material.shaderKeywords)  </span><br><span class="line">                    &#123;                        EditorUtility.DisplayProgressBar(<span class="string">$&quot;检查KeyWords: <span class="subst">&#123;material.name&#125;</span>&quot;</span>, <span class="string">$&quot;匹配字段 <span class="subst">&#123;item&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeIndex / resetKeywords.Count);  </span><br><span class="line">                        <span class="keyword">if</span> (!keywords.Contains(item))  </span><br><span class="line">                        &#123;  </span><br><span class="line">                            resetKeywords.Remove(item);  </span><br><span class="line">                        &#125;  </span><br><span class="line">                        removeIndex++;  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    material.shaderKeywords = resetKeywords.ToArray();  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>  </span><br><span class="line">                &#123;  </span><br><span class="line">                    Log.Warn(<span class="string">$&quot;获取shader中所有的宏,Error: Material:<span class="subst">&#123;material.name&#125;</span>  shader:<span class="subst">&#123;material.shader&#125;</span>&quot;</span>);  </span><br><span class="line">                    <span class="keyword">continue</span>;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                HashSet&lt;<span class="built_in">string</span>&gt; property = <span class="keyword">new</span> HashSet&lt;<span class="built_in">string</span>&gt;();  </span><br><span class="line">                <span class="built_in">int</span> count = material.shader.GetPropertyCount();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = <span class="number">0</span>; i &lt; count; i++)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    property.Add(material.shader.GetPropertyName(i));  </span><br><span class="line">                &#125;  </span><br><span class="line">                SerializedObject o = <span class="keyword">new</span> SerializedObject(material);  </span><br><span class="line">                SerializedProperty disabledShaderPasses = o.FindProperty(<span class="string">&quot;disabledShaderPasses&quot;</span>);  </span><br><span class="line">                SerializedProperty savedProperties = o.FindProperty(<span class="string">&quot;m_SavedProperties&quot;</span>);  </span><br><span class="line">                SerializedProperty texEnvs = savedProperties.FindPropertyRelative(<span class="string">&quot;m_TexEnvs&quot;</span>);  </span><br><span class="line">                SerializedProperty floats = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Floats&quot;</span>);  </span><br><span class="line">                SerializedProperty colors = savedProperties.FindPropertyRelative(<span class="string">&quot;m_Colors&quot;</span>);  </span><br><span class="line">                <span class="built_in">int</span> removeAttrId = <span class="number">0</span>;  </span><br><span class="line">                <span class="built_in">int</span> removeAttrCount = disabledShaderPasses.arraySize + texEnvs.arraySize + floats.arraySize + colors.arraySize;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="comment">//对比属性删除残留的属性  </span></span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = disabledShaderPasses.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = disabledShaderPasses.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:disabledShaderPasses&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        disabledShaderPasses.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = texEnvs.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = texEnvs.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_TexEnvs&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        texEnvs.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = floats.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = floats.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Floats&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        floats.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                EditorUtility.ClearProgressBar();  </span><br><span class="line">                <span class="keyword">for</span> (<span class="built_in">int</span> i = colors.arraySize - <span class="number">1</span>; i &gt;= <span class="number">0</span>; i--)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    <span class="built_in">string</span> displayName = colors.GetArrayElementAtIndex(i).displayName;  </span><br><span class="line">                    EditorUtility.DisplayProgressBar(<span class="string">$&quot;<span class="subst">&#123;material.name&#125;</span> 对比:m_Colors&quot;</span>, <span class="string">$&quot;检查属性<span class="subst">&#123;displayName&#125;</span>&quot;</span>, (<span class="built_in">float</span>)removeAttrId / removeAttrCount);  </span><br><span class="line">                    <span class="keyword">if</span> (!property.Contains(displayName))  </span><br><span class="line">                    &#123;                        colors.DeleteArrayElementAtIndex(i);  </span><br><span class="line">                    &#125;  </span><br><span class="line">                    removeAttrId++;  </span><br><span class="line">                &#125;  </span><br><span class="line">                o.ApplyModifiedProperties();  </span><br><span class="line">                index += <span class="number">1</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">            UWatchResult result = ProfilerUtils.EndWatch(<span class="string">&quot;CheckMaterials&quot;</span>);  </span><br><span class="line">            Log.Info(<span class="string">$&quot;清理Material残留 时间<span class="subst">&#123;result.costTime&#125;</span> [内存]<span class="subst">&#123;result.costMemory&#125;</span>&quot;</span>);  </span><br><span class="line">            EditorUtility.ClearProgressBar();  </span><br><span class="line">            AssetDatabase.SaveAssets();  </span><br><span class="line">            Log.Info(<span class="string">&quot;检查完毕&quot;</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>IOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>查看日志</title>
-    <url>/posts/e1b1b87/</url>
-    <content><![CDATA[<p>IOS 查看日志<br>搜索 –&gt; ProductName(UnityFramework)</p>
-<p><a href="%22https://docs.google.com/spreadsheets/d/1yFjZvtNaV7cYOB_hRDjgPiNgQDZtMzaLAUhfxv449ZA/edit#gid=0%22">IOS 设备颜色 </a></p>
-<p>which {name} 查询 安装位置</p>
-]]></content>
-      <tags>
-        <tag>IOS</tag>
+        <tag>Unity Shader</tag>
       </tags>
   </entry>
   <entry>
     <title>标签注解</title>
-    <url>/posts/20410000/</url>
+    <url>/BlogProject/posts/20410000/</url>
     <content><![CDATA[<p><strong>XLua.GCOptimize：</strong> <br>GC 代码优化对于一个 c#纯值类型(官网指一个只包含值类型的 struct，可以嵌套其它只包含值类型的 struct)或者 c#枚举值加上了这个配置，会使得该类型在 lua 和 c#间传递不产生 gc alloc，该类型的数组访问也不会产生 gc。<br>(除枚举之外，包含无参构造函数的复杂类型，都会生成 lua table 到该类型，以及该类型的一维数组转换代码，可以优化转换性能)</p>
 ]]></content>
       <tags>
@@ -1708,7 +1708,7 @@
   </entry>
   <entry>
     <title>Unity PC 出包相关</title>
-    <url>/posts/5714b715/</url>
+    <url>/BlogProject/posts/5714b715/</url>
     <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
 <ol>
 <li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
@@ -1724,7 +1724,7 @@
   </entry>
   <entry>
     <title>优化资产</title>
-    <url>/posts/f7fefa74/</url>
+    <url>/BlogProject/posts/f7fefa74/</url>
     <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
 ]]></content>
       <tags>
