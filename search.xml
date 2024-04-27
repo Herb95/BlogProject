@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>数据结构</title>
-    <url>/BlogProject/posts/ba907200/</url>
-    <content><![CDATA[<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><blockquote>
-<p>1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式. 2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。 3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。 4.正确的数据机构可提高算法的效率 5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构</p>
-</blockquote>
-<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><blockquote>
-<p>数组 (Array)<br>堆栈 (Stack)<br>队列 (Queue)<br>链表 (Linked List)<br>树 (Tree)<br>图 (Graph)<br>堆 (Heap)<br>散列表 (Hash)</p>
-</blockquote>
-<p><strong><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">参考维基百科地址</a></strong> &lt;–点击</p>
-]]></content>
-      <tags>
-        <tag>数据</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>部署个人博客方法</title>
     <url>/BlogProject/posts/4441/</url>
     <content><![CDATA[<p>部署个人博客命令<br>npm+hexo</p>
@@ -35,10 +20,10 @@
 <li>cd ~&#x2F;.ssh #查看本机是否存在 SSH Key ###<strong>存在</strong></li>
 <li>clip &lt;~&#x2F;.ssh&#x2F;id_rsa.pub #复制公钥到 clipboard</li>
 <li>登录 github 设置秘钥</li>
-<li>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;">&#x67;&#105;&#x74;&#x40;&#103;&#105;&#x74;&#x68;&#x75;&#98;&#46;&#99;&#x6f;&#109;</a> #测试秘钥</li>
+<li>ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a> #测试秘钥</li>
 </ul>
 <h3 id="不存在"><a href="#不存在" class="headerlink" title="不存在"></a><strong>不存在</strong></h3><ul>
-<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#111;&#117;&#x72;&#x5f;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;">&#x79;&#111;&#117;&#x72;&#x5f;&#101;&#109;&#x61;&#x69;&#x6c;&#x40;&#x65;&#120;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
+<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#117;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;">&#121;&#x6f;&#117;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;</a>“</p>
 <ul>
 <li>弹出界面</li>
 <li>直接回车:默认文件进行存储<ul>
@@ -116,6 +101,21 @@
 <li>等生效</li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>数据结构</title>
+    <url>/BlogProject/posts/ba907200/</url>
+    <content><![CDATA[<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><blockquote>
+<p>1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式. 2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。 3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。 4.正确的数据机构可提高算法的效率 5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构</p>
+</blockquote>
+<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><blockquote>
+<p>数组 (Array)<br>堆栈 (Stack)<br>队列 (Queue)<br>链表 (Linked List)<br>树 (Tree)<br>图 (Graph)<br>堆 (Heap)<br>散列表 (Hash)</p>
+</blockquote>
+<p><strong><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">参考维基百科地址</a></strong> &lt;–点击</p>
+]]></content>
+      <tags>
+        <tag>数据</tag>
+      </tags>
   </entry>
   <entry>
     <title>Lua初识</title>
@@ -538,6 +538,21 @@
       </tags>
   </entry>
   <entry>
+    <title>获取当前仓库文件状态</title>
+    <url>/BlogProject/posts/be7912d9/</url>
+    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+
+<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git 相关解决方案</title>
     <url>/BlogProject/posts/12e58447/</url>
     <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
@@ -554,28 +569,26 @@
       </tags>
   </entry>
   <entry>
-    <title>获取当前仓库文件状态</title>
-    <url>/BlogProject/posts/be7912d9/</url>
-    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
-
-<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git 命令使用记录</title>
     <url>/BlogProject/posts/0/</url>
     <content><![CDATA[<h1 id="Git-相关命令使用记录"><a href="#Git-相关命令使用记录" class="headerlink" title="Git 相关命令使用记录"></a>Git 相关命令使用记录</h1><h2 id="合并"><a href="#合并" class="headerlink" title="合并"></a>合并</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks merge &#123;branch Name&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="获取内容-sourceTree"><a href="#获取内容-sourceTree" class="headerlink" title="获取内容-sourceTree"></a>获取内容-sourceTree</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git --no-optional-locks -c color.branch=<span class="literal">false</span> -c color.diff=<span class="literal">false</span> -c color.status=<span class="literal">false</span> -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> -c credential.helper=sourcetree fetch origin </span><br></pre></td></tr></table></figure>
 <h2 id="删除-Tag"><a href="#删除-Tag" class="headerlink" title="删除 Tag"></a>删除 Tag</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks tag -d &#123;Tag Name&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="重置"><a href="#重置" class="headerlink" title="重置"></a>重置</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks reset -q --hard HEAD --</span><br><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks submodule update --init</span><br></pre></td></tr></table></figure>]]></content>
+<h2 id="重置"><a href="#重置" class="headerlink" title="重置"></a>重置</h2><figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks reset -q --hard HEAD --</span><br><span class="line">git -c diff.mnemonicprefix=<span class="literal">false</span> -c core.quotepath=<span class="literal">false</span> --no-optional-locks submodule update --init</span><br></pre></td></tr></table></figure>
+
+<h2 id="清理"><a href="#清理" class="headerlink" title="清理"></a>清理</h2><h3 id="清理帮助"><a href="#清理帮助" class="headerlink" title="清理帮助"></a>清理帮助</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> git clean -h</span><br></pre></td></tr></table></figure>
+
+<h3 id="常用参数介绍："><a href="#常用参数介绍：" class="headerlink" title="常用参数介绍："></a>常用参数介绍：</h3><ol>
+<li>-n 打印出需要清理的文件和文件夹（不会真的删除）</li>
+<li>-f 强制删除（并不是删除文件的意思）</li>
+<li>-d 删除整个文件夹（包括文件，-n 不会显示文件夹里面的文件）</li>
+<li>-x 对 .gitignore 文件中忽略的文件及文件夹进行清理（不加上-d参数的话只能清理文件</li>
+</ol>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><blockquote>
+<p>使用 git clean 清除时最好先加上 -n 参数查看清理的对象，如果清理文件夹的话，需要明确文件夹里是否有重要的文件数据，避免误删。<br>-f 是强制删除，可以在 -xd 删除失败的时候加上。<br>不希望删除的文件加入 git 管理（add，commit）就可以了。</p>
+</blockquote>
+]]></content>
       <tags>
         <tag>Git</tag>
       </tags>
@@ -600,7 +613,7 @@
   <entry>
     <title>生成密钥</title>
     <url>/BlogProject/posts/7b852c9/</url>
-    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#120;&#120;&#x40;&#120;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#109;">&#x78;&#120;&#120;&#120;&#x40;&#120;&#120;&#x78;&#x78;&#46;&#x63;&#x6f;&#109;</a>“</p>
+    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#x78;&#120;&#x40;&#x78;&#x78;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;">&#x78;&#120;&#x78;&#120;&#x40;&#x78;&#x78;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -647,15 +660,6 @@
 ]]></content>
       <tags>
         <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Love Steam Game</title>
-    <url>/BlogProject/posts/33b8e905/</url>
-    <content><![CDATA[<p>Desynced <a href="https://store.steampowered.com/app/1450900/Desynced/">https://store.steampowered.com/app/1450900/Desynced/</a></p>
-]]></content>
-      <tags>
-        <tag>SteamGame</tag>
       </tags>
   </entry>
   <entry>
@@ -887,6 +891,15 @@
       </tags>
   </entry>
   <entry>
+    <title>Love Steam Game</title>
+    <url>/BlogProject/posts/33b8e905/</url>
+    <content><![CDATA[<h1 id="模拟游戏"><a href="#模拟游戏" class="headerlink" title="模拟游戏"></a>模拟游戏</h1><p><a href="%22https://store.steampowered.com/app/1450900/Desynced/%22">Desynced</a></p>
+]]></content>
+      <tags>
+        <tag>SteamGame</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Changelog Record</title>
     <url>/BlogProject/posts/8efc86c4/</url>
     <content><![CDATA[<h1 id="Changelog"><a href="#Changelog" class="headerlink" title="Changelog"></a>Changelog</h1><p>All notable changes to this project will be documented in this file.</p>
@@ -1071,6 +1084,15 @@
       </tags>
   </entry>
   <entry>
+    <title></title>
+    <url>/BlogProject/posts/0/</url>
+    <content><![CDATA[<h1 id="方式"><a href="#方式" class="headerlink" title="方式"></a>方式</h1><p>Requirements. Txt 可以通过 pip 命令自动生成和安装</p>
+<h2 id="生成-requirements-Txt-文件"><a href="#生成-requirements-Txt-文件" class="headerlink" title="生成 requirements. Txt 文件"></a>生成 requirements. Txt 文件</h2><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">pip freeze &gt; requirements.txt</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装-requirements-Txt-依赖"><a href="#安装-requirements-Txt-依赖" class="headerlink" title="安装 requirements. Txt 依赖"></a>安装 requirements. Txt 依赖</h2><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
     <title>DisallowMultipleComponent</title>
     <url>/BlogProject/posts/5c9c1269/</url>
     <content><![CDATA[<h1 id="DisallowMultipleComponent"><a href="#DisallowMultipleComponent" class="headerlink" title="DisallowMultipleComponent"></a>DisallowMultipleComponent</h1><p>DisallowMultipleComponent : 不允许多个相同的组件挂载在同一个 GameObject 上</p>
@@ -1228,17 +1250,338 @@
       </tags>
   </entry>
   <entry>
+    <title>Unity TextureFormat</title>
+    <url>/BlogProject/posts/c7faa5ac/</url>
+    <content><![CDATA[<h1 id="TextureFormat-类型"><a href="#TextureFormat-类型" class="headerlink" title="TextureFormat 类型"></a>TextureFormat 类型</h1><table>
+<thead>
+<tr>
+<th>Id</th>
+<th>英文</th>
+<th>注解</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.Alpha8.html">Alpha8</a></td>
+<td>只有8位 alpha 通道的格式</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ARGB4444.html">ARGB4444</a></td>
+<td>16 位&#x2F;像素纹理格式。纹理使用 Alpha 通道存储颜色</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGB24.html">RGB24</a></td>
+<td>颜色纹理格式，每通道 8 位。</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="%20%5BARGB32%5D(https://docs.unity3d.com/ScriptReference/TextureFormat.ARGB32.html)%20">RGBA32</a></td>
+<td>采用 Alpha 纹理格式的颜色，每通道 8 位。(每个 RGBA 颜色通道都存储为 [0.. 1] 范围内的 8 位值。在内存中，通道数据的顺序如下：R、G、B、A 字节依次排列.)</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ARGB32.html">ARGB32</a></td>
+<td>采用 Alpha 纹理格式的颜色，每通道 8 位。(每个 RGBA 颜色通道都存储为 [0..1] 范围内的 8 位值。在内存中，通道数据的顺序如下：A、R、G、B 字节依次排列。请注意，[RGBA32]( <a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGBA32.htm">https://docs.unity3d.com/ScriptReference/TextureFormat.RGBA32.htm</a> 格式可能稍微更高效，因为内存中的数据布局更接近于图形 API 的期望。)</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGB565.html">RGB565</a></td>
+<td>16 位颜色纹理格式。</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.R16.html">R16</a></td>
+<td>单通道 (R) 纹理格式，16 位整数。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.DXT1.html">DXT1</a></td>
+<td>压缩颜色纹理格式。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.DXT5.html">DXT5</a></td>
+<td>使用 Alpha 通道纹理格式压缩颜色。</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGBA4444.html">RGBA4444</a></td>
+<td>颜色和 Alpha 纹理格式，每通道 4 位。</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.BGRA32.html">BGRA32</a></td>
+<td>采用 Alpha 纹理格式的颜色，每通道 8 位。</td>
+</tr>
+<tr>
+<td>12</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RHalf.html">RHalf</a></td>
+<td>标量 (R) 纹理格式，16 位浮点。</td>
+</tr>
+<tr>
+<td>13</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGHalf.html">RGHalf</a></td>
+<td>两种颜色 (RG) 纹理格式，每通道 16 位浮点。</td>
+</tr>
+<tr>
+<td>14</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGBAHalf.html">RGBAHalf</a></td>
+<td>RGB 颜色和 alpha 纹理格式，每通道 16 位浮点。</td>
+</tr>
+<tr>
+<td>15</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RFloat.html">RFloat</a></td>
+<td>标量 (R) 纹理格式，32 位浮点。</td>
+</tr>
+<tr>
+<td>16</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGFloat.html">RGFloat</a></td>
+<td>两种颜色 (RG) 纹理格式，每通道 32 位浮点。</td>
+</tr>
+<tr>
+<td>17</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGBAFloat.html">RGBAFloat</a></td>
+<td>RGB 颜色和 alpha 纹理格式，每个通道 32 位浮点数。</td>
+</tr>
+<tr>
+<td>18</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.YUY2.html">YUY2</a></td>
+<td>一种使用 YUV 色彩空间的格式，通常用于视频编码或播放。</td>
+</tr>
+<tr>
+<td>22</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGB9e5Float.html">RGB9e5Float</a></td>
+<td>RGB HDR 格式，每个通道有 9 位尾数和 5 位共享指数。</td>
+</tr>
+<tr>
+<td>26</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.BC4.html">BC4</a></td>
+<td>压缩的单通道 (R) 纹理格式。</td>
+</tr>
+<tr>
+<td>27</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.BC5.html">BC5</a></td>
+<td>压缩双通道 (RG) 纹理格式。</td>
+</tr>
+<tr>
+<td>24</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.BC6H.html">BC6H</a></td>
+<td>HDR 压缩颜色纹理格式。</td>
+</tr>
+<tr>
+<td>25</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.BC7.html">BC7</a></td>
+<td>高品质压缩颜色纹理格式。</td>
+</tr>
+<tr>
+<td>28</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.DXT1Crunched.html">DXT1Crunched</a></td>
+<td>采用 Crunch 压缩的压缩颜色纹理格式，可实现更小的存储大小。</td>
+</tr>
+<tr>
+<td>29</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.DXT5Crunched.html">DXT5Crunched</a></td>
+<td>使用 Alpha 通道纹理格式压缩颜色，并使用 Crunch 压缩来实现更小的存储大小。</td>
+</tr>
+<tr>
+<td>30</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.PVRTC_RGB2.html">PVRTC_RGB2</a></td>
+<td>PowerVR (iOS) 2 位&#x2F;像素压缩颜色纹理格式。</td>
+</tr>
+<tr>
+<td>31</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.PVRTC_RGBA2.html">PVRTC_RGBA2</a></td>
+<td>PowerVR (iOS) 采用 alpha 通道纹理格式压缩 2 位&#x2F;像素。</td>
+</tr>
+<tr>
+<td>32</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.PVRTC_RGB4.html">PVRTC_RGB4</a></td>
+<td>PowerVR (iOS) 4 位&#x2F;像素压缩颜色纹理格式。</td>
+</tr>
+<tr>
+<td>33</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.PVRTC_RGBA4.html">PVRTC_RGBA4</a></td>
+<td>PowerVR (iOS) 4 位&#x2F;像素，采用 Alpha 通道纹理格式压缩。</td>
+</tr>
+<tr>
+<td>34</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ETC_RGB4.html">ETC_RGB4</a></td>
+<td>ETC (GLES2.0) 4 位&#x2F;像素压缩 RGB 纹理格式。</td>
+</tr>
+<tr>
+<td>41</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.EAC_R.html">EAC_R</a></td>
+<td>ETC2 &#x2F; EAC (GL ES 3.0) 4 位&#x2F;像素压缩无符号单通道纹理格式。</td>
+</tr>
+<tr>
+<td>42</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.EAC_R_SIGNED.html">EAC_R_SIGNED</a></td>
+<td>ETC2 &#x2F; EAC (GL ES 3.0) 4 位&#x2F;像素压缩签名单通道纹理格式。</td>
+</tr>
+<tr>
+<td>43</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.EAC_RG.html">EAC_RG</a></td>
+<td>ETC2 &#x2F; EAC (GL ES 3.0) 8 位&#x2F;像素压缩无符号双通道 (RG) 纹理格式。</td>
+</tr>
+<tr>
+<td>44</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.EAC_RG_SIGNED.html">EAC_RG_SIGNED</a></td>
+<td>ETC2 &#x2F; EAC (GL ES 3.0) 8 位&#x2F;像素压缩带符号双通道 (RG) 纹理格式。</td>
+</tr>
+<tr>
+<td>45</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ETC2_RGB.html">ETC2_RGB</a></td>
+<td>ETC2 (GL ES 3.0) 4 位&#x2F;像素压缩 RGB 纹理格式。</td>
+</tr>
+<tr>
+<td>46</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ETC2_RGBA1.html">ETC2_RGBA1</a></td>
+<td>ETC2 (GL ES 3.0) 4 位&#x2F;像素 RGB+1 位 alpha 纹理格式。</td>
+</tr>
+<tr>
+<td>47</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ETC2_RGBA8.html">ETC2_RGBA8</a></td>
+<td>ETC2 (GL ES 3.0) 8 位&#x2F;像素压缩 RGBA 纹理格式。</td>
+</tr>
+<tr>
+<td>48</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_4x4.html">ASTC_4x4</a></td>
+<td>ASTC（128 位 4x4 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>49</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_5x5.html">ASTC_5x5</a></td>
+<td>ASTC（128 位 5x5 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>50</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_6x6.html">ASTC_6x6</a></td>
+<td>ASTC（128 位 6x6 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>51</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_8x8.html">ASTC_8x8</a></td>
+<td>ASTC（128 位 8x8 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>52</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_10x10.html">ASTC_10x10</a></td>
+<td>ASTC（128 位 10x10 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>53</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_12x12.html">ASTC_12x12</a></td>
+<td>ASTC（128 位的 12x12 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>62</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RG16.html">RG16</a></td>
+<td>两种颜色 (RG) 纹理格式，每通道 8 位。</td>
+</tr>
+<tr>
+<td>63</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.R8.html">R8</a></td>
+<td>单通道 (R) 纹理格式，8 位整数。</td>
+</tr>
+<tr>
+<td>64</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ETC_RGB4Crunched.html">ETC_RGB4Crunched</a></td>
+<td>采用 Crunch 压缩的压缩颜色纹理格式，可实现更小的存储大小。</td>
+</tr>
+<tr>
+<td>65</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ETC2_RGBA8Crunched.html">ETC2_RGBA8Crunched</a></td>
+<td>使用 Crunch 压缩以 Alpha 通道纹理格式压缩颜色，以实现更小的存储大小。</td>
+</tr>
+<tr>
+<td>66</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_HDR_4x4.html">ASTC_HDR_4x4</a></td>
+<td>ASTC（128 位 4x4 像素块）压缩 RGB(A) HDR 纹理格式。</td>
+</tr>
+<tr>
+<td>67</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_HDR_5x5.html">ASTC_HDR_5x5</a></td>
+<td>ASTC（128 位 5x5 像素块）压缩 RGB(A) HDR 纹理格式。</td>
+</tr>
+<tr>
+<td>68</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_HDR_6x6.html">ASTC_HDR_6x6</a></td>
+<td>ASTC（128 位 6x6 像素块）压缩 RGB(A) HDR 纹理格式。</td>
+</tr>
+<tr>
+<td>69</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_HDR_8x8.html">ASTC_HDR_8x8</a></td>
+<td>ASTC（128 位 8x8 像素块）压缩 RGB(A) 纹理格式。</td>
+</tr>
+<tr>
+<td>70</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_HDR_10x10.html">ASTC_HDR_10x10</a></td>
+<td>ASTC（10x10 像素块，128 位）压缩 RGB(A) HDR 纹理格式。</td>
+</tr>
+<tr>
+<td>71</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.ASTC_HDR_12x12.html">ASTC_HDR_12x12</a></td>
+<td>ASTC（128 位 12x12 像素块）压缩 RGB(A) HDR 纹理格式。</td>
+</tr>
+<tr>
+<td>72</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RG32.html">RG32</a></td>
+<td>两通道 (RG) 纹理格式，每通道 16 位整数。</td>
+</tr>
+<tr>
+<td>73</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGB48.html">RGB48</a></td>
+<td>三通道 (RGB) 纹理格式，每通道 16 位整数。</td>
+</tr>
+<tr>
+<td>74</td>
+<td><a href="https://docs.unity3d.com/ScriptReference/TextureFormat.RGBA64.html">RGBA64</a></td>
+<td>四通道 (RGBA) 纹理格式，每通道 16 位整数。</td>
+</tr>
+</tbody></table>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Unity 安装</title>
+    <url>/BlogProject/posts/0/</url>
+    <content><![CDATA[<h1 id="Unity-安装命令"><a href="#Unity-安装命令" class="headerlink" title="Unity 安装命令"></a>Unity 安装命令</h1><h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unityhub://安装版本/安装Md5(短)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2020-3-48f1"><a href="#2020-3-48f1" class="headerlink" title="2020.3.48f1"></a>2020.3.48f1</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unityhub://2020.3.48f1/b805b124c6b7</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Command</title>
     <url>/BlogProject/posts/4177d348/</url>
-    <content><![CDATA[<p>ping + ip： 查看某一个 ip 地址是否能够连通，如： ping 164.80.77.163(或者 ping 域名)<br>telnet ip port ： 查看某一个机器上的某一个端口是否可以访问，如：telnet 164.80.77.163 8088</p>
-<h1 id="window"><a href="#window" class="headerlink" title="window"></a>window</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line"><span class="built_in">del</span> /a /f /s /q &quot;*.meta&quot; &quot;*.meta.*&quot;</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="Shell-Command"><a href="#Shell-Command" class="headerlink" title="Shell Command"></a>Shell Command</h1><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">del /a /f /s /q &quot;*.meta&quot; &quot;*.meta.*&quot;</span><br></pre></td></tr></table></figure>
 
 <p>该指令可删除后缀为 <strong>xxx.meta</strong> <strong>xxx.meta.xxx</strong> 的文件<br>*为通配符<br>&#x2F;a &#x2F;f 是强制删除所有属性的文件<br>&#x2F;q 是无需确认直接删除<br>要是再加上&#x2F;s 开关，就可以删除子文件加中的文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1. &quot;dir&quot; : 显示目录中的文件和文件夹</span><br><span class="line">2. &quot;cd&quot; : 更改目录</span><br><span class="line">3. &quot;copy&quot; : 复制文件</span><br><span class="line">4. &quot;xcopy&quot; : 复制文件夹及其内容</span><br><span class="line">5. &quot;del&quot; : 删除文件</span><br><span class="line">6. &quot;rmdir&quot; : 删除文件夹</span><br><span class="line">7. &quot;ren&quot; : 重命名文件或文件夹</span><br><span class="line">8. &quot;netstat&quot; : 显示网络连接状态</span><br><span class="line">9. &quot;ipconfig&quot; : 显示本地计算机的IP地址</span><br><span class="line">10.&quot;ping&quot; : 检测网络连通性</span><br><span class="line">11.&quot;tracert&quot; : 显示数据包从源到目的地经过的路由</span><br><span class="line">12.&quot;nslookup&quot; : 显示域名解析信息</span><br><span class="line">13.&quot;tasklist&quot; : 显示运行中的进程</span><br><span class="line">14.&quot;taskkill&quot; : 结束运行中的进程</span><br><span class="line">15.&quot;net user&quot; : 管理网络账户</span><br><span class="line">16.&quot;net localgroup&quot; : 管理本地组</span><br><span class="line">17.&quot;netstat -ano&quot; : 显示所有连接和监听端口以及它们对应的PID</span><br><span class="line">18.&quot;find&quot; : 在文件中查找文本</span><br><span class="line">19.&quot;for f&quot; : 循环执行命令</span><br><span class="line">20.&quot;date&quot; : 显示或设置系统日期</span><br><span class="line">21.&quot;systeminfo&quot; : 显示系统配置信息</span><br><span class="line">22.&quot;shutdown&quot; : 关闭或重启计算机</span><br><span class="line">23.&quot;cls&quot; : 清除命令行屏幕内容</span><br><span class="line">24.&quot;color&quot; : 更改命令行文本和背景颜色</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">1. &quot;dir&quot; : 显示目录中的文件和文件夹</span><br><span class="line">2. &quot;cd&quot; : 更改目录</span><br><span class="line">3. &quot;copy&quot; : 复制文件</span><br><span class="line">4. &quot;xcopy&quot; : 复制文件夹及其内容</span><br><span class="line">5. &quot;del&quot; : 删除文件</span><br><span class="line">6. &quot;rmdir&quot; : 删除文件夹</span><br><span class="line">7. &quot;ren&quot; : 重命名文件或文件夹</span><br><span class="line">8. &quot;netstat&quot; : 显示网络连接状态</span><br><span class="line">9. &quot;ipconfig&quot; : 显示本地计算机的IP地址</span><br><span class="line">10.&quot;ping&quot; : 检测网络连通性</span><br><span class="line">11.&quot;tracert&quot; : 显示数据包从源到目的地经过的路由</span><br><span class="line">12.&quot;nslookup&quot; : 显示域名解析信息</span><br><span class="line">13.&quot;tasklist&quot; : 显示运行中的进程</span><br><span class="line">14.&quot;taskkill&quot; : 结束运行中的进程</span><br><span class="line">15.&quot;net user&quot; : 管理网络账户</span><br><span class="line">16.&quot;net localgroup&quot; : 管理本地组</span><br><span class="line">17.&quot;netstat -ano&quot; : 显示所有连接和监听端口以及它们对应的PID</span><br><span class="line">18.&quot;find&quot; : 在文件中查找文本</span><br><span class="line">19.&quot;for f&quot; : 循环执行命令</span><br><span class="line">20.&quot;date&quot; : 显示或设置系统日期</span><br><span class="line">21.&quot;systeminfo&quot; : 显示系统配置信息</span><br><span class="line">22.&quot;shutdown&quot; : 关闭或重启计算机</span><br><span class="line">23.&quot;cls&quot; : 清除命令行屏幕内容</span><br><span class="line">24.&quot;color&quot; : 更改命令行文本和背景颜色</span><br></pre></td></tr></table></figure>
 
-<h1 id="文件夹命令"><a href="#文件夹命令" class="headerlink" title="文件夹命令"></a>文件夹命令</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">explorer</span><br><span class="line">explorer . //打开当前文件夹</span><br></pre></td></tr></table></figure>
+<h3 id="打开文件夹"><a href="#打开文件夹" class="headerlink" title="打开文件夹"></a>打开文件夹</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">explorer</span><br><span class="line">explorer . //打开当前文件夹</span><br></pre></td></tr></table></figure>
 
-<h1 id="控制面板–-网络和-Internet–-网络连接"><a href="#控制面板–-网络和-Internet–-网络连接" class="headerlink" title="控制面板–&gt;网络和 Internet–&gt;网络连接"></a>控制面板–&gt;网络和 Internet–&gt;网络连接</h1><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">ncpa.cpl</span><br></pre></td></tr></table></figure>
+<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><h3 id="控制面板–-网络和-Internet–-网络连接"><a href="#控制面板–-网络和-Internet–-网络连接" class="headerlink" title="控制面板–&gt;网络和 Internet–&gt;网络连接"></a>控制面板–&gt;网络和 Internet–&gt;网络连接</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ncpa.cpl</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看已放行的端口命令"><a href="#查看已放行的端口命令" class="headerlink" title="查看已放行的端口命令"></a>查看已放行的端口命令</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netstat -ano | findstr &quot;8080&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="查对方的-MAC-地址"><a href="#查对方的-MAC-地址" class="headerlink" title="查对方的 MAC 地址"></a>查对方的 MAC 地址</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">arp -a </span><br><span class="line">arp -a ip</span><br></pre></td></tr></table></figure>
+
+<h3 id="查对方的主机名"><a href="#查对方的主机名" class="headerlink" title="查对方的主机名"></a>查对方的主机名</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nbtstat -a 主机名</span><br><span class="line">nbtstat -A ip</span><br></pre></td></tr></table></figure>
+<h3 id="查看某一个-ip-地址是否能够连通"><a href="#查看某一个-ip-地址是否能够连通" class="headerlink" title="查看某一个 ip 地址是否能够连通"></a>查看某一个 ip 地址是否能够连通</h3><p>如： ping 164.80.77.163 (或者 ping 域名)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Ping 127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看某一个机器上的某一个端口是否可以访问"><a href="#查看某一个机器上的某一个端口是否可以访问" class="headerlink" title="查看某一个机器上的某一个端口是否可以访问"></a>查看某一个机器上的某一个端口是否可以访问</h3><p>Telnet ip port ： 查看某一个机器上的某一个端口是否可以访问，如：telnet 164.80.77.163 8088</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Telnet ip port</span><br></pre></td></tr></table></figure>
+<h3 id="开放端口号"><a href="#开放端口号" class="headerlink" title="开放端口号"></a>开放端口号</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netsh firewall add portopening protocol = TCP port = 443 name = &quot;开启443&quot; mode =  ENABLE  </span><br><span class="line">netsh advfirewall firewall add portopening protocol = TCP port = 443 name = &quot;开启443&quot; mode =  ENABLE</span><br></pre></td></tr></table></figure>
+
+<h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><h3 id="计算文件-MD5"><a href="#计算文件-MD5" class="headerlink" title="计算文件 MD5"></a>计算文件 MD5</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">certutil -hashfile some_file MD5</span><br></pre></td></tr></table></figure>
+<p>如果不传入 “MD5” 参数，则 <strong>certutil -hashfile</strong> 命令会默认计算文件的 SHA（Secure Hash Algorithm） 哈希值</p>
 ]]></content>
       <tags>
         <tag>Window</tag>
@@ -1247,16 +1590,18 @@
   <entry>
     <title>PowerShell</title>
     <url>/BlogProject/posts/a2c49dae/</url>
-    <content><![CDATA[<h1 id="PowerShell-相关命令"><a href="#PowerShell-相关命令" class="headerlink" title="PowerShell 相关命令"></a>PowerShell 相关命令</h1><h2 id="安装-pwsh"><a href="#安装-pwsh" class="headerlink" title="安装 pwsh"></a>安装 pwsh</h2><h3 id="升级-PowerShell"><a href="#升级-PowerShell" class="headerlink" title="升级 PowerShell"></a>升级 PowerShell</h3><h4 id="winget-方式"><a href="#winget-方式" class="headerlink" title="winget 方式"></a>winget 方式</h4><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">winget search Microsoft.PowerShell</span><br><span class="line">winget install --id Microsoft.PowerShell --source winget</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="PowerShell-相关命令"><a href="#PowerShell-相关命令" class="headerlink" title="PowerShell 相关命令"></a>PowerShell 相关命令</h1><h2 id="安装-pwsh"><a href="#安装-pwsh" class="headerlink" title="安装 pwsh"></a>安装 pwsh</h2><h3 id="升级-PowerShell"><a href="#升级-PowerShell" class="headerlink" title="升级 PowerShell"></a>升级 PowerShell</h3><h4 id="winget-方式"><a href="#winget-方式" class="headerlink" title="winget 方式"></a>winget 方式</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">winget search Microsoft.PowerShell</span><br><span class="line">winget install --id Microsoft.PowerShell --source winget</span><br></pre></td></tr></table></figure>
+<h4 id="Iex-方式"><a href="#Iex-方式" class="headerlink" title="Iex 方式"></a>Iex 方式</h4><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123; $(irm https://aka.ms/install-powershell.ps1) &#125; -UseMSI&quot;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123; $(irm https://aka.ms/install-powershell.ps1) &#125; -UseMSI&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="查看当前-PowerShell-版本"><a href="#查看当前-PowerShell-版本" class="headerlink" title="查看当前 PowerShell 版本"></a>查看当前 PowerShell 版本</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Get-Host | Select-Object Version</span><br></pre></td></tr></table></figure>
 
-<h2 id="查看当前-PowerShell-版本"><a href="#查看当前-PowerShell-版本" class="headerlink" title="查看当前 PowerShell 版本"></a>查看当前 PowerShell 版本</h2><figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">Get-Host | Select-Object Version</span><br></pre></td></tr></table></figure>
+<h2 id="删除匹配后缀的文件"><a href="#删除匹配后缀的文件" class="headerlink" title="删除匹配后缀的文件"></a>删除匹配后缀的文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Remove-Item * -Include *.meta -Recurs</span><br></pre></td></tr></table></figure>
 
-<h2 id="删除匹配后缀的文件"><a href="#删除匹配后缀的文件" class="headerlink" title="删除匹配后缀的文件"></a>删除匹配后缀的文件</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Remove-Item * -Include *.meta -Recurs</span><br></pre></td></tr></table></figure>
+<h2 id="打开当前文件夹"><a href="#打开当前文件夹" class="headerlink" title="打开当前文件夹"></a>打开当前文件夹</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ii .</span><br></pre></td></tr></table></figure>
 
-<h2 id="打开当前文件夹"><a href="#打开当前文件夹" class="headerlink" title="打开当前文件夹"></a>打开当前文件夹</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ii .</span><br></pre></td></tr></table></figure>
-]]></content>
+<h2 id="压缩-解压缩"><a href="#压缩-解压缩" class="headerlink" title="压缩&#x2F;解压缩"></a>压缩&#x2F;解压缩</h2><h3 id="将文件或文件夹-test-压缩为-test-zip"><a href="#将文件或文件夹-test-压缩为-test-zip" class="headerlink" title="将文件或文件夹 test 压缩为 test .zip"></a>将文件或文件夹 test 压缩为 test .zip</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Compress-Archive -Path D:\test -DestinationPath E:\test.zip</span><br></pre></td></tr></table></figure>
+
+<h3 id="将文件-test-zip-解压到-test-目录下"><a href="#将文件-test-zip-解压到-test-目录下" class="headerlink" title="将文件 test .zip 解压到 test 目录下"></a>将文件 test .zip 解压到 test 目录下</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Expand-Archive -Path E:\test.Zip -DestinationPath F:\test</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Window</tag>
       </tags>
@@ -1264,9 +1609,9 @@
   <entry>
     <title>Scoops</title>
     <url>/BlogProject/posts/23b7e45f/</url>
-    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> RemoteSigned <span class="literal">-Scope</span> CurrentUser <span class="comment"># Optional: Needed to run a remote script the first time</span></span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time</span><br></pre></td></tr></table></figure>
 
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">iex</span> <span class="string">&quot;&amp; &#123;<span class="variable">$</span>(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span></span><br></pre></td></tr></table></figure>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123;$(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Window</tag>
@@ -1275,11 +1620,11 @@
   <entry>
     <title>Which</title>
     <url>/BlogProject/posts/f83c1a8b/</url>
-    <content><![CDATA[<h1 id="自建which-命令"><a href="#自建which-命令" class="headerlink" title="自建which 命令"></a>自建which 命令</h1><figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">@ <span class="keyword">for</span> <span class="variable">%%e</span> <span class="keyword">in</span> (<span class="variable">%PATHEXT%</span>) <span class="keyword">do</span> @ <span class="keyword">for</span> <span class="variable">%%i</span> <span class="keyword">in</span> (<span class="variable">%1%</span>%e) <span class="keyword">do</span> @ <span class="keyword">if</span> <span class="keyword">NOT</span> &quot;<span class="variable">%%~</span>$<span class="built_in">PATH</span>:i&quot; == &quot;&quot; <span class="built_in">echo</span> <span class="variable">%%~</span>$<span class="built_in">PATH</span>:i</span><br></pre></td></tr></table></figure>
+    <content><![CDATA[<h1 id="自建which-命令"><a href="#自建which-命令" class="headerlink" title="自建which 命令"></a>自建which 命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@ for %%e in (%PATHEXT%) do @ for %%i in (%1%%e) do @ if NOT &quot;%%~$PATH:i&quot; == &quot;&quot; echo %%~$PATH:i</span><br></pre></td></tr></table></figure>
 
 <p>新建 “which.cmd”  放入–&gt; C:\Windows\System32 中即可使用</p>
 <p>内置命令:</p>
-<figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">where 命令工具说明可用 where /?  查询用法。</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">where 命令工具说明可用 where /?  查询用法。</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Window</tag>
@@ -1316,6 +1661,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Sentence OF The Day</title>
+    <url>/BlogProject/posts/752687cf/</url>
+    <content><![CDATA[<h1 id="2023-2-2-21-45"><a href="#2023-2-2-21-45" class="headerlink" title="2023-2-2 21:45"></a>2023-2-2 21:45</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If one day we meet what should I say to you ?</span><br><span class="line">如果有一天我们相遇了我该和你说些什么呢？</span><br><span class="line">Long time no see  or I love you ?</span><br><span class="line">是好久不见，还是我爱你?</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-3-21-58"><a href="#2023-2-3-21-58" class="headerlink" title="2023-2-3 21:58"></a>2023-2-3 21:58</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Take your time and think about it.</span><br><span class="line">慢慢来，好好想一想。</span><br><span class="line">What can make you happy?</span><br><span class="line">什么事情能让你开心</span><br><span class="line">What do you really want to do?</span><br><span class="line">你真正想做什么？</span><br><span class="line">Rather than what makes other people happy .</span><br><span class="line">而不是去想怎么样，取悦别人。</span><br><span class="line">Live in your own way,</span><br><span class="line">以你自己的方式生活。</span><br><span class="line">That&#x27;s the best choice.</span><br><span class="line">才是最好的选择！</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-4-00-22"><a href="#2023-2-4-00-22" class="headerlink" title="2023-2-4 00:22"></a>2023-2-4 00:22</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I can love you for four days.</span><br><span class="line">我可以爱你四天。</span><br><span class="line">Spring,summer,autumn and winter.</span><br><span class="line">春、夏、秋、冬四季</span><br><span class="line">Oh,no! Maybg tree days.</span><br><span class="line">噢，不！也许是三天。</span><br><span class="line">Yesterday，today and tomorrow。</span><br><span class="line">昨天，今天和明天。</span><br><span class="line">How about two day?</span><br><span class="line">要不两天呢？</span><br><span class="line">Day and night.</span><br><span class="line">白天和晚上。</span><br><span class="line">Maybe one day is enough.</span><br><span class="line">也许一天就足够了。</span><br><span class="line">Love you every day.</span><br><span class="line">爱你每一天。</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-5-23-23"><a href="#2023-2-5-23-23" class="headerlink" title="2023-2-5 23:23"></a>2023-2-5 23:23</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hey, my firend.</span><br><span class="line">嘿，我的朋友！</span><br><span class="line">How long does it take to forge someone?</span><br><span class="line">忘记一个人需要多长时间。</span><br><span class="line">If you don&#x27;t care.</span><br><span class="line">如果你不在乎那个人。</span><br><span class="line">It could be one second.</span><br><span class="line">一瞬间就能忘记。</span><br><span class="line">But if you care.</span><br><span class="line">但如果你很在乎。</span><br><span class="line">It might take. Forever!</span><br><span class="line">那也许需要。一辈子！</span><br><span class="line">Give yourself a little time.</span><br><span class="line">给自己一点时间。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Internal Notice</title>
     <url>/BlogProject/posts/72429f7f/</url>
     <content><![CDATA[<h1 id="Internal-Notice"><a href="#Internal-Notice" class="headerlink" title="Internal Notice"></a>Internal Notice</h1><p>Internal Notice</p>
@@ -1326,21 +1686,6 @@
 <p>Best regards,</p>
 <p>Ruth Crawford</p>
 <p>Date: September 15, 2011</p>
-]]></content>
-      <tags>
-        <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Sentence OF The Day</title>
-    <url>/BlogProject/posts/752687cf/</url>
-    <content><![CDATA[<h1 id="2023-2-2-21-45"><a href="#2023-2-2-21-45" class="headerlink" title="2023-2-2 21:45"></a>2023-2-2 21:45</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If one day we meet what should I say to you ?</span><br><span class="line">如果有一天我们相遇了我该和你说些什么呢？</span><br><span class="line">Long time no see  or I love you ?</span><br><span class="line">是好久不见，还是我爱你?</span><br></pre></td></tr></table></figure>
-
-<h1 id="2023-2-3-21-58"><a href="#2023-2-3-21-58" class="headerlink" title="2023-2-3 21:58"></a>2023-2-3 21:58</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Take your time and think about it.</span><br><span class="line">慢慢来，好好想一想。</span><br><span class="line">What can make you happy?</span><br><span class="line">什么事情能让你开心</span><br><span class="line">What do you really want to do?</span><br><span class="line">你真正想做什么？</span><br><span class="line">Rather than what makes other people happy .</span><br><span class="line">而不是去想怎么样，取悦别人。</span><br><span class="line">Live in your own way,</span><br><span class="line">以你自己的方式生活。</span><br><span class="line">That&#x27;s the best choice.</span><br><span class="line">才是最好的选择！</span><br></pre></td></tr></table></figure>
-
-<h1 id="2023-2-4-00-22"><a href="#2023-2-4-00-22" class="headerlink" title="2023-2-4 00:22"></a>2023-2-4 00:22</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I can love you for four days.</span><br><span class="line">我可以爱你四天。</span><br><span class="line">Spring,summer,autumn and winter.</span><br><span class="line">春、夏、秋、冬四季</span><br><span class="line">Oh,no! Maybg tree days.</span><br><span class="line">噢，不！也许是三天。</span><br><span class="line">Yesterday，today and tomorrow。</span><br><span class="line">昨天，今天和明天。</span><br><span class="line">How about two day?</span><br><span class="line">要不两天呢？</span><br><span class="line">Day and night.</span><br><span class="line">白天和晚上。</span><br><span class="line">Maybe one day is enough.</span><br><span class="line">也许一天就足够了。</span><br><span class="line">Love you every day.</span><br><span class="line">爱你每一天。</span><br></pre></td></tr></table></figure>
-
-<h1 id="2023-2-5-23-23"><a href="#2023-2-5-23-23" class="headerlink" title="2023-2-5 23:23"></a>2023-2-5 23:23</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hey, my firend.</span><br><span class="line">嘿，我的朋友！</span><br><span class="line">How long does it take to forge someone?</span><br><span class="line">忘记一个人需要多长时间。</span><br><span class="line">If you don&#x27;t care.</span><br><span class="line">如果你不在乎那个人。</span><br><span class="line">It could be one second.</span><br><span class="line">一瞬间就能忘记。</span><br><span class="line">But if you care.</span><br><span class="line">但如果你很在乎。</span><br><span class="line">It might take. Forever!</span><br><span class="line">那也许需要。一辈子！</span><br><span class="line">Give yourself a little time.</span><br><span class="line">给自己一点时间。</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>English</tag>
@@ -1409,6 +1754,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Unity PC 出包相关</title>
+    <url>/BlogProject/posts/5714b715/</url>
+    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
+<ol>
+<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
+<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
+<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
+<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
+<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化资产</title>
+    <url>/BlogProject/posts/f7fefa74/</url>
+    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
+]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Adb Command</title>
     <url>/BlogProject/posts/f3b5148b/</url>
     <content><![CDATA[<h1 id="Adb-Command"><a href="#Adb-Command" class="headerlink" title="Adb Command"></a>Adb Command</h1><p>查看所有当前所有进程命令: <code>adb shell ps</code></p>
@@ -1453,41 +1823,40 @@
 <li>在手机上筛选某个进程：<code>adb shell ps baidu 或者 adb shell ps|findstr -i baidu</code></li>
 <li>android 或者 linux 中的 shell 命令是 grep：<code>adb shell ps|grepbaidu</code></li>
 </ul>
-<h1 id="指定设备安装-apk"><a href="#指定设备安装-apk" class="headerlink" title="指定设备安装 apk"></a>指定设备安装 apk</h1><blockquote>
-<p>adb -s 设备 id install app-release.apk</p>
-</blockquote>
-<h1 id="检测端口是否被占用"><a href="#检测端口是否被占用" class="headerlink" title="检测端口是否被占用"></a>检测端口是否被占用</h1><blockquote>
-<p>netstat -a -o -n | find “34999”</p>
-</blockquote>
-<h1 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h1><blockquote>
-<p>taskkill &#x2F;f &#x2F;pid (进程 Id 44468)</p>
-</blockquote>
-<h1 id="调试打开某个应用"><a href="#调试打开某个应用" class="headerlink" title="调试打开某个应用"></a>调试打开某个应用</h1><blockquote>
-<p>adb forward tco:34999 localabstract:Unity-com.xxx.xx</p>
-</blockquote>
-<h1 id="包信息查询"><a href="#包信息查询" class="headerlink" title="包信息查询"></a>包信息查询</h1><blockquote>
-<p>子命令格式：adb shell dumpsys package [-h] [-f] [—checkin] [cmd]…</p>
-</blockquote>
-<h1 id="activity-信息查询"><a href="#activity-信息查询" class="headerlink" title="activity 信息查询"></a>activity 信息查询</h1><blockquote>
-<p>子命令格式：adb shell dumpsys activity [-a] [-c]…</p>
-</blockquote>
-<h1 id="网络信息查询"><a href="#网络信息查询" class="headerlink" title="网络信息查询"></a>网络信息查询</h1><blockquote>
-<p>网络连接 adb shell dumpsys connectivity<br>网络策略 adb shell dumpsys netpolicy<br>网络状态 adb shell dumpsys netstats<br>网络管理 adb shell dumpsys network_management</p>
-</blockquote>
-<h1 id="其他常用服务信息查询"><a href="#其他常用服务信息查询" class="headerlink" title="其他常用服务信息查询"></a>其他常用服务信息查询</h1><blockquote>
-<p>内存 adb shell dumpsys meminfo<br>CPU adb shell dumpsys cpuinfo<br>帧率 adb shell dumpsys gfxinfo<br>显示 adb shell dumpsys display<br>电源 adb shell dumpsys power<br>电池状态 adb shell dumpsys batterystats<br>电池 adb shell dumpsys battery<br>闹钟 adb shell dumpsys alarm<br>位置 adb shell dumpsys location</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>Android</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Adb Install Progress</title>
-    <url>/BlogProject/posts/bf5f2ea8/</url>
-    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
-]]></content>
+<h2 id="指定设备安装-apk"><a href="#指定设备安装-apk" class="headerlink" title="指定设备安装 apk"></a>指定设备安装 apk</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb -s &quot;设备id&quot; install app-release.apk</span><br><span class="line">&quot;覆盖安装&quot; adb install -r app-release.apk</span><br></pre></td></tr></table></figure>
+
+<h2 id="卸载-Apk"><a href="#卸载-Apk" class="headerlink" title="卸载 Apk"></a>卸载 Apk</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb uninstall com.example.android.backgraound</span><br></pre></td></tr></table></figure>
+<h2 id="检测端口是否被占用"><a href="#检测端口是否被占用" class="headerlink" title="检测端口是否被占用"></a>检测端口是否被占用</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">netstat -a -o -n | find &quot;34999&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="杀掉进程"><a href="#杀掉进程" class="headerlink" title="杀掉进程"></a>杀掉进程</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">taskkill /f /pid (进程 Id 44468)</span><br></pre></td></tr></table></figure>
+
+<h2 id="调试打开某个应用"><a href="#调试打开某个应用" class="headerlink" title="调试打开某个应用"></a>调试打开某个应用</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb forward tco:34999 localabstract:Unity-com.xxx.xx</span><br></pre></td></tr></table></figure>
+
+<h2 id="包信息查询"><a href="#包信息查询" class="headerlink" title="包信息查询"></a>包信息查询</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&quot;子命令格式&quot; adb shell dumpsys package [-h] [-f] [—checkin] [cmd] ...</span><br></pre></td></tr></table></figure>
+
+<h2 id="Activity-信息查询"><a href="#Activity-信息查询" class="headerlink" title="Activity 信息查询"></a>Activity 信息查询</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&quot;子命令格式&quot; adb shell dumpsys activity [-a]  [-c] ...</span><br></pre></td></tr></table></figure>
+
+<h2 id="网络信息查询"><a href="#网络信息查询" class="headerlink" title="网络信息查询"></a>网络信息查询</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&quot;网络连接&quot; adb shell dumpsys connectivity</span><br><span class="line">&quot;网络策略&quot; adb shell dumpsys netpolicy</span><br><span class="line">&quot;网络状态&quot; adb shell dumpsys netstats</span><br><span class="line">&quot;网络管理&quot; adb shell dumpsys network_management</span><br></pre></td></tr></table></figure>
+
+<h2 id="其他常用服务信息查询"><a href="#其他常用服务信息查询" class="headerlink" title="其他常用服务信息查询"></a>其他常用服务信息查询</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&quot;内   存&quot; adb shell dumpsys meminfo</span><br><span class="line">&quot;处理 器&quot; adb shell dumpsys cpuinfo</span><br><span class="line">&quot;帧   率&quot; adb shell dumpsys gfxinfo</span><br><span class="line">&quot;显   示&quot; adb shell dumpsys display</span><br><span class="line">&quot;电   源&quot; adb shell dumpsys power</span><br><span class="line">&quot;电池状态&quot; adb shell dumpsys batterystats</span><br><span class="line">&quot;手机电量&quot; adb shell dumpsys battery set level 100</span><br><span class="line">&quot;电   池&quot;  adb shell dumpsys battery</span><br><span class="line">&quot;闹   钟&quot;  adb shell dumpsys alarm</span><br><span class="line">&quot;位   置&quot; adb shell dumpsys location</span><br></pre></td></tr></table></figure>
+
+<h2 id="显示连接到的计算机的设备"><a href="#显示连接到的计算机的设备" class="headerlink" title="显示连接到的计算机的设备"></a>显示连接到的计算机的设备</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb devices</span><br></pre></td></tr></table></figure>
+
+<h2 id="多设备连接时指定操作设备"><a href="#多设备连接时指定操作设备" class="headerlink" title="多设备连接时指定操作设备"></a>多设备连接时指定操作设备</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb -s &quot;设备SN&quot; &quot;Cmd&quot;</span><br></pre></td></tr></table></figure>
+
+<h2 id="PC-传文件到-Android"><a href="#PC-传文件到-Android" class="headerlink" title="PC 传文件到 Android"></a>PC 传文件到 Android</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb push ./thing.zip /storage/sdcard0/</span><br></pre></td></tr></table></figure>
+
+<h2 id="PC-获取-Android-文件"><a href="#PC-获取-Android-文件" class="headerlink" title="PC 获取 Android 文件"></a>PC 获取 Android 文件</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb pull /storage/sdcard0/thing.zip ./</span><br></pre></td></tr></table></figure>
+
+<h2 id="启动指定-App-的指定-Activity"><a href="#启动指定-App-的指定-Activity" class="headerlink" title="启动指定 App 的指定 Activity"></a>启动指定 App 的指定 Activity</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">adb sehll am start -n</span><br><span class="line">com.android.settings/com.android.settings.Settings</span><br></pre></td></tr></table></figure>
+
+<h2 id="关闭指定-App"><a href="#关闭指定-App" class="headerlink" title="关闭指定 App"></a>关闭指定 App</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb shell am force-stop com.android.settings</span><br></pre></td></tr></table></figure>
+
+<h2 id="清除指定-App-数据"><a href="#清除指定-App-数据" class="headerlink" title="清除指定 App 数据"></a>清除指定 App 数据</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb sehll pm clear com.example.android.background</span><br></pre></td></tr></table></figure>
+
+<h2 id="查看第三方应用"><a href="#查看第三方应用" class="headerlink" title="查看第三方应用"></a>查看第三方应用</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">adb shell pm list pckages -3</span><br></pre></td></tr></table></figure>
+
+<h2 id="模拟器手机从-USB-Android-6-0-以上"><a href="#模拟器手机从-USB-Android-6-0-以上" class="headerlink" title="模拟器手机从 USB  Android 6.0 以上"></a>模拟器手机从 USB  Android 6.0 以上</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">&quot;拔掉USB&quot; adb sehll dumpsys battery unplug</span><br><span class="line">&quot;重新插上&quot; adb shell dumpsys battery reset</span><br><span class="line">&quot;切换非充电模式&quot; adb sell dumpsys battery set status 1</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Android</tag>
       </tags>
@@ -1510,23 +1879,14 @@
       </tags>
   </entry>
   <entry>
-    <title>优化内存和运行效率</title>
-    <url>/BlogProject/posts/dcaeb9c4/</url>
-    <content><![CDATA[<h1 id="优化内存和运行效率"><a href="#优化内存和运行效率" class="headerlink" title="优化内存和运行效率"></a>优化内存和运行效率</h1><ol>
-<li>用 GetEnumerator () 遍历 dictionary 和 list ，避免使用 foreach</li>
-<li>dictionary 使用 TryGetValue 一次判断取值，避免两次访问</li>
-<li>值类型使用引用方式传递，可提高效率 ref</li>
-<li>避免无意义的初始化，C# 默认初始化是清除内存，所以无意的初始化，会增加内存</li>
-<li>字符串判断，使用比较 length &#x3D;&#x3D; 0 效率更高</li>
-<li>cahe 数据，可以避免反复访问；</li>
-<li>减少字符串的拼接，每次拼接都会产生新的字符串，产生 CG</li>
-<li>常量使用 const 或 readonly 修饰</li>
-<li>用 using 包裹，可自动调用 Dispose</li>
-</ol>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>C# 语言的  ​​foreach​​  语句（在 Visual Basic 中为  ​​For Each​​）隐藏了枚举数的复杂性。因此，建议使用  ​​foreach​​，而不是直接操作枚举数。<br>枚举器可用于读取集合中的数据，但不能用于修改基础集合。<br>最初，枚举数定位在集合中第一个元素的前面。 Reset 方法还将枚举器恢复到此位置。在此位置， Current  属性未定义。因此，在读取的值之前，必须调用  MoveNext  方法，以将枚举器前进到集合的第一个元素  Current 。<br>在调用  Current  或  MoveNext  之前，Reset  返回同一对象。 MoveNext  将  Current  设置为下一个元素。<br>如果  MoveNext  越过集合的末尾，则枚举器将定位在集合中最后一个元素之后，并  MoveNext  返回  ​​false​​ 。当枚举器位于此位置时，对的后续调用  MoveNext  也将返回  ​​false​​ 。如果最后一次调用  MoveNext  返回  ​​false​​ ， Current  则未定义。若要再次将  Current  设置为集合的第一个元素，可以调用  Reset  并接着调用  MoveNext。<br>如果对集合所做的更改（如添加、修改或删除元素），则枚举器的行为是不确定的。<br>枚举数没有对集合的独占访问权；因此，从头到尾对一个集合进行枚举在本质上不是一个线程安全的过程。若要确保枚举过程中的线程安全性，可以在整个枚举过程中锁定集合。若要允许多个线程访问集合以进行读写操作，则必须实现自己的同步。</p>
-]]></content>
+    <title>IOS SDK 接入</title>
+    <url>/BlogProject/posts/f8d88cdd/</url>
+    <content><![CDATA[<p>QQ文档:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd">https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd</a><br>微信稳定:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html">https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html</a><br>记得 这两种腾讯的登录方式 都取玩家的 unionid 这个值当作唯一标识  </p>
+<p>在”Other Linker Flags”中加入”-ObjC -all_load”</p>
+<p>Info.plist</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;NSUserTrackingUsageDescription&lt;/key&gt;</span><br><span class="line">&lt;string&gt;是否允许我们的APP使用您的IDFA信息，以此来优化您的使用体验，定向提供服务&lt;/string&gt;</span><br><span class="line">&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">    &lt;string&gt;weixin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;weixinULAPI&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;weixinURLParamsAPI&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tim&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqq&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqapi&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqbrowser&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mttbrowser&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqOpensdkSSoLogin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkapiV2&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkapiV4&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzone&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdk&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapi&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapi19&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapiV2&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqapiwallet&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkfriend&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkavatar&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkminiapp&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkdataline&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqgamebindinggroup&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkgrouptribeshare&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tencentapi.qq.reqContent&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tencentapi.qzone.reqContent&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqthirdappgroup&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdklaunchminiapp&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkproxylogin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdknopasteboard&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdknopasteboardios16&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkcheckauth&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqguild&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
-        <tag>C#</tag>
+        <tag>IOS</tag>
       </tags>
   </entry>
   <entry>
@@ -1571,14 +1931,13 @@
       </tags>
   </entry>
   <entry>
-    <title>IOS SDK 接入</title>
-    <url>/BlogProject/posts/f8d88cdd/</url>
-    <content><![CDATA[<p>QQ文档:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd">https://wiki.connect.qq.com/sdk%e4%b8%8b%e8%bd%bd</a><br>微信稳定:<img src="file:///C:\Users\Administrator\AppData\Roaming\Tencent\QQ\Temp[5UQ[BL(6~BS2JV6W}N6[%S.png"><a href="https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html">https://developers.weixin.qq.com/doc/oplatform/Mobile_App/WeChat_Login/Development_Guide.html</a><br>记得 这两种腾讯的登录方式 都取玩家的 unionid 这个值当作唯一标识  </p>
-<p>在”Other Linker Flags”中加入”-ObjC -all_load”</p>
-<p>Info.plist</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;NSUserTrackingUsageDescription&lt;/key&gt;</span><br><span class="line">&lt;string&gt;是否允许我们的APP使用您的IDFA信息，以此来优化您的使用体验，定向提供服务&lt;/string&gt;</span><br><span class="line">&lt;key&gt;LSApplicationQueriesSchemes&lt;/key&gt;</span><br><span class="line">&lt;array&gt;</span><br><span class="line">    &lt;string&gt;weixin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;weixinULAPI&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;weixinURLParamsAPI&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tim&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqq&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqapi&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqbrowser&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mttbrowser&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqOpensdkSSoLogin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkapiV2&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkapiV4&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzone&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdk&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapi&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapi19&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqzoneopensdkapiV2&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqapiwallet&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkfriend&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkavatar&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkminiapp&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkdataline&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqgamebindinggroup&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkgrouptribeshare&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tencentapi.qq.reqContent&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;tencentapi.qzone.reqContent&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqthirdappgroup&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdklaunchminiapp&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkproxylogin&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdknopasteboard&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdknopasteboardios16&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqopensdkcheckauth&lt;/string&gt;</span><br><span class="line">    &lt;string&gt;mqqguild&lt;/string&gt;</span><br><span class="line">&lt;/array&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>Adb Install Progress</title>
+    <url>/BlogProject/posts/bf5f2ea8/</url>
+    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
-        <tag>IOS</tag>
+        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1635,17 +1994,6 @@
       </tags>
   </entry>
   <entry>
-    <title>bash 相关命令</title>
-    <url>/BlogProject/posts/feaf77e8/</url>
-    <content><![CDATA[<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">find <span class="operator">./</span> <span class="operator">-</span>name <span class="string">&quot;*.meta&quot;</span> <span class="operator">|</span> xargs rm <span class="operator">-</span>rf</span><br></pre></td></tr></table></figure>
-
-<p>删除当前目录下所有后缀名为 .meta 文件<br>find . -name “*.meta” |xargs rm -rf<br>格式很简单，如下：<br>find 目录 -name 名称 | xargs rm -rf<br>查找你要删除的文件夹或者文件，然后删除即可。<br>但是在macos下有一个问题，文件夹中有空格是不能删除的。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//清楚拷贝命令</span><br><span class="line">pbcopy &lt; /dev/null</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>IOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>IOS FacebookSDK</title>
     <url>/BlogProject/posts/2414f1c4/</url>
     <content><![CDATA[<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/facebook/facebook-ios-sdk</span><br></pre></td></tr></table></figure>
@@ -1659,6 +2007,17 @@
       </tags>
   </entry>
   <entry>
+    <title>bash 相关命令</title>
+    <url>/BlogProject/posts/feaf77e8/</url>
+    <content><![CDATA[<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">find <span class="operator">./</span> <span class="operator">-</span>name <span class="string">&quot;*.meta&quot;</span> <span class="operator">|</span> xargs rm <span class="operator">-</span>rf</span><br></pre></td></tr></table></figure>
+
+<p>删除当前目录下所有后缀名为 .meta 文件<br>find . -name “*.meta” |xargs rm -rf<br>格式很简单，如下：<br>find 目录 -name 名称 | xargs rm -rf<br>查找你要删除的文件夹或者文件，然后删除即可。<br>但是在macos下有一个问题，文件夹中有空格是不能删除的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//清楚拷贝命令</span><br><span class="line">pbcopy &lt; /dev/null</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>查看日志</title>
     <url>/BlogProject/posts/e1b1b87/</url>
     <content><![CDATA[<p>IOS 查看日志<br>搜索 –&gt; ProductName(UnityFramework)</p>
@@ -1667,6 +2026,26 @@
 ]]></content>
       <tags>
         <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化内存和运行效率</title>
+    <url>/BlogProject/posts/dcaeb9c4/</url>
+    <content><![CDATA[<h1 id="优化内存和运行效率"><a href="#优化内存和运行效率" class="headerlink" title="优化内存和运行效率"></a>优化内存和运行效率</h1><ol>
+<li>用 GetEnumerator () 遍历 dictionary 和 list ，避免使用 foreach</li>
+<li>dictionary 使用 TryGetValue 一次判断取值，避免两次访问</li>
+<li>值类型使用引用方式传递，可提高效率 ref</li>
+<li>避免无意义的初始化，C# 默认初始化是清除内存，所以无意的初始化，会增加内存</li>
+<li>字符串判断，使用比较 length &#x3D;&#x3D; 0 效率更高</li>
+<li>cahe 数据，可以避免反复访问；</li>
+<li>减少字符串的拼接，每次拼接都会产生新的字符串，产生 CG</li>
+<li>常量使用 const 或 readonly 修饰</li>
+<li>用 using 包裹，可自动调用 Dispose</li>
+</ol>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>C# 语言的  ​​foreach​​  语句（在 Visual Basic 中为  ​​For Each​​）隐藏了枚举数的复杂性。因此，建议使用  ​​foreach​​，而不是直接操作枚举数。<br>枚举器可用于读取集合中的数据，但不能用于修改基础集合。<br>最初，枚举数定位在集合中第一个元素的前面。 Reset 方法还将枚举器恢复到此位置。在此位置， Current  属性未定义。因此，在读取的值之前，必须调用  MoveNext  方法，以将枚举器前进到集合的第一个元素  Current 。<br>在调用  Current  或  MoveNext  之前，Reset  返回同一对象。 MoveNext  将  Current  设置为下一个元素。<br>如果  MoveNext  越过集合的末尾，则枚举器将定位在集合中最后一个元素之后，并  MoveNext  返回  ​​false​​ 。当枚举器位于此位置时，对的后续调用  MoveNext  也将返回  ​​false​​ 。如果最后一次调用  MoveNext  返回  ​​false​​ ， Current  则未定义。若要再次将  Current  设置为集合的第一个元素，可以调用  Reset  并接着调用  MoveNext。<br>如果对集合所做的更改（如添加、修改或删除元素），则枚举器的行为是不确定的。<br>枚举数没有对集合的独占访问权；因此，从头到尾对一个集合进行枚举在本质上不是一个线程安全的过程。若要确保枚举过程中的线程安全性，可以在整个枚举过程中锁定集合。若要允许多个线程访问集合以进行读写操作，则必须实现自己的同步。</p>
+]]></content>
+      <tags>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -1707,28 +2086,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Unity PC 出包相关</title>
-    <url>/BlogProject/posts/5714b715/</url>
-    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
-<ol>
-<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
-<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
-<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
-<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
-<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
-</ol>
-]]></content>
+    <title></title>
+    <url>/BlogProject/posts/0/</url>
+    <content><![CDATA[]]></content>
       <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化资产</title>
-    <url>/BlogProject/posts/f7fefa74/</url>
-    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
-]]></content>
-      <tags>
-        <tag>Unity</tag>
+        <tag>灵感</tag>
       </tags>
   </entry>
 </search>
