@@ -1,6 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>数据结构</title>
+    <url>/BlogProject/posts/ba907200/</url>
+    <content><![CDATA[<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><blockquote>
+<p>1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式. 2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。 3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。 4.正确的数据机构可提高算法的效率 5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构</p>
+</blockquote>
+<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><blockquote>
+<p>数组 (Array)<br>堆栈 (Stack)<br>队列 (Queue)<br>链表 (Linked List)<br>树 (Tree)<br>图 (Graph)<br>堆 (Heap)<br>散列表 (Hash)</p>
+</blockquote>
+<p><strong><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">参考维基百科地址</a></strong> &lt;–点击</p>
+]]></content>
+      <tags>
+        <tag>数据</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Lua初识</title>
+    <url>/BlogProject/posts/undefined/</url>
+    <content><![CDATA[<h2 id="Lua-初识"><a href="#Lua-初识" class="headerlink" title="Lua 初识"></a>Lua 初识</h2><h3 id="Lua-数据类型"><a href="#Lua-数据类型" class="headerlink" title="Lua 数据类型"></a>Lua 数据类型</h3><ul>
+<li>8 种基本类型:</li>
+<li>nil :表示无效值(条件表达式代表 false)</li>
+<li>boolean:布尔 包含两个值:true 和 false</li>
+<li>number: 表示双精度类型的实浮点数</li>
+<li>string: 字符串有””或者’’表示</li>
+<li>userData: 任意存储中的 C 数据结构</li>
+<li>function: Lua 或 C 编写的函数</li>
+<li>thread: 执行独立线路,执行协同程序</li>
+<li>table: 关联数据(associative arrays),索引是数字或者字符串,table 的创建通过”构造表达式”来完成,最简单构造表达式{}(创建一个空表)</li>
+</ul>
+<h4 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nil:空</span><br><span class="line"> print(type(x)==&quot;nil&quot;) true</span><br><span class="line"> print(typeI(x)==nil) false</span><br><span class="line"> 注: type(X)==nil 结果为 false 的原因是因为 type(type(X))==string</span><br></pre></td></tr></table></figure>
+
+<h4 id="number"><a href="#number" class="headerlink" title="number"></a>number</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">number类型--双精度类型(默认类型修改luaconf.h文中定义)</span><br><span class="line">例如:</span><br><span class="line">print(type(2))</span><br><span class="line">print(type(2.2))</span><br><span class="line">print(type(0.2))</span><br><span class="line">print(type(2e+1))</span><br><span class="line">print(type(2.1231231465e-06))</span><br></pre></td></tr></table></figure>
+
+<h4 id="string"><a href="#string" class="headerlink" title="string"></a>string</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用 [[]] 表示一块字符串</span><br><span class="line">例如:</span><br><span class="line">html = [[</span><br><span class="line">    &lt;html&gt;</span><br><span class="line">    &lt;head&gt;&lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;a href=&quot;https://herb95.github.io/&quot;&gt;Graywolf 博客&lt;/a&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">    &lt;/html&gt;</span><br><span class="line">]]</span><br><span class="line">print(html)</span><br></pre></td></tr></table></figure>
+
+<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">数字,字符串上进行运算</span><br><span class="line">print(&quot;3&quot;+9)</span><br><span class="line">print(&quot;3&quot;+&quot;9&quot;)</span><br><span class="line">print(&quot;3+9&quot;)</span><br><span class="line">print(&quot;-2e2&quot;*9)</span><br><span class="line">print(&quot;e&quot;+2)</span><br><span class="line">结果:</span><br><span class="line">12</span><br><span class="line">12</span><br><span class="line">3+9</span><br><span class="line">-1800</span><br><span class="line">error...</span><br></pre></td></tr></table></figure>
+
+<p><strong>注:字符串连接使用是 ..</strong><br><strong>注:用#来计算字符串的长度</strong></p>
+<h4 id="运用"><a href="#运用" class="headerlink" title="# 运用"></a># 运用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">len=&quot;herb95.github.io/&quot;</span><br><span class="line">print(#len)</span><br><span class="line">print(#&quot;herb95.github.io/&quot;)</span><br><span class="line">结果:</span><br><span class="line">17</span><br><span class="line">17</span><br></pre></td></tr></table></figure>
+
+<h4 id="table"><a href="#table" class="headerlink" title="table"></a>table</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tab1 =&#123;&#125;</span><br><span class="line">-- 直接初始化</span><br><span class="line">tab2 =&#123;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;&#125;</span><br><span class="line">for k,v in pairs(tab2) do</span><br><span class="line">    print(k.. &quot;:&quot; .. v)</span><br><span class="line">end</span><br><span class="line">结果:</span><br><span class="line">1:1</span><br><span class="line">2:2</span><br><span class="line">3:3</span><br><span class="line">4:4</span><br></pre></td></tr></table></figure>
+
+<p><strong>注:lua 表默认初始索引一般以 1 开始</strong><br><strong>table 不会固定长度大小,有新数据添加 table 长度会自动增长,没初始的 table 都是 nil</strong></p>
+<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- function 函数是被看做事&quot;第一类值(First-Class Value),可存变量&quot;:</span><br><span class="line">例如:</span><br><span class="line">function add(a,b)</span><br><span class="line">   return a+b</span><br><span class="line">end</span><br><span class="line">print(add(10,20))</span><br><span class="line">add2 = add</span><br><span class="line">print(add(10,30))</span><br><span class="line">结果:</span><br><span class="line">30</span><br><span class="line">40</span><br></pre></td></tr></table></figure>
+
+<p>function 可以做匿名函数(anonymous function)的方式参数传递:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function testFun(tab,fun)</span><br><span class="line">    for k,v in pairs(tab) do</span><br><span class="line">        print(fun(k,v))</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">tab1 = &#123;k1= &quot;1&quot;,k2 = &quot;3&quot;&#125;;</span><br><span class="line">testFun(tab1,</span><br><span class="line">function(k,v)</span><br><span class="line">    return k..&quot;=&quot;..v</span><br><span class="line">end</span><br><span class="line">)</span><br><span class="line">结果:</span><br><span class="line">k1=1</span><br><span class="line">k2=3</span><br></pre></td></tr></table></figure>
+
+<h4 id="thread-线程"><a href="#thread-线程" class="headerlink" title="thread 线程"></a>thread 线程</h4><p>lua 中最主要的线程是协同程序(coroutine),跟线程(thread)差不多,拥有自己独立的栈、 局部变量和指令指针，可与其他协同程序共享全局变量<br>线程和协程的区别：</p>
+<blockquote>
+<ul>
+<li>线程可以多个运行；</li>
+<li>协程任意时刻只能运行一个，并且处于运行状态的协程只有被挂起(suspend)时才会暂停</li>
+</ul>
+</blockquote>
+<h4 id="userdata-自定义类型"><a href="#userdata-自定义类型" class="headerlink" title="userdata (自定义类型)"></a>userdata (自定义类型)</h4><p>是一种用户自定义数据,表示一种有应用程序或 C&#x2F;C++语言库创建类型,将任意 C&#x2F;C++任意数据类型的数据(通常是 struct 和指针) 存到 lua 变量中调用</p>
+]]></content>
+      <tags>
+        <tag>Lua Study</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>部署个人博客方法</title>
     <url>/BlogProject/posts/4441/</url>
     <content><![CDATA[<p>部署个人博客命令<br>npm+hexo</p>
@@ -20,10 +81,10 @@
 <li>cd ~&#x2F;.ssh #查看本机是否存在 SSH Key ###<strong>存在</strong></li>
 <li>clip &lt;~&#x2F;.ssh&#x2F;id_rsa.pub #复制公钥到 clipboard</li>
 <li>登录 github 设置秘钥</li>
-<li>ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#x6f;&#x6d;</a> #测试秘钥</li>
+<li>ssh -T <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#x6d;</a> #测试秘钥</li>
 </ul>
 <h3 id="不存在"><a href="#不存在" class="headerlink" title="不存在"></a><strong>不存在</strong></h3><ul>
-<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#121;&#x6f;&#117;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;">&#121;&#x6f;&#117;&#114;&#x5f;&#101;&#x6d;&#97;&#x69;&#x6c;&#x40;&#101;&#x78;&#x61;&#x6d;&#112;&#x6c;&#101;&#46;&#99;&#111;&#109;</a>“</p>
+<li><p>ssh-keygen -t rsa -C “<a href="mailto:&#x79;&#x6f;&#117;&#114;&#95;&#101;&#109;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#111;&#109;">&#x79;&#x6f;&#117;&#114;&#95;&#101;&#109;&#x61;&#105;&#108;&#64;&#x65;&#x78;&#97;&#x6d;&#112;&#108;&#101;&#46;&#x63;&#111;&#109;</a>“</p>
 <ul>
 <li>弹出界面</li>
 <li>直接回车:默认文件进行存储<ul>
@@ -103,67 +164,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>数据结构</title>
-    <url>/BlogProject/posts/ba907200/</url>
-    <content><![CDATA[<h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><blockquote>
-<p>1.在计算机科学中,数据结构(data structure)是计算机中存储、组织数据的方式. 2.大多数数据结构是由数列、记录、可辨识联合、引用等基本类型构成。 3.数据结构可透过编程语言所提供的数据类型、引用及其他操作加以实现。一个设计良好的数据结构，应该在尽可能使用较少的时间和空间资源前提下，支持各种程序运行。 4.正确的数据机构可提高算法的效率 5.系统架构的关键因素是数据机构而非算法的见解,导致多种形式化的设计方法与编程语言的出现.绝大多数的语言都带上某种模块化思想,透过将数据机构的具体实现封装隐藏于用户界面之后的方法,来让不同的应用程序嫩够安全的重用这些结构</p>
-</blockquote>
-<h3 id="常见的数据结构"><a href="#常见的数据结构" class="headerlink" title="常见的数据结构"></a>常见的数据结构</h3><blockquote>
-<p>数组 (Array)<br>堆栈 (Stack)<br>队列 (Queue)<br>链表 (Linked List)<br>树 (Tree)<br>图 (Graph)<br>堆 (Heap)<br>散列表 (Hash)</p>
-</blockquote>
-<p><strong><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">参考维基百科地址</a></strong> &lt;–点击</p>
-]]></content>
-      <tags>
-        <tag>数据</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Lua初识</title>
-    <url>/BlogProject/posts/undefined/</url>
-    <content><![CDATA[<h2 id="Lua-初识"><a href="#Lua-初识" class="headerlink" title="Lua 初识"></a>Lua 初识</h2><h3 id="Lua-数据类型"><a href="#Lua-数据类型" class="headerlink" title="Lua 数据类型"></a>Lua 数据类型</h3><ul>
-<li>8 种基本类型:</li>
-<li>nil :表示无效值(条件表达式代表 false)</li>
-<li>boolean:布尔 包含两个值:true 和 false</li>
-<li>number: 表示双精度类型的实浮点数</li>
-<li>string: 字符串有””或者’’表示</li>
-<li>userData: 任意存储中的 C 数据结构</li>
-<li>function: Lua 或 C 编写的函数</li>
-<li>thread: 执行独立线路,执行协同程序</li>
-<li>table: 关联数据(associative arrays),索引是数字或者字符串,table 的创建通过”构造表达式”来完成,最简单构造表达式{}(创建一个空表)</li>
-</ul>
-<h4 id="nil"><a href="#nil" class="headerlink" title="nil"></a>nil</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nil:空</span><br><span class="line"> print(type(x)==&quot;nil&quot;) true</span><br><span class="line"> print(typeI(x)==nil) false</span><br><span class="line"> 注: type(X)==nil 结果为 false 的原因是因为 type(type(X))==string</span><br></pre></td></tr></table></figure>
-
-<h4 id="number"><a href="#number" class="headerlink" title="number"></a>number</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">number类型--双精度类型(默认类型修改luaconf.h文中定义)</span><br><span class="line">例如:</span><br><span class="line">print(type(2))</span><br><span class="line">print(type(2.2))</span><br><span class="line">print(type(0.2))</span><br><span class="line">print(type(2e+1))</span><br><span class="line">print(type(2.1231231465e-06))</span><br></pre></td></tr></table></figure>
-
-<h4 id="string"><a href="#string" class="headerlink" title="string"></a>string</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">用 [[]] 表示一块字符串</span><br><span class="line">例如:</span><br><span class="line">html = [[</span><br><span class="line">    &lt;html&gt;</span><br><span class="line">    &lt;head&gt;&lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;a href=&quot;https://herb95.github.io/&quot;&gt;Graywolf 博客&lt;/a&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">    &lt;/html&gt;</span><br><span class="line">]]</span><br><span class="line">print(html)</span><br></pre></td></tr></table></figure>
-
-<h4 id="运算"><a href="#运算" class="headerlink" title="运算"></a>运算</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">数字,字符串上进行运算</span><br><span class="line">print(&quot;3&quot;+9)</span><br><span class="line">print(&quot;3&quot;+&quot;9&quot;)</span><br><span class="line">print(&quot;3+9&quot;)</span><br><span class="line">print(&quot;-2e2&quot;*9)</span><br><span class="line">print(&quot;e&quot;+2)</span><br><span class="line">结果:</span><br><span class="line">12</span><br><span class="line">12</span><br><span class="line">3+9</span><br><span class="line">-1800</span><br><span class="line">error...</span><br></pre></td></tr></table></figure>
-
-<p><strong>注:字符串连接使用是 ..</strong><br><strong>注:用#来计算字符串的长度</strong></p>
-<h4 id="运用"><a href="#运用" class="headerlink" title="# 运用"></a># 运用</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">len=&quot;herb95.github.io/&quot;</span><br><span class="line">print(#len)</span><br><span class="line">print(#&quot;herb95.github.io/&quot;)</span><br><span class="line">结果:</span><br><span class="line">17</span><br><span class="line">17</span><br></pre></td></tr></table></figure>
-
-<h4 id="table"><a href="#table" class="headerlink" title="table"></a>table</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tab1 =&#123;&#125;</span><br><span class="line">-- 直接初始化</span><br><span class="line">tab2 =&#123;&quot;1&quot;,&quot;2&quot;,&quot;3&quot;,&quot;4&quot;&#125;</span><br><span class="line">for k,v in pairs(tab2) do</span><br><span class="line">    print(k.. &quot;:&quot; .. v)</span><br><span class="line">end</span><br><span class="line">结果:</span><br><span class="line">1:1</span><br><span class="line">2:2</span><br><span class="line">3:3</span><br><span class="line">4:4</span><br></pre></td></tr></table></figure>
-
-<p><strong>注:lua 表默认初始索引一般以 1 开始</strong><br><strong>table 不会固定长度大小,有新数据添加 table 长度会自动增长,没初始的 table 都是 nil</strong></p>
-<h4 id="function"><a href="#function" class="headerlink" title="function"></a>function</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-- function 函数是被看做事&quot;第一类值(First-Class Value),可存变量&quot;:</span><br><span class="line">例如:</span><br><span class="line">function add(a,b)</span><br><span class="line">   return a+b</span><br><span class="line">end</span><br><span class="line">print(add(10,20))</span><br><span class="line">add2 = add</span><br><span class="line">print(add(10,30))</span><br><span class="line">结果:</span><br><span class="line">30</span><br><span class="line">40</span><br></pre></td></tr></table></figure>
-
-<p>function 可以做匿名函数(anonymous function)的方式参数传递:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function testFun(tab,fun)</span><br><span class="line">    for k,v in pairs(tab) do</span><br><span class="line">        print(fun(k,v))</span><br><span class="line">    end</span><br><span class="line">end</span><br><span class="line"></span><br><span class="line">tab1 = &#123;k1= &quot;1&quot;,k2 = &quot;3&quot;&#125;;</span><br><span class="line">testFun(tab1,</span><br><span class="line">function(k,v)</span><br><span class="line">    return k..&quot;=&quot;..v</span><br><span class="line">end</span><br><span class="line">)</span><br><span class="line">结果:</span><br><span class="line">k1=1</span><br><span class="line">k2=3</span><br></pre></td></tr></table></figure>
-
-<h4 id="thread-线程"><a href="#thread-线程" class="headerlink" title="thread 线程"></a>thread 线程</h4><p>lua 中最主要的线程是协同程序(coroutine),跟线程(thread)差不多,拥有自己独立的栈、 局部变量和指令指针，可与其他协同程序共享全局变量<br>线程和协程的区别：</p>
-<blockquote>
-<ul>
-<li>线程可以多个运行；</li>
-<li>协程任意时刻只能运行一个，并且处于运行状态的协程只有被挂起(suspend)时才会暂停</li>
-</ul>
-</blockquote>
-<h4 id="userdata-自定义类型"><a href="#userdata-自定义类型" class="headerlink" title="userdata (自定义类型)"></a>userdata (自定义类型)</h4><p>是一种用户自定义数据,表示一种有应用程序或 C&#x2F;C++语言库创建类型,将任意 C&#x2F;C++任意数据类型的数据(通常是 struct 和指针) 存到 lua 变量中调用</p>
-]]></content>
-      <tags>
-        <tag>Lua Study</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Make Backpack</title>
     <url>/BlogProject/posts/undefined/</url>
     <content><![CDATA[<h4 id="Unity3D-背包的制作"><a href="#Unity3D-背包的制作" class="headerlink" title="Unity3D 背包的制作"></a>Unity3D 背包的制作</h4>]]></content>
@@ -192,6 +192,24 @@
     <content><![CDATA[<h1 id="GWNotebookLibrary"><a href="#GWNotebookLibrary" class="headerlink" title="GWNotebookLibrary"></a>GWNotebookLibrary</h1><p>生活工作笔记记录库</p>
 <h2 id="Android"><a href="#Android" class="headerlink" title="Android"></a>Android</h2><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><p>[[Git -Command — Some Solutions]](Git 相关解决方案)</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>说话心理学</title>
+    <url>/BlogProject/posts/2c4a00a4/</url>
+    <content><![CDATA[<h1 id="会说话懂心里，迈出成功第一步"><a href="#会说话懂心里，迈出成功第一步" class="headerlink" title="会说话懂心里，迈出成功第一步"></a>会说话懂心里，迈出成功第一步</h1><blockquote>
+<p>说话，是一种可以训练的技能。它取决于你的思维和表达方式，更取决于你是否能抓住听者的心里。掌握说话心理学，迈出成功第一步。</p>
+</blockquote>
+<h2 id="说话操纵术"><a href="#说话操纵术" class="headerlink" title="说话操纵术"></a>说话操纵术</h2><p>从利益中最中新的</p>
+<ul>
+<li>拉近彼此距离</li>
+<li>该说的话大方说</li>
+<li>好口才是练出来的</li>
+<li></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>闲赋</tag>
+      </tags>
   </entry>
   <entry>
     <title>List</title>
@@ -328,24 +346,6 @@
 ]]></content>
       <tags>
         <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>说话心理学</title>
-    <url>/BlogProject/posts/2c4a00a4/</url>
-    <content><![CDATA[<h1 id="会说话懂心里，迈出成功第一步"><a href="#会说话懂心里，迈出成功第一步" class="headerlink" title="会说话懂心里，迈出成功第一步"></a>会说话懂心里，迈出成功第一步</h1><blockquote>
-<p>说话，是一种可以训练的技能。它取决于你的思维和表达方式，更取决于你是否能抓住听者的心里。掌握说话心理学，迈出成功第一步。</p>
-</blockquote>
-<h2 id="说话操纵术"><a href="#说话操纵术" class="headerlink" title="说话操纵术"></a>说话操纵术</h2><p>从利益中最中新的</p>
-<ul>
-<li>拉近彼此距离</li>
-<li>该说的话大方说</li>
-<li>好口才是练出来的</li>
-<li></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>闲赋</tag>
       </tags>
   </entry>
   <entry>
@@ -538,21 +538,6 @@
       </tags>
   </entry>
   <entry>
-    <title>获取当前仓库文件状态</title>
-    <url>/BlogProject/posts/be7912d9/</url>
-    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
-
-<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
-
-<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Git 相关解决方案</title>
     <url>/BlogProject/posts/12e58447/</url>
     <content><![CDATA[<h1 id="Git-相关解决方案"><a href="#Git-相关解决方案" class="headerlink" title="Git 相关解决方案"></a>Git 相关解决方案</h1><h2 id="解决10054问题"><a href="#解决10054问题" class="headerlink" title="解决10054问题"></a>解决10054问题</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//**fatal: unable to access OpenSSL SSL_read: Connection was reset, errno 10054**</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br><span class="line">git config --global https.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
@@ -563,6 +548,21 @@
 
 
 <h2 id="old-mode-100644-new-mode-100755"><a href="#old-mode-100644-new-mode-100755" class="headerlink" title="old mode 100644 new mode 100755"></a>old mode 100644 new mode 100755</h2><p>  old mode 100644 new mode 100755 的提示，如下图：<br>  ![[Pasted image 20230801150009.png]]<br>  ### 产生这个问题的原因就是<br>  filemode的变化，文件chmod后其文件某些位是改变了的，如果严格的比较原文件和chmod后的文件，两者是有区别的，但是源代码通常只关心文本内容，因此chmod产生的变化应该忽略，所以设置一下：<br>  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line">  切到源码的根目录下，</span><br><span class="line">  git config --add core.filemode false</span><br></pre></td></tr></table></figure><br>  这样你的所有的git库都会忽略filemode变更了～</p>
+]]></content>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>获取当前仓库文件状态</title>
+    <url>/BlogProject/posts/be7912d9/</url>
+    <content><![CDATA[<h1 id="获取当前仓库文件状态"><a href="#获取当前仓库文件状态" class="headerlink" title="获取当前仓库文件状态"></a>获取当前仓库文件状态</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+
+<h2 id="精简显示"><a href="#精简显示" class="headerlink" title="精简显示"></a>精简显示</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s</span><br></pre></td></tr></table></figure>
+
+<h2 id="筛选指定后缀"><a href="#筛选指定后缀" class="headerlink" title="筛选指定后缀"></a>筛选指定后缀</h2><h4 id="win"><a href="#win" class="headerlink" title="win"></a>win</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | findstr <span class="string">&quot;.js&quot;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | findstr <span class="string">&quot;.js .css&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="linux"><a href="#linux" class="headerlink" title="linux"></a>linux</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git status -s | grep <span class="string">&#x27;\.js$&#x27;</span></span><br><span class="line"><span class="comment"># 多个筛选</span></span><br><span class="line">git status -s | grep <span class="string">&#x27;\.js$\|\.css$&#x27;</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -613,7 +613,7 @@
   <entry>
     <title>生成密钥</title>
     <url>/BlogProject/posts/7b852c9/</url>
-    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#120;&#x78;&#120;&#x40;&#x78;&#x78;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;">&#x78;&#120;&#x78;&#120;&#x40;&#x78;&#x78;&#120;&#120;&#x2e;&#99;&#x6f;&#x6d;</a>“</p>
+    <content><![CDATA[<p>ssh-keygen -t rsa -C “<a href="mailto:&#x78;&#x78;&#120;&#120;&#64;&#x78;&#x78;&#x78;&#x78;&#46;&#99;&#x6f;&#x6d;">&#x78;&#x78;&#120;&#120;&#64;&#x78;&#x78;&#x78;&#x78;&#46;&#99;&#x6f;&#x6d;</a>“</p>
 ]]></content>
       <tags>
         <tag>Git</tag>
@@ -663,27 +663,12 @@
       </tags>
   </entry>
   <entry>
-    <title>CentOS 8 Install Python</title>
-    <url>/BlogProject/posts/b5a8ead0/</url>
-    <content><![CDATA[<h1 id="检查系统安装版本"><a href="#检查系统安装版本" class="headerlink" title="检查系统安装版本"></a>检查系统安装版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment"># pwd</span></span><br><span class="line">/user/bin</span><br><span class="line">[root@xsource bin]<span class="comment"># ls -al | grep python</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="安装编译时依赖库"><a href="#安装编译时依赖库" class="headerlink" title="安装编译时依赖库"></a>安装编译时依赖库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># dnf -y groupinstall &quot;Development tools&quot;</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install libuuid-devel.x86_64 libuuid.x86_64 uuid.x86_64</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf install -y openssl-devel # 安装openssl</span></span><br><span class="line">opensll version  <span class="comment">#检查版本</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="下载版本"><a href="#下载版本" class="headerlink" title="下载版本"></a>下载版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># wget https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tgz</span></span><br><span class="line">[root@xsource /]<span class="comment"># tar xvzf Python-3.11.3.tgz</span></span><br><span class="line">[root@xsource /]<span class="comment"># cd Python-3.11.3</span></span><br><span class="line">[root@xsource /]<span class="comment"># ./configure --enable-optiomizations &amp;&amp; make altinstall</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="配置软链接"><a href="#配置软链接" class="headerlink" title="配置软链接"></a>配置软链接</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/python3.11 /usr/bin/python3</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/pip3.11 /usr/bin/pip3</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/python3.11 /usr/bin/python</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/pip3.11 /usr/bin/pip</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="需要覆盖-pip-不是软连接"><a href="#需要覆盖-pip-不是软连接" class="headerlink" title="需要覆盖 pip (不是软连接)"></a>需要覆盖 pip (不是软连接)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]#which pip</span><br><span class="line">/usr/local/bin/pip</span><br><span class="line">[root@xsource bin]# ls -al</span><br><span class="line">-rwxr-xr-x   1 root root      230 Jan  3 09:55 pip</span><br><span class="line">-rwxr-xr-x   1 root root      227 Dec 22 14:12 pip3</span><br><span class="line">-rwxr-xr-x   1 root root      230 Jan  3 08:46 pip3.11</span><br><span class="line">-rwxr-xr-x   1 root root      227 Dec 22 14:12 pip3.6</span><br></pre></td></tr></table></figure>
-
-<h1 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h1><p>地址: <a href="https://docs.python.org/3/tutorial/venv.html">https://docs.python.org/3/tutorial/venv.html</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># python -m venv tutorial-env #创建虚拟环境</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Windows</span></span><br><span class="line">[root@xsource /]<span class="comment"># tutorial-env\Scripts\activate.bat</span></span><br><span class="line"><span class="comment">#Unix || MacOS</span></span><br><span class="line">[root@xsource /]<span class="comment"># source tutorial-env/bin/activate</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h1 id="停止运行"><a href="#停止运行" class="headerlink" title="停止运行"></a>停止运行</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment">#  deactivate</span></span><br></pre></td></tr></table></figure>
+    <title>Love Steam Game</title>
+    <url>/BlogProject/posts/33b8e905/</url>
+    <content><![CDATA[<h1 id="模拟游戏"><a href="#模拟游戏" class="headerlink" title="模拟游戏"></a>模拟游戏</h1><p><a href="%22https://store.steampowered.com/app/1450900/Desynced/%22">Desynced</a></p>
 ]]></content>
       <tags>
-        <tag>Linux</tag>
+        <tag>SteamGame</tag>
       </tags>
   </entry>
   <entry>
@@ -797,6 +782,30 @@
       </tags>
   </entry>
   <entry>
+    <title>CentOS 8 Install Python</title>
+    <url>/BlogProject/posts/b5a8ead0/</url>
+    <content><![CDATA[<h1 id="检查系统安装版本"><a href="#检查系统安装版本" class="headerlink" title="检查系统安装版本"></a>检查系统安装版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment"># pwd</span></span><br><span class="line">/user/bin</span><br><span class="line">[root@xsource bin]<span class="comment"># ls -al | grep python</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="安装编译时依赖库"><a href="#安装编译时依赖库" class="headerlink" title="安装编译时依赖库"></a>安装编译时依赖库</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># dnf -y groupinstall &quot;Development tools&quot;</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install ncurses-devel gdbm-devel xz-devel sqlite-devel tk-devel uuid-devel readline-devel bzip2-devel libffi-devel</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf -y install libuuid-devel.x86_64 libuuid.x86_64 uuid.x86_64</span></span><br><span class="line">[root@xsource /]<span class="comment"># dnf install -y openssl-devel # 安装openssl</span></span><br><span class="line">opensll version  <span class="comment">#检查版本</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="下载版本"><a href="#下载版本" class="headerlink" title="下载版本"></a>下载版本</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># wget https://www.python.org/ftp/python/3.11.3/Python-3.11.3.tgz</span></span><br><span class="line">[root@xsource /]<span class="comment"># tar xvzf Python-3.11.3.tgz</span></span><br><span class="line">[root@xsource /]<span class="comment"># cd Python-3.11.3</span></span><br><span class="line">[root@xsource /]<span class="comment"># ./configure --enable-optiomizations &amp;&amp; make altinstall</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="配置软链接"><a href="#配置软链接" class="headerlink" title="配置软链接"></a>配置软链接</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/python3.11 /usr/bin/python3</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/pip3.11 /usr/bin/pip3</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/python3.11 /usr/bin/python</span></span><br><span class="line">[root@xsource bin]<span class="comment">#ln -sf /usr/local/bin/pip3.11 /usr/bin/pip</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="需要覆盖-pip-不是软连接"><a href="#需要覆盖-pip-不是软连接" class="headerlink" title="需要覆盖 pip (不是软连接)"></a>需要覆盖 pip (不是软连接)</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">[root@xsource bin]#which pip</span><br><span class="line">/usr/local/bin/pip</span><br><span class="line">[root@xsource bin]# ls -al</span><br><span class="line">-rwxr-xr-x   1 root root      230 Jan  3 09:55 pip</span><br><span class="line">-rwxr-xr-x   1 root root      227 Dec 22 14:12 pip3</span><br><span class="line">-rwxr-xr-x   1 root root      230 Jan  3 08:46 pip3.11</span><br><span class="line">-rwxr-xr-x   1 root root      227 Dec 22 14:12 pip3.6</span><br></pre></td></tr></table></figure>
+
+<h1 id="创建虚拟环境"><a href="#创建虚拟环境" class="headerlink" title="创建虚拟环境"></a>创建虚拟环境</h1><p>地址: <a href="https://docs.python.org/3/tutorial/venv.html">https://docs.python.org/3/tutorial/venv.html</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment"># python -m venv tutorial-env #创建虚拟环境</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment">#Windows</span></span><br><span class="line">[root@xsource /]<span class="comment"># tutorial-env\Scripts\activate.bat</span></span><br><span class="line"><span class="comment">#Unix || MacOS</span></span><br><span class="line">[root@xsource /]<span class="comment"># source tutorial-env/bin/activate</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="停止运行"><a href="#停止运行" class="headerlink" title="停止运行"></a>停止运行</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[root@xsource /]<span class="comment">#  deactivate</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Linux Firewall</title>
     <url>/BlogProject/posts/cebd6f84/</url>
     <content><![CDATA[<h1 id="防火墙命令"><a href="#防火墙命令" class="headerlink" title="防火墙命令"></a>防火墙命令</h1><ul>
@@ -888,15 +897,6 @@
 ]]></content>
       <tags>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Love Steam Game</title>
-    <url>/BlogProject/posts/33b8e905/</url>
-    <content><![CDATA[<h1 id="模拟游戏"><a href="#模拟游戏" class="headerlink" title="模拟游戏"></a>模拟游戏</h1><p><a href="%22https://store.steampowered.com/app/1450900/Desynced/%22">Desynced</a></p>
-]]></content>
-      <tags>
-        <tag>SteamGame</tag>
       </tags>
   </entry>
   <entry>
@@ -1250,6 +1250,16 @@
       </tags>
   </entry>
   <entry>
+    <title>Unity 安装</title>
+    <url>/BlogProject/posts/0/</url>
+    <content><![CDATA[<h1 id="Unity-安装命令"><a href="#Unity-安装命令" class="headerlink" title="Unity 安装命令"></a>Unity 安装命令</h1><h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unityhub://安装版本/安装Md5(短)</span><br></pre></td></tr></table></figure>
+
+<h2 id="2020-3-48f1"><a href="#2020-3-48f1" class="headerlink" title="2020.3.48f1"></a>2020.3.48f1</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unityhub://2020.3.48f1/b805b124c6b7</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Unity</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Unity TextureFormat</title>
     <url>/BlogProject/posts/c7faa5ac/</url>
     <content><![CDATA[<h1 id="TextureFormat-类型"><a href="#TextureFormat-类型" class="headerlink" title="TextureFormat 类型"></a>TextureFormat 类型</h1><table>
@@ -1547,16 +1557,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Unity 安装</title>
-    <url>/BlogProject/posts/0/</url>
-    <content><![CDATA[<h1 id="Unity-安装命令"><a href="#Unity-安装命令" class="headerlink" title="Unity 安装命令"></a>Unity 安装命令</h1><h2 id="安装命令"><a href="#安装命令" class="headerlink" title="安装命令"></a>安装命令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unityhub://安装版本/安装Md5(短)</span><br></pre></td></tr></table></figure>
-
-<h2 id="2020-3-48f1"><a href="#2020-3-48f1" class="headerlink" title="2020.3.48f1"></a>2020.3.48f1</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">unityhub://2020.3.48f1/b805b124c6b7</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Command</title>
     <url>/BlogProject/posts/4177d348/</url>
     <content><![CDATA[<h1 id="Shell-Command"><a href="#Shell-Command" class="headerlink" title="Shell Command"></a>Shell Command</h1><h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">del /a /f /s /q &quot;*.meta&quot; &quot;*.meta.*&quot;</span><br></pre></td></tr></table></figure>
@@ -1607,17 +1607,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Scoops</title>
-    <url>/BlogProject/posts/23b7e45f/</url>
-    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time</span><br></pre></td></tr></table></figure>
-
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123;$(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Window</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Which</title>
     <url>/BlogProject/posts/f83c1a8b/</url>
     <content><![CDATA[<h1 id="自建which-命令"><a href="#自建which-命令" class="headerlink" title="自建which 命令"></a>自建which 命令</h1><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">@ for %%e in (%PATHEXT%) do @ for %%i in (%1%%e) do @ if NOT &quot;%%~$PATH:i&quot; == &quot;&quot; echo %%~$PATH:i</span><br></pre></td></tr></table></figure>
@@ -1625,6 +1614,17 @@
 <p>新建 “which.cmd”  放入–&gt; C:\Windows\System32 中即可使用</p>
 <p>内置命令:</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">where 命令工具说明可用 where /?  查询用法。</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Window</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Scoops</title>
+    <url>/BlogProject/posts/23b7e45f/</url>
+    <content><![CDATA[<h2 id="设置脚本权限"><a href="#设置脚本权限" class="headerlink" title="设置脚本权限"></a>设置脚本权限</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser # Optional: Needed to run a remote script the first time</span><br></pre></td></tr></table></figure>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">iex &quot;&amp; &#123;$(irm get.scoop.sh)&#125; -RunAsAdmin&quot;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Window</tag>
@@ -1661,21 +1661,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Sentence OF The Day</title>
-    <url>/BlogProject/posts/752687cf/</url>
-    <content><![CDATA[<h1 id="2023-2-2-21-45"><a href="#2023-2-2-21-45" class="headerlink" title="2023-2-2 21:45"></a>2023-2-2 21:45</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If one day we meet what should I say to you ?</span><br><span class="line">如果有一天我们相遇了我该和你说些什么呢？</span><br><span class="line">Long time no see  or I love you ?</span><br><span class="line">是好久不见，还是我爱你?</span><br></pre></td></tr></table></figure>
-
-<h1 id="2023-2-3-21-58"><a href="#2023-2-3-21-58" class="headerlink" title="2023-2-3 21:58"></a>2023-2-3 21:58</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Take your time and think about it.</span><br><span class="line">慢慢来，好好想一想。</span><br><span class="line">What can make you happy?</span><br><span class="line">什么事情能让你开心</span><br><span class="line">What do you really want to do?</span><br><span class="line">你真正想做什么？</span><br><span class="line">Rather than what makes other people happy .</span><br><span class="line">而不是去想怎么样，取悦别人。</span><br><span class="line">Live in your own way,</span><br><span class="line">以你自己的方式生活。</span><br><span class="line">That&#x27;s the best choice.</span><br><span class="line">才是最好的选择！</span><br></pre></td></tr></table></figure>
-
-<h1 id="2023-2-4-00-22"><a href="#2023-2-4-00-22" class="headerlink" title="2023-2-4 00:22"></a>2023-2-4 00:22</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I can love you for four days.</span><br><span class="line">我可以爱你四天。</span><br><span class="line">Spring,summer,autumn and winter.</span><br><span class="line">春、夏、秋、冬四季</span><br><span class="line">Oh,no! Maybg tree days.</span><br><span class="line">噢，不！也许是三天。</span><br><span class="line">Yesterday，today and tomorrow。</span><br><span class="line">昨天，今天和明天。</span><br><span class="line">How about two day?</span><br><span class="line">要不两天呢？</span><br><span class="line">Day and night.</span><br><span class="line">白天和晚上。</span><br><span class="line">Maybe one day is enough.</span><br><span class="line">也许一天就足够了。</span><br><span class="line">Love you every day.</span><br><span class="line">爱你每一天。</span><br></pre></td></tr></table></figure>
-
-<h1 id="2023-2-5-23-23"><a href="#2023-2-5-23-23" class="headerlink" title="2023-2-5 23:23"></a>2023-2-5 23:23</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hey, my firend.</span><br><span class="line">嘿，我的朋友！</span><br><span class="line">How long does it take to forge someone?</span><br><span class="line">忘记一个人需要多长时间。</span><br><span class="line">If you don&#x27;t care.</span><br><span class="line">如果你不在乎那个人。</span><br><span class="line">It could be one second.</span><br><span class="line">一瞬间就能忘记。</span><br><span class="line">But if you care.</span><br><span class="line">但如果你很在乎。</span><br><span class="line">It might take. Forever!</span><br><span class="line">那也许需要。一辈子！</span><br><span class="line">Give yourself a little time.</span><br><span class="line">给自己一点时间。</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>English</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Internal Notice</title>
     <url>/BlogProject/posts/72429f7f/</url>
     <content><![CDATA[<h1 id="Internal-Notice"><a href="#Internal-Notice" class="headerlink" title="Internal Notice"></a>Internal Notice</h1><p>Internal Notice</p>
@@ -1692,11 +1677,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Working from Home</title>
-    <url>/BlogProject/posts/3eb0b64d/</url>
-    <content><![CDATA[<h1 id="Working-from-Home"><a href="#Working-from-Home" class="headerlink" title="Working from Home"></a>Working from Home</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I. Advantages of working from home.</span><br><span class="line">(1) Provide more time for productive work</span><br><span class="line">Home office allows people to eliminate or reduce commuting time, will have more time and energy to devote to work. If the home office is properly arranged, it can also reduce the usual distractions in the office, such as loud phone calls from colleagues, ringing phones, unknown odors, and unnecessarily strict policies. By reducing chores and making workers less distracted, home office workers will be able to focus more on what they are doing and get their work done quickly.</span><br><span class="line">(2) Better work-life balance</span><br><span class="line">Research shows that jobs that have a good work-life balance increase employee satisfaction with their jobs. It goes without saying that when you feel better about your job, you will be more motivated to do your job, which is also better for your mental state and physical health.</span><br><span class="line">(3) Save money</span><br><span class="line">Since you don&#x27;t have to leave home, you can save a lot of money. These include spending on commuting, clothing expenses, expensive take-out costs or going out to restaurants, etc.</span><br><span class="line">(4) Higher employee retention</span><br><span class="line">You heard it right, people who work from home are more likely to stay with the company rather than leave, and of course the company can give employees the right to work in the office, giving them more options and more freedom. In this way, working from home increases job and life satisfaction, making employee turnover rates lower, and employers save on the cost of hiring and training new employees when they don&#x27;t leave the company as often.</span><br><span class="line">Second, the disadvantages of working from home.</span><br><span class="line">(1) Delay</span><br><span class="line">One of the main reasons companies allow employees to work from home is to reduce the time they spend on transportation. However, when working from home, you may not schedule your time correctly because of the lack of company management, so that you may overestimate the time you actually have by procrastinating when working from home. So plan your day, do the task at hand, and avoid procrastination.</span><br><span class="line">(2) Burnout</span><br><span class="line">Sometimes we do a lot of work, but when there is a tangle between work responsibilities and household chores with no boundaries, employees have the risk of being more exhausted. This is because you feel overwhelmed by things leading to stress, but still need to sit in front of the computer and work all day. In addition, you may also produce some burnout symptoms including headaches, irritability, increased errors and reduced efficiency.</span><br><span class="line">(3) Collaboration is more difficult</span><br><span class="line">Working from home can be difficult in terms of collaboration, but if you have the tools you need to communicate effectively with your team, this difficulty will be greatly reduced. A few other reasons why working from home makes collaboration more difficult include spotty Internet connections, time zone differences, and technical issues.</span><br><span class="line">Teamwork function</span><br><span class="line">(4) Loneliness</span><br><span class="line">There are times when working side-by-side with colleagues makes work more interesting. One of the main factors contributing to employee engagement and satisfaction is maintaining friendships with colleagues. In fact, one study showed that loneliness affects employee performance and that maintaining positive social communication relationships can alleviate loneliness in the workplace.</span><br><span class="line">There are many drawbacks, though in some industries they can be avoided, so the number of companies using work-at-home has been steadily increasing, especially in industries such as the Internet, digital marketing, and education.</span><br></pre></td></tr></table></figure>
+    <title>Sentence OF The Day</title>
+    <url>/BlogProject/posts/752687cf/</url>
+    <content><![CDATA[<h1 id="2023-2-2-21-45"><a href="#2023-2-2-21-45" class="headerlink" title="2023-2-2 21:45"></a>2023-2-2 21:45</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">If one day we meet what should I say to you ?</span><br><span class="line">如果有一天我们相遇了我该和你说些什么呢？</span><br><span class="line">Long time no see  or I love you ?</span><br><span class="line">是好久不见，还是我爱你?</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一、居家办公的优势：</span><br><span class="line">（1）为生产工作提供更多时间</span><br><span class="line">居家办公使人可以消除或减少上下班时间，将有更多的时间和精力去投入到工作。如果居家办公安排得当，还可以减少办公室中通常会受到的干扰，例如同事大声打电话、电话响、不明的气味，以及不必要的严格政策。居家办公通过减少琐事来使工作者更少分心，将能够更专注于他们正在做的事情，并且快速完成工作。</span><br><span class="line">（2）工作与生活得到更好地平衡</span><br><span class="line">研究表明，能将工作时间与生活平衡好的工作会提高员工对工作的满意度。不言而喻，当你对工作感觉好一点时，你会更有动力去做你的工作，这也对你的精神状态与身体健康更好。</span><br><span class="line">（3）省钱</span><br><span class="line">由于不必离开家，可以节省许多费用。其中包括用于通勤的花费、服装开支、昂贵的外卖费用或下馆子的花费等。</span><br><span class="line">（4）更高的员工保留率</span><br><span class="line">你没有听错，居家办公的人更有可能留在公司而不是离职，当然公司也可以给予员工办公室工作的权利，让员工获得更多的选择，自由度更高。这样一来，居家上班就提高了工作和生活满意度，使得员工离职率降低，当员工不经常离开公司时，雇主也会节省雇佣和培训新员工的成本。</span><br><span class="line">二、居家办公的缺点：</span><br><span class="line">（1）拖延</span><br><span class="line">公司允许员工在家工作的主要原因之一是减少了他们在交通上的时间。但是，在居家办公时，你可能不会正确地安排时间，因为缺乏公司的管理，这样一来，你在办公时可能会通过拖延来高估你实际拥有的时间。所以计划好你的每一天，做好手头的任务，避免拖延。</span><br><span class="line">（2）倦怠</span><br><span class="line">有时我们做了很多工作，但是当工作责任和家务劳动之间纠缠不清，没有边界时，员工有着更加筋疲力尽的风险。这是因为你觉得事情过于繁杂导致压力过大，却依然需要坐在电脑前工作一整天。除此之外，你还可能产生一些倦怠症状包括头痛、易怒、错误增加和效率降低。</span><br><span class="line">（3）协作难度更大</span><br><span class="line">居家办公在协作方面会很困难，但是如果你拥有与团队进行有效沟通所需的工具，这种困难将大大降低。居家办公使协作更加困难的其他几个原因包括网际网络连接不稳定、时区不同以及技术问题等。</span><br><span class="line">团队协作功能</span><br><span class="line">（4）孤独</span><br><span class="line">有的时候，与同事并肩作战让工作更有趣。促进员工敬业度和满意度的主要因素之一是与同事保持友谊。事实上，一项研究表明，孤独会影响员工的表现，保持积极的社会交流关系可以缓解工作场所的孤独感。</span><br><span class="line">虽然有很多缺点，不过在有些行业，是可以避免这些缺点的，因此使用居家办公的公司数量一直在稳步增加，特别是互联网、数字营销、教育等行业。</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+<h1 id="2023-2-3-21-58"><a href="#2023-2-3-21-58" class="headerlink" title="2023-2-3 21:58"></a>2023-2-3 21:58</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Take your time and think about it.</span><br><span class="line">慢慢来，好好想一想。</span><br><span class="line">What can make you happy?</span><br><span class="line">什么事情能让你开心</span><br><span class="line">What do you really want to do?</span><br><span class="line">你真正想做什么？</span><br><span class="line">Rather than what makes other people happy .</span><br><span class="line">而不是去想怎么样，取悦别人。</span><br><span class="line">Live in your own way,</span><br><span class="line">以你自己的方式生活。</span><br><span class="line">That&#x27;s the best choice.</span><br><span class="line">才是最好的选择！</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-4-00-22"><a href="#2023-2-4-00-22" class="headerlink" title="2023-2-4 00:22"></a>2023-2-4 00:22</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I can love you for four days.</span><br><span class="line">我可以爱你四天。</span><br><span class="line">Spring,summer,autumn and winter.</span><br><span class="line">春、夏、秋、冬四季</span><br><span class="line">Oh,no! Maybg tree days.</span><br><span class="line">噢，不！也许是三天。</span><br><span class="line">Yesterday，today and tomorrow。</span><br><span class="line">昨天，今天和明天。</span><br><span class="line">How about two day?</span><br><span class="line">要不两天呢？</span><br><span class="line">Day and night.</span><br><span class="line">白天和晚上。</span><br><span class="line">Maybe one day is enough.</span><br><span class="line">也许一天就足够了。</span><br><span class="line">Love you every day.</span><br><span class="line">爱你每一天。</span><br></pre></td></tr></table></figure>
+
+<h1 id="2023-2-5-23-23"><a href="#2023-2-5-23-23" class="headerlink" title="2023-2-5 23:23"></a>2023-2-5 23:23</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hey, my firend.</span><br><span class="line">嘿，我的朋友！</span><br><span class="line">How long does it take to forge someone?</span><br><span class="line">忘记一个人需要多长时间。</span><br><span class="line">If you don&#x27;t care.</span><br><span class="line">如果你不在乎那个人。</span><br><span class="line">It could be one second.</span><br><span class="line">一瞬间就能忘记。</span><br><span class="line">But if you care.</span><br><span class="line">但如果你很在乎。</span><br><span class="line">It might take. Forever!</span><br><span class="line">那也许需要。一辈子！</span><br><span class="line">Give yourself a little time.</span><br><span class="line">给自己一点时间。</span><br></pre></td></tr></table></figure>
+]]></content>
       <tags>
         <tag>English</tag>
       </tags>
@@ -1710,6 +1700,25 @@
 ]]></content>
       <tags>
         <tag>Game Mechanics</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Working from Home</title>
+    <url>/BlogProject/posts/3eb0b64d/</url>
+    <content><![CDATA[<h1 id="Working-from-Home"><a href="#Working-from-Home" class="headerlink" title="Working from Home"></a>Working from Home</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">I. Advantages of working from home.</span><br><span class="line">(1) Provide more time for productive work</span><br><span class="line">Home office allows people to eliminate or reduce commuting time, will have more time and energy to devote to work. If the home office is properly arranged, it can also reduce the usual distractions in the office, such as loud phone calls from colleagues, ringing phones, unknown odors, and unnecessarily strict policies. By reducing chores and making workers less distracted, home office workers will be able to focus more on what they are doing and get their work done quickly.</span><br><span class="line">(2) Better work-life balance</span><br><span class="line">Research shows that jobs that have a good work-life balance increase employee satisfaction with their jobs. It goes without saying that when you feel better about your job, you will be more motivated to do your job, which is also better for your mental state and physical health.</span><br><span class="line">(3) Save money</span><br><span class="line">Since you don&#x27;t have to leave home, you can save a lot of money. These include spending on commuting, clothing expenses, expensive take-out costs or going out to restaurants, etc.</span><br><span class="line">(4) Higher employee retention</span><br><span class="line">You heard it right, people who work from home are more likely to stay with the company rather than leave, and of course the company can give employees the right to work in the office, giving them more options and more freedom. In this way, working from home increases job and life satisfaction, making employee turnover rates lower, and employers save on the cost of hiring and training new employees when they don&#x27;t leave the company as often.</span><br><span class="line">Second, the disadvantages of working from home.</span><br><span class="line">(1) Delay</span><br><span class="line">One of the main reasons companies allow employees to work from home is to reduce the time they spend on transportation. However, when working from home, you may not schedule your time correctly because of the lack of company management, so that you may overestimate the time you actually have by procrastinating when working from home. So plan your day, do the task at hand, and avoid procrastination.</span><br><span class="line">(2) Burnout</span><br><span class="line">Sometimes we do a lot of work, but when there is a tangle between work responsibilities and household chores with no boundaries, employees have the risk of being more exhausted. This is because you feel overwhelmed by things leading to stress, but still need to sit in front of the computer and work all day. In addition, you may also produce some burnout symptoms including headaches, irritability, increased errors and reduced efficiency.</span><br><span class="line">(3) Collaboration is more difficult</span><br><span class="line">Working from home can be difficult in terms of collaboration, but if you have the tools you need to communicate effectively with your team, this difficulty will be greatly reduced. A few other reasons why working from home makes collaboration more difficult include spotty Internet connections, time zone differences, and technical issues.</span><br><span class="line">Teamwork function</span><br><span class="line">(4) Loneliness</span><br><span class="line">There are times when working side-by-side with colleagues makes work more interesting. One of the main factors contributing to employee engagement and satisfaction is maintaining friendships with colleagues. In fact, one study showed that loneliness affects employee performance and that maintaining positive social communication relationships can alleviate loneliness in the workplace.</span><br><span class="line">There are many drawbacks, though in some industries they can be avoided, so the number of companies using work-at-home has been steadily increasing, especially in industries such as the Internet, digital marketing, and education.</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">一、居家办公的优势：</span><br><span class="line">（1）为生产工作提供更多时间</span><br><span class="line">居家办公使人可以消除或减少上下班时间，将有更多的时间和精力去投入到工作。如果居家办公安排得当，还可以减少办公室中通常会受到的干扰，例如同事大声打电话、电话响、不明的气味，以及不必要的严格政策。居家办公通过减少琐事来使工作者更少分心，将能够更专注于他们正在做的事情，并且快速完成工作。</span><br><span class="line">（2）工作与生活得到更好地平衡</span><br><span class="line">研究表明，能将工作时间与生活平衡好的工作会提高员工对工作的满意度。不言而喻，当你对工作感觉好一点时，你会更有动力去做你的工作，这也对你的精神状态与身体健康更好。</span><br><span class="line">（3）省钱</span><br><span class="line">由于不必离开家，可以节省许多费用。其中包括用于通勤的花费、服装开支、昂贵的外卖费用或下馆子的花费等。</span><br><span class="line">（4）更高的员工保留率</span><br><span class="line">你没有听错，居家办公的人更有可能留在公司而不是离职，当然公司也可以给予员工办公室工作的权利，让员工获得更多的选择，自由度更高。这样一来，居家上班就提高了工作和生活满意度，使得员工离职率降低，当员工不经常离开公司时，雇主也会节省雇佣和培训新员工的成本。</span><br><span class="line">二、居家办公的缺点：</span><br><span class="line">（1）拖延</span><br><span class="line">公司允许员工在家工作的主要原因之一是减少了他们在交通上的时间。但是，在居家办公时，你可能不会正确地安排时间，因为缺乏公司的管理，这样一来，你在办公时可能会通过拖延来高估你实际拥有的时间。所以计划好你的每一天，做好手头的任务，避免拖延。</span><br><span class="line">（2）倦怠</span><br><span class="line">有时我们做了很多工作，但是当工作责任和家务劳动之间纠缠不清，没有边界时，员工有着更加筋疲力尽的风险。这是因为你觉得事情过于繁杂导致压力过大，却依然需要坐在电脑前工作一整天。除此之外，你还可能产生一些倦怠症状包括头痛、易怒、错误增加和效率降低。</span><br><span class="line">（3）协作难度更大</span><br><span class="line">居家办公在协作方面会很困难，但是如果你拥有与团队进行有效沟通所需的工具，这种困难将大大降低。居家办公使协作更加困难的其他几个原因包括网际网络连接不稳定、时区不同以及技术问题等。</span><br><span class="line">团队协作功能</span><br><span class="line">（4）孤独</span><br><span class="line">有的时候，与同事并肩作战让工作更有趣。促进员工敬业度和满意度的主要因素之一是与同事保持友谊。事实上，一项研究表明，孤独会影响员工的表现，保持积极的社会交流关系可以缓解工作场所的孤独感。</span><br><span class="line">虽然有很多缺点，不过在有些行业，是可以避免这些缺点的，因此使用居家办公的公司数量一直在稳步增加，特别是互联网、数字营销、教育等行业。</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>English</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Working from Home</title>
+    <url>/BlogProject/posts/3eb0b64d/</url>
+    <content><![CDATA[<h1 id="EmEditor-v22-2-2-便携版本"><a href="#EmEditor-v22-2-2-便携版本" class="headerlink" title="EmEditor v22.2.2 便携版本"></a>EmEditor v22.2.2 便携版本</h1><p><strong>DMAZM-WHY52-AX222-ZQJXN-79JXH</strong></p>
+]]></content>
+      <tags>
+        <tag>Program Software</tag>
       </tags>
   </entry>
   <entry>
@@ -1727,55 +1736,6 @@
 ]]></content>
       <tags>
         <tag>Record</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Chrome Record</title>
-    <url>/BlogProject/posts/700fdf6a/</url>
-    <content><![CDATA[<p>![[ZLF6%RW1ZEZ_II]{1NP@~QU.png]]</p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>报错的原因是因为是 Google 在 79 版本（2019 年 12 月 20 号左右）的更新中又重新启用了 Renderer Code Integrity Protection（渲染器代码完整性保护），会阻止签名不是谷歌和微软的模块加载。该功能已经在之前一个版本中导致同样的问题，并由 Google 自己禁用了。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
-<li>禁用谷歌 chrome 的这项功能，Win+R 打开运行对话框；输入 regedit 打开注册表导航到：（没有这个文件夹的都新建项就行）HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome</li>
-<li>在右边窗口中，右键单击新建&gt;DWORD(32 位)值，双击创建的新值；</li>
-<li>然后将新值名称改为 RendererCodeIntegrityEnabled 并将值数据输入为 0；</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Chrome</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Working from Home</title>
-    <url>/BlogProject/posts/3eb0b64d/</url>
-    <content><![CDATA[<h1 id="EmEditor-v22-2-2-便携版本"><a href="#EmEditor-v22-2-2-便携版本" class="headerlink" title="EmEditor v22.2.2 便携版本"></a>EmEditor v22.2.2 便携版本</h1><p><strong>DMAZM-WHY52-AX222-ZQJXN-79JXH</strong></p>
-]]></content>
-      <tags>
-        <tag>Program Software</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Unity PC 出包相关</title>
-    <url>/BlogProject/posts/5714b715/</url>
-    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
-<ol>
-<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
-<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
-<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
-<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
-<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Unity</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>优化资产</title>
-    <url>/BlogProject/posts/f7fefa74/</url>
-    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
-]]></content>
-      <tags>
-        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
@@ -1862,6 +1822,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Adb Install Progress</title>
+    <url>/BlogProject/posts/bf5f2ea8/</url>
+    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Chrome Record</title>
+    <url>/BlogProject/posts/700fdf6a/</url>
+    <content><![CDATA[<p>![[ZLF6%RW1ZEZ_II]{1NP@~QU.png]]</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>报错的原因是因为是 Google 在 79 版本（2019 年 12 月 20 号左右）的更新中又重新启用了 Renderer Code Integrity Protection（渲染器代码完整性保护），会阻止签名不是谷歌和微软的模块加载。该功能已经在之前一个版本中导致同样的问题，并由 Google 自己禁用了。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li>禁用谷歌 chrome 的这项功能，Win+R 打开运行对话框；输入 regedit 打开注册表导航到：（没有这个文件夹的都新建项就行）HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome</li>
+<li>在右边窗口中，右键单击新建&gt;DWORD(32 位)值，双击创建的新值；</li>
+<li>然后将新值名称改为 RendererCodeIntegrityEnabled 并将值数据输入为 0；</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Chrome</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android 内存详解</title>
     <url>/BlogProject/posts/e230f7b5/</url>
     <content><![CDATA[<p>![[Pasted image 20230823154158.png]]</p>
@@ -1876,6 +1861,46 @@
 ]]></content>
       <tags>
         <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PM2 命令运行参数</title>
+    <url>/BlogProject/posts/230219f6/</url>
+    <content><![CDATA[<ol>
+<li>–name：给应用程序指定一个名称，方便管理和监控。</li>
+<li>–watch：监控指定目录下的文件变化，如果发现文件变化会自动重启应用程序。</li>
+<li>–ignore-watch：忽略指定目录下的文件变化，可以使用通配符 * 指定多个目录。</li>
+<li>–max-memory-restart：当应用程序内存使用超过指定值时，自动重启应用程序。</li>
+<li>–log-date-format：指定日志的时间格式，例如 YYYY-MM-DD HH:mm:ss。</li>
+<li>–log：指定日志文件的路径。</li>
+<li>–env：指定应用程序的环境变量。</li>
+<li>–interpreter：指定解释器路径，例如 &#x2F;usr&#x2F;bin&#x2F;node。</li>
+<li>–no-daemon：关闭守护进程模式，将 PM2 运行在前台。</li>
+<li>–no-autorestart：关闭自动重启功能。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Nodejs</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>优化内存和运行效率</title>
+    <url>/BlogProject/posts/dcaeb9c4/</url>
+    <content><![CDATA[<h1 id="优化内存和运行效率"><a href="#优化内存和运行效率" class="headerlink" title="优化内存和运行效率"></a>优化内存和运行效率</h1><ol>
+<li>用 GetEnumerator () 遍历 dictionary 和 list ，避免使用 foreach</li>
+<li>dictionary 使用 TryGetValue 一次判断取值，避免两次访问</li>
+<li>值类型使用引用方式传递，可提高效率 ref</li>
+<li>避免无意义的初始化，C# 默认初始化是清除内存，所以无意的初始化，会增加内存</li>
+<li>字符串判断，使用比较 length &#x3D;&#x3D; 0 效率更高</li>
+<li>cahe 数据，可以避免反复访问；</li>
+<li>减少字符串的拼接，每次拼接都会产生新的字符串，产生 CG</li>
+<li>常量使用 const 或 readonly 修饰</li>
+<li>用 using 包裹，可自动调用 Dispose</li>
+</ol>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>C# 语言的  ​​foreach​​  语句（在 Visual Basic 中为  ​​For Each​​）隐藏了枚举数的复杂性。因此，建议使用  ​​foreach​​，而不是直接操作枚举数。<br>枚举器可用于读取集合中的数据，但不能用于修改基础集合。<br>最初，枚举数定位在集合中第一个元素的前面。 Reset 方法还将枚举器恢复到此位置。在此位置， Current  属性未定义。因此，在读取的值之前，必须调用  MoveNext  方法，以将枚举器前进到集合的第一个元素  Current 。<br>在调用  Current  或  MoveNext  之前，Reset  返回同一对象。 MoveNext  将  Current  设置为下一个元素。<br>如果  MoveNext  越过集合的末尾，则枚举器将定位在集合中最后一个元素之后，并  MoveNext  返回  ​​false​​ 。当枚举器位于此位置时，对的后续调用  MoveNext  也将返回  ​​false​​ 。如果最后一次调用  MoveNext  返回  ​​false​​ ， Current  则未定义。若要再次将  Current  设置为集合的第一个元素，可以调用  Reset  并接着调用  MoveNext。<br>如果对集合所做的更改（如添加、修改或删除元素），则枚举器的行为是不确定的。<br>枚举数没有对集合的独占访问权；因此，从头到尾对一个集合进行枚举在本质上不是一个线程安全的过程。若要确保枚举过程中的线程安全性，可以在整个枚举过程中锁定集合。若要允许多个线程访问集合以进行读写操作，则必须实现自己的同步。</p>
+]]></content>
+      <tags>
+        <tag>C#</tag>
       </tags>
   </entry>
   <entry>
@@ -1928,16 +1953,6 @@
 ]]></content>
       <tags>
         <tag>IOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Adb Install Progress</title>
-    <url>/BlogProject/posts/bf5f2ea8/</url>
-    <content><![CDATA[<h1 id="Adb-Install-Progress"><a href="#Adb-Install-Progress" class="headerlink" title="Adb_Install_Progress"></a>Adb_Install_Progress</h1><h2 id="bat-命令"><a href="#bat-命令" class="headerlink" title="bat 命令"></a>bat 命令</h2><p>命令行：myadb demo.apk</p>
-<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> apkname=<span class="variable">%1%</span></span><br><span class="line"></span><br><span class="line">::传入apk路径</span><br><span class="line"><span class="built_in">echo</span> 您输入了参数:<span class="variable">%apkname%</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Set</span> filename=<span class="variable">%apkname%</span></span><br><span class="line"><span class="built_in">set</span> filename=%~nx1</span><br><span class="line"><span class="built_in">echo</span> 文件名为:<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">set</span> folder=%~dp1</span><br><span class="line"><span class="built_in">echo</span> 路径为:<span class="variable">%folder%</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">adb push <span class="variable">%apkname%</span> /data/local/tmp</span><br><span class="line"><span class="built_in">echo</span> 复制到设备完成！***开始安装,耐心等待***</span><br><span class="line">adb shell pm install -r /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***安装完成***</span><br><span class="line">adb shell rm /data/local/tmp/<span class="variable">%filename%</span></span><br><span class="line"><span class="built_in">echo</span> ***删除临时文件***</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Android</tag>
       </tags>
   </entry>
   <entry>
@@ -1994,6 +2009,26 @@
       </tags>
   </entry>
   <entry>
+    <title>bash 相关命令</title>
+    <url>/BlogProject/posts/feaf77e8/</url>
+    <content><![CDATA[<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">find <span class="operator">./</span> <span class="operator">-</span>name <span class="string">&quot;*.meta&quot;</span> <span class="operator">|</span> xargs rm <span class="operator">-</span>rf</span><br></pre></td></tr></table></figure>
+
+<p>删除当前目录下所有后缀名为 .meta 文件<br>find . -name “*.meta” |xargs rm -rf<br>格式很简单，如下：<br>find 目录 -name 名称 | xargs rm -rf<br>查找你要删除的文件夹或者文件，然后删除即可。<br>但是在macos下有一个问题，文件夹中有空格是不能删除的。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//清楚拷贝命令</span><br><span class="line">pbcopy &lt; /dev/null</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>IOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>标签注解</title>
+    <url>/BlogProject/posts/20410000/</url>
+    <content><![CDATA[<p><strong>XLua.GCOptimize：</strong> <br>GC 代码优化对于一个 c#纯值类型(官网指一个只包含值类型的 struct，可以嵌套其它只包含值类型的 struct)或者 c#枚举值加上了这个配置，会使得该类型在 lua 和 c#间传递不产生 gc alloc，该类型的数组访问也不会产生 gc。<br>(除枚举之外，包含无参构造函数的复杂类型，都会生成 lua table 到该类型，以及该类型的一维数组转换代码，可以优化转换性能)</p>
+]]></content>
+      <tags>
+        <tag>XLua</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>IOS FacebookSDK</title>
     <url>/BlogProject/posts/2414f1c4/</url>
     <content><![CDATA[<h1 id="地址"><a href="#地址" class="headerlink" title="地址"></a>地址</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">https://github.com/facebook/facebook-ios-sdk</span><br></pre></td></tr></table></figure>
@@ -2002,17 +2037,6 @@
 
 <p> Keychain Sharing 功能，才能使登录功能在 Mac Catalyst 应用程序中正常运作。</p>
 <h1 id="触发问题"><a href="#触发问题" class="headerlink" title="触发问题"></a>触发问题</h1><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Undefined symbol: __swift_FORCE_LOAD_$_swiftDataDetection</span><br><span class="line">引入之后，编译一下，出现100多个报错，看很多报错都带swift字眼，搜了下解决方案，也很简单，新建一个空的Swift文件，重新编译一下就没了，试了下也确实可行，真坑啊，oc的代码，导入一个库，还得加个swift的文件才能编译过</span><br></pre></td></tr></table></figure>]]></content>
-      <tags>
-        <tag>IOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>bash 相关命令</title>
-    <url>/BlogProject/posts/feaf77e8/</url>
-    <content><![CDATA[<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line">find <span class="operator">./</span> <span class="operator">-</span>name <span class="string">&quot;*.meta&quot;</span> <span class="operator">|</span> xargs rm <span class="operator">-</span>rf</span><br></pre></td></tr></table></figure>
-
-<p>删除当前目录下所有后缀名为 .meta 文件<br>find . -name “*.meta” |xargs rm -rf<br>格式很简单，如下：<br>find 目录 -name 名称 | xargs rm -rf<br>查找你要删除的文件夹或者文件，然后删除即可。<br>但是在macos下有一个问题，文件夹中有空格是不能删除的。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//清楚拷贝命令</span><br><span class="line">pbcopy &lt; /dev/null</span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>IOS</tag>
       </tags>
@@ -2029,43 +2053,12 @@
       </tags>
   </entry>
   <entry>
-    <title>优化内存和运行效率</title>
-    <url>/BlogProject/posts/dcaeb9c4/</url>
-    <content><![CDATA[<h1 id="优化内存和运行效率"><a href="#优化内存和运行效率" class="headerlink" title="优化内存和运行效率"></a>优化内存和运行效率</h1><ol>
-<li>用 GetEnumerator () 遍历 dictionary 和 list ，避免使用 foreach</li>
-<li>dictionary 使用 TryGetValue 一次判断取值，避免两次访问</li>
-<li>值类型使用引用方式传递，可提高效率 ref</li>
-<li>避免无意义的初始化，C# 默认初始化是清除内存，所以无意的初始化，会增加内存</li>
-<li>字符串判断，使用比较 length &#x3D;&#x3D; 0 效率更高</li>
-<li>cahe 数据，可以避免反复访问；</li>
-<li>减少字符串的拼接，每次拼接都会产生新的字符串，产生 CG</li>
-<li>常量使用 const 或 readonly 修饰</li>
-<li>用 using 包裹，可自动调用 Dispose</li>
-</ol>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>C# 语言的  ​​foreach​​  语句（在 Visual Basic 中为  ​​For Each​​）隐藏了枚举数的复杂性。因此，建议使用  ​​foreach​​，而不是直接操作枚举数。<br>枚举器可用于读取集合中的数据，但不能用于修改基础集合。<br>最初，枚举数定位在集合中第一个元素的前面。 Reset 方法还将枚举器恢复到此位置。在此位置， Current  属性未定义。因此，在读取的值之前，必须调用  MoveNext  方法，以将枚举器前进到集合的第一个元素  Current 。<br>在调用  Current  或  MoveNext  之前，Reset  返回同一对象。 MoveNext  将  Current  设置为下一个元素。<br>如果  MoveNext  越过集合的末尾，则枚举器将定位在集合中最后一个元素之后，并  MoveNext  返回  ​​false​​ 。当枚举器位于此位置时，对的后续调用  MoveNext  也将返回  ​​false​​ 。如果最后一次调用  MoveNext  返回  ​​false​​ ， Current  则未定义。若要再次将  Current  设置为集合的第一个元素，可以调用  Reset  并接着调用  MoveNext。<br>如果对集合所做的更改（如添加、修改或删除元素），则枚举器的行为是不确定的。<br>枚举数没有对集合的独占访问权；因此，从头到尾对一个集合进行枚举在本质上不是一个线程安全的过程。若要确保枚举过程中的线程安全性，可以在整个枚举过程中锁定集合。若要允许多个线程访问集合以进行读写操作，则必须实现自己的同步。</p>
+    <title>优化资产</title>
+    <url>/BlogProject/posts/f7fefa74/</url>
+    <content><![CDATA[<p>压缩立方体贴图<br>PC: MaxSize—&gt;256&#x2F;521<br>移动平台:  MaxSize—&gt;1024&#x2F;2048</p>
 ]]></content>
       <tags>
-        <tag>C#</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PM2 命令运行参数</title>
-    <url>/BlogProject/posts/230219f6/</url>
-    <content><![CDATA[<ol>
-<li>–name：给应用程序指定一个名称，方便管理和监控。</li>
-<li>–watch：监控指定目录下的文件变化，如果发现文件变化会自动重启应用程序。</li>
-<li>–ignore-watch：忽略指定目录下的文件变化，可以使用通配符 * 指定多个目录。</li>
-<li>–max-memory-restart：当应用程序内存使用超过指定值时，自动重启应用程序。</li>
-<li>–log-date-format：指定日志的时间格式，例如 YYYY-MM-DD HH:mm:ss。</li>
-<li>–log：指定日志文件的路径。</li>
-<li>–env：指定应用程序的环境变量。</li>
-<li>–interpreter：指定解释器路径，例如 &#x2F;usr&#x2F;bin&#x2F;node。</li>
-<li>–no-daemon：关闭守护进程模式，将 PM2 运行在前台。</li>
-<li>–no-autorestart：关闭自动重启功能。</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Nodejs</tag>
+        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
@@ -2077,12 +2070,19 @@
       </tags>
   </entry>
   <entry>
-    <title>标签注解</title>
-    <url>/BlogProject/posts/20410000/</url>
-    <content><![CDATA[<p><strong>XLua.GCOptimize：</strong> <br>GC 代码优化对于一个 c#纯值类型(官网指一个只包含值类型的 struct，可以嵌套其它只包含值类型的 struct)或者 c#枚举值加上了这个配置，会使得该类型在 lua 和 c#间传递不产生 gc alloc，该类型的数组访问也不会产生 gc。<br>(除枚举之外，包含无参构造函数的复杂类型，都会生成 lua table 到该类型，以及该类型的一维数组转换代码，可以优化转换性能)</p>
+    <title>Unity PC 出包相关</title>
+    <url>/BlogProject/posts/5714b715/</url>
+    <content><![CDATA[<h1 id="默认管理员权限运行"><a href="#默认管理员权限运行" class="headerlink" title="默认管理员权限运行"></a>默认管理员权限运行</h1><p><strong>修改Unity安装目录中的Windows打包插件模板，重新生成一个新的默认以管理员权限启动的模板exe，然后再进行打包</strong></p>
+<ol>
+<li><strong>找到Unity安装目录的Data&#x2F;PlaybackEngines&#x2F;windowsstandalonesupport&#x2F;</strong></li>
+<li><strong>Unity打包PC读取的是&#x2F;Variations文件夹中已经打包好的WindowsPlayer.exe文件与其他各种依赖文件</strong></li>
+<li><strong>注释WindowsPlayer.vcxproj 中<!--<Import Project="UnityData.vcxitems" Label="UnityData" />--> 重新载入 WindowsPlayer</strong></li>
+<li><strong>WindowsPlayer.manifest文件，找到图中那一行修改为 level&#x3D;”requireAdministrator” ，然后保存即可。</strong></li>
+<li><strong>确保改为Release，然后Ctrl+F5打包64位与32位，成功之后可以看到在项目的Build&#x2F;bin目录下生成exe成功，接下来把exe拷贝到对应的目录</strong></li>
+</ol>
 ]]></content>
       <tags>
-        <tag>XLua</tag>
+        <tag>Unity</tag>
       </tags>
   </entry>
   <entry>
