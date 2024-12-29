@@ -7,3 +7,6 @@
 [submodule "themes/hexo-theme-chan"]
 	path = themes/hexo-theme-chan
 	url = https://github.com/denjones/hexo-theme-chan.git
+[submodule "themes/stellar"]
+	path = themes/stellar
+	url = https://github.com/xaoxuu/hexo-theme-stellar.git

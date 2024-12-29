@@ -9,8 +9,10 @@
     "hexo": "^6.3.0",
     "hexo-abbrlink": "^2.2.1",
     "hexo-all-minifier": "^0.5.7",
+    "hexo-butterfly-artitalk": "^1.0.5",
+    "hexo-butterfly-hpptalk": "^1.0.4",
     "hexo-deployer-git": "^4.0.0",
-    "hexo-douban": "^2.2.6",
+    "hexo-douban": "^2.3.6",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9",
     "hexo-generator-category": "^2.0.0",
@@ -18,11 +20,15 @@
     "hexo-generator-searchdb": "^1.4.1",
     "hexo-generator-sitemap": "^3.0.1",
     "hexo-generator-tag": "^2.0.0",
+    "hexo-offline": "^3.0.0",
     "hexo-pdf": "^1.1.1",
     "hexo-renderer-ejs": "^2.0.0",
     "hexo-renderer-marked": "^6.0.0",
+    "hexo-renderer-pug": "^3.0.0",
     "hexo-renderer-stylus": "^2.1.0",
     "hexo-server": "^3.0.0",
+    "hexo-tag-aplayer": "^3.0.4",
+    "hexo-theme-butterfly": "^5.2.2",
     "hexo-theme-landscape": "^1.0.0",
     "hexo-theme-next": "^8.19.1",
     "hexo-wordcount": "^6.0.1"
@@ -36,6 +42,11 @@
     "clean": "hexo clean",
     "deploy": "hexo deploy",
     "server": "hexo server",
-    "debug-deploy": "node ./node_modules/hexo-cli/bin/hexo deploy --debug"
+    "debug-deploy": "node ./node_modules/hexo-cli/bin/hexo deploy --debug",
+    "push": "hexo clean && hexo g && hexo douban && gulp && hexo deploy",
+    "show": "hexo clean && hexo g && hexo s",
+    "update": "git init && git add . && git commit -m 'backup' && git push origin main",
+    "kk": "hexo clean && hexo g && hexo deploy",
+    "en": "hexo clean && hexo g && hexo g --config config-en.yml -f && hexo s"
   }
 }

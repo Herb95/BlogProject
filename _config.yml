@@ -135,15 +135,23 @@ sitemap:
   path: sitemap.xml
 ## Themes: https://hexo.io/themes/
 #theme: hexo-theme-chan
-theme: next
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 # git@github.com:Herb95/Herb95.github.io.git
 deploy:
   - type: git
+    #repo: Herb95.github.io@github.com:Herb95/Herb95.github.io.git
+    repo: https://github.com/Herb95/Herb95.github.io.git
+    branch: master
+  - type: git
     repo: git@github.com:Herb95/BlogProject.git
     branch: deploy_Build
+#  - type: git
+#    repo: BlogProject@github.com:Herb95/BlogProject.git
+#    branch: master
+
 
 # 豆瓣配置站点
 ## Docs: https://github.com/mythsman/hexo-douban

@@ -1,0 +1,202 @@
+# Hexo Configuration
+## Docs: https://hexo.io/docs/configuration.html
+## Source: https://github.com/hexojs/hexo/
+
+# Site
+# 网站标题
+title: GrayWolf
+# 网站副标题
+subtitle: Blog
+# 网站描述
+description: Dark, coquettish Bana, even covered the pain, do not want to let go, have long forgotten how to smile.
+# 网站的关键字。 支持多个值。
+keywords:
+# 作者
+author: Gray wolf
+# 网站使用语言
+language: en
+# 网站时区
+timezone: Asia/Hong_Kong
+
+# URL
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+# 网址
+url: https://herb95.github.io/en
+# 网址根目录
+root: /en/
+# 文章的格式 permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/ # "posts/"
+# 永久链接各部分的默认值
+permalink_defaults:
+# abbrlink config
+abbrlink:
+  alg: crc32 # 算法 : crc16(default) and crc32
+  rep: hex # 进制: dec(default) and hex
+
+# Directory
+# 资源文件夹
+source_dir: source
+# 公共文件夹
+public_dir: public
+# 归档文件夹
+tag_dir: tags
+# 分类文件夹
+archive_dir: archives
+# include code 文件夹
+category_dir: categories
+# 国际化(i18n) 文件夹
+code_dir: downloads/code
+i18n_dir: :lang
+# 跳过指定文件的渲染
+skip_render:
+  - 'README.md'
+  - _posts/GWNotebookLibrary/CXX_WorkSpace/**
+
+# Writing
+# 新文章的名字 File name of new posts
+new_post_name: :title.md
+# 预设布局
+default_layout: post
+# Transform title into titlecase 把标题转换位title case
+titlecase: false
+# Open external links in new tab 在新标签中打开里链接
+external_link:
+  enable: true
+  field: site #适用于全部site或post仅
+  exclude: [] #排除主机名。指定适用时的子域，包括www
+# 把文件名称转换为(1)小写或(2)大写
+filename_case: 0
+# 显示草稿
+render_drafts: false
+# 启动Asset文件夹
+post_asset_folder: true
+# 把链接改为与根目录的相对位置
+relative_link: false
+# 显示未来的文章
+future: true
+# 代码块的设置
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace:
+
+# Home page setting
+# path: Root path for your blogs index page. (default = '')
+# per_page: Posts displayed per page. (0 = disable pagination)
+# order_by: Posts order. (Order by date descending by default)
+index_generator:
+  path: ""
+  per_page: 5
+  order_by: -date
+
+archive_generator:
+  per_page: 20
+  yearly: true
+  monthly: true
+
+tag_generator:
+  per_page: 10
+
+# Category & Tag
+# 默认分类
+default_category: uncategorized
+# 分类别名
+category_map:
+# 标签别名
+tag_map:
+
+# Date / Time format
+## Hexo uses Moment.js to parse and display date
+## You can customize the date format as defined in
+## http://momentjs.com/docs/#/displaying/format/
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+## updated_option supports 'mtime', 'date', 'empty'
+updated_option: 'mtime'
+
+# Pagination
+## Set per_page to 0 to disable pagination
+# 显示文章量
+per_page: 10
+# 分页目录
+pagination_dir: page
+
+# Extensions
+#Plugins: http://hexo.io/plugins/
+Plugins:
+  - hexo-generator-baidu-sitemap
+  - hexo-generator-sitemap
+  - hexo-generator-feed
+
+baidusitemap:
+  path: baidusitemap.xml
+sitemap:
+  path: sitemap.xml
+## Themes: https://hexo.io/themes/
+#theme: hexo-theme-chan
+theme: butterfly
+
+# Deployment
+## Docs: https://hexo.io/docs/deployment.html
+# git@github.com:Herb95/Herb95.github.io.git
+deploy:
+  - type: git
+    repo: Herb95.github.io@github.com:Herb95/Herb95.github.io.git
+    branch: master
+  - type: git
+    repo: BlogProject@github.com:Herb95/BlogProject.git
+    branch: master
+
+# 豆瓣配置站点
+## Docs: https://github.com/mythsman/hexo-douban
+douban:
+  user: mythsman
+  builtin: false
+  book:
+    title: "This is my book title"
+    quote: "This is my book quote"
+  movie:
+    title: "This is my movie title"
+    quote: "This is my movie quote"
+  game:
+    title: "This is my game title"
+    quote: "This is my game quote"
+  timeout: 10000
+
+# 搜所功能
+search:
+  path: search.xml
+  filed: post
+  format: html
+  limit: 10000
+
+# 对博客内容进行压缩处理
+# https://segmentfault.com/a/1190000009594843#articleHeader0
+html_minifier:
+  enable: true
+  ignore_error: false
+  exclude:
+
+css_minifiner:
+  enable: true
+  exclude:
+    - "*.min.css"
+
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - "*.min.js"
+
+image_minifiler:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
+
+google_maps_api_key: AIzaSyCQqSxozLiuetYfH5LN0fCwyx9uqDFoCro
