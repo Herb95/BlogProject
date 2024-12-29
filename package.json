@@ -34,7 +34,7 @@
     "hexo-wordcount": "^6.0.1"
   },
   "devDependencies": {
-    "hexo-util": "^3.1.0",
+    "hexo-util": "^3.3.0",
     "node-cli": "^0.2.5"
   },
   "scripts": {
